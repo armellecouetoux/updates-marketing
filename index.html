@@ -3,192 +3,182 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Veille Branding &amp; Marketing — Archives</title>
+<title>Veille Branding &amp; Marketing — 11 septembre 2026</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
 <style>
-  :root{
-    --black:#1e1e1e;
-    --white:#ffffff;
-    --navy:#14213d;
-    --navy-4:#324a82;
-    --navy-tint-1:#eef1f8;
-    --navy-tint-2:#e2e7f3;
-    --grey:#6b6f76;
-    --line:#e6e6e6;
-    --font-display:'Manrope', sans-serif;
-    --font-label:Impact, 'Arial Narrow', sans-serif;
-    --font-body:-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
-    --radius:14px;
-    --maxw:920px;
-  }
-  *{box-sizing:border-box;}
-  html,body{margin:0;padding:0;}
-  body{
-    background:var(--white);
-    color:var(--black);
-    font-family:var(--font-body);
-    line-height:1.5;
-    -webkit-font-smoothing:antialiased;
-  }
-  .wrap{
-    max-width:var(--maxw);
-    margin:0 auto;
-    padding:0 20px;
-  }
-  header.masthead{
-    background:var(--navy);
-    color:var(--white);
-    padding:60px 0 50px;
-    position:relative;
-    overflow:hidden;
-  }
-  header.masthead::after{
-    content:"";
-    position:absolute;
-    right:-120px; top:-120px;
-    width:340px; height:340px;
-    border-radius:50%;
-    background:radial-gradient(circle, var(--navy-4) 0%, transparent 70%);
-    opacity:.6;
-  }
-  .eyebrow{
-    font-family:var(--font-label);
-    letter-spacing:.14em;
-    text-transform:uppercase;
-    font-size:12px;
-    color:#aab4d4;
-    margin:0 0 14px;
-    position:relative;
-  }
-  h1.title{
-    font-family:var(--font-display);
-    font-weight:800;
-    font-size:clamp(28px, 4.4vw, 44px);
-    line-height:1.15;
-    margin:0 0 16px;
-    max-width:760px;
-    position:relative;
-  }
-  .subline{
-    font-size:15px;
-    color:#c7cfe6;
-    max-width:600px;
-    margin:0;
-    position:relative;
-  }
-  main{padding:48px 0 20px;}
-  h2.section-title{
-    font-family:var(--font-display);
-    font-weight:800;
-    font-size:22px;
-    color:var(--navy);
-    margin:0 0 24px;
-  }
-  .archive-list{
-    display:flex;
-    flex-direction:column;
-    gap:16px;
-  }
-  .archive-item{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:20px;
-    flex-wrap:wrap;
-    background:var(--navy-tint-1);
-    border:1px solid var(--navy-tint-2);
-    border-radius:var(--radius);
-    padding:22px 26px;
-    text-decoration:none;
-    color:var(--black);
-    transition:box-shadow .15s ease, transform .15s ease;
-  }
-  .archive-item:hover{
-    box-shadow:0 8px 24px rgba(20,33,61,.12);
-    transform:translateY(-2px);
-  }
-  .archive-date{
-    font-family:var(--font-label);
-    font-size:12px;
-    letter-spacing:.06em;
-    text-transform:uppercase;
-    color:var(--navy-4);
-    display:block;
-    margin-bottom:6px;
-  }
-  .archive-item h3{
-    font-family:var(--font-display);
-    font-weight:700;
-    font-size:18px;
-    margin:0;
-    color:var(--navy);
-    max-width:640px;
-  }
-  .archive-arrow{
-    font-family:var(--font-label);
-    font-size:13px;
-    color:var(--navy-4);
-    white-space:nowrap;
-  }
-  footer{
-    margin-top:50px;
-    padding:30px 0 50px;
-    border-top:1px solid var(--line);
-    color:var(--grey);
-    font-size:13px;
-  }
-  #progress-bar{
-    position:fixed;
-    top:0; left:0;
-    height:4px;
-    width:0%;
-    background:var(--navy-4);
-    z-index:999;
-    transition:width .08s linear;
-  }
-  .stats-row{
-    display:flex;
-    gap:32px;
-    margin-top:22px;
-    position:relative;
-    flex-wrap:wrap;
-  }
-  .stat{display:flex;flex-direction:column;gap:2px;}
-  .stat-num{
-    font-family:var(--font-label);
-    font-size:30px;
-    color:var(--white);
-    line-height:1;
-  }
-  .stat-label{
-    font-family:var(--font-label);
-    font-size:11px;
-    letter-spacing:.05em;
-    text-transform:uppercase;
-    color:#aab4d4;
-  }
-  .archive-search{
-    margin:0 0 24px;
-  }
-  #search-input{
-    font-family:var(--font-body);
-    font-size:13.5px;
-    padding:10px 16px;
-    border:1px solid var(--navy-tint-2);
-    border-radius:999px;
-    width:100%;
-    max-width:360px;
-    color:var(--black);
-    background:var(--navy-tint-1);
-  }
-  #search-input:focus{outline:2px solid var(--navy-4);outline-offset:1px;}
-  .archive-item[hidden]{display:none;}
-  @media (max-width:560px){
-    header.masthead{padding:44px 0 38px;}
-    .archive-item{padding:18px 20px;}
-  }
+
+:root{
+  --black:#1e1e1e;
+  --white:#ffffff;
+  --navy:#14213d;
+  --navy-2:#1c2c52;
+  --navy-3:#2a3f70;
+  --navy-4:#4c5f94;
+  --navy-tint-1:#eef1f8;
+  --navy-tint-2:#e2e7f3;
+  --grey:#6b6f76;
+  --line:#e6e6e6;
+  --font-display:'Manrope', sans-serif;
+  --font-label:Impact, 'Arial Narrow', sans-serif;
+  --font-body:-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+  --radius:16px;
+  --maxw:1180px;
+}
+*{box-sizing:border-box;}
+html,body{margin:0;padding:0;}
+body{
+  background:var(--white);
+  color:var(--black);
+  font-family:var(--font-body);
+  line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+.wrap{max-width:var(--maxw); margin:0 auto; padding:0 20px;}
+
+#progress-bar{position:fixed; top:0; left:0; height:4px; width:0%; background:linear-gradient(90deg,var(--navy),var(--navy-4)); z-index:999; transition:width .08s linear;}
+
+header.masthead{
+  background:var(--navy);
+  color:var(--white);
+  padding:52px 0 44px;
+  position:relative;
+  overflow:hidden;
+}
+header.masthead::after{
+  content:"";
+  position:absolute; right:-140px; top:-140px; width:380px; height:380px;
+  border-radius:50%;
+  background:radial-gradient(circle, var(--navy-4) 0%, transparent 70%);
+  opacity:.55;
+}
+.masthead-top{
+  display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;
+  position:relative;
+}
+.eyebrow{
+  font-family:var(--font-label);
+  letter-spacing:.1em; text-transform:uppercase; font-size:11.5px;
+  color:#aab4d4; margin:0;
+}
+.archive-link{
+  font-family:var(--font-label);
+  font-size:12.5px; color:var(--white); text-decoration:none;
+  border:1px solid rgba(255,255,255,.4); border-radius:999px; padding:7px 16px;
+  white-space:nowrap; transition:background .15s ease, border-color .15s ease;
+}
+.archive-link:hover{background:rgba(255,255,255,.12); border-color:var(--white);}
+h1.title{
+  font-family:var(--font-display); font-weight:800;
+  font-size:clamp(26px, 4.2vw, 46px); line-height:1.15;
+  margin:18px 0 14px; max-width:920px; position:relative;
+}
+.subline{font-size:15px; color:#c7cfe6; max-width:680px; margin:0; position:relative;}
+.stats-row{display:flex; gap:36px; margin-top:26px; flex-wrap:wrap; position:relative;}
+.stat{display:flex; flex-direction:column; gap:2px;}
+.stat-num{font-family:var(--font-label); font-size:32px; color:var(--white); line-height:1;}
+.stat-label{font-family:var(--font-label); font-size:11px; letter-spacing:.05em; text-transform:uppercase; color:#aab4d4;}
+
+main{padding:40px 0 20px;}
+
+.controls{
+  display:flex; flex-wrap:wrap; gap:16px; align-items:center; justify-content:space-between;
+  margin-bottom:36px; position:sticky; top:0; background:var(--white); z-index:50;
+  padding:14px 0; border-bottom:1px solid var(--line);
+}
+.chips{display:flex; flex-wrap:wrap; gap:8px;}
+.chip{
+  font-family:var(--font-label); font-size:12.5px; letter-spacing:.02em;
+  background:var(--navy-tint-1); color:var(--navy); border:1px solid var(--navy-tint-2);
+  border-radius:999px; padding:8px 16px; cursor:pointer; transition:all .15s ease; white-space:nowrap;
+}
+.chip:hover{background:var(--navy-tint-2); transform:translateY(-1px);}
+.chip.active{background:var(--navy); color:var(--white); border-color:var(--navy);}
+.search-wrap{flex:0 1 320px; min-width:220px;}
+#search-input{
+  width:100%; font-family:var(--font-body); font-size:13.5px; padding:10px 16px;
+  border:1px solid var(--navy-tint-2); border-radius:999px; background:var(--navy-tint-1); color:var(--black);
+}
+#search-input:focus{outline:2px solid var(--navy-4); outline-offset:1px;}
+
+.section-title{
+  font-family:var(--font-display); font-weight:800; font-size:23px; color:var(--navy);
+  margin:0 0 22px; display:flex; align-items:center; gap:10px;
+}
+.section-emoji{font-size:22px;}
+.top5-section{margin-bottom:56px;}
+.top5-title{font-size:27px;}
+.top5-grid{display:grid; grid-template-columns:repeat(auto-fit, minmax(300px,1fr)); gap:22px;}
+
+.theme-section{margin-bottom:52px; scroll-margin-top:90px;}
+.card-grid{display:grid; grid-template-columns:repeat(auto-fit, minmax(300px,1fr)); gap:20px;}
+
+.card{
+  background:var(--white); border:1px solid var(--line); border-radius:var(--radius);
+  overflow:hidden; cursor:pointer; transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+  display:flex; flex-direction:column;
+}
+.card:hover{
+  transform:translateY(-4px) rotate(-0.3deg);
+  box-shadow:0 14px 30px rgba(20,33,61,.16);
+  border-color:var(--navy-3);
+}
+.card:focus-visible{outline:2px solid var(--navy); outline-offset:2px;}
+.card-media{position:relative; aspect-ratio:5/3; overflow:hidden; background:var(--navy);}
+.card-media svg{width:100%; height:100%; display:block; transition:transform .35s ease;}
+.card:hover .card-media svg{transform:scale(1.06);}
+.card-media .badge{
+  position:absolute; top:12px; left:12px; background:rgba(255,255,255,.94); color:var(--navy);
+  font-family:var(--font-label); font-size:11px; letter-spacing:.03em;
+  padding:6px 12px; border-radius:999px;
+}
+.card-body{padding:20px 20px 16px; display:flex; flex-direction:column; gap:10px; flex:1;}
+.card-title{
+  font-family:var(--font-label); font-weight:400; font-size:18px; line-height:1.28; color:var(--black); margin:0;
+}
+.card-fact{font-size:14px; color:#333; margin:0; line-height:1.55;}
+.card-more{
+  max-height:0; opacity:0; overflow:hidden;
+  transition:max-height .4s ease, opacity .3s ease, margin .4s ease;
+}
+.card.expanded .card-more{max-height:900px; opacity:1; margin-top:4px;}
+.card-label{
+  font-family:var(--font-label); font-size:11.5px; letter-spacing:.05em; text-transform:uppercase;
+  color:var(--navy); margin:12px 0 4px;
+}
+.card-why, .card-action{font-size:13.5px; color:#333; margin:0 0 4px; line-height:1.5;}
+.card-source{font-size:12.5px; color:var(--grey); margin:10px 0 0;}
+.card-source a{color:var(--navy); font-weight:600; text-decoration:none; border-bottom:1px solid var(--navy-tint-2);}
+.card-source a:hover{border-color:var(--navy);}
+.card-toggle{
+  align-self:flex-start; margin-top:auto; background:none; border:none; cursor:pointer;
+  font-family:var(--font-label); font-size:12px; color:var(--navy-4); padding:6px 0 0; display:flex; align-items:center; gap:4px;
+}
+.chevron{transition:transform .25s ease; display:inline-block;}
+.card.expanded .chevron{transform:rotate(180deg);}
+.card.expanded .card-toggle{color:var(--navy);}
+
+.top5-hero{position:relative;}
+.top5-hero .card-media{aspect-ratio:16/10;}
+.top5-hero::before{
+  content:"★"; position:absolute; top:14px; right:14px; z-index:2;
+  background:var(--navy); color:var(--white); width:30px; height:30px; border-radius:50%;
+  display:flex; align-items:center; justify-content:center; font-size:14px;
+}
+.top5-hero .card-title{font-size:19.5px;}
+
+.no-results{text-align:center; color:var(--grey); font-family:var(--font-label); padding:40px 0; font-size:15px;}
+
+footer{margin-top:40px; padding:28px 0 50px; border-top:1px solid var(--line); color:var(--grey); font-size:13px;}
+
+@media (max-width:640px){
+  header.masthead{padding:40px 0 36px;}
+  .controls{position:static;}
+  .stats-row{gap:24px;}
+}
+
 </style>
 </head>
 <body>
@@ -197,41 +187,1061 @@
 
 <header class="masthead">
   <div class="wrap">
-    <p class="eyebrow">Veille Branding · Marketing · Expérience de marque</p>
-    <h1 class="title">Archives de la veille hebdomadaire</h1>
-    <p class="subline">Marketing, branding, tech, événements et activations de marque — Espagne &amp; Europe. Une édition par semaine.</p>
+    <div class="masthead-top">
+      <p class="eyebrow">Veille Branding · Marketing · Expérience de marque — Espagne &amp; Europe</p>
+      <a class="archive-link" href="archive.html">Voir les archives →</a>
+    </div>
+    <h1 class="title">Madrid bat au rythme de la F1, Publicis rafle PepsiCo et Interrail efface Eurail</h1>
+    <p class="subline">Semaine du 4 septembre 2026 au 11 septembre 2026 — marketing, branding, tech, événements, expériences B2B/B2C, pop-up stores et activations de marque.</p>
     <div class="stats-row">
-      <div class="stat"><span class="stat-num" id="count-reports">0</span><span class="stat-label">éditions archivées</span></div>
+      <div class="stat"><span class="stat-num" id="count-items" data-target="39">0</span><span class="stat-label">actus cette semaine</span></div>
+      <div class="stat"><span class="stat-num" id="count-sources" data-target="39">0</span><span class="stat-label">sources citées</span></div>
+      <div class="stat"><span class="stat-num" id="count-themes" data-target="8">0</span><span class="stat-label">thématiques couvertes</span></div>
     </div>
   </div>
 </header>
 
 <main class="wrap">
-  <h2 class="section-title">Tous les rapports</h2>
-  <div class="archive-search">
-    <input type="search" id="search-input" placeholder="Rechercher une édition (mot-clé)…" aria-label="Rechercher un rapport">
-  </div>
-  <div class="archive-list" id="archive-list">
 
-    <a class="archive-item" href="reports/veille-2026-09-11.html">
-      <div>
-        <span class="archive-date">11 septembre 2026 · Semaine du 4 au 11 septembre</span>
-        <h3>Instagram change de visage, l'Espagne débarque à SoHo, l'IA devient un média</h3>
-      </div>
-      <span class="archive-arrow">Lire →</span>
-    </a>
-
+  <div class="controls">
+    <div class="chips" id="chips"><button class="chip active" data-filter="all" type="button">Tout</button><button class="chip" data-filter="marketing" type="button">📈 Marketing</button><button class="chip" data-filter="branding" type="button">🎨 Branding</button><button class="chip" data-filter="tech" type="button">🤖 Tech</button><button class="chip" data-filter="evenements" type="button">🎪 Événements</button><button class="chip" data-filter="b2b" type="button">🤝 Expériences B2B</button><button class="chip" data-filter="b2c" type="button">✨ Expériences B2C</button><button class="chip" data-filter="popup" type="button">🏬 Pop-up stores</button><button class="chip" data-filter="activations" type="button">💥 Activations originales</button></div>
+    <div class="search-wrap">
+      <input type="search" id="search-input" placeholder="Rechercher un mot-clé (marque, thème…)" aria-label="Rechercher">
+    </div>
   </div>
+
+  <section class="top5-section">
+    <h2 class="section-title top5-title"><span class="section-emoji">🏆</span>Top 5 à retenir cette semaine</h2>
+    <div class="top5-grid">
+      
+<article class="card top5-hero" data-theme="marketing" data-search="publicis rafle le budget média mondial de pepsico le 2 septembre 2026, pepsico a confié — sans appel d&#x27;offres formel — la gestion de son compte média mondial (environ 1,9 md$ de dépenses) à publicis groupe, mettant fin à plus de 25 ans de collaboration avec omnicom sur ce périmètre. omnicom reste partenaire sur la création, le sport et les rp. publicis s&#x27;est par ailleurs retiré du pitch média mondial de coca-cola." tabindex="0" role="button" aria-expanded="false" id="card-top5-marketing-0">
+  <div class="card-media"><svg viewBox="0 0 400 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Marketing">
+<rect width="400" height="240" fill="#14213d"/>
+<circle cx="90" cy="120" r="18" fill="#ffffff"/>
+<circle cx="90" cy="120" r="46" fill="none" stroke="#ffffff" stroke-width="4" opacity="0.55"/>
+<circle cx="90" cy="120" r="76" fill="none" stroke="#ffffff" stroke-width="4" opacity="0.3"/>
+<circle cx="90" cy="120" r="106" fill="none" stroke="#ffffff" stroke-width="4" opacity="0.15"/>
+<path d="M230 70 L340 40 L340 200 L230 170 Z" fill="#ffffff" opacity="0.92"/>
+<rect x="200" y="95" width="34" height="50" fill="#ffffff" opacity="0.92"/>
+</svg><span class="badge">📈 Marketing</span></div>
+  <div class="card-body">
+    <h3 class="card-title">Publicis rafle le budget média mondial de PepsiCo</h3>
+    <p class="card-fact">PepsiCo confie sans appel d&#x27;offres son budget média mondial (1,9 Md$) à Publicis, mettant fin à 25 ans de collaboration avec Omnicom sur ce périmètre.</p>
+    <div class="card-more">
+      <p class="card-label">Pourquoi ça compte</p>
+      <p class="card-why">Ce mouvement confirme la consolidation des budgets média mondiaux autour d&#x27;un modèle unique piloté par la donnée et l&#x27;IA, au détriment des architectures multi-agences historiques.</p>
+      <p class="card-label">Action concrète</p>
+      <p class="card-action">💡 Proposer à des clients PME/ETI un mini-audit de leur gouvernance média (fragmentation vs modèle unifié), en s&#x27;inspirant de cette logique de consolidation, même à petite échelle.</p>
+      <p class="card-source">Source : <a href="https://www.marketingdive.com/news/pepsico-hands-global-media-to-publicis-amid-transformation-at-cpg-giant/829556/" target="_blank" rel="noopener noreferrer">Marketing Dive ↗</a></p>
+    </div>
+    <button class="card-toggle" type="button" aria-hidden="true">Voir plus <span class="chevron">▾</span></button>
+  </div>
+</article>
+
+<article class="card top5-hero" data-theme="marketing" data-search="madrid lance « madrid beats », sa plus grande campagne touristique internationale le 2 septembre 2026, la comunidad de madrid a présenté « madrid beats », campagne de 18,8 m€ déployée jusqu&#x27;en décembre 2027 dans 13 pays et plus de 30 villes (287 millions d&#x27;impressions visées). identité signée t.o.t. studio, narration par l&#x27;acteur walton goggins (the white lotus, fallout), lancement calé juste avant le grand prix de f1 d&#x27;espagne à madrid (11-13 septembre)." tabindex="0" role="button" aria-expanded="false" id="card-top5-marketing-1">
+  <div class="card-media"><svg viewBox="0 0 400 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Marketing">
+<rect width="400" height="240" fill="#14213d"/>
+<circle cx="90" cy="120" r="18" fill="#ffffff"/>
+<circle cx="90" cy="120" r="46" fill="none" stroke="#ffffff" stroke-width="4" opacity="0.55"/>
+<circle cx="90" cy="120" r="76" fill="none" stroke="#ffffff" stroke-width="4" opacity="0.3"/>
+<circle cx="90" cy="120" r="106" fill="none" stroke="#ffffff" stroke-width="4" opacity="0.15"/>
+<path d="M230 70 L340 40 L340 200 L230 170 Z" fill="#ffffff" opacity="0.92"/>
+<rect x="200" y="95" width="34" height="50" fill="#ffffff" opacity="0.92"/>
+</svg><span class="badge">📈 Marketing</span></div>
+  <div class="card-body">
+    <h3 class="card-title">Madrid lance « Madrid Beats », sa plus grande campagne touristique internationale</h3>
+    <p class="card-fact">Madrid lance « Madrid Beats », campagne touristique de 18,8 M€ dans 13 pays, calée sur l&#x27;arrivée de la F1 dans la capitale.</p>
+    <div class="card-more">
+      <p class="card-label">Pourquoi ça compte</p>
+      <p class="card-why">Cas d&#x27;école de city branding orienté data (ciblage de voyageurs à fort pouvoir d&#x27;achat) synchronisé avec un temps fort sportif mondial, plutôt qu&#x27;une campagne institutionnelle isolée.</p>
+      <p class="card-label">Action concrète</p>
+      <p class="card-action">💡 Reprendre la mécanique — icône de marque + storytelling incarné par une figure culturelle + synchronisation événementielle — pour une campagne de marque territoriale ou institutionnelle.</p>
+      <p class="card-source">Source : <a href="https://www.marketingdirecto.com/creacion/campanas-de-marketing/madrid-lanza-madrid-beats-presentacion-internacional-llevar-estilo-vida-madrileno-mundo" target="_blank" rel="noopener noreferrer">MarketingDirecto ↗</a></p>
+    </div>
+    <button class="card-toggle" type="button" aria-hidden="true">Voir plus <span class="chevron">▾</span></button>
+  </div>
+</article>
+
+<article class="card top5-hero" data-theme="branding" data-search="eurail disparaît au profit d&#x27;interrail à l&#x27;échelle mondiale depuis le 10 septembre 2026, la marque eurail (destinée aux voyageurs hors europe) est retirée après plus de 60 ans d&#x27;existence : tous les pass sont désormais vendus sous le seul nom interrail, avec une nouvelle plateforme de marque mondiale « the interrail effect », conçue par l&#x27;agence we are pi." tabindex="0" role="button" aria-expanded="false" id="card-top5-branding-2">
+  <div class="card-media"><svg viewBox="0 0 400 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Branding">
+<rect width="400" height="240" fill="#1e1e1e"/>
+<circle cx="160" cy="120" r="72" fill="none" stroke="#ffffff" stroke-width="5"/>
+<circle cx="250" cy="120" r="72" fill="none" stroke="#14213d" stroke-width="10"/>
+<circle cx="205" cy="120" r="16" fill="#ffffff"/>
+</svg><span class="badge">🎨 Branding</span></div>
+  <div class="card-body">
+    <h3 class="card-title">Eurail disparaît au profit d&#x27;Interrail à l&#x27;échelle mondiale</h3>
+    <p class="card-fact">Après 60 ans, Eurail disparaît : toute l&#x27;offre passe sous le seul nom Interrail, avec une plateforme de marque mondiale unifiée.</p>
+    <div class="card-more">
+      <p class="card-label">Pourquoi ça compte</p>
+      <p class="card-why">Cas concret de simplification de portefeuille de marques à l&#x27;échelle mondiale — un seul nom, une seule promesse (l&#x27;expérience du voyage plutôt que le pass ferroviaire).</p>
+      <p class="card-label">Action concrète</p>
+      <p class="card-action">💡 Pour un client multi-marques/multi-pays, challenger la pertinence de conserver des noms différents selon les marchés et chiffrer le gain de notoriété d&#x27;une architecture de marque unifiée.</p>
+      <p class="card-source">Source : <a href="https://www.traveldailynews.com/ground-transportation/eurail-adopts-interrail-name-globally-with-new-brand-identity/" target="_blank" rel="noopener noreferrer">Travel Daily News ↗</a></p>
+    </div>
+    <button class="card-toggle" type="button" aria-hidden="true">Voir plus <span class="chevron">▾</span></button>
+  </div>
+</article>
+
+<article class="card top5-hero" data-theme="b2c" data-search="nike x one piece : un pop-up qui fait basculer l&#x27;acheteur dans le manga nike a lancé sa collection air max plus « devil fruits » inspirée du manga one piece, avec un pop-up mondial baptisé « dr. b&#x27;s research lab » ouvert à harajuku (tokyo) début septembre, avant un déploiement dans plusieurs villes d&#x27;asie puis une arrivée en europe et aux états-unis le 19 septembre. le décor plonge les visiteurs dans l&#x27;univers scientifique et fantastique du manga plutôt que dans une simple présentation produit." tabindex="0" role="button" aria-expanded="false" id="card-top5-b2c-3">
+  <div class="card-media"><svg viewBox="0 0 400 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Experiences B2C">
+<rect width="400" height="240" fill="#1e1e1e"/>
+<g fill="#ffffff">
+<polygon points="120,50 132,90 172,90 140,114 152,154 120,130 88,154 100,114 68,90 108,90"/>
+</g>
+<g fill="#14213d" stroke="#ffffff" stroke-width="3">
+<polygon points="280,110 292,140 322,140 298,158 308,188 280,170 252,188 262,158 238,140 268,140"/>
+</g>
+</svg><span class="badge">✨ Expériences B2C</span></div>
+  <div class="card-body">
+    <h3 class="card-title">Nike x One Piece : un pop-up qui fait basculer l&#x27;acheteur dans le manga</h3>
+    <p class="card-fact">Nike fait entrer ses acheteurs dans l&#x27;univers du manga One Piece avec le pop-up mondial « Dr. B&#x27;s Research Lab » — le world-building remplace le stand produit.</p>
+    <div class="card-more">
+      <p class="card-label">Pourquoi ça compte</p>
+      <p class="card-why">Nike illustre la bascule du pop-up produit vers le « world-building » narratif complet — le client n&#x27;achète pas une sneaker, il entre dans la fiction dont elle est issue, ce qui démultiplie le potentiel de contenu généré par les visiteurs.</p>
+      <p class="card-label">Action concrète</p>
+      <p class="card-action">💡 Pour un lancement produit client, construire le décor du pop-up autour d&#x27;un univers narratif emprunté (collaboration IP, fiction, esthétique culte) plutôt que du simple habillage aux couleurs de la marque.</p>
+      <p class="card-source">Source : <a href="https://about.nike.com/en/newsroom/releases/nike-one-piece-collection-transforms-imagination-into-motion-for-adventurers-everywhere" target="_blank" rel="noopener noreferrer">Nike Newsroom ↗</a></p>
+    </div>
+    <button class="card-toggle" type="button" aria-hidden="true">Voir plus <span class="chevron">▾</span></button>
+  </div>
+</article>
+
+<article class="card top5-hero" data-theme="activations" data-search="audi transforme la plaza de colón en musée éphémère de la compétition automobile du 4 au 12 septembre, audi a installé plaza de colón (madrid) une exposition gratuite reliant presque neuf décennies d&#x27;histoire en compétition à son entrée en formule 1, avec pour pièce maîtresse la « curva monumental », réplique grandeur nature d&#x27;un virage du nouveau circuit madring, et un photobooth ia générant du contenu personnalisé." tabindex="0" role="button" aria-expanded="false" id="card-top5-activations-4">
+  <div class="card-media"><svg viewBox="0 0 400 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Activations originales">
+<rect width="400" height="240" fill="#1e1e1e"/>
+<polygon points="210,30 170,140 205,140 175,215 260,105 220,105 250,30" fill="#ffffff"/>
+<circle cx="330" cy="60" r="10" fill="#14213d" stroke="#ffffff" stroke-width="3"/>
+<circle cx="60" cy="180" r="14" fill="none" stroke="#ffffff" stroke-width="4" opacity="0.6"/>
+</svg><span class="badge">💥 Activations originales</span></div>
+  <div class="card-body">
+    <h3 class="card-title">Audi transforme la Plaza de Colón en musée éphémère de la compétition automobile</h3>
+    <p class="card-fact">Audi installe un musée éphémère gratuit Plaza de Colón à Madrid pour célébrer son entrée en F1 — la légitimité patrimoniale plutôt que le placement produit.</p>
+    <div class="card-more">
+      <p class="card-label">Pourquoi ça compte</p>
+      <p class="card-why">Au lieu d&#x27;un simple stand de sponsoring, Audi crée une destination culturelle gratuite en plein cœur de ville — un modèle de « brand museum éphémère » qui construit de la légitimité patrimoniale plutôt que du pur placement produit.</p>
+      <p class="card-label">Action concrète</p>
+      <p class="card-action">💡 Pour une marque avec un héritage fort, concevoir une exposition gratuite en espace public plutôt qu&#x27;un stand événementiel classique — avec un point de capture de contenu pour maximiser la diffusion organique.</p>
+      <p class="card-source">Source : <a href="https://www.marketingnews.es/marcas/noticia/1194990054305/audi-lleva-la-formula-1-al-centro-de-madrid-con-una-gran-experiencia-en-la-plaza-de-colon.1.html" target="_blank" rel="noopener noreferrer">MarketingNews ↗</a></p>
+    </div>
+    <button class="card-toggle" type="button" aria-hidden="true">Voir plus <span class="chevron">▾</span></button>
+  </div>
+</article>
+    </div>
+  </section>
+
+  
+<section class="theme-section" id="section-marketing" data-theme-section="marketing">
+  <h2 class="section-title"><span class="section-emoji">📈</span>Marketing</h2>
+  <div class="card-grid">
+    
+<article class="card" data-theme="marketing" data-search="publicis rafle le budget média mondial de pepsico le 2 septembre 2026, pepsico a confié — sans appel d&#x27;offres formel — la gestion de son compte média mondial (environ 1,9 md$ de dépenses) à publicis groupe, mettant fin à plus de 25 ans de collaboration avec omnicom sur ce périmètre. omnicom reste partenaire sur la création, le sport et les rp. publicis s&#x27;est par ailleurs retiré du pitch média mondial de coca-cola. ce mouvement confirme la consolidation des budgets média mondiaux autour d&#x27;un modèle unique piloté par la donnée et l&#x27;ia, au détriment des architectures multi-agences historiques. proposer à des clients pme/eti un mini-audit de leur gouvernance média (fragmentation vs modèle unifié), en s&#x27;inspirant de cette logique de consolidation, même à petite échelle." tabindex="0" role="button" aria-expanded="false" id="card-marketing-0">
+  <div class="card-media"><svg viewBox="0 0 400 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Marketing">
+<rect width="400" height="240" fill="#14213d"/>
+<circle cx="90" cy="120" r="18" fill="#ffffff"/>
+<circle cx="90" cy="120" r="46" fill="none" stroke="#ffffff" stroke-width="4" opacity="0.55"/>
+<circle cx="90" cy="120" r="76" fill="none" stroke="#ffffff" stroke-width="4" opacity="0.3"/>
+<circle cx="90" cy="120" r="106" fill="none" stroke="#ffffff" stroke-width="4" opacity="0.15"/>
+<path d="M230 70 L340 40 L340 200 L230 170 Z" fill="#ffffff" opacity="0.92"/>
+<rect x="200" y="95" width="34" height="50" fill="#ffffff" opacity="0.92"/>
+</svg><span class="badge">📈 Marketing</span></div>
+  <div class="card-body">
+    <h3 class="card-title">Publicis rafle le budget média mondial de PepsiCo</h3>
+    <p class="card-fact">Le 2 septembre 2026, PepsiCo a confié — sans appel d&#x27;offres formel — la gestion de son compte média mondial (environ 1,9 Md$ de dépenses) à Publicis Groupe, mettant fin à plus de 25 ans de collaboration avec Omnicom sur ce périmètre. Omnicom reste partenaire sur la création, le sport et les RP. Publicis s&#x27;est par ailleurs retiré du pitch média mondial de Coca-Cola.</p>
+    <div class="card-more">
+      <p class="card-label">Pourquoi ça compte</p>
+      <p class="card-why">Ce mouvement confirme la consolidation des budgets média mondiaux autour d&#x27;un modèle unique piloté par la donnée et l&#x27;IA, au détriment des architectures multi-agences historiques.</p>
+      <p class="card-label">Action concrète</p>
+      <p class="card-action">💡 Proposer à des clients PME/ETI un mini-audit de leur gouvernance média (fragmentation vs modèle unifié), en s&#x27;inspirant de cette logique de consolidation, même à petite échelle.</p>
+      <p class="card-source">Source : <a href="https://www.marketingdive.com/news/pepsico-hands-global-media-to-publicis-amid-transformation-at-cpg-giant/829556/" target="_blank" rel="noopener noreferrer">Marketing Dive ↗</a></p>
+    </div>
+    <button class="card-toggle" type="button" aria-hidden="true">Voir plus <span class="chevron">▾</span></button>
+  </div>
+</article>
+
+<article class="card" data-theme="marketing" data-search="google et microsoft basculent la recherche payante vers l&#x27;ia, sans option de refus depuis le 1er septembre 2026, google migre automatiquement les campagnes search en « broad match » et les assets générés automatiquement vers son système piloté par ia « ai max » ; microsoft ads a fait de même par défaut sur ses nouvelles campagnes search. des annonceurs rapportent avoir découvert le changement du jour au lendemain. le contrôle manuel du ciblage et des créas en recherche payante s&#x27;efface au profit de systèmes ia « boîte noire », déplaçant le rôle du media-buyer vers la supervision de la donnée plutôt que le réglage fin. vérifier avec chaque client si ses comptes google/microsoft ads ont basculé vers l&#x27;ia par défaut, auditer les nouveaux réglages de correspondance et revalider les exclusions de marque." tabindex="0" role="button" aria-expanded="false" id="card-marketing-1">
+  <div class="card-media"><svg viewBox="0 0 400 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Marketing">
+<rect width="400" height="240" fill="#14213d"/>
+<circle cx="90" cy="120" r="18" fill="#ffffff"/>
+<circle cx="90" cy="120" r="46" fill="none" stroke="#ffffff" stroke-width="4" opacity="0.55"/>
+<circle cx="90" cy="120" r="76" fill="none" stroke="#ffffff" stroke-width="4" opacity="0.3"/>
+<circle cx="90" cy="120" r="106" fill="none" stroke="#ffffff" stroke-width="4" opacity="0.15"/>
+<path d="M230 70 L340 40 L340 200 L230 170 Z" fill="#ffffff" opacity="0.92"/>
+<rect x="200" y="95" width="34" height="50" fill="#ffffff" opacity="0.92"/>
+</svg><span class="badge">📈 Marketing</span></div>
+  <div class="card-body">
+    <h3 class="card-title">Google et Microsoft basculent la recherche payante vers l&#x27;IA, sans option de refus</h3>
+    <p class="card-fact">Depuis le 1er septembre 2026, Google migre automatiquement les campagnes Search en « Broad Match » et les assets générés automatiquement vers son système piloté par IA « AI Max » ; Microsoft Ads a fait de même par défaut sur ses nouvelles campagnes Search. Des annonceurs rapportent avoir découvert le changement du jour au lendemain.</p>
+    <div class="card-more">
+      <p class="card-label">Pourquoi ça compte</p>
+      <p class="card-why">Le contrôle manuel du ciblage et des créas en recherche payante s&#x27;efface au profit de systèmes IA « boîte noire », déplaçant le rôle du media-buyer vers la supervision de la donnée plutôt que le réglage fin.</p>
+      <p class="card-label">Action concrète</p>
+      <p class="card-action">💡 Vérifier avec chaque client si ses comptes Google/Microsoft Ads ont basculé vers l&#x27;IA par défaut, auditer les nouveaux réglages de correspondance et revalider les exclusions de marque.</p>
+      <p class="card-source">Source : <a href="https://searchengineland.com/google-sets-ai-max-migration-timeline-for-search-campaigns-485006" target="_blank" rel="noopener noreferrer">Search Engine Land ↗</a></p>
+    </div>
+    <button class="card-toggle" type="button" aria-hidden="true">Voir plus <span class="chevron">▾</span></button>
+  </div>
+</article>
+
+<article class="card" data-theme="marketing" data-search="chatgpt ads franchit le milliard de dollars et arrive en europe fin août/début septembre 2026, openai a annoncé que chatgpt ads atteint un rythme annualisé d&#x27;1 md$ en moins de 200 jours, et ouvre l&#x27;achat direct via ads manager à l&#x27;europe, l&#x27;inde, le moyen-orient et l&#x27;afrique du nord. un nouveau canal média conversationnel s&#x27;ouvre aux annonceurs européens, potentiellement concurrent de la recherche google pour capter l&#x27;intention d&#x27;achat en amont. tester un pilote chatgpt ads à petit budget pour un client b2c, en travaillant en parallèle la visibilité de la marque dans les réponses ia (optimisation « geo »)." tabindex="0" role="button" aria-expanded="false" id="card-marketing-2">
+  <div class="card-media"><svg viewBox="0 0 400 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Marketing">
+<rect width="400" height="240" fill="#14213d"/>
+<circle cx="90" cy="120" r="18" fill="#ffffff"/>
+<circle cx="90" cy="120" r="46" fill="none" stroke="#ffffff" stroke-width="4" opacity="0.55"/>
+<circle cx="90" cy="120" r="76" fill="none" stroke="#ffffff" stroke-width="4" opacity="0.3"/>
+<circle cx="90" cy="120" r="106" fill="none" stroke="#ffffff" stroke-width="4" opacity="0.15"/>
+<path d="M230 70 L340 40 L340 200 L230 170 Z" fill="#ffffff" opacity="0.92"/>
+<rect x="200" y="95" width="34" height="50" fill="#ffffff" opacity="0.92"/>
+</svg><span class="badge">📈 Marketing</span></div>
+  <div class="card-body">
+    <h3 class="card-title">ChatGPT Ads franchit le milliard de dollars et arrive en Europe</h3>
+    <p class="card-fact">Fin août/début septembre 2026, OpenAI a annoncé que ChatGPT Ads atteint un rythme annualisé d&#x27;1 Md$ en moins de 200 jours, et ouvre l&#x27;achat direct via Ads Manager à l&#x27;Europe, l&#x27;Inde, le Moyen-Orient et l&#x27;Afrique du Nord.</p>
+    <div class="card-more">
+      <p class="card-label">Pourquoi ça compte</p>
+      <p class="card-why">Un nouveau canal média conversationnel s&#x27;ouvre aux annonceurs européens, potentiellement concurrent de la recherche Google pour capter l&#x27;intention d&#x27;achat en amont.</p>
+      <p class="card-label">Action concrète</p>
+      <p class="card-action">💡 Tester un pilote ChatGPT Ads à petit budget pour un client B2C, en travaillant en parallèle la visibilité de la marque dans les réponses IA (optimisation « GEO »).</p>
+      <p class="card-source">Source : <a href="https://www.cnbc.com/2026/08/31/open-ai-chatgpt-ads-revenue.html" target="_blank" rel="noopener noreferrer">CNBC ↗</a></p>
+    </div>
+    <button class="card-toggle" type="button" aria-hidden="true">Voir plus <span class="chevron">▾</span></button>
+  </div>
+</article>
+
+<article class="card" data-theme="marketing" data-search="l&#x27;ue démarre ses premières inspections ia dans le marketing, la finance et les rh en septembre 2026, l&#x27;office européen de l&#x27;ia et 24 autorités nationales (dont l&#x27;espagnole aesia, la française cnil, l&#x27;allemande bfdi) lancent leur première vague de contrôles de conformité à l&#x27;ai act, ciblant en priorité le tri automatisé de cv, le scoring de crédit et les outils ia de triage en santé privée. après l&#x27;échéance du 2 août 2026 sur la documentation technique des systèmes à haut risque, on passe d&#x27;une logique déclarative à des contrôles réels, avec sanctions possibles — un sujet direct pour toute agence utilisant l&#x27;ia dans le scoring client ou le recrutement. proposer aux clients utilisant l&#x27;ia pour la personnalisation, le scoring ou le recrutement un état des lieux rapide de conformité ai act avant un éventuel contrôle." tabindex="0" role="button" aria-expanded="false" id="card-marketing-3">
+  <div class="card-media"><svg viewBox="0 0 400 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Marketing">
+<rect width="400" height="240" fill="#14213d"/>
+<circle cx="90" cy="120" r="18" fill="#ffffff"/>
+<circle cx="90" cy="120" r="46" fill="none" stroke="#ffffff" stroke-width="4" opacity="0.55"/>
+<circle cx="90" cy="120" r="76" fill="none" stroke="#ffffff" stroke-width="4" opacity="0.3"/>
+<circle cx="90" cy="120" r="106" fill="none" stroke="#ffffff" stroke-width="4" opacity="0.15"/>
+<path d="M230 70 L340 40 L340 200 L230 170 Z" fill="#ffffff" opacity="0.92"/>
+<rect x="200" y="95" width="34" height="50" fill="#ffffff" opacity="0.92"/>
+</svg><span class="badge">📈 Marketing</span></div>
+  <div class="card-body">
+    <h3 class="card-title">L&#x27;UE démarre ses premières inspections IA dans le marketing, la finance et les RH</h3>
+    <p class="card-fact">En septembre 2026, l&#x27;Office européen de l&#x27;IA et 24 autorités nationales (dont l&#x27;espagnole AESIA, la française CNIL, l&#x27;allemande BfDI) lancent leur première vague de contrôles de conformité à l&#x27;AI Act, ciblant en priorité le tri automatisé de CV, le scoring de crédit et les outils IA de triage en santé privée.</p>
+    <div class="card-more">
+      <p class="card-label">Pourquoi ça compte</p>
+      <p class="card-why">Après l&#x27;échéance du 2 août 2026 sur la documentation technique des systèmes à haut risque, on passe d&#x27;une logique déclarative à des contrôles réels, avec sanctions possibles — un sujet direct pour toute agence utilisant l&#x27;IA dans le scoring client ou le recrutement.</p>
+      <p class="card-label">Action concrète</p>
+      <p class="card-action">💡 Proposer aux clients utilisant l&#x27;IA pour la personnalisation, le scoring ou le recrutement un état des lieux rapide de conformité AI Act avant un éventuel contrôle.</p>
+      <p class="card-source">Source : <a href="https://cubbbix.com/blog/ai-regulation-september-2026-global-update" target="_blank" rel="noopener noreferrer">Cubbbix ↗</a></p>
+    </div>
+    <button class="card-toggle" type="button" aria-hidden="true">Voir plus <span class="chevron">▾</span></button>
+  </div>
+</article>
+
+<article class="card" data-theme="marketing" data-search="madrid lance « madrid beats », sa plus grande campagne touristique internationale le 2 septembre 2026, la comunidad de madrid a présenté « madrid beats », campagne de 18,8 m€ déployée jusqu&#x27;en décembre 2027 dans 13 pays et plus de 30 villes (287 millions d&#x27;impressions visées). identité signée t.o.t. studio, narration par l&#x27;acteur walton goggins (the white lotus, fallout), lancement calé juste avant le grand prix de f1 d&#x27;espagne à madrid (11-13 septembre). cas d&#x27;école de city branding orienté data (ciblage de voyageurs à fort pouvoir d&#x27;achat) synchronisé avec un temps fort sportif mondial, plutôt qu&#x27;une campagne institutionnelle isolée. reprendre la mécanique — icône de marque + storytelling incarné par une figure culturelle + synchronisation événementielle — pour une campagne de marque territoriale ou institutionnelle." tabindex="0" role="button" aria-expanded="false" id="card-marketing-4">
+  <div class="card-media"><svg viewBox="0 0 400 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Marketing">
+<rect width="400" height="240" fill="#14213d"/>
+<circle cx="90" cy="120" r="18" fill="#ffffff"/>
+<circle cx="90" cy="120" r="46" fill="none" stroke="#ffffff" stroke-width="4" opacity="0.55"/>
+<circle cx="90" cy="120" r="76" fill="none" stroke="#ffffff" stroke-width="4" opacity="0.3"/>
+<circle cx="90" cy="120" r="106" fill="none" stroke="#ffffff" stroke-width="4" opacity="0.15"/>
+<path d="M230 70 L340 40 L340 200 L230 170 Z" fill="#ffffff" opacity="0.92"/>
+<rect x="200" y="95" width="34" height="50" fill="#ffffff" opacity="0.92"/>
+</svg><span class="badge">📈 Marketing</span></div>
+  <div class="card-body">
+    <h3 class="card-title">Madrid lance « Madrid Beats », sa plus grande campagne touristique internationale</h3>
+    <p class="card-fact">Le 2 septembre 2026, la Comunidad de Madrid a présenté « Madrid Beats », campagne de 18,8 M€ déployée jusqu&#x27;en décembre 2027 dans 13 pays et plus de 30 villes (287 millions d&#x27;impressions visées). Identité signée T.O.T. Studio, narration par l&#x27;acteur Walton Goggins (The White Lotus, Fallout), lancement calé juste avant le Grand Prix de F1 d&#x27;Espagne à Madrid (11-13 septembre).</p>
+    <div class="card-more">
+      <p class="card-label">Pourquoi ça compte</p>
+      <p class="card-why">Cas d&#x27;école de city branding orienté data (ciblage de voyageurs à fort pouvoir d&#x27;achat) synchronisé avec un temps fort sportif mondial, plutôt qu&#x27;une campagne institutionnelle isolée.</p>
+      <p class="card-label">Action concrète</p>
+      <p class="card-action">💡 Reprendre la mécanique — icône de marque + storytelling incarné par une figure culturelle + synchronisation événementielle — pour une campagne de marque territoriale ou institutionnelle.</p>
+      <p class="card-source">Source : <a href="https://www.marketingdirecto.com/creacion/campanas-de-marketing/madrid-lanza-madrid-beats-presentacion-internacional-llevar-estilo-vida-madrileno-mundo" target="_blank" rel="noopener noreferrer">MarketingDirecto ↗</a></p>
+    </div>
+    <button class="card-toggle" type="button" aria-hidden="true">Voir plus <span class="chevron">▾</span></button>
+  </div>
+</article>
+  </div>
+</section>
+
+<section class="theme-section" id="section-branding" data-theme-section="branding">
+  <h2 class="section-title"><span class="section-emoji">🎨</span>Branding</h2>
+  <div class="card-grid">
+    
+<article class="card" data-theme="branding" data-search="aj bell dévoile sa nouvelle identité de marque le 5 septembre 2026, le courtier britannique aj bell a intégré sur sa plateforme grand public un nouveau logo (symbole en forme de cloche), une nouvelle typographie et une nouvelle palette, en soutien à sa plateforme de marque « feel good investing ». le déploiement se poursuit sur le site du groupe et la plateforme conseillers courant 2027. illustre une approche « brand platform » où l&#x27;identité visuelle amplifie une signature déjà installée (jingle, sponsoring) plutôt que de rompre avec l&#x27;existant. pour un rebranding client, valider d&#x27;abord la plateforme de marque et le territoire verbal, et ne faire évoluer le logo qu&#x27;en second temps, aligné sur une preuve de marque déjà reconnue." tabindex="0" role="button" aria-expanded="false" id="card-branding-0">
+  <div class="card-media"><svg viewBox="0 0 400 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Branding">
+<rect width="400" height="240" fill="#1e1e1e"/>
+<circle cx="160" cy="120" r="72" fill="none" stroke="#ffffff" stroke-width="5"/>
+<circle cx="250" cy="120" r="72" fill="none" stroke="#14213d" stroke-width="10"/>
+<circle cx="205" cy="120" r="16" fill="#ffffff"/>
+</svg><span class="badge">🎨 Branding</span></div>
+  <div class="card-body">
+    <h3 class="card-title">AJ Bell dévoile sa nouvelle identité de marque</h3>
+    <p class="card-fact">Le 5 septembre 2026, le courtier britannique AJ Bell a intégré sur sa plateforme grand public un nouveau logo (symbole en forme de cloche), une nouvelle typographie et une nouvelle palette, en soutien à sa plateforme de marque « Feel Good Investing ». Le déploiement se poursuit sur le site du groupe et la plateforme conseillers courant 2027.</p>
+    <div class="card-more">
+      <p class="card-label">Pourquoi ça compte</p>
+      <p class="card-why">Illustre une approche « brand platform » où l&#x27;identité visuelle amplifie une signature déjà installée (jingle, sponsoring) plutôt que de rompre avec l&#x27;existant.</p>
+      <p class="card-label">Action concrète</p>
+      <p class="card-action">💡 Pour un rebranding client, valider d&#x27;abord la plateforme de marque et le territoire verbal, et ne faire évoluer le logo qu&#x27;en second temps, aligné sur une preuve de marque déjà reconnue.</p>
+      <p class="card-source">Source : <a href="https://www.international-adviser.com/aj-bell-unveils-new-brand-identity/" target="_blank" rel="noopener noreferrer">International Adviser ↗</a></p>
+    </div>
+    <button class="card-toggle" type="button" aria-hidden="true">Voir plus <span class="chevron">▾</span></button>
+  </div>
+</article>
+
+<article class="card" data-theme="branding" data-search="eurail disparaît au profit d&#x27;interrail à l&#x27;échelle mondiale depuis le 10 septembre 2026, la marque eurail (destinée aux voyageurs hors europe) est retirée après plus de 60 ans d&#x27;existence : tous les pass sont désormais vendus sous le seul nom interrail, avec une nouvelle plateforme de marque mondiale « the interrail effect », conçue par l&#x27;agence we are pi. cas concret de simplification de portefeuille de marques à l&#x27;échelle mondiale — un seul nom, une seule promesse (l&#x27;expérience du voyage plutôt que le pass ferroviaire). pour un client multi-marques/multi-pays, challenger la pertinence de conserver des noms différents selon les marchés et chiffrer le gain de notoriété d&#x27;une architecture de marque unifiée." tabindex="0" role="button" aria-expanded="false" id="card-branding-1">
+  <div class="card-media"><svg viewBox="0 0 400 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Branding">
+<rect width="400" height="240" fill="#1e1e1e"/>
+<circle cx="160" cy="120" r="72" fill="none" stroke="#ffffff" stroke-width="5"/>
+<circle cx="250" cy="120" r="72" fill="none" stroke="#14213d" stroke-width="10"/>
+<circle cx="205" cy="120" r="16" fill="#ffffff"/>
+</svg><span class="badge">🎨 Branding</span></div>
+  <div class="card-body">
+    <h3 class="card-title">Eurail disparaît au profit d&#x27;Interrail à l&#x27;échelle mondiale</h3>
+    <p class="card-fact">Depuis le 10 septembre 2026, la marque Eurail (destinée aux voyageurs hors Europe) est retirée après plus de 60 ans d&#x27;existence : tous les pass sont désormais vendus sous le seul nom Interrail, avec une nouvelle plateforme de marque mondiale « The Interrail Effect », conçue par l&#x27;agence We Are Pi.</p>
+    <div class="card-more">
+      <p class="card-label">Pourquoi ça compte</p>
+      <p class="card-why">Cas concret de simplification de portefeuille de marques à l&#x27;échelle mondiale — un seul nom, une seule promesse (l&#x27;expérience du voyage plutôt que le pass ferroviaire).</p>
+      <p class="card-label">Action concrète</p>
+      <p class="card-action">💡 Pour un client multi-marques/multi-pays, challenger la pertinence de conserver des noms différents selon les marchés et chiffrer le gain de notoriété d&#x27;une architecture de marque unifiée.</p>
+      <p class="card-source">Source : <a href="https://www.traveldailynews.com/ground-transportation/eurail-adopts-interrail-name-globally-with-new-brand-identity/" target="_blank" rel="noopener noreferrer">Travel Daily News ↗</a></p>
+    </div>
+    <button class="card-toggle" type="button" aria-hidden="true">Voir plus <span class="chevron">▾</span></button>
+  </div>
+</article>
+
+<article class="card" data-theme="branding" data-search="zairon : une nouvelle marque espagnole de motos et scooters se lance le 10 septembre 2026 à madrid, la marque espagnole zairon (dirigée par un ancien responsable de piaggio espagne) a présenté son projet : scooters et motos fabriqués en asie mais pensés et positionnés depuis l&#x27;espagne, avec une logique inspirée de la « fast fashion » pour adapter rapidement coloris et finitions. preuve que le modèle « fast fashion » (cycles courts, personnalisation rapide) s&#x27;exporte au-delà du textile vers d&#x27;autres catégories produit, misant sur l&#x27;agilité de marque plutôt que sur l&#x27;héritage. explorer avec des clients produits physiques comment raccourcir les cycles de renouvellement visuel (coloris, éditions limitées) pour dynamiser une marque sans refonte totale." tabindex="0" role="button" aria-expanded="false" id="card-branding-2">
+  <div class="card-media"><svg viewBox="0 0 400 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Branding">
+<rect width="400" height="240" fill="#1e1e1e"/>
+<circle cx="160" cy="120" r="72" fill="none" stroke="#ffffff" stroke-width="5"/>
+<circle cx="250" cy="120" r="72" fill="none" stroke="#14213d" stroke-width="10"/>
+<circle cx="205" cy="120" r="16" fill="#ffffff"/>
+</svg><span class="badge">🎨 Branding</span></div>
+  <div class="card-body">
+    <h3 class="card-title">Zairon : une nouvelle marque espagnole de motos et scooters se lance</h3>
+    <p class="card-fact">Le 10 septembre 2026 à Madrid, la marque espagnole Zairon (dirigée par un ancien responsable de Piaggio Espagne) a présenté son projet : scooters et motos fabriqués en Asie mais pensés et positionnés depuis l&#x27;Espagne, avec une logique inspirée de la « fast fashion » pour adapter rapidement coloris et finitions.</p>
+    <div class="card-more">
+      <p class="card-label">Pourquoi ça compte</p>
+      <p class="card-why">Preuve que le modèle « fast fashion » (cycles courts, personnalisation rapide) s&#x27;exporte au-delà du textile vers d&#x27;autres catégories produit, misant sur l&#x27;agilité de marque plutôt que sur l&#x27;héritage.</p>
+      <p class="card-label">Action concrète</p>
+      <p class="card-action">💡 Explorer avec des clients produits physiques comment raccourcir les cycles de renouvellement visuel (coloris, éditions limitées) pour dynamiser une marque sans refonte totale.</p>
+      <p class="card-source">Source : <a href="https://www.motociclismo.es/noticias/zairon-nueva-marca-espanola-tiene-ya-dos-motos-en-preventa-por-1990-2390-euros_332086_102.html" target="_blank" rel="noopener noreferrer">Motociclismo ↗</a></p>
+    </div>
+    <button class="card-toggle" type="button" aria-hidden="true">Voir plus <span class="chevron">▾</span></button>
+  </div>
+</article>
+
+<article class="card" data-theme="branding" data-search="comafi (argentine) change d&#x27;image pour incarner une nouvelle ambition le 10 septembre 2026, la banque argentine comafi (plus de 40 ans d&#x27;existence) a dévoilé une nouvelle identité conçue avec futurebrand, autour d&#x27;un symbole évoquant un voilier — agilité et solidité — et de la signature « a la altura de tus desafíos », pour accompagner sa croissance vers les entreprises et les marchés de capitaux. exemple mondial instructif : chaque choix visuel (symbole, couleur, signature) traduit un attribut stratégique business précis, pas un simple lifting esthétique. utiliser cette grille comme trame de brief pour un repositionnement client — faire correspondre chaque élément visuel à un attribut stratégique explicite." tabindex="0" role="button" aria-expanded="false" id="card-branding-3">
+  <div class="card-media"><svg viewBox="0 0 400 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Branding">
+<rect width="400" height="240" fill="#1e1e1e"/>
+<circle cx="160" cy="120" r="72" fill="none" stroke="#ffffff" stroke-width="5"/>
+<circle cx="250" cy="120" r="72" fill="none" stroke="#14213d" stroke-width="10"/>
+<circle cx="205" cy="120" r="16" fill="#ffffff"/>
+</svg><span class="badge">🎨 Branding</span></div>
+  <div class="card-body">
+    <h3 class="card-title">Comafi (Argentine) change d&#x27;image pour incarner une nouvelle ambition</h3>
+    <p class="card-fact">Le 10 septembre 2026, la banque argentine Comafi (plus de 40 ans d&#x27;existence) a dévoilé une nouvelle identité conçue avec FutureBrand, autour d&#x27;un symbole évoquant un voilier — agilité et solidité — et de la signature « A la altura de tus desafíos », pour accompagner sa croissance vers les entreprises et les marchés de capitaux.</p>
+    <div class="card-more">
+      <p class="card-label">Pourquoi ça compte</p>
+      <p class="card-why">Exemple mondial instructif : chaque choix visuel (symbole, couleur, signature) traduit un attribut stratégique business précis, pas un simple lifting esthétique.</p>
+      <p class="card-label">Action concrète</p>
+      <p class="card-action">💡 Utiliser cette grille comme trame de brief pour un repositionnement client — faire correspondre chaque élément visuel à un attribut stratégique explicite.</p>
+      <p class="card-source">Source : <a href="https://www.lanacion.com.ar/economia/negocios/comafi-cambia-su-imagen-y-consolida-su-estrategia-para-crecer-en-empresas-y-mercado-de-capitales-nid10092026/" target="_blank" rel="noopener noreferrer">La Nación ↗</a></p>
+    </div>
+    <button class="card-toggle" type="button" aria-hidden="true">Voir plus <span class="chevron">▾</span></button>
+  </div>
+</article>
+
+<article class="card" data-theme="branding" data-search="le branding s&#x27;impose comme levier stratégique et économique en europe un article publié le 11 septembre 2026 par creativos online souligne comment marques établies et émergentes en europe multiplient les refontes stratégiques, et comment le licensing et le co-branding s&#x27;imposent comme des modèles de croissance à part entière plutôt que de simples opérations marketing ponctuelles. confirme une bascule où la marque devient un actif économique directement monétisable (licences, collaborations), un argument fort pour justifier des budgets branding auprès des directions financières. ajouter un volet « licensing / co-branding » dans les propositions de valorisation de marque pour les clients pme, en identifiant des partenaires de collaboration potentiels dans leur écosystème." tabindex="0" role="button" aria-expanded="false" id="card-branding-4">
+  <div class="card-media"><svg viewBox="0 0 400 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Branding">
+<rect width="400" height="240" fill="#1e1e1e"/>
+<circle cx="160" cy="120" r="72" fill="none" stroke="#ffffff" stroke-width="5"/>
+<circle cx="250" cy="120" r="72" fill="none" stroke="#14213d" stroke-width="10"/>
+<circle cx="205" cy="120" r="16" fill="#ffffff"/>
+</svg><span class="badge">🎨 Branding</span></div>
+  <div class="card-body">
+    <h3 class="card-title">Le branding s&#x27;impose comme levier stratégique et économique en Europe</h3>
+    <p class="card-fact">Un article publié le 11 septembre 2026 par Creativos Online souligne comment marques établies et émergentes en Europe multiplient les refontes stratégiques, et comment le licensing et le co-branding s&#x27;imposent comme des modèles de croissance à part entière plutôt que de simples opérations marketing ponctuelles.</p>
+    <div class="card-more">
+      <p class="card-label">Pourquoi ça compte</p>
+      <p class="card-why">Confirme une bascule où la marque devient un actif économique directement monétisable (licences, collaborations), un argument fort pour justifier des budgets branding auprès des directions financières.</p>
+      <p class="card-label">Action concrète</p>
+      <p class="card-action">💡 Ajouter un volet « licensing / co-branding » dans les propositions de valorisation de marque pour les clients PME, en identifiant des partenaires de collaboration potentiels dans leur écosystème.</p>
+      <p class="card-source">Source : <a href="https://www.creativosonline.org/el-branding-se-consolida-como-estrategia-clave-en-empresas-y-marcas-personales-en-europa.html" target="_blank" rel="noopener noreferrer">Creativos Online ↗</a></p>
+    </div>
+    <button class="card-toggle" type="button" aria-hidden="true">Voir plus <span class="chevron">▾</span></button>
+  </div>
+</article>
+  </div>
+</section>
+
+<section class="theme-section" id="section-tech" data-theme-section="tech">
+  <h2 class="section-title"><span class="section-emoji">🤖</span>Tech</h2>
+  <div class="card-grid">
+    
+<article class="card" data-theme="tech" data-search="qualtrics dévoile sa plateforme xm data &amp; ai qualtrics a annoncé le 9 septembre 2026 sa plateforme « xm data &amp; ai », conçue pour simuler la réaction d&#x27;un client avant une décision, prédire son comportement individuel et vérifier toute réponse générée par ia par rapport aux règles internes de l&#x27;entreprise. elle s&#x27;appuie sur les données de plus de 18 000 organisations et sur l&#x27;acquisition de press ganey forsta (6,75 md$, finalisée en mai 2026). le cx management bascule de la simple mesure du feedback vers la prédiction et l&#x27;action automatisée — un changement de paradigme pour tous les outils d&#x27;expérience client utilisés par les marques. auditer avec ses clients les outils cx actuels pour repérer où l&#x27;ia prédictive (et pas seulement générative) pourrait anticiper les points de friction, et en faire un argument de conseil." tabindex="0" role="button" aria-expanded="false" id="card-tech-0">
+  <div class="card-media"><svg viewBox="0 0 400 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Tech">
+<rect width="400" height="240" fill="#14213d"/>
+<path d="M60 50 L140 50 L140 120 L220 120 L220 190 L300 190" stroke="#ffffff" stroke-width="2" fill="none" opacity="0.5"/>
+<path d="M140 50 L220 50 L220 120 L300 120" stroke="#ffffff" stroke-width="2" fill="none" opacity="0.3"/>
+<circle cx="60" cy="50" r="6" fill="#ffffff" opacity="0.9"/><circle cx="60" cy="120" r="6" fill="#ffffff" opacity="0.35"/><circle cx="60" cy="190" r="6" fill="#ffffff" opacity="0.35"/><circle cx="140" cy="50" r="6" fill="#ffffff" opacity="0.9"/><circle cx="140" cy="120" r="6" fill="#ffffff" opacity="0.35"/><circle cx="140" cy="190" r="6" fill="#ffffff" opacity="0.35"/><circle cx="220" cy="50" r="6" fill="#ffffff" opacity="0.9"/><circle cx="220" cy="120" r="6" fill="#ffffff" opacity="0.35"/><circle cx="220" cy="190" r="6" fill="#ffffff" opacity="0.35"/><circle cx="300" cy="50" r="6" fill="#ffffff" opacity="0.9"/><circle cx="300" cy="120" r="6" fill="#ffffff" opacity="0.35"/><circle cx="300" cy="190" r="6" fill="#ffffff" opacity="0.35"/><circle cx="360" cy="50" r="6" fill="#ffffff" opacity="0.9"/><circle cx="360" cy="120" r="6" fill="#ffffff" opacity="0.35"/><circle cx="360" cy="190" r="6" fill="#ffffff" opacity="0.35"/>
+</svg><span class="badge">🤖 Tech</span></div>
+  <div class="card-body">
+    <h3 class="card-title">Qualtrics dévoile sa plateforme XM Data &amp; AI</h3>
+    <p class="card-fact">Qualtrics a annoncé le 9 septembre 2026 sa plateforme « XM Data &amp; AI », conçue pour simuler la réaction d&#x27;un client avant une décision, prédire son comportement individuel et vérifier toute réponse générée par IA par rapport aux règles internes de l&#x27;entreprise. Elle s&#x27;appuie sur les données de plus de 18 000 organisations et sur l&#x27;acquisition de Press Ganey Forsta (6,75 Md$, finalisée en mai 2026).</p>
+    <div class="card-more">
+      <p class="card-label">Pourquoi ça compte</p>
+      <p class="card-why">Le CX management bascule de la simple mesure du feedback vers la prédiction et l&#x27;action automatisée — un changement de paradigme pour tous les outils d&#x27;expérience client utilisés par les marques.</p>
+      <p class="card-label">Action concrète</p>
+      <p class="card-action">💡 Auditer avec ses clients les outils CX actuels pour repérer où l&#x27;IA prédictive (et pas seulement générative) pourrait anticiper les points de friction, et en faire un argument de conseil.</p>
+      <p class="card-source">Source : <a href="https://www.qualtrics.com/news/qualtrics-unveils-xm-data-ai/" target="_blank" rel="noopener noreferrer">Qualtrics ↗</a></p>
+    </div>
+    <button class="card-toggle" type="button" aria-hidden="true">Voir plus <span class="chevron">▾</span></button>
+  </div>
+</article>
+
+<article class="card" data-theme="tech" data-search="winseed lance une initiative de « visibilité ia » à l&#x27;ifa berlin pendant l&#x27;ifa berlin 2026 (4-8 septembre), la scale-up winseed a lancé « one question at ifa », initiative éditoriale interrogeant 50 marques sur la façon dont l&#x27;ia générative change la découverte de marque, avant de publier un classement « the 30 tech brands most recommended by ai ». la visibilité dans les réponses générées par l&#x27;ia (geo — generative engine optimization) devient un enjeu concurrentiel aussi important que le seo ou les réseaux sociaux, un terrain encore peu maîtrisé par les marques européennes. proposer aux clients un premier audit de « présence ia » (comment chatgpt, gemini ou perplexity recommandent — ou non — la marque face à ses concurrents)." tabindex="0" role="button" aria-expanded="false" id="card-tech-1">
+  <div class="card-media"><svg viewBox="0 0 400 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Tech">
+<rect width="400" height="240" fill="#14213d"/>
+<path d="M60 50 L140 50 L140 120 L220 120 L220 190 L300 190" stroke="#ffffff" stroke-width="2" fill="none" opacity="0.5"/>
+<path d="M140 50 L220 50 L220 120 L300 120" stroke="#ffffff" stroke-width="2" fill="none" opacity="0.3"/>
+<circle cx="60" cy="50" r="6" fill="#ffffff" opacity="0.9"/><circle cx="60" cy="120" r="6" fill="#ffffff" opacity="0.35"/><circle cx="60" cy="190" r="6" fill="#ffffff" opacity="0.35"/><circle cx="140" cy="50" r="6" fill="#ffffff" opacity="0.9"/><circle cx="140" cy="120" r="6" fill="#ffffff" opacity="0.35"/><circle cx="140" cy="190" r="6" fill="#ffffff" opacity="0.35"/><circle cx="220" cy="50" r="6" fill="#ffffff" opacity="0.9"/><circle cx="220" cy="120" r="6" fill="#ffffff" opacity="0.35"/><circle cx="220" cy="190" r="6" fill="#ffffff" opacity="0.35"/><circle cx="300" cy="50" r="6" fill="#ffffff" opacity="0.9"/><circle cx="300" cy="120" r="6" fill="#ffffff" opacity="0.35"/><circle cx="300" cy="190" r="6" fill="#ffffff" opacity="0.35"/><circle cx="360" cy="50" r="6" fill="#ffffff" opacity="0.9"/><circle cx="360" cy="120" r="6" fill="#ffffff" opacity="0.35"/><circle cx="360" cy="190" r="6" fill="#ffffff" opacity="0.35"/>
+</svg><span class="badge">🤖 Tech</span></div>
+  <div class="card-body">
+    <h3 class="card-title">Winseed lance une initiative de « visibilité IA » à l&#x27;IFA Berlin</h3>
+    <p class="card-fact">Pendant l&#x27;IFA Berlin 2026 (4-8 septembre), la scale-up Winseed a lancé « ONE QUESTION AT IFA », initiative éditoriale interrogeant 50 marques sur la façon dont l&#x27;IA générative change la découverte de marque, avant de publier un classement « The 30 Tech Brands Most Recommended by AI ».</p>
+    <div class="card-more">
+      <p class="card-label">Pourquoi ça compte</p>
+      <p class="card-why">La visibilité dans les réponses générées par l&#x27;IA (GEO — Generative Engine Optimization) devient un enjeu concurrentiel aussi important que le SEO ou les réseaux sociaux, un terrain encore peu maîtrisé par les marques européennes.</p>
+      <p class="card-label">Action concrète</p>
+      <p class="card-action">💡 Proposer aux clients un premier audit de « présence IA » (comment ChatGPT, Gemini ou Perplexity recommandent — ou non — la marque face à ses concurrents).</p>
+      <p class="card-source">Source : <a href="https://www.globenewswire.com/news-release/2026/09/05/3356882/0/en/winseed-debuts-at-ifa-2026-with-one-question-at-ifa-positioning-itself-at-the-center-of-ai-driven-brand-discovery.html" target="_blank" rel="noopener noreferrer">GlobeNewswire ↗</a></p>
+    </div>
+    <button class="card-toggle" type="button" aria-hidden="true">Voir plus <span class="chevron">▾</span></button>
+  </div>
+</article>
+
+<article class="card" data-theme="tech" data-search="mntn et klaviyo connectent la tv connectée au crm mntn et klaviyo ont annoncé début septembre 2026 une intégration native bidirectionnelle reliant la publicité tv connectée (mntn performance tv) aux parcours e-mail et sms de klaviyo, avec activation d&#x27;audiences et déclenchement automatique de séquences après exposition à une pub ctv. cela illustre la fusion accélérée entre tv connectée et marketing relationnel — la ctv devient un canal adressable et mesurable au même titre que l&#x27;e-mail. pour des clients e-commerce/dtc, tester une campagne combinant un spot tv connectée avec une relance e-mail/sms synchronisée, même sur petit budget." tabindex="0" role="button" aria-expanded="false" id="card-tech-2">
+  <div class="card-media"><svg viewBox="0 0 400 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Tech">
+<rect width="400" height="240" fill="#14213d"/>
+<path d="M60 50 L140 50 L140 120 L220 120 L220 190 L300 190" stroke="#ffffff" stroke-width="2" fill="none" opacity="0.5"/>
+<path d="M140 50 L220 50 L220 120 L300 120" stroke="#ffffff" stroke-width="2" fill="none" opacity="0.3"/>
+<circle cx="60" cy="50" r="6" fill="#ffffff" opacity="0.9"/><circle cx="60" cy="120" r="6" fill="#ffffff" opacity="0.35"/><circle cx="60" cy="190" r="6" fill="#ffffff" opacity="0.35"/><circle cx="140" cy="50" r="6" fill="#ffffff" opacity="0.9"/><circle cx="140" cy="120" r="6" fill="#ffffff" opacity="0.35"/><circle cx="140" cy="190" r="6" fill="#ffffff" opacity="0.35"/><circle cx="220" cy="50" r="6" fill="#ffffff" opacity="0.9"/><circle cx="220" cy="120" r="6" fill="#ffffff" opacity="0.35"/><circle cx="220" cy="190" r="6" fill="#ffffff" opacity="0.35"/><circle cx="300" cy="50" r="6" fill="#ffffff" opacity="0.9"/><circle cx="300" cy="120" r="6" fill="#ffffff" opacity="0.35"/><circle cx="300" cy="190" r="6" fill="#ffffff" opacity="0.35"/><circle cx="360" cy="50" r="6" fill="#ffffff" opacity="0.9"/><circle cx="360" cy="120" r="6" fill="#ffffff" opacity="0.35"/><circle cx="360" cy="190" r="6" fill="#ffffff" opacity="0.35"/>
+</svg><span class="badge">🤖 Tech</span></div>
+  <div class="card-body">
+    <h3 class="card-title">MNTN et Klaviyo connectent la TV connectée au CRM</h3>
+    <p class="card-fact">MNTN et Klaviyo ont annoncé début septembre 2026 une intégration native bidirectionnelle reliant la publicité TV connectée (MNTN Performance TV) aux parcours e-mail et SMS de Klaviyo, avec activation d&#x27;audiences et déclenchement automatique de séquences après exposition à une pub CTV.</p>
+    <div class="card-more">
+      <p class="card-label">Pourquoi ça compte</p>
+      <p class="card-why">Cela illustre la fusion accélérée entre TV connectée et marketing relationnel — la CTV devient un canal adressable et mesurable au même titre que l&#x27;e-mail.</p>
+      <p class="card-label">Action concrète</p>
+      <p class="card-action">💡 Pour des clients e-commerce/DTC, tester une campagne combinant un spot TV connectée avec une relance e-mail/SMS synchronisée, même sur petit budget.</p>
+      <p class="card-source">Source : <a href="https://martechseries.com/sales-marketing/crm/mntn-and-klaviyo-integrate-performance-tv-with-crm/" target="_blank" rel="noopener noreferrer">MarTech Series ↗</a></p>
+    </div>
+    <button class="card-toggle" type="button" aria-hidden="true">Voir plus <span class="chevron">▾</span></button>
+  </div>
+</article>
+
+<article class="card" data-theme="tech" data-search="gumgum transforme le sponsoring sportif en audiences ciblables gumgum a lancé le 9 septembre 2026 « gumgum sports media », qui convertit l&#x27;exposition de sponsoring en direct (logos visibles à l&#x27;écran) en audiences adressables, en combinant la détection d&#x27;exposition de relo metrics avec les données d&#x27;audience de videoamp, sur 9 ligues sportives américaines. le sponsoring événementiel/sportif, longtemps difficile à mesurer, devient enfin traçable et « retargetable » — un argument de poids pour justifier des budgets de sponsoring en interne. pour des clients sponsors d&#x27;événements sportifs ou culturels, intégrer dès la négociation des clauses de mesure d&#x27;exposition et de reciblage post-exposition dans les contrats." tabindex="0" role="button" aria-expanded="false" id="card-tech-3">
+  <div class="card-media"><svg viewBox="0 0 400 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Tech">
+<rect width="400" height="240" fill="#14213d"/>
+<path d="M60 50 L140 50 L140 120 L220 120 L220 190 L300 190" stroke="#ffffff" stroke-width="2" fill="none" opacity="0.5"/>
+<path d="M140 50 L220 50 L220 120 L300 120" stroke="#ffffff" stroke-width="2" fill="none" opacity="0.3"/>
+<circle cx="60" cy="50" r="6" fill="#ffffff" opacity="0.9"/><circle cx="60" cy="120" r="6" fill="#ffffff" opacity="0.35"/><circle cx="60" cy="190" r="6" fill="#ffffff" opacity="0.35"/><circle cx="140" cy="50" r="6" fill="#ffffff" opacity="0.9"/><circle cx="140" cy="120" r="6" fill="#ffffff" opacity="0.35"/><circle cx="140" cy="190" r="6" fill="#ffffff" opacity="0.35"/><circle cx="220" cy="50" r="6" fill="#ffffff" opacity="0.9"/><circle cx="220" cy="120" r="6" fill="#ffffff" opacity="0.35"/><circle cx="220" cy="190" r="6" fill="#ffffff" opacity="0.35"/><circle cx="300" cy="50" r="6" fill="#ffffff" opacity="0.9"/><circle cx="300" cy="120" r="6" fill="#ffffff" opacity="0.35"/><circle cx="300" cy="190" r="6" fill="#ffffff" opacity="0.35"/><circle cx="360" cy="50" r="6" fill="#ffffff" opacity="0.9"/><circle cx="360" cy="120" r="6" fill="#ffffff" opacity="0.35"/><circle cx="360" cy="190" r="6" fill="#ffffff" opacity="0.35"/>
+</svg><span class="badge">🤖 Tech</span></div>
+  <div class="card-body">
+    <h3 class="card-title">GumGum transforme le sponsoring sportif en audiences ciblables</h3>
+    <p class="card-fact">GumGum a lancé le 9 septembre 2026 « GumGum Sports Media », qui convertit l&#x27;exposition de sponsoring en direct (logos visibles à l&#x27;écran) en audiences adressables, en combinant la détection d&#x27;exposition de Relo Metrics avec les données d&#x27;audience de VideoAmp, sur 9 ligues sportives américaines.</p>
+    <div class="card-more">
+      <p class="card-label">Pourquoi ça compte</p>
+      <p class="card-why">Le sponsoring événementiel/sportif, longtemps difficile à mesurer, devient enfin traçable et « retargetable » — un argument de poids pour justifier des budgets de sponsoring en interne.</p>
+      <p class="card-label">Action concrète</p>
+      <p class="card-action">💡 Pour des clients sponsors d&#x27;événements sportifs ou culturels, intégrer dès la négociation des clauses de mesure d&#x27;exposition et de reciblage post-exposition dans les contrats.</p>
+      <p class="card-source">Source : <a href="https://ppc.land/gumgum-turns-verified-sports-logo-views-into-audiences-across-9-us-leagues/" target="_blank" rel="noopener noreferrer">PPC Land ↗</a></p>
+    </div>
+    <button class="card-toggle" type="button" aria-hidden="true">Voir plus <span class="chevron">▾</span></button>
+  </div>
+</article>
+
+<article class="card" data-theme="tech" data-search="bazaarvoice lance un pack « ai visibility » pour l&#x27;ugc bazaarvoice a introduit, la semaine du 4 septembre 2026, un pack « ai visibility » sur sa plateforme de contenu généré par les utilisateurs (avis clients, q&amp;r), destiné à optimiser la reprise de ce contenu par les moteurs de réponse ia. les avis clients deviennent une matière première stratégique pour la visibilité dans les réponses ia génératives, pas seulement pour la conversion e-commerce classique. auditer la structuration des avis/contenus ugc des clients (fraîcheur, diversité, balisage) pour les rendre plus « citables » par les moteurs ia en plus des moteurs de recherche classiques." tabindex="0" role="button" aria-expanded="false" id="card-tech-4">
+  <div class="card-media"><svg viewBox="0 0 400 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Tech">
+<rect width="400" height="240" fill="#14213d"/>
+<path d="M60 50 L140 50 L140 120 L220 120 L220 190 L300 190" stroke="#ffffff" stroke-width="2" fill="none" opacity="0.5"/>
+<path d="M140 50 L220 50 L220 120 L300 120" stroke="#ffffff" stroke-width="2" fill="none" opacity="0.3"/>
+<circle cx="60" cy="50" r="6" fill="#ffffff" opacity="0.9"/><circle cx="60" cy="120" r="6" fill="#ffffff" opacity="0.35"/><circle cx="60" cy="190" r="6" fill="#ffffff" opacity="0.35"/><circle cx="140" cy="50" r="6" fill="#ffffff" opacity="0.9"/><circle cx="140" cy="120" r="6" fill="#ffffff" opacity="0.35"/><circle cx="140" cy="190" r="6" fill="#ffffff" opacity="0.35"/><circle cx="220" cy="50" r="6" fill="#ffffff" opacity="0.9"/><circle cx="220" cy="120" r="6" fill="#ffffff" opacity="0.35"/><circle cx="220" cy="190" r="6" fill="#ffffff" opacity="0.35"/><circle cx="300" cy="50" r="6" fill="#ffffff" opacity="0.9"/><circle cx="300" cy="120" r="6" fill="#ffffff" opacity="0.35"/><circle cx="300" cy="190" r="6" fill="#ffffff" opacity="0.35"/><circle cx="360" cy="50" r="6" fill="#ffffff" opacity="0.9"/><circle cx="360" cy="120" r="6" fill="#ffffff" opacity="0.35"/><circle cx="360" cy="190" r="6" fill="#ffffff" opacity="0.35"/>
+</svg><span class="badge">🤖 Tech</span></div>
+  <div class="card-body">
+    <h3 class="card-title">Bazaarvoice lance un pack « AI Visibility » pour l&#x27;UGC</h3>
+    <p class="card-fact">Bazaarvoice a introduit, la semaine du 4 septembre 2026, un pack « AI Visibility » sur sa plateforme de contenu généré par les utilisateurs (avis clients, Q&amp;R), destiné à optimiser la reprise de ce contenu par les moteurs de réponse IA.</p>
+    <div class="card-more">
+      <p class="card-label">Pourquoi ça compte</p>
+      <p class="card-why">Les avis clients deviennent une matière première stratégique pour la visibilité dans les réponses IA génératives, pas seulement pour la conversion e-commerce classique.</p>
+      <p class="card-label">Action concrète</p>
+      <p class="card-action">💡 Auditer la structuration des avis/contenus UGC des clients (fraîcheur, diversité, balisage) pour les rendre plus « citables » par les moteurs IA en plus des moteurs de recherche classiques.</p>
+      <p class="card-source">Source : <a href="https://solutionsreview.com/crm/2026/09/03/top-martech-news-from-the-week-of-september-4th/" target="_blank" rel="noopener noreferrer">Solutions Review ↗</a></p>
+    </div>
+    <button class="card-toggle" type="button" aria-hidden="true">Voir plus <span class="chevron">▾</span></button>
+  </div>
+</article>
+
+<article class="card" data-theme="tech" data-search="seedtag lance l&#x27;« emotion quotient » pour mesurer l&#x27;intensité émotionnelle en ligne la scale-up espagnole d&#x27;adtech seedtag a présenté cette semaine son « emotion quotient », indicateur qui suit l&#x27;intensité émotionnelle des grands moments culturels en ligne grâce à « liz », son ia neuro-contextuelle, sans données personnelles. une nouvelle façon de choisir le bon contexte et le bon moment émotionnel pour publier une campagne, sans ciblage individuel — pertinent dans un monde post-cookies. intégrer une lecture « climat émotionnel » de l&#x27;actualité culturelle dans le calendrier éditorial d&#x27;une marque cliente, pour choisir les moments d&#x27;activation qui maximisent la réceptivité." tabindex="0" role="button" aria-expanded="false" id="card-tech-5">
+  <div class="card-media"><svg viewBox="0 0 400 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Tech">
+<rect width="400" height="240" fill="#14213d"/>
+<path d="M60 50 L140 50 L140 120 L220 120 L220 190 L300 190" stroke="#ffffff" stroke-width="2" fill="none" opacity="0.5"/>
+<path d="M140 50 L220 50 L220 120 L300 120" stroke="#ffffff" stroke-width="2" fill="none" opacity="0.3"/>
+<circle cx="60" cy="50" r="6" fill="#ffffff" opacity="0.9"/><circle cx="60" cy="120" r="6" fill="#ffffff" opacity="0.35"/><circle cx="60" cy="190" r="6" fill="#ffffff" opacity="0.35"/><circle cx="140" cy="50" r="6" fill="#ffffff" opacity="0.9"/><circle cx="140" cy="120" r="6" fill="#ffffff" opacity="0.35"/><circle cx="140" cy="190" r="6" fill="#ffffff" opacity="0.35"/><circle cx="220" cy="50" r="6" fill="#ffffff" opacity="0.9"/><circle cx="220" cy="120" r="6" fill="#ffffff" opacity="0.35"/><circle cx="220" cy="190" r="6" fill="#ffffff" opacity="0.35"/><circle cx="300" cy="50" r="6" fill="#ffffff" opacity="0.9"/><circle cx="300" cy="120" r="6" fill="#ffffff" opacity="0.35"/><circle cx="300" cy="190" r="6" fill="#ffffff" opacity="0.35"/><circle cx="360" cy="50" r="6" fill="#ffffff" opacity="0.9"/><circle cx="360" cy="120" r="6" fill="#ffffff" opacity="0.35"/><circle cx="360" cy="190" r="6" fill="#ffffff" opacity="0.35"/>
+</svg><span class="badge">🤖 Tech</span></div>
+  <div class="card-body">
+    <h3 class="card-title">Seedtag lance l&#x27;« Emotion Quotient » pour mesurer l&#x27;intensité émotionnelle en ligne</h3>
+    <p class="card-fact">La scale-up espagnole d&#x27;adtech Seedtag a présenté cette semaine son « Emotion Quotient », indicateur qui suit l&#x27;intensité émotionnelle des grands moments culturels en ligne grâce à « Liz », son IA neuro-contextuelle, sans données personnelles.</p>
+    <div class="card-more">
+      <p class="card-label">Pourquoi ça compte</p>
+      <p class="card-why">Une nouvelle façon de choisir le bon contexte et le bon moment émotionnel pour publier une campagne, sans ciblage individuel — pertinent dans un monde post-cookies.</p>
+      <p class="card-label">Action concrète</p>
+      <p class="card-action">💡 Intégrer une lecture « climat émotionnel » de l&#x27;actualité culturelle dans le calendrier éditorial d&#x27;une marque cliente, pour choisir les moments d&#x27;activation qui maximisent la réceptivité.</p>
+      <p class="card-source">Source : <a href="https://agilebrandguide.com/yesterdays-marketing-technology-ai-news-september-9-2026/" target="_blank" rel="noopener noreferrer">The Agile Brand Guide ↗</a></p>
+    </div>
+    <button class="card-toggle" type="button" aria-hidden="true">Voir plus <span class="chevron">▾</span></button>
+  </div>
+</article>
+  </div>
+</section>
+
+<section class="theme-section" id="section-evenements" data-theme-section="evenements">
+  <h2 class="section-title"><span class="section-emoji">🎪</span>Événements</h2>
+  <div class="card-grid">
+    
+<article class="card" data-theme="evenements" data-search="madring : les grandes marques envahissent le grand prix d&#x27;espagne de f1 à madrid le grand prix d&#x27;espagne de f1 se déroule à madrid (« madring ») du 11 au 13 septembre 2026. gillette organise un événement créateurs autour de sa collaboration avec audi revolut f1 team, audi installe une expérience immersive plaza de colón, tag heuer est sponsor-titre, et pompeii lance une collection capsule liée à l&#x27;événement. madring confirme madrid comme terrain de jeu pour le marketing expérientiel lié au sport premium, avec une multiplication d&#x27;activations de marque hors piste qui dépasse le simple sponsoring du circuit. s&#x27;inspirer du dispositif multi-format (expérience physique + collab produit + contenu créateurs) pour construire une activation « satellite » autour d&#x27;un grand événement sportif ou culturel local, sans être sponsor officiel." tabindex="0" role="button" aria-expanded="false" id="card-evenements-0">
+  <div class="card-media"><svg viewBox="0 0 400 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Evenements">
+<rect width="400" height="240" fill="#1e1e1e"/>
+<rect x="30" y="40" width="42" height="42" rx="6" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.45"/><rect x="88" y="40" width="42" height="42" rx="6" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.45"/><rect x="146" y="40" width="42" height="42" rx="6" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.45"/><rect x="204" y="40" width="42" height="42" rx="6" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.45"/><rect x="262" y="40" width="42" height="42" rx="6" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.45"/><rect x="320" y="40" width="42" height="42" rx="6" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.45"/><rect x="30" y="98" width="42" height="42" rx="6" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.45"/><rect x="88" y="98" width="42" height="42" rx="6" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.45"/><rect x="146" y="98" width="42" height="42" rx="6" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.45"/><rect x="204" y="98" width="42" height="42" rx="6" fill="#ffffff" stroke="#ffffff" stroke-width="3" opacity="1"/><rect x="262" y="98" width="42" height="42" rx="6" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.45"/><rect x="320" y="98" width="42" height="42" rx="6" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.45"/><rect x="30" y="156" width="42" height="42" rx="6" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.45"/><rect x="88" y="156" width="42" height="42" rx="6" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.45"/><rect x="146" y="156" width="42" height="42" rx="6" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.45"/><rect x="204" y="156" width="42" height="42" rx="6" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.45"/><rect x="262" y="156" width="42" height="42" rx="6" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.45"/><rect x="320" y="156" width="42" height="42" rx="6" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.45"/>
+</svg><span class="badge">🎪 Événements</span></div>
+  <div class="card-body">
+    <h3 class="card-title">Madring : les grandes marques envahissent le Grand Prix d&#x27;Espagne de F1 à Madrid</h3>
+    <p class="card-fact">Le Grand Prix d&#x27;Espagne de F1 se déroule à Madrid (« Madring ») du 11 au 13 septembre 2026. Gillette organise un événement créateurs autour de sa collaboration avec Audi Revolut F1 Team, Audi installe une expérience immersive Plaza de Colón, TAG Heuer est sponsor-titre, et Pompeii lance une collection capsule liée à l&#x27;événement.</p>
+    <div class="card-more">
+      <p class="card-label">Pourquoi ça compte</p>
+      <p class="card-why">Madring confirme Madrid comme terrain de jeu pour le marketing expérientiel lié au sport premium, avec une multiplication d&#x27;activations de marque hors piste qui dépasse le simple sponsoring du circuit.</p>
+      <p class="card-label">Action concrète</p>
+      <p class="card-action">💡 S&#x27;inspirer du dispositif multi-format (expérience physique + collab produit + contenu créateurs) pour construire une activation « satellite » autour d&#x27;un grand événement sportif ou culturel local, sans être sponsor officiel.</p>
+      <p class="card-source">Source : <a href="https://marketinginsiderreview.com/gillete-hara-activacion-con-audi-revolut-f1-team-en-gran-premio-de-espana-2026-formula-1" target="_blank" rel="noopener noreferrer">Marketing Insider Review ↗</a></p>
+    </div>
+    <button class="card-toggle" type="button" aria-hidden="true">Voir plus <span class="chevron">▾</span></button>
+  </div>
+</article>
+
+<article class="card" data-theme="evenements" data-search="cannes lions exporte son cmo accelerator dans 5 villes lions a annoncé le 8 septembre 2026 le lancement de « city editions » de son programme cmo accelerator : los angeles, singapour, new york, são paulo et londres, après un pilote réussi l&#x27;an dernier à são paulo et londres. le format, conçu avec jim stengel (ex-cmo de p&amp;g), est adapté à chaque marché local. les grands formats de conférence internationaux se « régionalisent » pour rester pertinents toute l&#x27;année au lieu de concentrer toute la valeur sur un seul événement phare. s&#x27;inspirer de ce modèle « franchise locale d&#x27;un format global » pour décliner localement et de façon récurrente un format d&#x27;événement b2b qui a fait ses preuves ailleurs." tabindex="0" role="button" aria-expanded="false" id="card-evenements-1">
+  <div class="card-media"><svg viewBox="0 0 400 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Evenements">
+<rect width="400" height="240" fill="#1e1e1e"/>
+<rect x="30" y="40" width="42" height="42" rx="6" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.45"/><rect x="88" y="40" width="42" height="42" rx="6" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.45"/><rect x="146" y="40" width="42" height="42" rx="6" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.45"/><rect x="204" y="40" width="42" height="42" rx="6" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.45"/><rect x="262" y="40" width="42" height="42" rx="6" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.45"/><rect x="320" y="40" width="42" height="42" rx="6" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.45"/><rect x="30" y="98" width="42" height="42" rx="6" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.45"/><rect x="88" y="98" width="42" height="42" rx="6" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.45"/><rect x="146" y="98" width="42" height="42" rx="6" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.45"/><rect x="204" y="98" width="42" height="42" rx="6" fill="#ffffff" stroke="#ffffff" stroke-width="3" opacity="1"/><rect x="262" y="98" width="42" height="42" rx="6" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.45"/><rect x="320" y="98" width="42" height="42" rx="6" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.45"/><rect x="30" y="156" width="42" height="42" rx="6" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.45"/><rect x="88" y="156" width="42" height="42" rx="6" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.45"/><rect x="146" y="156" width="42" height="42" rx="6" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.45"/><rect x="204" y="156" width="42" height="42" rx="6" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.45"/><rect x="262" y="156" width="42" height="42" rx="6" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.45"/><rect x="320" y="156" width="42" height="42" rx="6" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.45"/>
+</svg><span class="badge">🎪 Événements</span></div>
+  <div class="card-body">
+    <h3 class="card-title">Cannes Lions exporte son CMO Accelerator dans 5 villes</h3>
+    <p class="card-fact">LIONS a annoncé le 8 septembre 2026 le lancement de « City Editions » de son programme CMO Accelerator : Los Angeles, Singapour, New York, São Paulo et Londres, après un pilote réussi l&#x27;an dernier à São Paulo et Londres. Le format, conçu avec Jim Stengel (ex-CMO de P&amp;G), est adapté à chaque marché local.</p>
+    <div class="card-more">
+      <p class="card-label">Pourquoi ça compte</p>
+      <p class="card-why">Les grands formats de conférence internationaux se « régionalisent » pour rester pertinents toute l&#x27;année au lieu de concentrer toute la valeur sur un seul événement phare.</p>
+      <p class="card-label">Action concrète</p>
+      <p class="card-action">💡 S&#x27;inspirer de ce modèle « franchise locale d&#x27;un format global » pour décliner localement et de façon récurrente un format d&#x27;événement B2B qui a fait ses preuves ailleurs.</p>
+      <p class="card-source">Source : <a href="https://www.mediapost.com/publications/article/417720/cannes-cmo-accelerator-hits-the-road-adds-new-c.html" target="_blank" rel="noopener noreferrer">MediaPost ↗</a></p>
+    </div>
+    <button class="card-toggle" type="button" aria-hidden="true">Voir plus <span class="chevron">▾</span></button>
+  </div>
+</article>
+
+<article class="card" data-theme="evenements" data-search="l&#x27;ifa berlin 2026 clôture sur des chiffres record le salon ifa berlin 2026 (4-8 septembre) a battu ses records avec près de 240 000 visiteurs de 155 pays et plus de 2 000 exposants, dont plusieurs marques espagnoles (taurus group, sogo, cecotec). l&#x27;ia et la robotique dominaient les nouveautés. ifa confirme sa place de vitrine mondiale pour l&#x27;innovation grand public — un terrain d&#x27;observation direct des tendances produit qui irrigueront les campagnes de marque à venir. constituer une veille produit issue des grands salons tech (ifa, ces, mwc) comme matière première régulière pour les briefs créatifs et argumentaires d&#x27;innovation des marques clientes." tabindex="0" role="button" aria-expanded="false" id="card-evenements-2">
+  <div class="card-media"><svg viewBox="0 0 400 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Evenements">
+<rect width="400" height="240" fill="#1e1e1e"/>
+<rect x="30" y="40" width="42" height="42" rx="6" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.45"/><rect x="88" y="40" width="42" height="42" rx="6" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.45"/><rect x="146" y="40" width="42" height="42" rx="6" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.45"/><rect x="204" y="40" width="42" height="42" rx="6" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.45"/><rect x="262" y="40" width="42" height="42" rx="6" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.45"/><rect x="320" y="40" width="42" height="42" rx="6" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.45"/><rect x="30" y="98" width="42" height="42" rx="6" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.45"/><rect x="88" y="98" width="42" height="42" rx="6" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.45"/><rect x="146" y="98" width="42" height="42" rx="6" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.45"/><rect x="204" y="98" width="42" height="42" rx="6" fill="#ffffff" stroke="#ffffff" stroke-width="3" opacity="1"/><rect x="262" y="98" width="42" height="42" rx="6" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.45"/><rect x="320" y="98" width="42" height="42" rx="6" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.45"/><rect x="30" y="156" width="42" height="42" rx="6" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.45"/><rect x="88" y="156" width="42" height="42" rx="6" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.45"/><rect x="146" y="156" width="42" height="42" rx="6" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.45"/><rect x="204" y="156" width="42" height="42" rx="6" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.45"/><rect x="262" y="156" width="42" height="42" rx="6" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.45"/><rect x="320" y="156" width="42" height="42" rx="6" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.45"/>
+</svg><span class="badge">🎪 Événements</span></div>
+  <div class="card-body">
+    <h3 class="card-title">L&#x27;IFA Berlin 2026 clôture sur des chiffres record</h3>
+    <p class="card-fact">Le salon IFA Berlin 2026 (4-8 septembre) a battu ses records avec près de 240 000 visiteurs de 155 pays et plus de 2 000 exposants, dont plusieurs marques espagnoles (Taurus Group, Sogo, Cecotec). L&#x27;IA et la robotique dominaient les nouveautés.</p>
+    <div class="card-more">
+      <p class="card-label">Pourquoi ça compte</p>
+      <p class="card-why">IFA confirme sa place de vitrine mondiale pour l&#x27;innovation grand public — un terrain d&#x27;observation direct des tendances produit qui irrigueront les campagnes de marque à venir.</p>
+      <p class="card-label">Action concrète</p>
+      <p class="card-action">💡 Constituer une veille produit issue des grands salons tech (IFA, CES, MWC) comme matière première régulière pour les briefs créatifs et argumentaires d&#x27;innovation des marques clientes.</p>
+      <p class="card-source">Source : <a href="https://www.marronyblanco.com/ifa-2026-registra-resultados-record/" target="_blank" rel="noopener noreferrer">Marrón y Blanco ↗</a></p>
+    </div>
+    <button class="card-toggle" type="button" aria-hidden="true">Voir plus <span class="chevron">▾</span></button>
+  </div>
+</article>
+
+<article class="card" data-theme="evenements" data-search="le format cx bfsi exchange débarque pour la première fois en europe après 15 ans de succès aux états-unis et au royaume-uni, l&#x27;événement sur invitation « cx bfsi exchange » fait ses débuts en europe continentale, à berlin, les 14-15 septembre 2026, réunissant 55 dirigeants cx/service client/transformation digitale de la banque, l&#x27;assurance et la finance. exemple de format b2b « premium et intimiste » (invitation uniquement, effectif restreint, pair-à-pair) qui gagne du terrain face aux grands salons de masse. proposer à un client b2b à cycle de vente long l&#x27;organisation d&#x27;un événement sur invitation, à petite échelle mais à forte densité de décideurs, plutôt qu&#x27;un salon généraliste coûteux." tabindex="0" role="button" aria-expanded="false" id="card-evenements-3">
+  <div class="card-media"><svg viewBox="0 0 400 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Evenements">
+<rect width="400" height="240" fill="#1e1e1e"/>
+<rect x="30" y="40" width="42" height="42" rx="6" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.45"/><rect x="88" y="40" width="42" height="42" rx="6" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.45"/><rect x="146" y="40" width="42" height="42" rx="6" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.45"/><rect x="204" y="40" width="42" height="42" rx="6" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.45"/><rect x="262" y="40" width="42" height="42" rx="6" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.45"/><rect x="320" y="40" width="42" height="42" rx="6" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.45"/><rect x="30" y="98" width="42" height="42" rx="6" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.45"/><rect x="88" y="98" width="42" height="42" rx="6" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.45"/><rect x="146" y="98" width="42" height="42" rx="6" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.45"/><rect x="204" y="98" width="42" height="42" rx="6" fill="#ffffff" stroke="#ffffff" stroke-width="3" opacity="1"/><rect x="262" y="98" width="42" height="42" rx="6" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.45"/><rect x="320" y="98" width="42" height="42" rx="6" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.45"/><rect x="30" y="156" width="42" height="42" rx="6" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.45"/><rect x="88" y="156" width="42" height="42" rx="6" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.45"/><rect x="146" y="156" width="42" height="42" rx="6" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.45"/><rect x="204" y="156" width="42" height="42" rx="6" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.45"/><rect x="262" y="156" width="42" height="42" rx="6" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.45"/><rect x="320" y="156" width="42" height="42" rx="6" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.45"/>
+</svg><span class="badge">🎪 Événements</span></div>
+  <div class="card-body">
+    <h3 class="card-title">Le format CX BFSI Exchange débarque pour la première fois en Europe</h3>
+    <p class="card-fact">Après 15 ans de succès aux États-Unis et au Royaume-Uni, l&#x27;événement sur invitation « CX BFSI Exchange » fait ses débuts en Europe continentale, à Berlin, les 14-15 septembre 2026, réunissant 55 dirigeants CX/service client/transformation digitale de la banque, l&#x27;assurance et la finance.</p>
+    <div class="card-more">
+      <p class="card-label">Pourquoi ça compte</p>
+      <p class="card-why">Exemple de format B2B « premium et intimiste » (invitation uniquement, effectif restreint, pair-à-pair) qui gagne du terrain face aux grands salons de masse.</p>
+      <p class="card-label">Action concrète</p>
+      <p class="card-action">💡 Proposer à un client B2B à cycle de vente long l&#x27;organisation d&#x27;un événement sur invitation, à petite échelle mais à forte densité de décideurs, plutôt qu&#x27;un salon généraliste coûteux.</p>
+      <p class="card-source">Source : <a href="https://financialit.net/news/banking/cx-bfsi-exchange-launches-europe-after-15-years-success" target="_blank" rel="noopener noreferrer">Financial IT ↗</a></p>
+    </div>
+    <button class="card-toggle" type="button" aria-hidden="true">Voir plus <span class="chevron">▾</span></button>
+  </div>
+</article>
+
+<article class="card" data-theme="evenements" data-search="barcelone se transforme en campus ia géant avec l&#x27;ai week la programmation de l&#x27;ai week barcelona 2026 (16-23 septembre) a été dévoilée cette semaine : 50 événements dans toute la ville autour de l&#x27;ai summit barcelona, attendu avec 10 000 participants et plus de 200 intervenants, complété par le hackathon « hackbarna ». le format « semaine thématique éclatée dans toute une ville » plutôt qu&#x27;un salon unique en centre de congrès multiplie les points de contact et les organisateurs partenaires — un modèle de plus en plus copié en europe. étudier, pour une marque ou un client institutionnel, l&#x27;organisation d&#x27;un « side event » satellite pendant une semaine thématique déjà établie plutôt que créer un événement autonome from scratch." tabindex="0" role="button" aria-expanded="false" id="card-evenements-4">
+  <div class="card-media"><svg viewBox="0 0 400 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Evenements">
+<rect width="400" height="240" fill="#1e1e1e"/>
+<rect x="30" y="40" width="42" height="42" rx="6" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.45"/><rect x="88" y="40" width="42" height="42" rx="6" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.45"/><rect x="146" y="40" width="42" height="42" rx="6" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.45"/><rect x="204" y="40" width="42" height="42" rx="6" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.45"/><rect x="262" y="40" width="42" height="42" rx="6" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.45"/><rect x="320" y="40" width="42" height="42" rx="6" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.45"/><rect x="30" y="98" width="42" height="42" rx="6" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.45"/><rect x="88" y="98" width="42" height="42" rx="6" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.45"/><rect x="146" y="98" width="42" height="42" rx="6" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.45"/><rect x="204" y="98" width="42" height="42" rx="6" fill="#ffffff" stroke="#ffffff" stroke-width="3" opacity="1"/><rect x="262" y="98" width="42" height="42" rx="6" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.45"/><rect x="320" y="98" width="42" height="42" rx="6" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.45"/><rect x="30" y="156" width="42" height="42" rx="6" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.45"/><rect x="88" y="156" width="42" height="42" rx="6" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.45"/><rect x="146" y="156" width="42" height="42" rx="6" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.45"/><rect x="204" y="156" width="42" height="42" rx="6" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.45"/><rect x="262" y="156" width="42" height="42" rx="6" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.45"/><rect x="320" y="156" width="42" height="42" rx="6" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.45"/>
+</svg><span class="badge">🎪 Événements</span></div>
+  <div class="card-body">
+    <h3 class="card-title">Barcelone se transforme en campus IA géant avec l&#x27;AI Week</h3>
+    <p class="card-fact">La programmation de l&#x27;AI Week Barcelona 2026 (16-23 septembre) a été dévoilée cette semaine : 50 événements dans toute la ville autour de l&#x27;AI Summit Barcelona, attendu avec 10 000 participants et plus de 200 intervenants, complété par le hackathon « HackBarna ».</p>
+    <div class="card-more">
+      <p class="card-label">Pourquoi ça compte</p>
+      <p class="card-why">Le format « semaine thématique éclatée dans toute une ville » plutôt qu&#x27;un salon unique en centre de congrès multiplie les points de contact et les organisateurs partenaires — un modèle de plus en plus copié en Europe.</p>
+      <p class="card-label">Action concrète</p>
+      <p class="card-action">💡 Étudier, pour une marque ou un client institutionnel, l&#x27;organisation d&#x27;un « side event » satellite pendant une semaine thématique déjà établie plutôt que créer un événement autonome from scratch.</p>
+      <p class="card-source">Source : <a href="https://ipmark.com/ai-week-barcelona-2026-eventos-inteligencia-artificial/" target="_blank" rel="noopener noreferrer">IPMARK ↗</a></p>
+    </div>
+    <button class="card-toggle" type="button" aria-hidden="true">Voir plus <span class="chevron">▾</span></button>
+  </div>
+</article>
+
+<article class="card" data-theme="evenements" data-search="les premios w!n misent sur la jeune génération des relations publiques la 3e édition des premios w!n nextgen pr a ouvert ses candidatures le 6 septembre 2026 (jusqu&#x27;au 9 octobre), avec un focus sur la mise en avant du jeune talent en relations publiques en espagne. ce type de prix sectoriel dédié à la relève devient un outil de marque employeur et de visibilité pour les agences, à moindre coût qu&#x27;un grand événement. encourager les jeunes collaborateurs ou freelances d&#x27;une agence cliente à candidater, et exploiter la nomination comme contenu de marque employeur sur linkedin." tabindex="0" role="button" aria-expanded="false" id="card-evenements-5">
+  <div class="card-media"><svg viewBox="0 0 400 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Evenements">
+<rect width="400" height="240" fill="#1e1e1e"/>
+<rect x="30" y="40" width="42" height="42" rx="6" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.45"/><rect x="88" y="40" width="42" height="42" rx="6" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.45"/><rect x="146" y="40" width="42" height="42" rx="6" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.45"/><rect x="204" y="40" width="42" height="42" rx="6" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.45"/><rect x="262" y="40" width="42" height="42" rx="6" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.45"/><rect x="320" y="40" width="42" height="42" rx="6" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.45"/><rect x="30" y="98" width="42" height="42" rx="6" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.45"/><rect x="88" y="98" width="42" height="42" rx="6" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.45"/><rect x="146" y="98" width="42" height="42" rx="6" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.45"/><rect x="204" y="98" width="42" height="42" rx="6" fill="#ffffff" stroke="#ffffff" stroke-width="3" opacity="1"/><rect x="262" y="98" width="42" height="42" rx="6" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.45"/><rect x="320" y="98" width="42" height="42" rx="6" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.45"/><rect x="30" y="156" width="42" height="42" rx="6" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.45"/><rect x="88" y="156" width="42" height="42" rx="6" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.45"/><rect x="146" y="156" width="42" height="42" rx="6" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.45"/><rect x="204" y="156" width="42" height="42" rx="6" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.45"/><rect x="262" y="156" width="42" height="42" rx="6" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.45"/><rect x="320" y="156" width="42" height="42" rx="6" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.45"/>
+</svg><span class="badge">🎪 Événements</span></div>
+  <div class="card-body">
+    <h3 class="card-title">Les Premios W!N misent sur la jeune génération des relations publiques</h3>
+    <p class="card-fact">La 3e édition des Premios W!N NEXTGEN PR a ouvert ses candidatures le 6 septembre 2026 (jusqu&#x27;au 9 octobre), avec un focus sur la mise en avant du jeune talent en relations publiques en Espagne.</p>
+    <div class="card-more">
+      <p class="card-label">Pourquoi ça compte</p>
+      <p class="card-why">Ce type de prix sectoriel dédié à la relève devient un outil de marque employeur et de visibilité pour les agences, à moindre coût qu&#x27;un grand événement.</p>
+      <p class="card-label">Action concrète</p>
+      <p class="card-action">💡 Encourager les jeunes collaborateurs ou freelances d&#x27;une agence cliente à candidater, et exploiter la nomination comme contenu de marque employeur sur LinkedIn.</p>
+      <p class="card-source">Source : <a href="https://ipmark.com/los-premios-wn-lanzan-su-apuesta-por-el-talento-joven-en-pr-en-su-tercera-edicion/" target="_blank" rel="noopener noreferrer">IPMARK ↗</a></p>
+    </div>
+    <button class="card-toggle" type="button" aria-hidden="true">Voir plus <span class="chevron">▾</span></button>
+  </div>
+</article>
+  </div>
+</section>
+
+<section class="theme-section" id="section-b2b" data-theme-section="b2b">
+  <h2 class="section-title"><span class="section-emoji">🤝</span>Expériences B2B</h2>
+  <div class="card-grid">
+    
+<article class="card" data-theme="b2b" data-search="iaa mobility 2026 : le showroom de marque au cœur de munich l&#x27;iaa mobility 2026 se tient à munich du 9 au 14 septembre 2026, avec un dispositif à deux vitesses : l&#x27;« iaa summit » b2b à messe münchen, et l&#x27;« iaa open space », déployé en plein centre-ville où les constructeurs installent showrooms et essais produits accessibles à tous les publics. l&#x27;industrie auto démontre qu&#x27;un salon b2b pur perd de son impact s&#x27;il reste cantonné aux halls — c&#x27;est en sortant physiquement vers la ville, avec une expérience testable, que la marque touche à la fois acheteurs professionnels et opinion publique. pour un client b2b (tech, industrie, mobilité), proposer un format hybride « salon + espace urbain ouvert » lors du prochain événement sectoriel, plutôt que le stand traditionnel isolé." tabindex="0" role="button" aria-expanded="false" id="card-b2b-0">
+  <div class="card-media"><svg viewBox="0 0 400 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Experiences B2B">
+<rect width="400" height="240" fill="#14213d"/>
+<path d="M40 160 L140 80 L200 130 L260 60 L360 150" stroke="#ffffff" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"/>
+<circle cx="140" cy="80" r="9" fill="#ffffff"/>
+<circle cx="200" cy="130" r="9" fill="#ffffff"/>
+<circle cx="260" cy="60" r="9" fill="#ffffff"/>
+<rect x="20" y="185" width="360" height="4" fill="#ffffff" opacity="0.35"/>
+</svg><span class="badge">🤝 Expériences B2B</span></div>
+  <div class="card-body">
+    <h3 class="card-title">IAA Mobility 2026 : le showroom de marque au cœur de Munich</h3>
+    <p class="card-fact">L&#x27;IAA Mobility 2026 se tient à Munich du 9 au 14 septembre 2026, avec un dispositif à deux vitesses : l&#x27;« IAA Summit » B2B à Messe München, et l&#x27;« IAA Open Space », déployé en plein centre-ville où les constructeurs installent showrooms et essais produits accessibles à tous les publics.</p>
+    <div class="card-more">
+      <p class="card-label">Pourquoi ça compte</p>
+      <p class="card-why">L&#x27;industrie auto démontre qu&#x27;un salon B2B pur perd de son impact s&#x27;il reste cantonné aux halls — c&#x27;est en sortant physiquement vers la ville, avec une expérience testable, que la marque touche à la fois acheteurs professionnels et opinion publique.</p>
+      <p class="card-label">Action concrète</p>
+      <p class="card-action">💡 Pour un client B2B (tech, industrie, mobilité), proposer un format hybride « salon + espace urbain ouvert » lors du prochain événement sectoriel, plutôt que le stand traditionnel isolé.</p>
+      <p class="card-source">Source : <a href="https://www.iaa-mobility.com/en" target="_blank" rel="noopener noreferrer">IAA Mobility ↗</a></p>
+    </div>
+    <button class="card-toggle" type="button" aria-hidden="true">Voir plus <span class="chevron">▾</span></button>
+  </div>
+</article>
+
+<article class="card" data-theme="b2b" data-search="ibc amsterdam 2026 : l&#x27;expérience immersive s&#x27;invite dans les stands broadcast/tech ibc amsterdam 2026 ouvre ses portes le 11 septembre au rai amsterdam, avec plus de 55 000 professionnels des médias, du streaming et de l&#x27;ia attendus. l&#x27;édition met l&#x27;accent sur les expériences immersives et la 5g côté stands, avec des zones dédiées comme l&#x27;accelerator zone. même dans un salon très technique et b2b, le design de stand devient un vecteur de storytelling de marque à part entière — les acheteurs professionnels attendent désormais autant d&#x27;émotion que les consommateurs grand public. auditer le prochain stand d&#x27;un client b2b tech avec la même grille d&#x27;exigence qu&#x27;une activation grand public (parcours, moment « waouh », captation de données qualifiées)." tabindex="0" role="button" aria-expanded="false" id="card-b2b-1">
+  <div class="card-media"><svg viewBox="0 0 400 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Experiences B2B">
+<rect width="400" height="240" fill="#14213d"/>
+<path d="M40 160 L140 80 L200 130 L260 60 L360 150" stroke="#ffffff" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"/>
+<circle cx="140" cy="80" r="9" fill="#ffffff"/>
+<circle cx="200" cy="130" r="9" fill="#ffffff"/>
+<circle cx="260" cy="60" r="9" fill="#ffffff"/>
+<rect x="20" y="185" width="360" height="4" fill="#ffffff" opacity="0.35"/>
+</svg><span class="badge">🤝 Expériences B2B</span></div>
+  <div class="card-body">
+    <h3 class="card-title">IBC Amsterdam 2026 : l&#x27;expérience immersive s&#x27;invite dans les stands broadcast/tech</h3>
+    <p class="card-fact">IBC Amsterdam 2026 ouvre ses portes le 11 septembre au RAI Amsterdam, avec plus de 55 000 professionnels des médias, du streaming et de l&#x27;IA attendus. L&#x27;édition met l&#x27;accent sur les expériences immersives et la 5G côté stands, avec des zones dédiées comme l&#x27;Accelerator Zone.</p>
+    <div class="card-more">
+      <p class="card-label">Pourquoi ça compte</p>
+      <p class="card-why">Même dans un salon très technique et B2B, le design de stand devient un vecteur de storytelling de marque à part entière — les acheteurs professionnels attendent désormais autant d&#x27;émotion que les consommateurs grand public.</p>
+      <p class="card-label">Action concrète</p>
+      <p class="card-action">💡 Auditer le prochain stand d&#x27;un client B2B tech avec la même grille d&#x27;exigence qu&#x27;une activation grand public (parcours, moment « waouh », captation de données qualifiées).</p>
+      <p class="card-source">Source : <a href="https://show.ibc.org/ibc-exhibition-stand-design-awards" target="_blank" rel="noopener noreferrer">IBC ↗</a></p>
+    </div>
+    <button class="card-toggle" type="button" aria-hidden="true">Voir plus <span class="chevron">▾</span></button>
+  </div>
+</article>
+
+<article class="card" data-theme="b2b" data-search="event marketer dévoile son « 2026 b-to-b dream team » event marketer a publié sa sélection annuelle des responsables événementiels b2b les plus innovants, avec des cas comme l&#x27;« innovation shuttle » de palo alto networks : un parcours immersif où les visiteurs vivent des simulations interactives de cybermenaces à bord d&#x27;une navette au design sci-fi. le rapport souligne que 64 % des participants à des événements b2b jugent l&#x27;expérience immersive plus importante que l&#x27;agenda ou les keynotes. la donnée clé (64 %) confirme un basculement : dans le b2b aussi, le contenu informatif seul ne suffit plus, c&#x27;est la mise en scène expérientielle qui fait la mémorabilité et la conversion. pitcher à un client b2b un format « parcours scénarisé » (mise en situation, choix interactifs, dénouement personnalisé) pour son prochain salon, plutôt qu&#x27;un simple stand démo." tabindex="0" role="button" aria-expanded="false" id="card-b2b-2">
+  <div class="card-media"><svg viewBox="0 0 400 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Experiences B2B">
+<rect width="400" height="240" fill="#14213d"/>
+<path d="M40 160 L140 80 L200 130 L260 60 L360 150" stroke="#ffffff" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"/>
+<circle cx="140" cy="80" r="9" fill="#ffffff"/>
+<circle cx="200" cy="130" r="9" fill="#ffffff"/>
+<circle cx="260" cy="60" r="9" fill="#ffffff"/>
+<rect x="20" y="185" width="360" height="4" fill="#ffffff" opacity="0.35"/>
+</svg><span class="badge">🤝 Expériences B2B</span></div>
+  <div class="card-body">
+    <h3 class="card-title">Event Marketer dévoile son « 2026 B-to-B Dream Team »</h3>
+    <p class="card-fact">Event Marketer a publié sa sélection annuelle des responsables événementiels B2B les plus innovants, avec des cas comme l&#x27;« Innovation Shuttle » de Palo Alto Networks : un parcours immersif où les visiteurs vivent des simulations interactives de cybermenaces à bord d&#x27;une navette au design sci-fi. Le rapport souligne que 64 % des participants à des événements B2B jugent l&#x27;expérience immersive plus importante que l&#x27;agenda ou les keynotes.</p>
+    <div class="card-more">
+      <p class="card-label">Pourquoi ça compte</p>
+      <p class="card-why">La donnée clé (64 %) confirme un basculement : dans le B2B aussi, le contenu informatif seul ne suffit plus, c&#x27;est la mise en scène expérientielle qui fait la mémorabilité et la conversion.</p>
+      <p class="card-label">Action concrète</p>
+      <p class="card-action">💡 Pitcher à un client B2B un format « parcours scénarisé » (mise en situation, choix interactifs, dénouement personnalisé) pour son prochain salon, plutôt qu&#x27;un simple stand démo.</p>
+      <p class="card-source">Source : <a href="https://www.eventmarketer.com/article/2026-b-to-b-dream-team/" target="_blank" rel="noopener noreferrer">Event Marketer ↗</a></p>
+    </div>
+    <button class="card-toggle" type="button" aria-hidden="true">Voir plus <span class="chevron">▾</span></button>
+  </div>
+</article>
+
+<article class="card" data-theme="b2b" data-search="canva : l&#x27;expérientiel entre dans son « ère de l&#x27;imagination » the drum a publié début septembre 2026 un entretien avec jimmy knowles, global head of experiential de canva, qui théorise l&#x27;entrée du marketing expérientiel dans une « imagination era », en s&#x27;appuyant sur le canva world tour et canva create (plus de 2,5 millions d&#x27;inscrits en 2025). un des architectes d&#x27;expérience de marque les plus suivis du secteur pose un cadre clair : la prochaine vague d&#x27;expériences misera moins sur la performance technologique brute que sur la capacité à activer l&#x27;imaginaire du participant. intégrer un volet « co-création avec le public » (atelier, studio créatif, contenu généré en direct) dans la prochaine expérience de marque conçue pour un client." tabindex="0" role="button" aria-expanded="false" id="card-b2b-3">
+  <div class="card-media"><svg viewBox="0 0 400 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Experiences B2B">
+<rect width="400" height="240" fill="#14213d"/>
+<path d="M40 160 L140 80 L200 130 L260 60 L360 150" stroke="#ffffff" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"/>
+<circle cx="140" cy="80" r="9" fill="#ffffff"/>
+<circle cx="200" cy="130" r="9" fill="#ffffff"/>
+<circle cx="260" cy="60" r="9" fill="#ffffff"/>
+<rect x="20" y="185" width="360" height="4" fill="#ffffff" opacity="0.35"/>
+</svg><span class="badge">🤝 Expériences B2B</span></div>
+  <div class="card-body">
+    <h3 class="card-title">Canva : l&#x27;expérientiel entre dans son « ère de l&#x27;imagination »</h3>
+    <p class="card-fact">The Drum a publié début septembre 2026 un entretien avec Jimmy Knowles, Global Head of Experiential de Canva, qui théorise l&#x27;entrée du marketing expérientiel dans une « Imagination Era », en s&#x27;appuyant sur le Canva World Tour et Canva Create (plus de 2,5 millions d&#x27;inscrits en 2025).</p>
+    <div class="card-more">
+      <p class="card-label">Pourquoi ça compte</p>
+      <p class="card-why">Un des architectes d&#x27;expérience de marque les plus suivis du secteur pose un cadre clair : la prochaine vague d&#x27;expériences misera moins sur la performance technologique brute que sur la capacité à activer l&#x27;imaginaire du participant.</p>
+      <p class="card-label">Action concrète</p>
+      <p class="card-action">💡 Intégrer un volet « co-création avec le public » (atelier, studio créatif, contenu généré en direct) dans la prochaine expérience de marque conçue pour un client.</p>
+      <p class="card-source">Source : <a href="https://www.thedrum.com/news/judge-the-day-canva-s-jimmy-knowles-brings-culture-and-surprise-back-experiential" target="_blank" rel="noopener noreferrer">The Drum ↗</a></p>
+    </div>
+    <button class="card-toggle" type="button" aria-hidden="true">Voir plus <span class="chevron">▾</span></button>
+  </div>
+</article>
+  </div>
+</section>
+
+<section class="theme-section" id="section-b2c" data-theme-section="b2c">
+  <h2 class="section-title"><span class="section-emoji">✨</span>Expériences B2C</h2>
+  <div class="card-grid">
+    
+<article class="card" data-theme="b2c" data-search="oatly transforme goodhood en univers matcha à londres du 3 au 13 septembre 2026, oatly a pris possession de l&#x27;espace d&#x27;angle du concept-store goodhood à shoreditch pour « monochrome », un pop-up entièrement teinté de vert matcha, avec un « colour matching matcha bar » où un·e barista prépare une boisson à la nuance de vert idéale du visiteur. l&#x27;activation transforme un insight produit (le nuancier des packagings oatly) en rituel personnalisé et instagrammable, au moment précis de la london fashion week — un timing calculé pour capter presse et créateurs de contenu. reprendre le principe du « service de personnalisation sensorielle » (couleur, goût, texture) comme mécanique d&#x27;activation pop-up pour une marque de boisson, cosmétique ou lifestyle cliente." tabindex="0" role="button" aria-expanded="false" id="card-b2c-0">
+  <div class="card-media"><svg viewBox="0 0 400 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Experiences B2C">
+<rect width="400" height="240" fill="#1e1e1e"/>
+<g fill="#ffffff">
+<polygon points="120,50 132,90 172,90 140,114 152,154 120,130 88,154 100,114 68,90 108,90"/>
+</g>
+<g fill="#14213d" stroke="#ffffff" stroke-width="3">
+<polygon points="280,110 292,140 322,140 298,158 308,188 280,170 252,188 262,158 238,140 268,140"/>
+</g>
+</svg><span class="badge">✨ Expériences B2C</span></div>
+  <div class="card-body">
+    <h3 class="card-title">Oatly transforme Goodhood en univers matcha à Londres</h3>
+    <p class="card-fact">Du 3 au 13 septembre 2026, Oatly a pris possession de l&#x27;espace d&#x27;angle du concept-store Goodhood à Shoreditch pour « Monochrome », un pop-up entièrement teinté de vert matcha, avec un « Colour Matching Matcha Bar » où un·e barista prépare une boisson à la nuance de vert idéale du visiteur.</p>
+    <div class="card-more">
+      <p class="card-label">Pourquoi ça compte</p>
+      <p class="card-why">L&#x27;activation transforme un insight produit (le nuancier des packagings Oatly) en rituel personnalisé et instagrammable, au moment précis de la London Fashion Week — un timing calculé pour capter presse et créateurs de contenu.</p>
+      <p class="card-label">Action concrète</p>
+      <p class="card-action">💡 Reprendre le principe du « service de personnalisation sensorielle » (couleur, goût, texture) comme mécanique d&#x27;activation pop-up pour une marque de boisson, cosmétique ou lifestyle cliente.</p>
+      <p class="card-source">Source : <a href="https://www.campaignlive.co.uk/article/oatly-activation-will-matcha-visitors-drinks/1969077" target="_blank" rel="noopener noreferrer">Campaign ↗</a></p>
+    </div>
+    <button class="card-toggle" type="button" aria-hidden="true">Voir plus <span class="chevron">▾</span></button>
+  </div>
+</article>
+
+<article class="card" data-theme="b2c" data-search="londres inaugure « arcade arena », temple du gaming immersif little lion entertainment a ouvert le 5 septembre 2026 à londres son « arcade arena », une destination réunissant trois expériences de jeu immersif à grande échelle sous un même toit — présentée comme son investissement le plus ambitieux à ce jour. le divertissement immersif physique continue de s&#x27;imposer comme catégorie de destination à part entière, capable de faire déplacer un public — logique de destination durable plutôt qu&#x27;éphémère. explorer avec un client retail ou loisirs un format de lieu permanent organisé autour de plusieurs micro-expériences complémentaires sous une même marque ombrelle." tabindex="0" role="button" aria-expanded="false" id="card-b2c-1">
+  <div class="card-media"><svg viewBox="0 0 400 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Experiences B2C">
+<rect width="400" height="240" fill="#1e1e1e"/>
+<g fill="#ffffff">
+<polygon points="120,50 132,90 172,90 140,114 152,154 120,130 88,154 100,114 68,90 108,90"/>
+</g>
+<g fill="#14213d" stroke="#ffffff" stroke-width="3">
+<polygon points="280,110 292,140 322,140 298,158 308,188 280,170 252,188 262,158 238,140 268,140"/>
+</g>
+</svg><span class="badge">✨ Expériences B2C</span></div>
+  <div class="card-body">
+    <h3 class="card-title">Londres inaugure « Arcade Arena », temple du gaming immersif</h3>
+    <p class="card-fact">Little Lion Entertainment a ouvert le 5 septembre 2026 à Londres son « Arcade Arena », une destination réunissant trois expériences de jeu immersif à grande échelle sous un même toit — présentée comme son investissement le plus ambitieux à ce jour.</p>
+    <div class="card-more">
+      <p class="card-label">Pourquoi ça compte</p>
+      <p class="card-why">Le divertissement immersif physique continue de s&#x27;imposer comme catégorie de destination à part entière, capable de faire déplacer un public — logique de destination durable plutôt qu&#x27;éphémère.</p>
+      <p class="card-label">Action concrète</p>
+      <p class="card-action">💡 Explorer avec un client retail ou loisirs un format de lieu permanent organisé autour de plusieurs micro-expériences complémentaires sous une même marque ombrelle.</p>
+      <p class="card-source">Source : <a href="https://www.amusementsandattractions.com/attractions/news/little-lions-flagship-immersive-gaming-experience-to-open-september-5" target="_blank" rel="noopener noreferrer">Amusements &amp; Attractions ↗</a></p>
+    </div>
+    <button class="card-toggle" type="button" aria-hidden="true">Voir plus <span class="chevron">▾</span></button>
+  </div>
+</article>
+
+<article class="card" data-theme="b2c" data-search="nike x one piece : un pop-up qui fait basculer l&#x27;acheteur dans le manga nike a lancé sa collection air max plus « devil fruits » inspirée du manga one piece, avec un pop-up mondial baptisé « dr. b&#x27;s research lab » ouvert à harajuku (tokyo) début septembre, avant un déploiement dans plusieurs villes d&#x27;asie puis une arrivée en europe et aux états-unis le 19 septembre. le décor plonge les visiteurs dans l&#x27;univers scientifique et fantastique du manga plutôt que dans une simple présentation produit. nike illustre la bascule du pop-up produit vers le « world-building » narratif complet — le client n&#x27;achète pas une sneaker, il entre dans la fiction dont elle est issue, ce qui démultiplie le potentiel de contenu généré par les visiteurs. pour un lancement produit client, construire le décor du pop-up autour d&#x27;un univers narratif emprunté (collaboration ip, fiction, esthétique culte) plutôt que du simple habillage aux couleurs de la marque." tabindex="0" role="button" aria-expanded="false" id="card-b2c-2">
+  <div class="card-media"><svg viewBox="0 0 400 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Experiences B2C">
+<rect width="400" height="240" fill="#1e1e1e"/>
+<g fill="#ffffff">
+<polygon points="120,50 132,90 172,90 140,114 152,154 120,130 88,154 100,114 68,90 108,90"/>
+</g>
+<g fill="#14213d" stroke="#ffffff" stroke-width="3">
+<polygon points="280,110 292,140 322,140 298,158 308,188 280,170 252,188 262,158 238,140 268,140"/>
+</g>
+</svg><span class="badge">✨ Expériences B2C</span></div>
+  <div class="card-body">
+    <h3 class="card-title">Nike x One Piece : un pop-up qui fait basculer l&#x27;acheteur dans le manga</h3>
+    <p class="card-fact">Nike a lancé sa collection Air Max Plus « Devil Fruits » inspirée du manga One Piece, avec un pop-up mondial baptisé « Dr. B&#x27;s Research Lab » ouvert à Harajuku (Tokyo) début septembre, avant un déploiement dans plusieurs villes d&#x27;Asie puis une arrivée en Europe et aux États-Unis le 19 septembre. Le décor plonge les visiteurs dans l&#x27;univers scientifique et fantastique du manga plutôt que dans une simple présentation produit.</p>
+    <div class="card-more">
+      <p class="card-label">Pourquoi ça compte</p>
+      <p class="card-why">Nike illustre la bascule du pop-up produit vers le « world-building » narratif complet — le client n&#x27;achète pas une sneaker, il entre dans la fiction dont elle est issue, ce qui démultiplie le potentiel de contenu généré par les visiteurs.</p>
+      <p class="card-label">Action concrète</p>
+      <p class="card-action">💡 Pour un lancement produit client, construire le décor du pop-up autour d&#x27;un univers narratif emprunté (collaboration IP, fiction, esthétique culte) plutôt que du simple habillage aux couleurs de la marque.</p>
+      <p class="card-source">Source : <a href="https://about.nike.com/en/newsroom/releases/nike-one-piece-collection-transforms-imagination-into-motion-for-adventurers-everywhere" target="_blank" rel="noopener noreferrer">Nike Newsroom ↗</a></p>
+    </div>
+    <button class="card-toggle" type="button" aria-hidden="true">Voir plus <span class="chevron">▾</span></button>
+  </div>
+</article>
+  </div>
+</section>
+
+<section class="theme-section" id="section-popup" data-theme-section="popup">
+  <h2 class="section-title"><span class="section-emoji">🏬</span>Pop-up stores</h2>
+  <div class="card-grid">
+    
+<article class="card" data-theme="popup" data-search="mclaren mastercard f1 team débarque à madrid mastercard a ouvert la pop-up store exclusive mclaren mastercard f1 team au centre commercial la vaguada à madrid, du 3 au 12 septembre — étape finale d&#x27;une tournée européenne passée par nice, vienne, bruxelles et milan. l&#x27;espace propose du merchandising exclusif et une cabine photo ia « en pilote » de l&#x27;écurie. c&#x27;est un cas d&#x27;école de pop-up « tournée itinérante » synchronisé avec un calendrier sportif — la boutique clôt sa tournée pile pendant la semaine du gp de madrid, maximisant la résonance locale. proposer à un client sponsor ou marque premium une « tournée capsule » de pop-up calée sur un calendrier d&#x27;événements, avec un dispositif photo/ia à faible coût qui génère du contenu partageable." tabindex="0" role="button" aria-expanded="false" id="card-popup-0">
+  <div class="card-media"><svg viewBox="0 0 400 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Pop-up stores">
+<rect width="400" height="240" fill="#14213d"/>
+<rect x="70" y="140" width="80" height="70" fill="#ffffff"/>
+<rect x="160" y="100" width="90" height="110" fill="#ffffff" opacity="0.75"/>
+<rect x="260" y="130" width="70" height="80" fill="#ffffff" opacity="0.5"/>
+<polygon points="60,140 160,140 150,110 70,110" fill="#ffffff"/>
+<polygon points="150,100 260,100 250,75 160,75" fill="#ffffff" opacity="0.75"/>
+</svg><span class="badge">🏬 Pop-up stores</span></div>
+  <div class="card-body">
+    <h3 class="card-title">McLaren Mastercard F1 Team débarque à Madrid</h3>
+    <p class="card-fact">Mastercard a ouvert la pop-up store exclusive McLaren Mastercard F1 Team au centre commercial La Vaguada à Madrid, du 3 au 12 septembre — étape finale d&#x27;une tournée européenne passée par Nice, Vienne, Bruxelles et Milan. L&#x27;espace propose du merchandising exclusif et une cabine photo IA « en pilote » de l&#x27;écurie.</p>
+    <div class="card-more">
+      <p class="card-label">Pourquoi ça compte</p>
+      <p class="card-why">C&#x27;est un cas d&#x27;école de pop-up « tournée itinérante » synchronisé avec un calendrier sportif — la boutique clôt sa tournée pile pendant la semaine du GP de Madrid, maximisant la résonance locale.</p>
+      <p class="card-label">Action concrète</p>
+      <p class="card-action">💡 Proposer à un client sponsor ou marque premium une « tournée capsule » de pop-up calée sur un calendrier d&#x27;événements, avec un dispositif photo/IA à faible coût qui génère du contenu partageable.</p>
+      <p class="card-source">Source : <a href="https://www.marketingdirecto.com/anunciantes-general/llega-madrid-pop-up-store-exclusiva-mclaren-mastercard-f1-team" target="_blank" rel="noopener noreferrer">MarketingDirecto ↗</a></p>
+    </div>
+    <button class="card-toggle" type="button" aria-hidden="true">Voir plus <span class="chevron">▾</span></button>
+  </div>
+</article>
+
+<article class="card" data-theme="popup" data-search="pepe jeans london s&#x27;associe à oracle red bull racing pour une boutique éphémère à madrid pepe jeans london a ouvert un espace éphémère rue fuencarral à madrid, en collaboration avec oracle red bull racing, pour commercialiser une collection capsule en édition limitée inspirée de la f1. la boutique reste ouverte jusqu&#x27;à fin septembre. une marque de mode espagnole historique capitalise sur l&#x27;arrivée de la f1 à madrid pour toucher un public plus jeune et sportif, en pleine rue commerçante à fort trafic touristique. pour un client mode/lifestyle, identifier un partenariat sport ou culture « de circonstance » locale et monter une capsule + corner éphémère dans une rue à forte affluence." tabindex="0" role="button" aria-expanded="false" id="card-popup-1">
+  <div class="card-media"><svg viewBox="0 0 400 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Pop-up stores">
+<rect width="400" height="240" fill="#14213d"/>
+<rect x="70" y="140" width="80" height="70" fill="#ffffff"/>
+<rect x="160" y="100" width="90" height="110" fill="#ffffff" opacity="0.75"/>
+<rect x="260" y="130" width="70" height="80" fill="#ffffff" opacity="0.5"/>
+<polygon points="60,140 160,140 150,110 70,110" fill="#ffffff"/>
+<polygon points="150,100 260,100 250,75 160,75" fill="#ffffff" opacity="0.75"/>
+</svg><span class="badge">🏬 Pop-up stores</span></div>
+  <div class="card-body">
+    <h3 class="card-title">Pepe Jeans London s&#x27;associe à Oracle Red Bull Racing pour une boutique éphémère à Madrid</h3>
+    <p class="card-fact">Pepe Jeans London a ouvert un espace éphémère rue Fuencarral à Madrid, en collaboration avec Oracle Red Bull Racing, pour commercialiser une collection capsule en édition limitée inspirée de la F1. La boutique reste ouverte jusqu&#x27;à fin septembre.</p>
+    <div class="card-more">
+      <p class="card-label">Pourquoi ça compte</p>
+      <p class="card-why">Une marque de mode espagnole historique capitalise sur l&#x27;arrivée de la F1 à Madrid pour toucher un public plus jeune et sportif, en pleine rue commerçante à fort trafic touristique.</p>
+      <p class="card-label">Action concrète</p>
+      <p class="card-action">💡 Pour un client mode/lifestyle, identifier un partenariat sport ou culture « de circonstance » locale et monter une capsule + corner éphémère dans une rue à forte affluence.</p>
+      <p class="card-source">Source : <a href="https://es.fashionnetwork.com/news/Pepe-jeans-london-inaugura-una-tienda-efimera-en-madrid-de-la-mano-de-oracle-red-bull-racing,1849714.html" target="_blank" rel="noopener noreferrer">FashionNetwork España ↗</a></p>
+    </div>
+    <button class="card-toggle" type="button" aria-hidden="true">Voir plus <span class="chevron">▾</span></button>
+  </div>
+</article>
+
+<article class="card" data-theme="popup" data-search="pompeii transforme son flagship madrilène en temple de la f1 la marque de streetwear madrilène pompeii a lancé, en partenariat officiel avec la formula 1, une collection capsule de neuf pièces unisexe disponible en ligne dès le 8 septembre et en boutique dès le 10. son magasin phare a été entièrement habillé aux couleurs f1 du 10 au 13 septembre, avec un lancement événementiel. c&#x27;est l&#x27;exemple d&#x27;une petite marque locale qui obtient une licence officielle d&#x27;un géant mondial du sport — un signal que les rights holders cherchent des partenaires « streetwear/local » plutôt que uniquement des multinationales. accompagner une marque locale/indépendante dans une démarche de co-branding avec un rights holder événementiel : capsule limitée + habillage temporaire du point de vente existant, sans investissement immobilier supplémentaire." tabindex="0" role="button" aria-expanded="false" id="card-popup-2">
+  <div class="card-media"><svg viewBox="0 0 400 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Pop-up stores">
+<rect width="400" height="240" fill="#14213d"/>
+<rect x="70" y="140" width="80" height="70" fill="#ffffff"/>
+<rect x="160" y="100" width="90" height="110" fill="#ffffff" opacity="0.75"/>
+<rect x="260" y="130" width="70" height="80" fill="#ffffff" opacity="0.5"/>
+<polygon points="60,140 160,140 150,110 70,110" fill="#ffffff"/>
+<polygon points="150,100 260,100 250,75 160,75" fill="#ffffff" opacity="0.75"/>
+</svg><span class="badge">🏬 Pop-up stores</span></div>
+  <div class="card-body">
+    <h3 class="card-title">Pompeii transforme son flagship madrilène en temple de la F1</h3>
+    <p class="card-fact">La marque de streetwear madrilène Pompeii a lancé, en partenariat officiel avec la Formula 1, une collection capsule de neuf pièces unisexe disponible en ligne dès le 8 septembre et en boutique dès le 10. Son magasin phare a été entièrement habillé aux couleurs F1 du 10 au 13 septembre, avec un lancement événementiel.</p>
+    <div class="card-more">
+      <p class="card-label">Pourquoi ça compte</p>
+      <p class="card-why">C&#x27;est l&#x27;exemple d&#x27;une petite marque locale qui obtient une licence officielle d&#x27;un géant mondial du sport — un signal que les rights holders cherchent des partenaires « streetwear/local » plutôt que uniquement des multinationales.</p>
+      <p class="card-label">Action concrète</p>
+      <p class="card-action">💡 Accompagner une marque locale/indépendante dans une démarche de co-branding avec un rights holder événementiel : capsule limitée + habillage temporaire du point de vente existant, sans investissement immobilier supplémentaire.</p>
+      <p class="card-source">Source : <a href="https://wwd.com/fashion-news/sportswear/formula-1-collaboration-spanish-sportswear-brand-pompeii-1239200128/" target="_blank" rel="noopener noreferrer">WWD ↗</a></p>
+    </div>
+    <button class="card-toggle" type="button" aria-hidden="true">Voir plus <span class="chevron">▾</span></button>
+  </div>
+</article>
+
+<article class="card" data-theme="popup" data-search="me &amp; em ouvre sa première pop-up store européenne hors royaume-uni, à genève la marque britannique de prêt-à-porter premium me &amp; em a ouvert le 3 septembre une pop-up store de 88 m² au sein du grand magasin bongénie à genève, pour trois mois — sa première implantation physique en europe continentale. plutôt qu&#x27;un site e-commerce seul, la marque teste un marché européen à faible risque via un corner temporaire hébergé dans un grand magasin partenaire — un modèle d&#x27;expansion internationale à coût maîtrisé. pour une marque d2c qui veut tester un nouveau marché européen (espagne comprise), proposer un partenariat de pop-up « hébergé » dans un grand magasin local plutôt qu&#x27;un bail commercial classique." tabindex="0" role="button" aria-expanded="false" id="card-popup-3">
+  <div class="card-media"><svg viewBox="0 0 400 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Pop-up stores">
+<rect width="400" height="240" fill="#14213d"/>
+<rect x="70" y="140" width="80" height="70" fill="#ffffff"/>
+<rect x="160" y="100" width="90" height="110" fill="#ffffff" opacity="0.75"/>
+<rect x="260" y="130" width="70" height="80" fill="#ffffff" opacity="0.5"/>
+<polygon points="60,140 160,140 150,110 70,110" fill="#ffffff"/>
+<polygon points="150,100 260,100 250,75 160,75" fill="#ffffff" opacity="0.75"/>
+</svg><span class="badge">🏬 Pop-up stores</span></div>
+  <div class="card-body">
+    <h3 class="card-title">Me &amp; Em ouvre sa première pop-up store européenne hors Royaume-Uni, à Genève</h3>
+    <p class="card-fact">La marque britannique de prêt-à-porter premium Me &amp; Em a ouvert le 3 septembre une pop-up store de 88 m² au sein du grand magasin Bongénie à Genève, pour trois mois — sa première implantation physique en Europe continentale.</p>
+    <div class="card-more">
+      <p class="card-label">Pourquoi ça compte</p>
+      <p class="card-why">Plutôt qu&#x27;un site e-commerce seul, la marque teste un marché européen à faible risque via un corner temporaire hébergé dans un grand magasin partenaire — un modèle d&#x27;expansion internationale à coût maîtrisé.</p>
+      <p class="card-label">Action concrète</p>
+      <p class="card-action">💡 Pour une marque D2C qui veut tester un nouveau marché européen (Espagne comprise), proposer un partenariat de pop-up « hébergé » dans un grand magasin local plutôt qu&#x27;un bail commercial classique.</p>
+      <p class="card-source">Source : <a href="https://www.drapersonline.com/companies/directory/me-and-em/me-em-to-open-geneva-pop-up-store" target="_blank" rel="noopener noreferrer">Drapers ↗</a></p>
+    </div>
+    <button class="card-toggle" type="button" aria-hidden="true">Voir plus <span class="chevron">▾</span></button>
+  </div>
+</article>
+
+<article class="card" data-theme="popup" data-search="pont-up store 2026 réunit 150 projets innovants à pontevedra les 11 et 12 septembre, la praza de españa de pontevedra (galice) accueille la pont-up store 2026, un format de boutiques pop-up collectif réunissant plus de 150 projets innovants issus de la tech, du design, de l&#x27;audiovisuel et du commerce durable. c&#x27;est un exemple de pop-up store « mutualisé » porté par une collectivité locale plutôt que par une seule marque — un format qui redonne de la visibilité au commerce local et à l&#x27;entrepreneuriat régional. proposer à une mairie, une association de commerçants ou une chambre de commerce espagnole un format de « pop-up collectif » thématique pour dynamiser un centre-ville hors saison touristique." tabindex="0" role="button" aria-expanded="false" id="card-popup-4">
+  <div class="card-media"><svg viewBox="0 0 400 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Pop-up stores">
+<rect width="400" height="240" fill="#14213d"/>
+<rect x="70" y="140" width="80" height="70" fill="#ffffff"/>
+<rect x="160" y="100" width="90" height="110" fill="#ffffff" opacity="0.75"/>
+<rect x="260" y="130" width="70" height="80" fill="#ffffff" opacity="0.5"/>
+<polygon points="60,140 160,140 150,110 70,110" fill="#ffffff"/>
+<polygon points="150,100 260,100 250,75 160,75" fill="#ffffff" opacity="0.75"/>
+</svg><span class="badge">🏬 Pop-up stores</span></div>
+  <div class="card-body">
+    <h3 class="card-title">Pont-Up Store 2026 réunit 150 projets innovants à Pontevedra</h3>
+    <p class="card-fact">Les 11 et 12 septembre, la Praza de España de Pontevedra (Galice) accueille la Pont-Up Store 2026, un format de boutiques pop-up collectif réunissant plus de 150 projets innovants issus de la tech, du design, de l&#x27;audiovisuel et du commerce durable.</p>
+    <div class="card-more">
+      <p class="card-label">Pourquoi ça compte</p>
+      <p class="card-why">C&#x27;est un exemple de pop-up store « mutualisé » porté par une collectivité locale plutôt que par une seule marque — un format qui redonne de la visibilité au commerce local et à l&#x27;entrepreneuriat régional.</p>
+      <p class="card-label">Action concrète</p>
+      <p class="card-action">💡 Proposer à une mairie, une association de commerçants ou une chambre de commerce espagnole un format de « pop-up collectif » thématique pour dynamiser un centre-ville hors saison touristique.</p>
+      <p class="card-source">Source : <a href="https://pontevedraplan.com/eventos/pont-up-store-2026-en-pontevedra/" target="_blank" rel="noopener noreferrer">PontevedraPlan ↗</a></p>
+    </div>
+    <button class="card-toggle" type="button" aria-hidden="true">Voir plus <span class="chevron">▾</span></button>
+  </div>
+</article>
+  </div>
+</section>
+
+<section class="theme-section" id="section-activations" data-theme-section="activations">
+  <h2 class="section-title"><span class="section-emoji">💥</span>Activations originales</h2>
+  <div class="card-grid">
+    
+<article class="card" data-theme="activations" data-search="audi transforme la plaza de colón en musée éphémère de la compétition automobile du 4 au 12 septembre, audi a installé plaza de colón (madrid) une exposition gratuite reliant presque neuf décennies d&#x27;histoire en compétition à son entrée en formule 1, avec pour pièce maîtresse la « curva monumental », réplique grandeur nature d&#x27;un virage du nouveau circuit madring, et un photobooth ia générant du contenu personnalisé. au lieu d&#x27;un simple stand de sponsoring, audi crée une destination culturelle gratuite en plein cœur de ville — un modèle de « brand museum éphémère » qui construit de la légitimité patrimoniale plutôt que du pur placement produit. pour une marque avec un héritage fort, concevoir une exposition gratuite en espace public plutôt qu&#x27;un stand événementiel classique — avec un point de capture de contenu pour maximiser la diffusion organique." tabindex="0" role="button" aria-expanded="false" id="card-activations-0">
+  <div class="card-media"><svg viewBox="0 0 400 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Activations originales">
+<rect width="400" height="240" fill="#1e1e1e"/>
+<polygon points="210,30 170,140 205,140 175,215 260,105 220,105 250,30" fill="#ffffff"/>
+<circle cx="330" cy="60" r="10" fill="#14213d" stroke="#ffffff" stroke-width="3"/>
+<circle cx="60" cy="180" r="14" fill="none" stroke="#ffffff" stroke-width="4" opacity="0.6"/>
+</svg><span class="badge">💥 Activations originales</span></div>
+  <div class="card-body">
+    <h3 class="card-title">Audi transforme la Plaza de Colón en musée éphémère de la compétition automobile</h3>
+    <p class="card-fact">Du 4 au 12 septembre, Audi a installé Plaza de Colón (Madrid) une exposition gratuite reliant presque neuf décennies d&#x27;histoire en compétition à son entrée en Formule 1, avec pour pièce maîtresse la « Curva Monumental », réplique grandeur nature d&#x27;un virage du nouveau circuit Madring, et un photobooth IA générant du contenu personnalisé.</p>
+    <div class="card-more">
+      <p class="card-label">Pourquoi ça compte</p>
+      <p class="card-why">Au lieu d&#x27;un simple stand de sponsoring, Audi crée une destination culturelle gratuite en plein cœur de ville — un modèle de « brand museum éphémère » qui construit de la légitimité patrimoniale plutôt que du pur placement produit.</p>
+      <p class="card-label">Action concrète</p>
+      <p class="card-action">💡 Pour une marque avec un héritage fort, concevoir une exposition gratuite en espace public plutôt qu&#x27;un stand événementiel classique — avec un point de capture de contenu pour maximiser la diffusion organique.</p>
+      <p class="card-source">Source : <a href="https://www.marketingnews.es/marcas/noticia/1194990054305/audi-lleva-la-formula-1-al-centro-de-madrid-con-una-gran-experiencia-en-la-plaza-de-colon.1.html" target="_blank" rel="noopener noreferrer">MarketingNews ↗</a></p>
+    </div>
+    <button class="card-toggle" type="button" aria-hidden="true">Voir plus <span class="chevron">▾</span></button>
+  </div>
+</article>
+
+<article class="card" data-theme="activations" data-search="williams racing installe sa fan zone en plein callao, avec simulateur de camion minier du 7 au 13 septembre, l&#x27;écurie atlassian williams f1 (celle de carlos sainz) a investi la plaza del callao à madrid avec une fan zone gratuite : voiture fw48 grandeur nature, simulateur de camion minier komatsu, jeux et bar de dégustation de bière, avec apparitions de pilotes. l&#x27;activation mélange des sponsors techniques improbables (mine, crypto, bière locale) dans un même espace ludique — preuve que la diversité des partenaires peut devenir un atout d&#x27;expérience plutôt qu&#x27;un simple mur de logos. concevoir pour un client multi-partenaires un parcours d&#x27;activation en plusieurs stations ludiques qui donne à chaque sponsor un rôle narratif distinct plutôt qu&#x27;un espace de visibilité isolé." tabindex="0" role="button" aria-expanded="false" id="card-activations-1">
+  <div class="card-media"><svg viewBox="0 0 400 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Activations originales">
+<rect width="400" height="240" fill="#1e1e1e"/>
+<polygon points="210,30 170,140 205,140 175,215 260,105 220,105 250,30" fill="#ffffff"/>
+<circle cx="330" cy="60" r="10" fill="#14213d" stroke="#ffffff" stroke-width="3"/>
+<circle cx="60" cy="180" r="14" fill="none" stroke="#ffffff" stroke-width="4" opacity="0.6"/>
+</svg><span class="badge">💥 Activations originales</span></div>
+  <div class="card-body">
+    <h3 class="card-title">Williams Racing installe sa Fan Zone en plein Callao, avec simulateur de camion minier</h3>
+    <p class="card-fact">Du 7 au 13 septembre, l&#x27;écurie Atlassian Williams F1 (celle de Carlos Sainz) a investi la Plaza del Callao à Madrid avec une Fan Zone gratuite : voiture FW48 grandeur nature, simulateur de camion minier Komatsu, jeux et bar de dégustation de bière, avec apparitions de pilotes.</p>
+    <div class="card-more">
+      <p class="card-label">Pourquoi ça compte</p>
+      <p class="card-why">L&#x27;activation mélange des sponsors techniques improbables (mine, crypto, bière locale) dans un même espace ludique — preuve que la diversité des partenaires peut devenir un atout d&#x27;expérience plutôt qu&#x27;un simple mur de logos.</p>
+      <p class="card-label">Action concrète</p>
+      <p class="card-action">💡 Concevoir pour un client multi-partenaires un parcours d&#x27;activation en plusieurs stations ludiques qui donne à chaque sponsor un rôle narratif distinct plutôt qu&#x27;un espace de visibilité isolé.</p>
+      <p class="card-source">Source : <a href="https://www.motor16.com/deportes/atlassian-williams-fan-zone/" target="_blank" rel="noopener noreferrer">Motor16 ↗</a></p>
+    </div>
+    <button class="card-toggle" type="button" aria-hidden="true">Voir plus <span class="chevron">▾</span></button>
+  </div>
+</article>
+
+<article class="card" data-theme="activations" data-search="louis vuitton sculpte un trophée-malle sur mesure pour le gp d&#x27;espagne partenaire officiel de la f1, louis vuitton a créé une malle-trophée sur mesure pour le premier grand prix d&#x27;espagne à madrid, reprenant le monogram réinterprété avec les couleurs du drapeau espagnol et des rayures damier formant un « v » qui évoque la victoire et l&#x27;initiale de la marque. plutôt qu&#x27;un logo sur une bâche, la maison transforme un objet fonctionnel du sport en pièce de savoir-faire et de storytelling — un rappel que le luxe active sa légitimité par l&#x27;artisanat, pas par la surexposition. pour un client premium/luxe sponsorisant un événement, proposer la création d&#x27;un objet fonctionnel sur mesure (écrin, mobilier, packaging d&#x27;accueil) comme point d&#x27;ancrage rp et contenu photo." tabindex="0" role="button" aria-expanded="false" id="card-activations-2">
+  <div class="card-media"><svg viewBox="0 0 400 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Activations originales">
+<rect width="400" height="240" fill="#1e1e1e"/>
+<polygon points="210,30 170,140 205,140 175,215 260,105 220,105 250,30" fill="#ffffff"/>
+<circle cx="330" cy="60" r="10" fill="#14213d" stroke="#ffffff" stroke-width="3"/>
+<circle cx="60" cy="180" r="14" fill="none" stroke="#ffffff" stroke-width="4" opacity="0.6"/>
+</svg><span class="badge">💥 Activations originales</span></div>
+  <div class="card-body">
+    <h3 class="card-title">Louis Vuitton sculpte un trophée-malle sur mesure pour le GP d&#x27;Espagne</h3>
+    <p class="card-fact">Partenaire officiel de la F1, Louis Vuitton a créé une malle-trophée sur mesure pour le premier Grand Prix d&#x27;Espagne à Madrid, reprenant le Monogram réinterprété avec les couleurs du drapeau espagnol et des rayures Damier formant un « V » qui évoque la victoire et l&#x27;initiale de la marque.</p>
+    <div class="card-more">
+      <p class="card-label">Pourquoi ça compte</p>
+      <p class="card-why">Plutôt qu&#x27;un logo sur une bâche, la maison transforme un objet fonctionnel du sport en pièce de savoir-faire et de storytelling — un rappel que le luxe active sa légitimité par l&#x27;artisanat, pas par la surexposition.</p>
+      <p class="card-label">Action concrète</p>
+      <p class="card-action">💡 Pour un client premium/luxe sponsorisant un événement, proposer la création d&#x27;un objet fonctionnel sur mesure (écrin, mobilier, packaging d&#x27;accueil) comme point d&#x27;ancrage RP et contenu photo.</p>
+      <p class="card-source">Source : <a href="https://highxtar.com/louis-vuitton-lleva-la-victoria-al-gran-premio-de-espana-con-un-baul-trofeo-a-medida/" target="_blank" rel="noopener noreferrer">HIGHXTAR ↗</a></p>
+    </div>
+    <button class="card-toggle" type="button" aria-hidden="true">Voir plus <span class="chevron">▾</span></button>
+  </div>
+</article>
+
+<article class="card" data-theme="activations" data-search="ron barceló recrée un village éphémère secret à madrid : « villa ahora » ron barceló prépare « villa ahora », un village éphémère dans un lieu secret de madrid qui accueillera sa grande fête le 25 septembre pour 700 personnes. pour obtenir une invitation, la marque a lancé un mini-jeu interactif en ligne (actif jusqu&#x27;au 15 septembre) où il faut repérer des objets d&#x27;imagerie villageoise, complété par des jeux sur instagram. la marque construit l&#x27;attente sur plusieurs semaines via la gamification et l&#x27;exclusivité (lieu secret, invitations limitées) avant même que l&#x27;événement physique n&#x27;ait lieu. pour un client événementiel, structurer une activation physique autour d&#x27;une phase de teasing digital gamifiée qui crée du désir et de la donnée qualifiée avant l&#x27;événement lui-même." tabindex="0" role="button" aria-expanded="false" id="card-activations-3">
+  <div class="card-media"><svg viewBox="0 0 400 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Activations originales">
+<rect width="400" height="240" fill="#1e1e1e"/>
+<polygon points="210,30 170,140 205,140 175,215 260,105 220,105 250,30" fill="#ffffff"/>
+<circle cx="330" cy="60" r="10" fill="#14213d" stroke="#ffffff" stroke-width="3"/>
+<circle cx="60" cy="180" r="14" fill="none" stroke="#ffffff" stroke-width="4" opacity="0.6"/>
+</svg><span class="badge">💥 Activations originales</span></div>
+  <div class="card-body">
+    <h3 class="card-title">Ron Barceló recrée un village éphémère secret à Madrid : « Villa Ahora »</h3>
+    <p class="card-fact">Ron Barceló prépare « Villa Ahora », un village éphémère dans un lieu secret de Madrid qui accueillera sa grande fête le 25 septembre pour 700 personnes. Pour obtenir une invitation, la marque a lancé un mini-jeu interactif en ligne (actif jusqu&#x27;au 15 septembre) où il faut repérer des objets d&#x27;imagerie villageoise, complété par des jeux sur Instagram.</p>
+    <div class="card-more">
+      <p class="card-label">Pourquoi ça compte</p>
+      <p class="card-why">La marque construit l&#x27;attente sur plusieurs semaines via la gamification et l&#x27;exclusivité (lieu secret, invitations limitées) avant même que l&#x27;événement physique n&#x27;ait lieu.</p>
+      <p class="card-label">Action concrète</p>
+      <p class="card-action">💡 Pour un client événementiel, structurer une activation physique autour d&#x27;une phase de teasing digital gamifiée qui crée du désir et de la donnée qualifiée avant l&#x27;événement lui-même.</p>
+      <p class="card-source">Source : <a href="https://www.marketingdirecto.com/anunciantes-general/ron-barcelo-villa-ahora-2026-madrid" target="_blank" rel="noopener noreferrer">MarketingDirecto ↗</a></p>
+    </div>
+    <button class="card-toggle" type="button" aria-hidden="true">Voir plus <span class="chevron">▾</span></button>
+  </div>
+</article>
+
+<article class="card" data-theme="activations" data-search="oatly transforme ses briques de lait d&#x27;avoine en tribune politique sur le climat oatly a commencé à imprimer sur ses briques un message en deux blocs de texte adressé aux responsables politiques : un bloc de 11 mots représentant « les personnes qui ne s&#x27;intéressent pas à l&#x27;action climatique » face à un bloc de 89 mots, reprenant la statistique selon laquelle 89 % des citoyens dans le monde veulent une action climatique plus forte, en lien avec le « 89 percent project » de l&#x27;ong covering climate now. la marque transforme son propre packaging — un support qu&#x27;elle possède et paie déjà — en média d&#x27;opinion virale, sans budget média additionnel, en s&#x27;appuyant sur une donnée choc facile à partager. pour un client engagé, identifier une statistique de conviction forte liée à sa cause et la transformer en design de packaging « activiste » limité dans le temps, plutôt que de lancer une campagne média classique." tabindex="0" role="button" aria-expanded="false" id="card-activations-4">
+  <div class="card-media"><svg viewBox="0 0 400 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Activations originales">
+<rect width="400" height="240" fill="#1e1e1e"/>
+<polygon points="210,30 170,140 205,140 175,215 260,105 220,105 250,30" fill="#ffffff"/>
+<circle cx="330" cy="60" r="10" fill="#14213d" stroke="#ffffff" stroke-width="3"/>
+<circle cx="60" cy="180" r="14" fill="none" stroke="#ffffff" stroke-width="4" opacity="0.6"/>
+</svg><span class="badge">💥 Activations originales</span></div>
+  <div class="card-body">
+    <h3 class="card-title">Oatly transforme ses briques de lait d&#x27;avoine en tribune politique sur le climat</h3>
+    <p class="card-fact">Oatly a commencé à imprimer sur ses briques un message en deux blocs de texte adressé aux responsables politiques : un bloc de 11 mots représentant « les personnes qui ne s&#x27;intéressent pas à l&#x27;action climatique » face à un bloc de 89 mots, reprenant la statistique selon laquelle 89 % des citoyens dans le monde veulent une action climatique plus forte, en lien avec le « 89 Percent Project » de l&#x27;ONG Covering Climate Now.</p>
+    <div class="card-more">
+      <p class="card-label">Pourquoi ça compte</p>
+      <p class="card-why">La marque transforme son propre packaging — un support qu&#x27;elle possède et paie déjà — en média d&#x27;opinion virale, sans budget média additionnel, en s&#x27;appuyant sur une donnée choc facile à partager.</p>
+      <p class="card-label">Action concrète</p>
+      <p class="card-action">💡 Pour un client engagé, identifier une statistique de conviction forte liée à sa cause et la transformer en design de packaging « activiste » limité dans le temps, plutôt que de lancer une campagne média classique.</p>
+      <p class="card-source">Source : <a href="https://www.vegan-news.net/oatly-prints-climate-action-message-on-cartons-in-bid-to-mobilize-the-89" target="_blank" rel="noopener noreferrer">Vegan News ↗</a></p>
+    </div>
+    <button class="card-toggle" type="button" aria-hidden="true">Voir plus <span class="chevron">▾</span></button>
+  </div>
+</article>
+  </div>
+</section>
+
+
+  <p class="no-results" id="no-results" hidden>Aucune actu ne correspond à ta recherche 🔎</p>
 
   <footer>
-    <p>Archive personnelle de veille hebdomadaire. Chaque rapport cite ses sources originales.</p>
+    <p>Veille personnelle — branding, marketing &amp; activation de marque. Chaque actu cite sa source originale. Généré automatiquement, semaine du 4 septembre 2026 au 11 septembre 2026.</p>
   </footer>
 </main>
 
 <script>
+
 (function(){
   "use strict";
 
+  // Reading progress bar
   var bar = document.getElementById('progress-bar');
   function updateProgress(){
     var el = document.documentElement;
@@ -240,12 +1250,14 @@
     var pct = scrollHeight > 0 ? (scrollTop / scrollHeight) * 100 : 0;
     if (bar) bar.style.width = pct + '%';
   }
-  window.addEventListener('scroll', updateProgress, { passive: true });
+  window.addEventListener('scroll', updateProgress, { passive:true });
   window.addEventListener('resize', updateProgress);
   updateProgress();
 
-  function animateCount(el, target, duration){
+  // Animated counters
+  function animateCount(el, duration){
     if (!el) return;
+    var target = parseInt(el.getAttribute('data-target'), 10) || 0;
     var startTime = null;
     function step(ts){
       if (!startTime) startTime = ts;
@@ -256,20 +1268,71 @@
     }
     requestAnimationFrame(step);
   }
-  var items = Array.prototype.slice.call(document.querySelectorAll('.archive-item'));
-  animateCount(document.getElementById('count-reports'), items.length, 700);
+  ['count-items','count-sources','count-themes'].forEach(function(id){
+    animateCount(document.getElementById(id), 900);
+  });
 
-  var searchInput = document.getElementById('search-input');
-  if (searchInput) {
-    searchInput.addEventListener('input', function(){
-      var q = searchInput.value.toLowerCase().trim();
-      items.forEach(function(item){
-        var match = !q || item.textContent.toLowerCase().indexOf(q) !== -1;
-        item.hidden = !match;
-      });
+  // Card expand/collapse
+  var cards = Array.prototype.slice.call(document.querySelectorAll('.card'));
+  cards.forEach(function(card){
+    function toggle(){
+      var willExpand = !card.classList.contains('expanded');
+      card.classList.toggle('expanded', willExpand);
+      card.setAttribute('aria-expanded', willExpand ? 'true' : 'false');
+      var btn = card.querySelector('.card-toggle');
+      if (btn) btn.firstChild.textContent = willExpand ? 'Voir moins ' : 'Voir plus ';
+    }
+    card.addEventListener('click', toggle);
+    card.addEventListener('keydown', function(e){
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(); }
     });
+  });
+
+  // Theme filter chips
+  var chips = Array.prototype.slice.call(document.querySelectorAll('.chip'));
+  var sections = Array.prototype.slice.call(document.querySelectorAll('.theme-section'));
+  var currentFilter = 'all';
+  var searchInput = document.getElementById('search-input');
+  var noResults = document.getElementById('no-results');
+
+  function applyFilters(){
+    var q = (searchInput.value || '').toLowerCase().trim();
+    var visibleCount = 0;
+    cards.forEach(function(card){
+      var themeMatch = currentFilter === 'all' || card.getAttribute('data-theme') === currentFilter;
+      var textMatch = !q || (card.getAttribute('data-search') || '').indexOf(q) !== -1;
+      var show = themeMatch && textMatch;
+      card.hidden = !show;
+      if (show) visibleCount++;
+    });
+    sections.forEach(function(sec){
+      var themeId = sec.getAttribute('data-theme-section');
+      var sectionMatchesFilter = currentFilter === 'all' || currentFilter === themeId;
+      var anyVisible = Array.prototype.some.call(sec.querySelectorAll('.card'), function(c){ return !c.hidden; });
+      sec.hidden = !sectionMatchesFilter || !anyVisible;
+    });
+    var top5Section = document.querySelector('.top5-section');
+    if (top5Section) {
+      var top5AnyVisible = Array.prototype.some.call(top5Section.querySelectorAll('.card'), function(c){ return !c.hidden; });
+      top5Section.hidden = !top5AnyVisible;
+    }
+    if (noResults) noResults.hidden = visibleCount > 0;
   }
+
+  chips.forEach(function(chip){
+    chip.addEventListener('click', function(){
+      chips.forEach(function(c){ c.classList.remove('active'); });
+      chip.classList.add('active');
+      currentFilter = chip.getAttribute('data-filter');
+      applyFilters();
+    });
+  });
+
+  if (searchInput) searchInput.addEventListener('input', applyFilters);
+
+  applyFilters();
 })();
+
 </script>
 
 </body>
