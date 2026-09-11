@@ -1,1 +1,178 @@
-PLACEHOLDER
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Veille Branding &amp; Marketing — Archives</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --black:#1e1e1e;
+    --white:#ffffff;
+    --navy:#14213d;
+    --navy-4:#324a82;
+    --navy-tint-1:#eef1f8;
+    --navy-tint-2:#e2e7f3;
+    --grey:#6b6f76;
+    --line:#e6e6e6;
+    --font-display:'Manrope', sans-serif;
+    --font-label:Impact, 'Arial Narrow', sans-serif;
+    --font-body:-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+    --radius:14px;
+    --maxw:920px;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    background:var(--white);
+    color:var(--black);
+    font-family:var(--font-body);
+    line-height:1.5;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{
+    max-width:var(--maxw);
+    margin:0 auto;
+    padding:0 20px;
+  }
+  header.masthead{
+    background:var(--navy);
+    color:var(--white);
+    padding:60px 0 50px;
+    position:relative;
+    overflow:hidden;
+  }
+  header.masthead::after{
+    content:"";
+    position:absolute;
+    right:-120px; top:-120px;
+    width:340px; height:340px;
+    border-radius:50%;
+    background:radial-gradient(circle, var(--navy-4) 0%, transparent 70%);
+    opacity:.6;
+  }
+  .eyebrow{
+    font-family:var(--font-label);
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    font-size:12px;
+    color:#aab4d4;
+    margin:0 0 14px;
+    position:relative;
+  }
+  h1.title{
+    font-family:var(--font-display);
+    font-weight:800;
+    font-size:clamp(28px, 4.4vw, 44px);
+    line-height:1.15;
+    margin:0 0 16px;
+    max-width:760px;
+    position:relative;
+  }
+  .subline{
+    font-size:15px;
+    color:#c7cfe6;
+    max-width:600px;
+    margin:0;
+    position:relative;
+  }
+  main{padding:48px 0 20px;}
+  h2.section-title{
+    font-family:var(--font-display);
+    font-weight:800;
+    font-size:22px;
+    color:var(--navy);
+    margin:0 0 24px;
+  }
+  .archive-list{
+    display:flex;
+    flex-direction:column;
+    gap:16px;
+  }
+  .archive-item{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+    flex-wrap:wrap;
+    background:var(--navy-tint-1);
+    border:1px solid var(--navy-tint-2);
+    border-radius:var(--radius);
+    padding:22px 26px;
+    text-decoration:none;
+    color:var(--black);
+    transition:box-shadow .15s ease, transform .15s ease;
+  }
+  .archive-item:hover{
+    box-shadow:0 8px 24px rgba(20,33,61,.12);
+    transform:translateY(-2px);
+  }
+  .archive-date{
+    font-family:var(--font-label);
+    font-size:12px;
+    letter-spacing:.06em;
+    text-transform:uppercase;
+    color:var(--navy-4);
+    display:block;
+    margin-bottom:6px;
+  }
+  .archive-item h3{
+    font-family:var(--font-display);
+    font-weight:700;
+    font-size:18px;
+    margin:0;
+    color:var(--navy);
+    max-width:640px;
+  }
+  .archive-arrow{
+    font-family:var(--font-label);
+    font-size:13px;
+    color:var(--navy-4);
+    white-space:nowrap;
+  }
+  footer{
+    margin-top:50px;
+    padding:30px 0 50px;
+    border-top:1px solid var(--line);
+    color:var(--grey);
+    font-size:13px;
+  }
+  @media (max-width:560px){
+    header.masthead{padding:44px 0 38px;}
+    .archive-item{padding:18px 20px;}
+  }
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="wrap">
+    <p class="eyebrow">Veille Branding · Marketing · Expérience de marque</p>
+    <h1 class="title">Archives de la veille hebdomadaire</h1>
+    <p class="subline">Marketing, branding, tech, événements et activations de marque — Espagne &amp; Europe. Une édition par semaine.</p>
+  </div>
+</header>
+
+<main class="wrap">
+  <h2 class="section-title">Tous les rapports</h2>
+  <div class="archive-list">
+
+    <a class="archive-item" href="reports/veille-2026-09-11.html">
+      <div>
+        <span class="archive-date">11 septembre 2026 · Semaine du 4 au 11 septembre</span>
+        <h3>Instagram change de visage, l'Espagne débarque à SoHo, l'IA devient un média</h3>
+      </div>
+      <span class="archive-arrow">Lire →</span>
+    </a>
+
+  </div>
+
+  <footer>
+    <p>Archive personnelle de veille hebdomadaire. Chaque rapport cite ses sources originales.</p>
+  </footer>
+</main>
+
+</body>
+</html>
