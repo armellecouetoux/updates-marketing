@@ -6,7 +6,7 @@
 <title>Veille Branding &amp; Marketing — 11 septembre 2026</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 
 :root{
@@ -20,9 +20,16 @@
   --navy-tint-2:#e2e7f3;
   --grey:#6b6f76;
   --line:#e6e6e6;
+  --coral:#ff6b5b;
+  --coral-deep:#d9432f;
+  --gold:#ffb84d;
+  --gold-deep:#e08a2b;
+  --teal:#2ec4b6;
+  --teal-deep:#1f8f84;
+  --navy-deep:#2f3f6e;
   --font-display:'Manrope', sans-serif;
-  --font-label:Impact, 'Arial Narrow', sans-serif;
-  --font-body:-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+  --font-label:'Manrope', sans-serif;
+  --font-body:'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
   --radius:16px;
   --maxw:1180px;
 }
@@ -38,10 +45,10 @@ body{
 }
 .wrap{max-width:var(--maxw); margin:0 auto; padding:0 20px;}
 
-#progress-bar{position:fixed; top:0; left:0; height:4px; width:0%; background:linear-gradient(90deg,var(--navy),var(--navy-4)); z-index:999; transition:width .08s linear;}
+#progress-bar{position:fixed; top:0; left:0; height:4px; width:0%; background:linear-gradient(90deg,var(--coral),var(--gold)); z-index:999; transition:width .08s linear;}
 
 header.masthead{
-  background:var(--navy);
+  background:linear-gradient(125deg, var(--navy) 0%, #1c2c52 55%, #2c2450 100%);
   color:var(--white);
   padding:52px 0 44px;
   position:relative;
@@ -51,7 +58,7 @@ header.masthead::after{
   content:"";
   position:absolute; right:-140px; top:-140px; width:380px; height:380px;
   border-radius:50%;
-  background:radial-gradient(circle, var(--navy-4) 0%, transparent 70%);
+  background:radial-gradient(circle, var(--coral) 0%, transparent 70%);
   opacity:.55;
 }
 .masthead-top{
@@ -59,12 +66,12 @@ header.masthead::after{
   position:relative;
 }
 .eyebrow{
-  font-family:var(--font-label);
+  font-family:var(--font-label); font-weight:700;
   letter-spacing:.1em; text-transform:uppercase; font-size:11.5px;
   color:#aab4d4; margin:0;
 }
 .archive-link{
-  font-family:var(--font-label);
+  font-family:var(--font-label); font-weight:600;
   font-size:12.5px; color:var(--white); text-decoration:none;
   border:1px solid rgba(255,255,255,.4); border-radius:999px; padding:7px 16px;
   white-space:nowrap; transition:background .15s ease, border-color .15s ease;
@@ -78,8 +85,8 @@ h1.title{
 .subline{font-size:15px; color:#c7cfe6; max-width:680px; margin:0; position:relative;}
 .stats-row{display:flex; gap:36px; margin-top:26px; flex-wrap:wrap; position:relative;}
 .stat{display:flex; flex-direction:column; gap:2px;}
-.stat-num{font-family:var(--font-label); font-size:32px; color:var(--white); line-height:1;}
-.stat-label{font-family:var(--font-label); font-size:11px; letter-spacing:.05em; text-transform:uppercase; color:#aab4d4;}
+.stat-num{font-family:var(--font-label); font-weight:800; font-size:32px; color:var(--white); line-height:1;}
+.stat-label{font-family:var(--font-label); font-weight:700; font-size:11px; letter-spacing:.05em; text-transform:uppercase; color:#aab4d4;}
 
 main{padding:40px 0 20px;}
 
@@ -90,7 +97,7 @@ main{padding:40px 0 20px;}
 }
 .chips{display:flex; flex-wrap:wrap; gap:8px;}
 .chip{
-  font-family:var(--font-label); font-size:12.5px; letter-spacing:.02em;
+  font-family:var(--font-label); font-weight:600; font-size:12.5px; letter-spacing:.02em;
   background:var(--navy-tint-1); color:var(--navy); border:1px solid var(--navy-tint-2);
   border-radius:999px; padding:8px 16px; cursor:pointer; transition:all .15s ease; white-space:nowrap;
 }
@@ -131,12 +138,12 @@ main{padding:40px 0 20px;}
 .card:hover .card-media svg{transform:scale(1.06);}
 .card-media .badge{
   position:absolute; top:12px; left:12px; background:rgba(255,255,255,.94); color:var(--navy);
-  font-family:var(--font-label); font-size:11px; letter-spacing:.03em;
+  font-family:var(--font-label); font-weight:700; font-size:11px; letter-spacing:.03em;
   padding:6px 12px; border-radius:999px;
 }
 .card-body{padding:20px 20px 16px; display:flex; flex-direction:column; gap:10px; flex:1;}
 .card-title{
-  font-family:var(--font-label); font-weight:400; font-size:18px; line-height:1.28; color:var(--black); margin:0;
+  font-family:var(--font-label); font-weight:700; font-size:18px; line-height:1.28; color:var(--black); margin:0;
 }
 .card-fact{font-size:14px; color:#333; margin:0; line-height:1.55;}
 .card-more{
@@ -145,7 +152,7 @@ main{padding:40px 0 20px;}
 }
 .card.expanded .card-more{max-height:900px; opacity:1; margin-top:4px;}
 .card-label{
-  font-family:var(--font-label); font-size:11.5px; letter-spacing:.05em; text-transform:uppercase;
+  font-family:var(--font-label); font-weight:700; font-size:11.5px; letter-spacing:.05em; text-transform:uppercase;
   color:var(--navy); margin:12px 0 4px;
 }
 .card-why, .card-action{font-size:13.5px; color:#333; margin:0 0 4px; line-height:1.5;}
@@ -154,7 +161,7 @@ main{padding:40px 0 20px;}
 .card-source a:hover{border-color:var(--navy);}
 .card-toggle{
   align-self:flex-start; margin-top:auto; background:none; border:none; cursor:pointer;
-  font-family:var(--font-label); font-size:12px; color:var(--navy-4); padding:6px 0 0; display:flex; align-items:center; gap:4px;
+  font-family:var(--font-label); font-weight:600; font-size:12px; color:var(--navy-4); padding:6px 0 0; display:flex; align-items:center; gap:4px;
 }
 .chevron{transition:transform .25s ease; display:inline-block;}
 .card.expanded .chevron{transform:rotate(180deg);}
@@ -169,7 +176,74 @@ main{padding:40px 0 20px;}
 }
 .top5-hero .card-title{font-size:19.5px;}
 
-.no-results{text-align:center; color:var(--grey); font-family:var(--font-label); padding:40px 0; font-size:15px;}
+.no-results{text-align:center; color:var(--grey); font-family:var(--font-label); font-weight:600; padding:40px 0; font-size:15px;}
+
+/* Couleurs de badge + halo au survol par thématique */
+.card[data-theme="marketing"] .badge{background:var(--navy); color:var(--white);}
+.card[data-theme="branding"] .badge{background:var(--coral-deep); color:var(--white);}
+.card[data-theme="tech"] .badge{background:var(--teal-deep); color:var(--white);}
+.card[data-theme="evenements"] .badge{background:var(--gold); color:var(--navy);}
+.card[data-theme="b2b"] .badge{background:var(--navy-deep); color:var(--white);}
+.card[data-theme="b2c"] .badge{background:var(--coral); color:var(--navy);}
+.card[data-theme="popup"] .badge{background:var(--teal); color:var(--navy);}
+.card[data-theme="activations"] .badge{background:var(--gold-deep); color:var(--navy);}
+.card[data-theme="marketing"]:hover{box-shadow:0 14px 30px rgba(20,33,61,.28); border-color:var(--navy);}
+.card[data-theme="branding"]:hover{box-shadow:0 14px 30px rgba(217,67,47,.28); border-color:var(--coral-deep);}
+.card[data-theme="tech"]:hover{box-shadow:0 14px 30px rgba(31,143,132,.28); border-color:var(--teal-deep);}
+.card[data-theme="evenements"]:hover{box-shadow:0 14px 30px rgba(255,184,77,.35); border-color:var(--gold);}
+.card[data-theme="b2b"]:hover{box-shadow:0 14px 30px rgba(47,63,110,.3); border-color:var(--navy-deep);}
+.card[data-theme="b2c"]:hover{box-shadow:0 14px 30px rgba(255,107,91,.32); border-color:var(--coral);}
+.card[data-theme="popup"]:hover{box-shadow:0 14px 30px rgba(46,196,182,.32); border-color:var(--teal);}
+.card[data-theme="activations"]:hover{box-shadow:0 14px 30px rgba(224,138,43,.32); border-color:var(--gold-deep);}
+.card:hover .badge::after{content:" ✨"; }
+
+.newsletter-cta{
+  display:inline-flex; align-items:center; gap:8px;
+  font-family:var(--font-label); font-weight:700; font-size:13px;
+  color:var(--white); text-decoration:none;
+  background:linear-gradient(120deg, var(--coral-deep) 0%, var(--gold-deep) 100%);
+  border-radius:999px; padding:10px 20px;
+  box-shadow:0 8px 20px rgba(217,67,47,.35);
+  transition:transform .15s ease, box-shadow .15s ease;
+  white-space:nowrap;
+}
+.newsletter-cta:hover{transform:translateY(-2px); box-shadow:0 12px 26px rgba(217,67,47,.45);}
+
+/* Carrousel de la semaine */
+.carousel-section{margin-bottom:56px;}
+.carousel{
+  position:relative; border-radius:var(--radius); overflow:hidden;
+  background:linear-gradient(135deg, var(--navy) 0%, #2c2450 55%, var(--coral-deep) 100%);
+  outline:none;
+}
+.carousel-track{display:flex; transition:transform .5s cubic-bezier(.65,0,.35,1);}
+.carousel-slide{
+  flex:0 0 100%; display:flex; align-items:flex-end; min-height:360px; position:relative;
+  padding:32px; color:var(--white);
+}
+.carousel-slide-media{position:absolute; inset:0; z-index:0; opacity:.34;}
+.carousel-slide-media svg{width:100%; height:100%; display:block;}
+.carousel-slide-content{position:relative; z-index:1; max-width:640px;}
+.carousel-badge{
+  display:inline-block; font-family:var(--font-label); font-weight:700; font-size:11px;
+  letter-spacing:.03em; background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.35);
+  border-radius:999px; padding:6px 14px; margin-bottom:14px;
+}
+.carousel-slide-content h3{font-family:var(--font-display); font-weight:800; font-size:clamp(19px,2.6vw,26px); line-height:1.25; margin:0 0 10px;}
+.carousel-slide-content p{font-size:14px; color:#dfe4f2; margin:0; max-width:520px;}
+.carousel-arrow{
+  position:absolute; top:50%; transform:translateY(-50%); z-index:2;
+  width:42px; height:42px; border-radius:50%; border:1px solid rgba(255,255,255,.4);
+  background:rgba(20,33,61,.55); color:var(--white); font-size:18px; cursor:pointer;
+  display:flex; align-items:center; justify-content:center; transition:background .15s ease;
+}
+.carousel-arrow:hover{background:rgba(255,107,91,.65);}
+.carousel-arrow.prev{left:16px;}
+.carousel-arrow.next{right:16px;}
+.carousel-dots{display:flex; gap:8px; justify-content:center; padding:16px 0 4px; position:relative; z-index:1; background:transparent;}
+.carousel-dot{width:9px; height:9px; border-radius:50%; background:rgba(20,33,61,.18); border:none; cursor:pointer; padding:0;}
+.carousel-dot.active{background:linear-gradient(120deg,var(--coral-deep),var(--gold-deep)); width:22px; border-radius:6px; transition:width .2s ease;}
+@media (max-width:640px){ .carousel-slide{min-height:300px; padding:24px;} .carousel-arrow{width:36px; height:36px; font-size:15px;} }
 
 footer{margin-top:40px; padding:28px 0 50px; border-top:1px solid var(--line); color:var(--grey); font-size:13px;}
 
@@ -193,6 +267,7 @@ footer{margin-top:40px; padding:28px 0 50px; border-top:1px solid var(--line); c
     </div>
     <h1 class="title">Madrid bat au rythme de la F1, Publicis rafle PepsiCo et Interrail efface Eurail</h1>
     <p class="subline">Semaine du 4 septembre 2026 au 11 septembre 2026 — marketing, branding, tech, événements, expériences B2B/B2C, pop-up stores et activations de marque.</p>
+    <p style="position:relative; margin:20px 0 0;"><a class="newsletter-cta" href="newsletter/veille-2026-09-11.html">📧 Voir la newsletter de cette semaine →</a></p>
     <div class="stats-row">
       <div class="stat"><span class="stat-num" id="count-items" data-target="39">0</span><span class="stat-label">actus cette semaine</span></div>
       <div class="stat"><span class="stat-num" id="count-sources" data-target="39">0</span><span class="stat-label">sources citées</span></div>
@@ -330,7 +405,90 @@ footer{margin-top:40px; padding:28px 0 50px; border-top:1px solid var(--line); c
     </div>
   </section>
 
-  
+  <section class="carousel-section">
+    <h2 class="section-title"><span class="section-emoji">🎞️</span>Le carrousel de la semaine</h2>
+    <div class="carousel" id="carousel" tabindex="0" aria-roledescription="carrousel" aria-label="Actus marquantes de la semaine">
+      <div class="carousel-track" id="carousel-track">
+
+        <div class="carousel-slide" data-theme="marketing">
+          <div class="carousel-slide-media"><svg viewBox="0 0 400 240" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice"><circle cx="90" cy="120" r="18" fill="#ffffff"/><circle cx="90" cy="120" r="46" fill="none" stroke="#ffffff" stroke-width="4" opacity="0.55"/><circle cx="90" cy="120" r="76" fill="none" stroke="#ffffff" stroke-width="4" opacity="0.3"/><circle cx="90" cy="120" r="106" fill="none" stroke="#ffffff" stroke-width="4" opacity="0.15"/><path d="M230 70 L340 40 L340 200 L230 170 Z" fill="#ffffff" opacity="0.92"/><rect x="200" y="95" width="34" height="50" fill="#ffffff" opacity="0.92"/></svg></div>
+          <div class="carousel-slide-content">
+            <span class="carousel-badge">📈 Marketing</span>
+            <h3>Publicis rafle le budget média mondial de PepsiCo</h3>
+            <p>PepsiCo confie sans appel d&#x27;offres son budget média mondial (1,9 Md$) à Publicis, mettant fin à 25 ans avec Omnicom sur ce périmètre.</p>
+          </div>
+        </div>
+
+        <div class="carousel-slide" data-theme="marketing">
+          <div class="carousel-slide-media"><svg viewBox="0 0 400 240" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice"><circle cx="90" cy="120" r="18" fill="#ffffff"/><circle cx="90" cy="120" r="46" fill="none" stroke="#ffffff" stroke-width="4" opacity="0.55"/><circle cx="90" cy="120" r="76" fill="none" stroke="#ffffff" stroke-width="4" opacity="0.3"/><circle cx="90" cy="120" r="106" fill="none" stroke="#ffffff" stroke-width="4" opacity="0.15"/><path d="M230 70 L340 40 L340 200 L230 170 Z" fill="#ffffff" opacity="0.92"/><rect x="200" y="95" width="34" height="50" fill="#ffffff" opacity="0.92"/></svg></div>
+          <div class="carousel-slide-content">
+            <span class="carousel-badge">📈 Marketing</span>
+            <h3>Madrid lance « Madrid Beats », sa plus grande campagne touristique internationale</h3>
+            <p>18,8 M€, 13 pays, narration par Walton Goggins — calée sur l&#x27;arrivée de la F1 dans la capitale.</p>
+          </div>
+        </div>
+
+        <div class="carousel-slide" data-theme="branding">
+          <div class="carousel-slide-media"><svg viewBox="0 0 400 240" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice"><circle cx="160" cy="120" r="72" fill="none" stroke="#ffffff" stroke-width="5"/><circle cx="250" cy="120" r="72" fill="none" stroke="#ffb84d" stroke-width="10"/><circle cx="205" cy="120" r="16" fill="#ffffff"/></svg></div>
+          <div class="carousel-slide-content">
+            <span class="carousel-badge">🎨 Branding</span>
+            <h3>Eurail disparaît au profit d&#x27;Interrail à l&#x27;échelle mondiale</h3>
+            <p>Après 60 ans, un seul nom pour toute l&#x27;offre — nouvelle plateforme de marque mondiale « The Interrail Effect ».</p>
+          </div>
+        </div>
+
+        <div class="carousel-slide" data-theme="b2c">
+          <div class="carousel-slide-media"><svg viewBox="0 0 400 240" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice"><polygon points="120,50 132,90 172,90 140,114 152,154 120,130 88,154 100,114 68,90 108,90" fill="#ffffff"/><polygon points="280,110 292,140 322,140 298,158 308,188 280,170 252,188 262,158 238,140 268,140" fill="#ff6b5b"/></svg></div>
+          <div class="carousel-slide-content">
+            <span class="carousel-badge">✨ Expériences B2C</span>
+            <h3>Nike x One Piece : un pop-up qui fait basculer l&#x27;acheteur dans le manga</h3>
+            <p>Le pop-up mondial « Dr. B&#x27;s Research Lab » fait entrer les visiteurs dans l&#x27;univers du manga plutôt que dans un stand produit.</p>
+          </div>
+        </div>
+
+        <div class="carousel-slide" data-theme="activations">
+          <div class="carousel-slide-media"><svg viewBox="0 0 400 240" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice"><polygon points="210,30 170,140 205,140 175,215 260,105 220,105 250,30" fill="#ffffff"/><circle cx="330" cy="60" r="10" fill="#ffb84d" stroke="#ffffff" stroke-width="3"/><circle cx="60" cy="180" r="14" fill="none" stroke="#ffffff" stroke-width="4" opacity="0.6"/></svg></div>
+          <div class="carousel-slide-content">
+            <span class="carousel-badge">💥 Activations originales</span>
+            <h3>Audi transforme la Plaza de Colón en musée éphémère de la compétition automobile</h3>
+            <p>Exposition gratuite avec réplique grandeur nature d&#x27;un virage du circuit Madring et photobooth IA — la légitimité patrimoniale plutôt que le sponsoring classique.</p>
+          </div>
+        </div>
+
+        <div class="carousel-slide" data-theme="b2c">
+          <div class="carousel-slide-media"><svg viewBox="0 0 400 240" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice"><polygon points="120,50 132,90 172,90 140,114 152,154 120,130 88,154 100,114 68,90 108,90" fill="#ffffff"/><polygon points="280,110 292,140 322,140 298,158 308,188 280,170 252,188 262,158 238,140 268,140" fill="#2ec4b6"/></svg></div>
+          <div class="carousel-slide-content">
+            <span class="carousel-badge">✨ Expériences B2C</span>
+            <h3>Oatly transforme Goodhood en univers matcha à Londres</h3>
+            <p>Un « Colour Matching Matcha Bar » calé sur la London Fashion Week transforme le nuancier packaging en rituel instagrammable.</p>
+          </div>
+        </div>
+
+        <div class="carousel-slide" data-theme="popup">
+          <div class="carousel-slide-media"><svg viewBox="0 0 400 240" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice"><rect x="70" y="140" width="80" height="70" fill="#ffffff"/><rect x="160" y="100" width="90" height="110" fill="#ffffff" opacity="0.75"/><rect x="260" y="130" width="70" height="80" fill="#ffffff" opacity="0.5"/><polygon points="60,140 160,140 150,110 70,110" fill="#ffb84d"/><polygon points="150,100 260,100 250,75 160,75" fill="#ffffff" opacity="0.75"/></svg></div>
+          <div class="carousel-slide-content">
+            <span class="carousel-badge">🏬 Pop-up stores</span>
+            <h3>McLaren Mastercard F1 Team débarque à Madrid</h3>
+            <p>Étape finale d&#x27;une tournée européenne (Nice, Vienne, Bruxelles, Milan) synchronisée avec le GP F1 de Madrid — merchandising exclusif et cabine photo IA.</p>
+          </div>
+        </div>
+
+        <div class="carousel-slide" data-theme="tech">
+          <div class="carousel-slide-media"><svg viewBox="0 0 400 240" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice"><path d="M60 50 L140 50 L140 120 L220 120 L220 190 L300 190" stroke="#ffffff" stroke-width="2" fill="none" opacity="0.6"/><circle cx="60" cy="50" r="7" fill="#ffb84d"/><circle cx="140" cy="120" r="7" fill="#ffffff"/><circle cx="220" cy="190" r="7" fill="#ff6b5b"/><circle cx="300" cy="190" r="7" fill="#ffffff"/></svg></div>
+          <div class="carousel-slide-content">
+            <span class="carousel-badge">🤖 Tech</span>
+            <h3>Qualtrics dévoile sa plateforme XM Data &amp; AI</h3>
+            <p>Simuler la réaction d&#x27;un client avant une décision, prédire son comportement et vérifier les réponses IA — le CX bascule vers la prédiction automatisée.</p>
+          </div>
+        </div>
+
+      </div>
+      <button class="carousel-arrow prev" type="button" aria-label="Actu précédente">‹</button>
+      <button class="carousel-arrow next" type="button" aria-label="Actu suivante">›</button>
+    </div>
+    <div class="carousel-dots" id="carousel-dots"></div>
+  </section>
+
 <section class="theme-section" id="section-marketing" data-theme-section="marketing">
   <h2 class="section-title"><span class="section-emoji">📈</span>Marketing</h2>
   <div class="card-grid">
@@ -1331,6 +1489,78 @@ footer{margin-top:40px; padding:28px 0 50px; border-top:1px solid var(--line); c
   if (searchInput) searchInput.addEventListener('input', applyFilters);
 
   applyFilters();
+
+  // Carrousel de la semaine
+  var carousel = document.getElementById('carousel');
+  var track = document.getElementById('carousel-track');
+  var dotsWrap = document.getElementById('carousel-dots');
+  if (carousel && track && dotsWrap) {
+    var slides = Array.prototype.slice.call(track.children);
+    var index = 0;
+    var autoplayMs = 5500;
+    var timer = null;
+
+    slides.forEach(function(_, i){
+      var dot = document.createElement('button');
+      dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
+      dot.type = 'button';
+      dot.setAttribute('aria-label', 'Aller à l\'actu ' + (i + 1));
+      dot.addEventListener('click', function(){ goTo(i); restartAutoplay(); });
+      dotsWrap.appendChild(dot);
+    });
+    var dots = Array.prototype.slice.call(dotsWrap.children);
+
+    function render(){
+      track.style.transform = 'translateX(-' + (index * 100) + '%)';
+      dots.forEach(function(d, i){ d.classList.toggle('active', i === index); });
+    }
+    function goTo(i){
+      index = (i + slides.length) % slides.length;
+      render();
+    }
+    function next(){ goTo(index + 1); }
+    function prev(){ goTo(index - 1); }
+
+    function startAutoplay(){
+      stopAutoplay();
+      timer = setInterval(next, autoplayMs);
+    }
+    function stopAutoplay(){
+      if (timer) { clearInterval(timer); timer = null; }
+    }
+    function restartAutoplay(){ startAutoplay(); }
+
+    var prevBtn = carousel.querySelector('.carousel-arrow.prev');
+    var nextBtn = carousel.querySelector('.carousel-arrow.next');
+    if (prevBtn) prevBtn.addEventListener('click', function(){ prev(); restartAutoplay(); });
+    if (nextBtn) nextBtn.addEventListener('click', function(){ next(); restartAutoplay(); });
+
+    carousel.addEventListener('mouseenter', stopAutoplay);
+    carousel.addEventListener('mouseleave', startAutoplay);
+    carousel.addEventListener('focusin', stopAutoplay);
+    carousel.addEventListener('focusout', startAutoplay);
+
+    carousel.addEventListener('keydown', function(e){
+      if (e.key === 'ArrowLeft') { e.preventDefault(); prev(); restartAutoplay(); }
+      else if (e.key === 'ArrowRight') { e.preventDefault(); next(); restartAutoplay(); }
+    });
+
+    var touchStartX = null;
+    carousel.addEventListener('touchstart', function(e){
+      touchStartX = e.touches[0].clientX;
+      stopAutoplay();
+    }, { passive:true });
+    carousel.addEventListener('touchend', function(e){
+      if (touchStartX === null) return;
+      var dx = e.changedTouches[0].clientX - touchStartX;
+      if (Math.abs(dx) > 40) { dx < 0 ? next() : prev(); }
+      touchStartX = null;
+      startAutoplay();
+    }, { passive:true });
+
+    render();
+    startAutoplay();
+  }
 })();
 
 </script>
