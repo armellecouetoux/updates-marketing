@@ -97,6 +97,101 @@
   }
   nav.backlink a:hover{border-color:#fff;}
 
+  /* ---------- Progress bar ---------- */
+  #progress-bar{
+    position:fixed;
+    top:0; left:0;
+    height:4px;
+    width:0%;
+    background:var(--navy-4);
+    z-index:999;
+    transition:width .08s linear;
+  }
+
+  /* ---------- Stats ---------- */
+  .stats-row{
+    display:flex;
+    gap:32px;
+    margin-top:26px;
+    position:relative;
+    flex-wrap:wrap;
+  }
+  .stat{
+    display:flex;
+    flex-direction:column;
+    gap:2px;
+  }
+  .stat-num{
+    font-family:var(--font-label);
+    font-size:32px;
+    color:var(--white);
+    line-height:1;
+  }
+  .stat-label{
+    font-family:var(--font-label);
+    font-size:11px;
+    letter-spacing:.05em;
+    text-transform:uppercase;
+    color:#aab4d4;
+  }
+
+  /* ---------- Filters & search ---------- */
+  .filters-bar{
+    position:sticky;
+    top:0;
+    z-index:50;
+    background:var(--white);
+    border-bottom:1px solid var(--line);
+    padding:14px 0;
+  }
+  .filters-inner{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+    align-items:center;
+    justify-content:space-between;
+  }
+  .chips{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+  }
+  .chip{
+    font-family:var(--font-label);
+    font-size:11.5px;
+    letter-spacing:.03em;
+    text-transform:uppercase;
+    color:var(--navy);
+    background:var(--white);
+    border:1px solid var(--navy-tint-2);
+    border-radius:999px;
+    padding:7px 14px;
+    cursor:pointer;
+    transition:background .15s ease, color .15s ease, border-color .15s ease;
+  }
+  .chip:hover{border-color:var(--navy-4);}
+  .chip.active{
+    background:var(--navy);
+    border-color:var(--navy);
+    color:var(--white);
+  }
+  .search-wrap{flex:0 0 auto;}
+  #search-input{
+    font-family:var(--font-body);
+    font-size:13.5px;
+    padding:9px 14px;
+    border:1px solid var(--navy-tint-2);
+    border-radius:999px;
+    min-width:220px;
+    color:var(--black);
+    background:var(--navy-tint-1);
+  }
+  #search-input:focus{outline:2px solid var(--navy-4);outline-offset:1px;}
+  @media (max-width:560px){
+    #search-input{min-width:0; width:100%;}
+    .filters-inner{flex-direction:column; align-items:stretch;}
+  }
+
   /* ---------- Top 5 ---------- */
   section.top5{
     padding:44px 0 8px;
@@ -121,16 +216,34 @@
   }
   .top-item{
     display:grid;
-    grid-template-columns:64px 1fr;
+    grid-template-columns:78px 1fr;
     gap:18px;
     background:var(--navy-tint-1);
     border:1px solid var(--navy-tint-2);
     border-radius:var(--radius);
     padding:20px 22px;
+    position:relative;
+    overflow:hidden;
+    transition:box-shadow .2s ease, transform .2s ease;
+  }
+  .top-item:hover{
+    box-shadow:0 10px 26px rgba(20,33,61,.14);
+    transform:translateY(-3px);
+  }
+  .top-visual{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:4px;
+  }
+  .top-icon{
+    width:44px;
+    height:44px;
   }
   .top-num{
     font-family:var(--font-label);
-    font-size:34px;
+    font-size:22px;
     color:var(--navy-4);
     line-height:1;
   }
@@ -200,12 +313,64 @@
     flex-direction:column;
     gap:10px;
     background:var(--white);
-    transition:box-shadow .15s ease, transform .15s ease;
+    position:relative;
+    overflow:hidden;
+    cursor:pointer;
+    transition:box-shadow .18s ease, transform .18s ease;
   }
   .card:hover{
-    box-shadow:0 8px 24px rgba(20,33,61,.10);
-    transform:translateY(-2px);
+    box-shadow:0 10px 26px rgba(20,33,61,.12);
+    transform:translateY(-3px) scale(1.008);
   }
+  .card::after{
+    content:"";
+    position:absolute;
+    top:16px;
+    right:16px;
+    font-size:20px;
+    line-height:1;
+    opacity:0;
+    transform:scale(.5) rotate(-15deg);
+    transition:opacity .25s ease, transform .25s ease;
+  }
+  .card:hover::after{opacity:1;transform:scale(1) rotate(0deg);}
+  .card[data-theme="marketing"]::after{content:"📣";}
+  .card[data-theme="branding"]::after{content:"🎨";}
+  .card[data-theme="tech"]::after{content:"⚡";}
+  .card[data-theme="events"]::after{content:"🎟️";}
+  .card[data-theme="b2b"]::after{content:"🤝";}
+  .card[data-theme="b2c"]::after{content:"💫";}
+  .card[data-theme="popup"]::after{content:"🏬";}
+  .card[data-theme="activation"]::after{content:"✨";}
+  .card-icon{
+    width:42px;
+    height:42px;
+    margin-bottom:2px;
+  }
+  .card .more{
+    max-height:0;
+    opacity:0;
+    overflow:hidden;
+    transition:max-height .35s ease, opacity .3s ease, margin .3s ease;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+  }
+  .card.open .more{
+    max-height:600px;
+    opacity:1;
+    margin-top:2px;
+  }
+  .toggle-hint{
+    display:inline-block;
+    margin-top:4px;
+    font-family:var(--font-label);
+    font-size:11px;
+    letter-spacing:.03em;
+    color:var(--navy-4);
+  }
+  .toggle-hint::before{content:"+ Voir l'angle stratégique & l'action";}
+  .card.open .toggle-hint::before{content:"– Réduire";}
   .card h3{
     font-family:var(--font-display);
     font-weight:700;
@@ -277,14 +442,89 @@
 </head>
 <body>
 
+<div id="progress-bar" aria-hidden="true"></div>
+
+<svg style="position:absolute;width:0;height:0;overflow:hidden" aria-hidden="true">
+  <defs>
+    <symbol id="ic-marketing" viewBox="0 0 64 64">
+      <circle cx="32" cy="32" r="30" fill="#eef1f8"/>
+      <path d="M20 24v16l-7 2V22z" fill="#14213d"/>
+      <path d="M20 24l26-9v34l-26-9z" fill="#324a82"/>
+      <path d="M27 42l2 11h6l-2-10z" fill="#14213d"/>
+    </symbol>
+    <symbol id="ic-branding" viewBox="0 0 64 64">
+      <circle cx="32" cy="32" r="30" fill="#eef1f8"/>
+      <circle cx="25" cy="29" r="14" fill="#324a82" opacity=".85"/>
+      <circle cx="40" cy="35" r="14" fill="#14213d" opacity=".85"/>
+    </symbol>
+    <symbol id="ic-tech" viewBox="0 0 64 64">
+      <circle cx="32" cy="32" r="30" fill="#eef1f8"/>
+      <g stroke="#14213d" stroke-width="3" fill="none">
+        <path d="M18 32h10M36 32h10M32 18v10M32 36v10M22 22l7 7M35 35l7 7M42 22l-7 7M29 35l-7 7"/>
+      </g>
+      <circle cx="32" cy="32" r="5" fill="#324a82"/>
+      <circle cx="18" cy="32" r="3" fill="#14213d"/>
+      <circle cx="46" cy="32" r="3" fill="#14213d"/>
+      <circle cx="32" cy="18" r="3" fill="#14213d"/>
+      <circle cx="32" cy="46" r="3" fill="#14213d"/>
+    </symbol>
+    <symbol id="ic-events" viewBox="0 0 64 64">
+      <circle cx="32" cy="32" r="30" fill="#eef1f8"/>
+      <path d="M15 24a4 4 0 014-4h26a4 4 0 014 4v3a4 4 0 000 8v3a4 4 0 01-4 4H19a4 4 0 01-4-4v-3a4 4 0 000-8z" fill="#324a82"/>
+      <path d="M32 20v24" stroke="#eef1f8" stroke-width="2" stroke-dasharray="3 3"/>
+    </symbol>
+    <symbol id="ic-b2b" viewBox="0 0 64 64">
+      <circle cx="32" cy="32" r="30" fill="#eef1f8"/>
+      <path d="M13 33l11-11 8 8 8-8 11 11-8 8-3-3-8 8-8-8-3 3z" fill="#14213d"/>
+    </symbol>
+    <symbol id="ic-b2c" viewBox="0 0 64 64">
+      <circle cx="32" cy="32" r="30" fill="#eef1f8"/>
+      <path d="M32 47s-15-9-15-20a9 9 0 0115-6 9 9 0 0115 6c0 11-15 20-15 20z" fill="#324a82"/>
+    </symbol>
+    <symbol id="ic-popup" viewBox="0 0 64 64">
+      <circle cx="32" cy="32" r="30" fill="#eef1f8"/>
+      <path d="M14 27l18-13 18 13z" fill="#14213d"/>
+      <rect x="17" y="27" width="30" height="19" fill="#324a82"/>
+      <rect x="27" y="34" width="10" height="12" fill="#eef1f8"/>
+    </symbol>
+    <symbol id="ic-activation" viewBox="0 0 64 64">
+      <circle cx="32" cy="32" r="30" fill="#eef1f8"/>
+      <path d="M35 11L18 36h10l-4 17 21-27H35z" fill="#14213d"/>
+    </symbol>
+  </defs>
+</svg>
+
 <header class="masthead">
   <div class="wrap">
     <p class="eyebrow">Veille Branding · Marketing · Expérience de marque</p>
     <h1 class="title">Instagram change de visage, l'Espagne débarque à SoHo, l'IA devient un média : la semaine marketing du 4&nbsp;au&nbsp;11&nbsp;septembre 2026</h1>
     <p class="subline">Huit thématiques, une trentaine d'actus vérifiées, priorité Espagne &amp; Europe — avec pour chacune l'angle stratégique et une action concrète à activer cette semaine.</p>
+    <div class="stats-row">
+      <div class="stat"><span class="stat-num" id="count-actus">0</span><span class="stat-label">actus cette semaine</span></div>
+      <div class="stat"><span class="stat-num" id="count-sources">0</span><span class="stat-label">sources vérifiées</span></div>
+    </div>
     <nav class="backlink"><a href="../index.html">← Retour à l'historique des veilles</a></nav>
   </div>
 </header>
+
+<div class="filters-bar">
+  <div class="wrap filters-inner">
+    <div class="chips">
+      <button type="button" class="chip active" data-filter="all">Tout</button>
+      <button type="button" class="chip" data-filter="marketing">Marketing</button>
+      <button type="button" class="chip" data-filter="branding">Branding</button>
+      <button type="button" class="chip" data-filter="tech">Tech</button>
+      <button type="button" class="chip" data-filter="events">Événements</button>
+      <button type="button" class="chip" data-filter="b2b">Expériences B2B</button>
+      <button type="button" class="chip" data-filter="b2c">Expériences B2C</button>
+      <button type="button" class="chip" data-filter="popup">Pop-up stores</button>
+      <button type="button" class="chip" data-filter="activation">Activations</button>
+    </div>
+    <div class="search-wrap">
+      <input type="search" id="search-input" placeholder="Rechercher une actu (mot-clé)…" aria-label="Rechercher dans la veille">
+    </div>
+  </div>
+</div>
 
 <main class="wrap">
 
@@ -293,8 +533,11 @@
     <p class="section-sub">Toutes thématiques confondues — l'essentiel en 30 secondes.</p>
     <div class="top5-list">
 
-      <div class="top-item">
-        <span class="top-num">01</span>
+      <div class="top-item" data-theme="popup">
+        <div class="top-visual">
+          <svg class="top-icon" aria-hidden="true"><use href="#ic-popup"></use></svg>
+          <span class="top-num">01</span>
+        </div>
         <div>
           <h3>Une marque espagnole conquiert SoHo</h3>
           <p>La marque de streetwear Nude Project (Barcelone) ouvre sa première boutique américaine à SoHo, New York, aux côtés de Zimmermann et Isabel Marant — preuve que le pop-up est devenu l'outil d'internationalisation numéro un des marques DTC espagnoles.</p>
@@ -302,8 +545,11 @@
         </div>
       </div>
 
-      <div class="top-item">
-        <span class="top-num">02</span>
+      <div class="top-item" data-theme="tech">
+        <div class="top-visual">
+          <svg class="top-icon" aria-hidden="true"><use href="#ic-tech"></use></svg>
+          <span class="top-num">02</span>
+        </div>
         <div>
           <h3>Spotify traque les fausses identités IA</h3>
           <p>Spotify va apposer un badge "AI Persona" sur les profils d'artistes à identité générée par IA et les exclure par défaut des recommandations — un précédent de transparence qui va bien au-delà du simple étiquetage de contenu.</p>
@@ -311,8 +557,11 @@
         </div>
       </div>
 
-      <div class="top-item">
-        <span class="top-num">03</span>
+      <div class="top-item" data-theme="branding">
+        <div class="top-visual">
+          <svg class="top-icon" aria-hidden="true"><use href="#ic-branding"></use></svg>
+          <span class="top-num">03</span>
+        </div>
         <div>
           <h3>Instagram change de logo pour la première fois en dix ans</h3>
           <p>La plateforme abandonne sa calligraphie historique pour une nouvelle identité pensée pour la prochaine décennie, un rebranding qui va rebattre les codes visuels attendus par les marques qui y publient.</p>
@@ -320,8 +569,11 @@
         </div>
       </div>
 
-      <div class="top-item">
-        <span class="top-num">04</span>
+      <div class="top-item" data-theme="tech">
+        <div class="top-visual">
+          <svg class="top-icon" aria-hidden="true"><use href="#ic-tech"></use></svg>
+          <span class="top-num">04</span>
+        </div>
         <div>
           <h3>Le SEO devient le GEO : les marques s'outillent pour exister dans les réponses IA</h3>
           <p>Comscore mesure désormais les pubs sponsorisées dans les chats IA (6% à 24% des prompts hôtellerie entre mars et mai) pendant que Bazaarvoice restructure les avis clients pour les rendre citables par les IA génératives (+40% de trafic référent chez les premiers clients).</p>
@@ -329,8 +581,11 @@
         </div>
       </div>
 
-      <div class="top-item">
-        <span class="top-num">05</span>
+      <div class="top-item" data-theme="events">
+        <div class="top-visual">
+          <svg class="top-icon" aria-hidden="true"><use href="#ic-events"></use></svg>
+          <span class="top-num">05</span>
+        </div>
         <div>
           <h3>Madrid Beats : la capitale espagnole se refait une marque, calée sur la F1</h3>
           <p>Havas Creative España lance pour Madrid Turismo la plateforme internationale "Madrid Beats" sur 13 marchés long-courriers, synchronisée avec l'arrivée du Grand Prix de F1 (impact estimé à 450 M€/an) pour maximiser couverture médiatique et tourisme d'affaires.</p>
@@ -350,40 +605,56 @@
     <p class="theme-intro">Mouvements de dirigeants, consolidation martech et grands rendez-vous saisonniers du côté espagnol.</p>
     <div class="cards">
 
-      <article class="card">
+      <article class="card" data-theme="marketing">
+        <svg class="card-icon" aria-hidden="true"><use href="#ic-marketing"></use></svg>
         <h3>Nacho Navarro prend les rênes du marketing d'IKEA Espagne</h3>
         <p class="meta">El Publicista · septembre 2026</p>
         <p class="body-text"><span class="label">Le fait</span>Après 19 ans chez Diageo (dont la direction marketing de Diageo Italie), Nacho Navarro devient directeur marketing d'IKEA Espagne en remplacement de Gabriel Ladaria, au tout début du nouvel exercice fiscal de l'enseigne.</p>
-        <p class="body-text"><span class="label">Pourquoi ça compte</span>Sa mission annoncée : rendre IKEA "plus proche, accessible et alignée sur son propos" — signe que même les géants du retail replacent la marque, et pas seulement la performance, au centre de la stratégie.</p>
-        <div class="action-box"><span class="label">Action concrète</span><p>Proposer à ses clients retail un audit de "proximité de marque" : mesurer l'écart entre discours et perception réelle en point de vente/digital.</p></div>
+        <div class="more">
+          <p class="body-text"><span class="label">Pourquoi ça compte</span>Sa mission annoncée : rendre IKEA "plus proche, accessible et alignée sur son propos" — signe que même les géants du retail replacent la marque, et pas seulement la performance, au centre de la stratégie.</p>
+          <div class="action-box"><span class="label">Action concrète</span><p>Proposer à ses clients retail un audit de "proximité de marque" : mesurer l'écart entre discours et perception réelle en point de vente/digital.</p></div>
+        </div>
         <a class="source-link" href="https://www.elpublicista.es/anunciantes/nacho-navarro-nuevo-director-marketing-ikea-espana" target="_blank" rel="noopener">El Publicista ↗</a>
+        <span class="toggle-hint" aria-hidden="true"></span>
       </article>
 
-      <article class="card">
+      <article class="card" data-theme="marketing">
+        <svg class="card-icon" aria-hidden="true"><use href="#ic-marketing"></use></svg>
         <h3>Marigold lance "Marketing Studio", plateforme tout-en-un dans Campaign Monitor</h3>
         <p class="meta">GlobeNewswire · 9 septembre 2026</p>
         <p class="body-text"><span class="label">Le fait</span>Marigold réunit dans un seul workflow cinq briques : Email Workspace, Creative Lab, Translation, Brand Hub et Social Suite.</p>
-        <p class="body-text"><span class="label">Pourquoi ça compte</span>Cette consolidation confirme la tendance à intégrer IA et cohérence de marque dans un outil unique, taillé pour les petites équipes marketing — exactement le profil des clients TPE/PME.</p>
-        <div class="action-box"><span class="label">Action concrète</span><p>Tester ce type d'outil tout-en-un pour des clients qui gèrent seuls leur communication multicanale, afin de réduire le temps de production et garantir la cohérence de marque.</p></div>
+        <div class="more">
+          <p class="body-text"><span class="label">Pourquoi ça compte</span>Cette consolidation confirme la tendance à intégrer IA et cohérence de marque dans un outil unique, taillé pour les petites équipes marketing — exactement le profil des clients TPE/PME.</p>
+          <div class="action-box"><span class="label">Action concrète</span><p>Tester ce type d'outil tout-en-un pour des clients qui gèrent seuls leur communication multicanale, afin de réduire le temps de production et garantir la cohérence de marque.</p></div>
+        </div>
         <a class="source-link" href="https://www.globenewswire.com/news-release/2026/09/09/3358981/0/en/campaign-monitor-launches-marketing-studio-bringing-campaign-creation-design-translation-and-social-publishing-into-a-unified-smart-workflow.html" target="_blank" rel="noopener">GlobeNewswire ↗</a>
+        <span class="toggle-hint" aria-hidden="true"></span>
       </article>
 
-      <article class="card">
+      <article class="card" data-theme="marketing">
+        <svg class="card-icon" aria-hidden="true"><use href="#ic-marketing"></use></svg>
         <h3>Spotify introduit le badge "AI Persona" pour les artistes générés par IA</h3>
         <p class="meta">TechCrunch · déploiement mi-septembre 2026</p>
         <p class="body-text"><span class="label">Le fait</span>Spotify va marquer les profils d'artistes à identité IA (badge visible sur le profil, en recherche et sur les pistes) et les exclure par défaut des recommandations éditoriales et algorithmiques.</p>
-        <p class="body-text"><span class="label">Pourquoi ça compte</span>Signal fort de bascule réglementaire/plateforme vers la transparence de l'identité IA — un précédent que Meta ou TikTok pourraient suivre.</p>
-        <div class="action-box"><span class="label">Action concrète</span><p>Auditer dès maintenant les comptes/influenceurs virtuels utilisés dans les campagnes clients et préparer une charte de transparence IA.</p></div>
+        <div class="more">
+          <p class="body-text"><span class="label">Pourquoi ça compte</span>Signal fort de bascule réglementaire/plateforme vers la transparence de l'identité IA — un précédent que Meta ou TikTok pourraient suivre.</p>
+          <div class="action-box"><span class="label">Action concrète</span><p>Auditer dès maintenant les comptes/influenceurs virtuels utilisés dans les campagnes clients et préparer une charte de transparence IA.</p></div>
+        </div>
         <a class="source-link" href="https://techcrunch.com/2026/08/11/spotify-will-label-ai-persona-profiles-and-exclude-their-music-from-recommendations/" target="_blank" rel="noopener">TechCrunch ↗</a>
+        <span class="toggle-hint" aria-hidden="true"></span>
       </article>
 
-      <article class="card">
+      <article class="card" data-theme="marketing">
+        <svg class="card-icon" aria-hidden="true"><use href="#ic-marketing"></use></svg>
         <h3>La rentrée scolaire 2026 mobilise les grandes marques espagnoles</h3>
         <p class="meta">MarketingNews.es · septembre 2026</p>
         <p class="body-text"><span class="label">Le fait</span>Sprinter ("Vuelven a lo grande"), El Corte Inglés ("¡Quiero volver al cole ya!") et Euskaltel (angle inversé "ce sont les parents qu'il faut convaincre") lancent leurs campagnes de rentrée, avec un budget moyen de 478€ par enfant (+12% vs 2025).</p>
-        <p class="body-text"><span class="label">Pourquoi ça compte</span>Face à l'inflation du poste rentrée, les marques misent sur l'humour et l'insight émotionnel plutôt que la promo pure pour se différencier.</p>
-        <div class="action-box"><span class="label">Action concrète</span><p>Construire pour des clients retail un calendrier de temps forts avec un angle "insight famille" différenciant plutôt qu'une simple offre prix.</p></div>
+        <div class="more">
+          <p class="body-text"><span class="label">Pourquoi ça compte</span>Face à l'inflation du poste rentrée, les marques misent sur l'humour et l'insight émotionnel plutôt que la promo pure pour se différencier.</p>
+          <div class="action-box"><span class="label">Action concrète</span><p>Construire pour des clients retail un calendrier de temps forts avec un angle "insight famille" différenciant plutôt qu'une simple offre prix.</p></div>
+        </div>
         <a class="source-link" href="https://www.marketingnews.es/marcas/noticia/1194850054305/sprinter-convierte-el-estiron-en-eje-de-su-vuelta-al-colegio.1.html" target="_blank" rel="noopener">MarketingNews.es ↗</a>
+        <span class="toggle-hint" aria-hidden="true"></span>
       </article>
 
     </div>
@@ -398,40 +669,56 @@
     <p class="theme-intro">Des refontes discrètes aux rebrandings de plateformes mondiales — la semaine où l'identité visuelle a bougé partout.</p>
     <div class="cards">
 
-      <article class="card">
+      <article class="card" data-theme="branding">
+        <svg class="card-icon" aria-hidden="true"><use href="#ic-branding"></use></svg>
         <h3>Wikimedia Espagne dévoile sa nouvelle identité visuelle</h3>
         <p class="meta">Wikimedia España · 4 septembre 2026</p>
         <p class="body-text"><span class="label">Le fait</span>Évolution du logo et des ressources graphiques vers une image plus claire et cohérente sur tous les canaux, en se rapprochant de la charte du mouvement Wikimedia global.</p>
-        <p class="body-text"><span class="label">Pourquoi ça compte</span>Illustre la tendance des organisations institutionnelles à moderniser leur image sans rompre avec leur héritage.</p>
-        <div class="action-box"><span class="label">Action concrète</span><p>Proposer aux clients associatifs un "toilettage" de charte graphique (logo, couleurs, gabarits) avant d'investir dans une refonte plus lourde.</p></div>
+        <div class="more">
+          <p class="body-text"><span class="label">Pourquoi ça compte</span>Illustre la tendance des organisations institutionnelles à moderniser leur image sans rompre avec leur héritage.</p>
+          <div class="action-box"><span class="label">Action concrète</span><p>Proposer aux clients associatifs un "toilettage" de charte graphique (logo, couleurs, gabarits) avant d'investir dans une refonte plus lourde.</p></div>
+        </div>
         <a class="source-link" href="https://wikimedia.es/nueva-identidad-visual-wikimedia-espana-2026/" target="_blank" rel="noopener">Wikimedia España ↗</a>
+        <span class="toggle-hint" aria-hidden="true"></span>
       </article>
 
-      <article class="card">
+      <article class="card" data-theme="branding">
+        <svg class="card-icon" aria-hidden="true"><use href="#ic-branding"></use></svg>
         <h3>Freixenet devient "Freixenet Iberia" en Espagne</h3>
         <p class="meta">IPMARK · août-septembre 2026</p>
         <p class="body-text"><span class="label">Le fait</span>Le Grupo Freixenet change de dénomination corporative pour souligner ses racines dans le Penedès, avec une nouvelle signature globale "Making life sparkle" — la marque de consommation Freixenet ne change pas, elle.</p>
-        <p class="body-text"><span class="label">Pourquoi ça compte</span>Cas d'école de la distinction entre identité corporate et identité de marque commerciale, pour ancrer un discours local sans diluer l'équité de marque mondiale.</p>
-        <div class="action-box"><span class="label">Action concrète</span><p>Utiliser ce cas dans un pitch client pour clarifier dès le brief la différence entre identité corporate et identité commerciale.</p></div>
+        <div class="more">
+          <p class="body-text"><span class="label">Pourquoi ça compte</span>Cas d'école de la distinction entre identité corporate et identité de marque commerciale, pour ancrer un discours local sans diluer l'équité de marque mondiale.</p>
+          <div class="action-box"><span class="label">Action concrète</span><p>Utiliser ce cas dans un pitch client pour clarifier dès le brief la différence entre identité corporate et identité commerciale.</p></div>
+        </div>
         <a class="source-link" href="https://ipmark.com/grupo-freixenet-pasa-llamarse-freixenet-iberia-espana/" target="_blank" rel="noopener">IPMARK ↗</a>
+        <span class="toggle-hint" aria-hidden="true"></span>
       </article>
 
-      <article class="card">
+      <article class="card" data-theme="branding">
+        <svg class="card-icon" aria-hidden="true"><use href="#ic-branding"></use></svg>
         <h3>Hunter &amp; Gather dévoile un rebranding à six chiffres</h3>
         <p class="meta">Retail Times · septembre 2026</p>
         <p class="body-text"><span class="label">Le fait</span>La marque britannique de nutrition a dévoilé un rebranding complet avec l'agence Big Fish (identité, packaging, site) après une année à 16,6 M£ de chiffre d'affaires.</p>
-        <p class="body-text"><span class="label">Pourquoi ça compte</span>Montre qu'un rebranding profond peut être déclenché par une phase de forte croissance — et non une crise — pour professionnaliser l'image.</p>
-        <div class="action-box"><span class="label">Action concrète</span><p>Identifier chez ses clients en forte croissance le "point de bascule" où un rebranding devient un investissement stratégique, et le formaliser en roadmap.</p></div>
+        <div class="more">
+          <p class="body-text"><span class="label">Pourquoi ça compte</span>Montre qu'un rebranding profond peut être déclenché par une phase de forte croissance — et non une crise — pour professionnaliser l'image.</p>
+          <div class="action-box"><span class="label">Action concrète</span><p>Identifier chez ses clients en forte croissance le "point de bascule" où un rebranding devient un investissement stratégique, et le formaliser en roadmap.</p></div>
+        </div>
         <a class="source-link" href="https://retailtimes.co.uk/hunter-gather-unveils-six-figure-rebrand-following-16-6m-year/" target="_blank" rel="noopener">Retail Times ↗</a>
+        <span class="toggle-hint" aria-hidden="true"></span>
       </article>
 
-      <article class="card">
+      <article class="card" data-theme="branding">
+        <svg class="card-icon" aria-hidden="true"><use href="#ic-branding"></use></svg>
         <h3>Instagram dévoile un nouveau logo, dix ans après le précédent</h3>
         <p class="meta">Moncloa.com · 14 août 2026 (déploiement en cours)</p>
         <p class="body-text"><span class="label">Le fait</span>Instagram abandonne la calligraphie classique utilisée depuis dix ans, dans un rebranding présenté comme structurant pour la décennie à venir, déployé progressivement à l'échelle mondiale.</p>
-        <p class="body-text"><span class="label">Pourquoi ça compte</span>Relance le débat sur la durée de vie d'une identité visuelle à l'ère du contenu court, et influence les attentes visuelles des marques qui y publient.</p>
-        <div class="action-box"><span class="label">Action concrète</span><p>Vérifier la compatibilité des gabarits sociaux des clients (miniatures, stories, reels) avec les nouveaux codes visuels de la plateforme.</p></div>
+        <div class="more">
+          <p class="body-text"><span class="label">Pourquoi ça compte</span>Relance le débat sur la durée de vie d'une identité visuelle à l'ère du contenu court, et influence les attentes visuelles des marques qui y publient.</p>
+          <div class="action-box"><span class="label">Action concrète</span><p>Vérifier la compatibilité des gabarits sociaux des clients (miniatures, stories, reels) avec les nouveaux codes visuels de la plateforme.</p></div>
+        </div>
         <a class="source-link" href="https://www.moncloa.com/2026/08/14/nuevo-logo-instagram-2026-3415057" target="_blank" rel="noopener">Moncloa.com ↗</a>
+        <span class="toggle-hint" aria-hidden="true"></span>
       </article>
 
     </div>
@@ -446,40 +733,56 @@
     <p class="theme-intro">Le grand sujet de la semaine : la bascule du SEO vers le GEO, et Barcelone qui s'impose comme hub IA européen.</p>
     <div class="cards">
 
-      <article class="card">
+      <article class="card" data-theme="tech">
+        <svg class="card-icon" aria-hidden="true"><use href="#ic-tech"></use></svg>
         <h3>Comscore mesure désormais les pubs dans les chats IA</h3>
         <p class="meta">GlobeNewswire · 3 septembre 2026</p>
         <p class="body-text"><span class="label">Le fait</span>Comscore élargit son produit "AI Intelligence" pour mesurer les pubs sponsorisées dans les réponses de chatbots IA : leur présence dans les prompts hôtellerie est passée de 6% en mars à 24% en mai 2026.</p>
-        <p class="body-text"><span class="label">Pourquoi ça compte</span>L'espace publicitaire ne se limite plus à Google ou Meta : les chats IA deviennent un canal mesurable qui va forcer les marques à repenser leur mix média.</p>
-        <div class="action-box"><span class="label">Action concrète</span><p>Ajouter un audit de présence de marque dans ChatGPT/Perplexity/Gemini au diagnostic marketing proposé aux clients.</p></div>
+        <div class="more">
+          <p class="body-text"><span class="label">Pourquoi ça compte</span>L'espace publicitaire ne se limite plus à Google ou Meta : les chats IA deviennent un canal mesurable qui va forcer les marques à repenser leur mix média.</p>
+          <div class="action-box"><span class="label">Action concrète</span><p>Ajouter un audit de présence de marque dans ChatGPT/Perplexity/Gemini au diagnostic marketing proposé aux clients.</p></div>
+        </div>
         <a class="source-link" href="https://www.globenewswire.com/news-release/2026/09/03/3355921/0/en/comscore-expands-its-ai-intelligence-to-measure-sponsored-chat-advertising-and-its-business-impact.html" target="_blank" rel="noopener">GlobeNewswire ↗</a>
+        <span class="toggle-hint" aria-hidden="true"></span>
       </article>
 
-      <article class="card">
+      <article class="card" data-theme="tech">
+        <svg class="card-icon" aria-hidden="true"><use href="#ic-tech"></use></svg>
         <h3>Bazaarvoice rend les avis clients "lisibles" par l'IA</h3>
         <p class="meta">GlobeNewswire · 1er septembre 2026</p>
         <p class="body-text"><span class="label">Le fait</span>"AI Visibility Package" restructure avis, photos et notes pour qu'ils soient indexables par les crawlers IA ; les premiers clients constatent +40% de trafic référent en provenance des IA.</p>
-        <p class="body-text"><span class="label">Pourquoi ça compte</span>Confirme la bascule du SEO vers le GEO (Generative Engine Optimization) : le contenu doit être pensé pour être cité par une IA, pas seulement indexé par Google.</p>
-        <div class="action-box"><span class="label">Action concrète</span><p>Proposer un service "GEO readiness" (structuration des avis, FAQ, fiches produit) avant que la concurrence ne squatte les réponses IA.</p></div>
+        <div class="more">
+          <p class="body-text"><span class="label">Pourquoi ça compte</span>Confirme la bascule du SEO vers le GEO (Generative Engine Optimization) : le contenu doit être pensé pour être cité par une IA, pas seulement indexé par Google.</p>
+          <div class="action-box"><span class="label">Action concrète</span><p>Proposer un service "GEO readiness" (structuration des avis, FAQ, fiches produit) avant que la concurrence ne squatte les réponses IA.</p></div>
+        </div>
         <a class="source-link" href="https://www.globenewswire.com/news-release/2026/09/01/3354231/19098/en/bazaarvoice-introduces-ai-visibility-package-to-prime-brand-content-and-ugc-for-ai-recommendation.html" target="_blank" rel="noopener">GlobeNewswire ↗</a>
+        <span class="toggle-hint" aria-hidden="true"></span>
       </article>
 
-      <article class="card">
+      <article class="card" data-theme="tech">
+        <svg class="card-icon" aria-hidden="true"><use href="#ic-tech"></use></svg>
         <h3>MNTN et Klaviyo connectent la TV connectée à l'email et au SMS</h3>
         <p class="meta">MarTech Series · 9 septembre 2026</p>
         <p class="body-text"><span class="label">Le fait</span>Intégration bidirectionnelle : les audiences Klaviyo peuvent être ciblées en TV connectée via MNTN, et l'exposition à une pub TV déclenche automatiquement des séquences email/SMS personnalisées.</p>
-        <p class="body-text"><span class="label">Pourquoi ça compte</span>Fusion des canaux "brand" (TV) et "performance" (CRM) en un flux automatisé — un signal fort pour mesurer l'impact réel du branding sur les ventes.</p>
-        <div class="action-box"><span class="label">Action concrète</span><p>Cartographier un parcours simple TV connectée → CRM pour préparer une conversation sur l'attribution cross-canal lors du prochain brief media.</p></div>
+        <div class="more">
+          <p class="body-text"><span class="label">Pourquoi ça compte</span>Fusion des canaux "brand" (TV) et "performance" (CRM) en un flux automatisé — un signal fort pour mesurer l'impact réel du branding sur les ventes.</p>
+          <div class="action-box"><span class="label">Action concrète</span><p>Cartographier un parcours simple TV connectée → CRM pour préparer une conversation sur l'attribution cross-canal lors du prochain brief media.</p></div>
+        </div>
         <a class="source-link" href="https://martechseries.com/sales-marketing/crm/mntn-and-klaviyo-integrate-performance-tv-with-crm/" target="_blank" rel="noopener">MarTech Series ↗</a>
+        <span class="toggle-hint" aria-hidden="true"></span>
       </article>
 
-      <article class="card">
+      <article class="card" data-theme="tech">
+        <svg class="card-icon" aria-hidden="true"><use href="#ic-tech"></use></svg>
         <h3>Barcelone se transforme en campus géant dédié à l'IA</h3>
         <p class="meta">IPMARK · 16-23 septembre 2026</p>
         <p class="body-text"><span class="label">Le fait</span>L'AI Week Barcelona 2026 annonce 50 événements, culminant avec l'AI Summit Barcelona (22-23 septembre) attendant 15 000 participants et des intervenants d'Anthropic, OpenAI, Microsoft, Google et Nvidia.</p>
-        <p class="body-text"><span class="label">Pourquoi ça compte</span>Barcelone se positionne comme hub IA européen — une opportunité concrète de veille et de repérage de futurs partenaires martech en Espagne.</p>
-        <div class="action-box"><span class="label">Action concrète</span><p>Bloquer un créneau (hackathon ou Summit) pour du networking ciblé avec des startups martech espagnoles.</p></div>
+        <div class="more">
+          <p class="body-text"><span class="label">Pourquoi ça compte</span>Barcelone se positionne comme hub IA européen — une opportunité concrète de veille et de repérage de futurs partenaires martech en Espagne.</p>
+          <div class="action-box"><span class="label">Action concrète</span><p>Bloquer un créneau (hackathon ou Summit) pour du networking ciblé avec des startups martech espagnoles.</p></div>
+        </div>
         <a class="source-link" href="https://ipmark.com/ai-week-barcelona-2026-eventos-inteligencia-artificial/" target="_blank" rel="noopener">IPMARK ↗</a>
+        <span class="toggle-hint" aria-hidden="true"></span>
       </article>
 
     </div>
@@ -494,40 +797,56 @@
     <p class="theme-intro">De Berlin à Madrid, les grands rendez-vous de marque de la semaine.</p>
     <div class="cards">
 
-      <article class="card">
+      <article class="card" data-theme="events">
+        <svg class="card-icon" aria-hidden="true"><use href="#ic-events"></use></svg>
         <h3>IFA 2026 : Samsung transforme son stand en escape room IA</h3>
         <p class="meta">Seoul Economic Daily · 4-8 septembre 2026, Berlin</p>
         <p class="body-text"><span class="label">Le fait</span>Samsung installe une escape room thématisée IA à Humboldt Carre, pendant que LG déploie un stand massif autour de son robot domestique CLOiD orchestrant 31 appareils connectés. Plus de 1 900 marques exposaient au salon.</p>
-        <p class="body-text"><span class="label">Pourquoi ça compte</span>Les deux leaders coréens ont fait des choix de mise en scène radicalement différents, montrant que le lieu et le format d'activation deviennent un message stratégique en soi.</p>
-        <div class="action-box"><span class="label">Action concrète</span><p>Pour un client exposant sur un grand salon, auditer le choix de lieu/format de stand au regard du positionnement de marque plutôt que de partir par défaut sur le format traditionnel.</p></div>
+        <div class="more">
+          <p class="body-text"><span class="label">Pourquoi ça compte</span>Les deux leaders coréens ont fait des choix de mise en scène radicalement différents, montrant que le lieu et le format d'activation deviennent un message stratégique en soi.</p>
+          <div class="action-box"><span class="label">Action concrète</span><p>Pour un client exposant sur un grand salon, auditer le choix de lieu/format de stand au regard du positionnement de marque plutôt que de partir par défaut sur le format traditionnel.</p></div>
+        </div>
         <a class="source-link" href="https://en.sedaily.com/finance/2026/09/04/samsung-turns-ifa-booth-into-an-ai-escape-room-for-gen-z" target="_blank" rel="noopener">Seoul Economic Daily ↗</a>
+        <span class="toggle-hint" aria-hidden="true"></span>
       </article>
 
-      <article class="card">
+      <article class="card" data-theme="events">
+        <svg class="card-icon" aria-hidden="true"><use href="#ic-events"></use></svg>
         <h3>Coca-Cola Music Experience revient à Madrid pour sa 16e édition</h3>
         <p class="meta">MarketingDirecto · 4-5 septembre 2026</p>
         <p class="body-text"><span class="label">Le fait</span>16e édition du festival de marque, avec une programmation musicale incluant Omar Montes parmi les têtes d'affiche.</p>
-        <p class="body-text"><span class="label">Pourquoi ça compte</span>Cas d'école de branded content long terme : la marque devient productrice culturelle plutôt que simple sponsor, construisant une plateforme événementielle propriétaire et récurrente.</p>
-        <div class="action-box"><span class="label">Action concrète</span><p>Proposer à une marque cliente de transformer une activation ponctuelle en plateforme annuelle récurrente plutôt qu'un one-shot.</p></div>
+        <div class="more">
+          <p class="body-text"><span class="label">Pourquoi ça compte</span>Cas d'école de branded content long terme : la marque devient productrice culturelle plutôt que simple sponsor, construisant une plateforme événementielle propriétaire et récurrente.</p>
+          <div class="action-box"><span class="label">Action concrète</span><p>Proposer à une marque cliente de transformer une activation ponctuelle en plateforme annuelle récurrente plutôt qu'un one-shot.</p></div>
+        </div>
         <a class="source-link" href="https://www.marketingdirecto.com/marketing-general/eventos-y-formacion/omar-montes-artistas-cartel-coca-cola-music-experience" target="_blank" rel="noopener">MarketingDirecto ↗</a>
+        <span class="toggle-hint" aria-hidden="true"></span>
       </article>
 
-      <article class="card">
+      <article class="card" data-theme="events">
+        <svg class="card-icon" aria-hidden="true"><use href="#ic-events"></use></svg>
         <h3>Madrid es Moda ouvre la Semaine de la Mode à Madrid</h3>
         <p class="meta">esMadrid (Turismo Madrid) · 7-10 septembre 2026</p>
         <p class="body-text"><span class="label">Le fait</span>Impulsée par l'ACME, l'initiative fédère plusieurs plateformes professionnelles de mode sous une même ombrelle événementielle.</p>
-        <p class="body-text"><span class="label">Pourquoi ça compte</span>Montre comment une ville-marque structure un écosystème d'événements sous un récit commun pour gagner en visibilité internationale.</p>
-        <div class="action-box"><span class="label">Action concrète</span><p>S'inspirer du modèle d'ombrelle événementielle pour aider un client sectoriel à fédérer des événements dispersés sous une identité unique.</p></div>
+        <div class="more">
+          <p class="body-text"><span class="label">Pourquoi ça compte</span>Montre comment une ville-marque structure un écosystème d'événements sous un récit commun pour gagner en visibilité internationale.</p>
+          <div class="action-box"><span class="label">Action concrète</span><p>S'inspirer du modèle d'ombrelle événementielle pour aider un client sectoriel à fédérer des événements dispersés sous une identité unique.</p></div>
+        </div>
         <a class="source-link" href="https://www.esmadrid.com/agenda/omoda-madrid-es-moda" target="_blank" rel="noopener">esMadrid ↗</a>
+        <span class="toggle-hint" aria-hidden="true"></span>
       </article>
 
-      <article class="card">
+      <article class="card" data-theme="events">
+        <svg class="card-icon" aria-hidden="true"><use href="#ic-events"></use></svg>
         <h3>Madrid dévoile "Madrid Beats", sa nouvelle marque touristique</h3>
         <p class="meta">El Publicista · 4 septembre 2026</p>
         <p class="body-text"><span class="label">Le fait</span>Havas Creative España a créé pour Madrid Turismo/IFEMA une campagne internationale sur 13 marchés long-courriers, dans une année marquée par l'arrivée de la F1 (impact estimé à 450 M€/an).</p>
-        <p class="body-text"><span class="label">Pourquoi ça compte</span>Montre comment une destination synchronise un rebranding de territoire avec un temps fort événementiel pour maximiser couverture médiatique et impact business.</p>
-        <div class="action-box"><span class="label">Action concrète</span><p>Pour un client territorial, caler le lancement d'une nouvelle plateforme de marque sur un événement à forte exposition déjà programmé.</p></div>
+        <div class="more">
+          <p class="body-text"><span class="label">Pourquoi ça compte</span>Montre comment une destination synchronise un rebranding de territoire avec un temps fort événementiel pour maximiser couverture médiatique et impact business.</p>
+          <div class="action-box"><span class="label">Action concrète</span><p>Pour un client territorial, caler le lancement d'une nouvelle plateforme de marque sur un événement à forte exposition déjà programmé.</p></div>
+        </div>
         <a class="source-link" href="https://www.elpublicista.es/anunciantes/madrid-transforma-corazon-invisible-nuevo-icono-marca-para" target="_blank" rel="noopener">El Publicista ↗</a>
+        <span class="toggle-hint" aria-hidden="true"></span>
       </article>
 
     </div>
@@ -542,40 +861,56 @@
     <p class="theme-intro">Le grand sujet : concevoir du contenu et des expériences pour deux audiences, humaine et IA.</p>
     <div class="cards">
 
-      <article class="card">
+      <article class="card" data-theme="b2b">
+        <svg class="card-icon" aria-hidden="true"><use href="#ic-b2b"></use></svg>
         <h3>IAA Mobility 2026 sépare clairement B2B et grand public</h3>
         <p class="meta">MICEGermany · 9-14 septembre 2026, Munich</p>
         <p class="body-text"><span class="label">Le fait</span>Le Summit B2B à Messe München (batteries, logiciel embarqué, IA, conduite autonome) est séparé de l'"Open Space" en centre-ville, ouvert au grand public avec pavillons de marques et essais de véhicules.</p>
-        <p class="body-text"><span class="label">Pourquoi ça compte</span>Cas concret de segmentation d'audience à l'échelle d'un salon entier : deux expériences totalement différentes selon le public visé, plutôt qu'une expérience unique diluée.</p>
-        <div class="action-box"><span class="label">Action concrète</span><p>Scinder les événements clients qui mélangent aujourd'hui prospects B2B et grand public en deux parcours distincts.</p></div>
+        <div class="more">
+          <p class="body-text"><span class="label">Pourquoi ça compte</span>Cas concret de segmentation d'audience à l'échelle d'un salon entier : deux expériences totalement différentes selon le public visé, plutôt qu'une expérience unique diluée.</p>
+          <div class="action-box"><span class="label">Action concrète</span><p>Scinder les événements clients qui mélangent aujourd'hui prospects B2B et grand public en deux parcours distincts.</p></div>
+        </div>
         <a class="source-link" href="https://micegermany.de/all-events/iaa-mobility-2026" target="_blank" rel="noopener">MICEGermany ↗</a>
+        <span class="toggle-hint" aria-hidden="true"></span>
       </article>
 
-      <article class="card">
+      <article class="card" data-theme="b2b">
+        <svg class="card-icon" aria-hidden="true"><use href="#ic-b2b"></use></svg>
         <h3>DigiMarCon Spain 2026 réunit les professionnels du marketing digital à Barcelone</h3>
         <p class="meta">DigiMarCon · 7-8 septembre 2026, W Barcelona</p>
         <p class="body-text"><span class="label">Le fait</span>Conférence-exposition hybride au W Barcelona autour de la fidélisation, la génération de leads et l'engagement client (marketing digital, AdTech, MarTech).</p>
-        <p class="body-text"><span class="label">Pourquoi ça compte</span>Ce format hôtel de luxe + hybride illustre la transformation des conférences pro en expériences premium accessibles à distance.</p>
-        <div class="action-box"><span class="label">Action concrète</span><p>Systématiser l'option hybride avec un vrai design d'expérience à distance pour les séminaires clients, pas juste un streaming.</p></div>
+        <div class="more">
+          <p class="body-text"><span class="label">Pourquoi ça compte</span>Ce format hôtel de luxe + hybride illustre la transformation des conférences pro en expériences premium accessibles à distance.</p>
+          <div class="action-box"><span class="label">Action concrète</span><p>Systématiser l'option hybride avec un vrai design d'expérience à distance pour les séminaires clients, pas juste un streaming.</p></div>
+        </div>
         <a class="source-link" href="https://digimarconspain.es/" target="_blank" rel="noopener">DigiMarCon ↗</a>
+        <span class="toggle-hint" aria-hidden="true"></span>
       </article>
 
-      <article class="card">
+      <article class="card" data-theme="b2b">
+        <svg class="card-icon" aria-hidden="true"><use href="#ic-b2b"></use></svg>
         <h3>ContentCon Europe 2026 : "chaque marque a désormais deux audiences"</h3>
         <p class="meta">GlobeNewswire — Contentstack · 8 septembre 2026</p>
         <p class="body-text"><span class="label">Le fait</span>Thème et keynotes dévoilés pour ContentCon Europe (30 sept-1er oct, Amsterdam) : "Inspiring Humans, Informing Agents", avec des intervenants de Verizon, Volvo, ASICS et Walmart Marketplace.</p>
-        <p class="body-text"><span class="label">Pourquoi ça compte</span>Le contenu et l'expérience de marque doivent désormais être pensés pour un double public, humain ET agent IA — ce qui redéfinit les briefs créatifs.</p>
-        <div class="action-box"><span class="label">Action concrète</span><p>Ajouter à l'audit de contenu client un volet "lisibilité par les agents IA" en plus du volet créatif humain classique.</p></div>
+        <div class="more">
+          <p class="body-text"><span class="label">Pourquoi ça compte</span>Le contenu et l'expérience de marque doivent désormais être pensés pour un double public, humain ET agent IA — ce qui redéfinit les briefs créatifs.</p>
+          <div class="action-box"><span class="label">Action concrète</span><p>Ajouter à l'audit de contenu client un volet "lisibilité par les agents IA" en plus du volet créatif humain classique.</p></div>
+        </div>
         <a class="source-link" href="https://www.globenewswire.com/news-release/2026/09/08/3357506/0/en/contentcon-2026-every-brand-now-has-two-audiences-humans-and-agents.html" target="_blank" rel="noopener">GlobeNewswire ↗</a>
+        <span class="toggle-hint" aria-hidden="true"></span>
       </article>
 
-      <article class="card">
+      <article class="card" data-theme="b2b">
+        <svg class="card-icon" aria-hidden="true"><use href="#ic-b2b"></use></svg>
         <h3>Maison&amp;Objet Paris relance le grand rendez-vous B2B de l'art de vivre</h3>
         <p class="meta">Veille salons Paris · 10-14 septembre 2026</p>
         <p class="body-text"><span class="label">Le fait</span>Salon professionnel de référence pour la décoration, le design et l'art de vivre à Villepinte, réunissant marques, designers et acheteurs internationaux.</p>
-        <p class="body-text"><span class="label">Pourquoi ça compte</span>Rappelle que les grands salons B2B sectoriels restent un moteur central de business pour les marques lifestyle, difficiles à toucher en digital pur.</p>
-        <div class="action-box"><span class="label">Action concrète</span><p>Évaluer pour un client design/lifestyle une présence ou un partenariat de contenu autour d'un salon plutôt que tout miser sur le digital.</p></div>
+        <div class="more">
+          <p class="body-text"><span class="label">Pourquoi ça compte</span>Rappelle que les grands salons B2B sectoriels restent un moteur central de business pour les marques lifestyle, difficiles à toucher en digital pur.</p>
+          <div class="action-box"><span class="label">Action concrète</span><p>Évaluer pour un client design/lifestyle une présence ou un partenariat de contenu autour d'un salon plutôt que tout miser sur le digital.</p></div>
+        </div>
         <a class="source-link" href="https://hotelrdeparis.com/en/news/trade-shows-paris-september-2026-events-to-watch/" target="_blank" rel="noopener">Hotel R de Paris ↗</a>
+        <span class="toggle-hint" aria-hidden="true"></span>
       </article>
 
     </div>
@@ -590,40 +925,56 @@
     <p class="theme-intro">Peurs transformées en expériences, phygital et data culturelle traduite en installations physiques.</p>
     <div class="cards">
 
-      <article class="card">
+      <article class="card" data-theme="b2c">
+        <svg class="card-icon" aria-hidden="true"><use href="#ic-b2c"></use></svg>
         <h3>Iberia rouvre son espace immersif au cœur de Madrid</h3>
         <p class="meta">Aviación al Día · 2-27 septembre 2026</p>
         <p class="body-text"><span class="label">Le fait</span>"Espacio Iberia" (Madrid) propose simulateur de vol, offre gastronomique et un podcast immersif "El Cubo de Otto" conçu pour aider à surmonter la peur de l'avion via IA et son binaural.</p>
-        <p class="body-text"><span class="label">Pourquoi ça compte</span>Une compagnie aérienne transforme un pain point client en expérience de marque phygitale, plutôt qu'en simple promotion de destinations.</p>
-        <div class="action-box"><span class="label">Action concrète</span><p>Identifier une friction ou une peur liée au produit d'un client et la transformer en expérience immersive temporaire.</p></div>
+        <div class="more">
+          <p class="body-text"><span class="label">Pourquoi ça compte</span>Une compagnie aérienne transforme un pain point client en expérience de marque phygitale, plutôt qu'en simple promotion de destinations.</p>
+          <div class="action-box"><span class="label">Action concrète</span><p>Identifier une friction ou une peur liée au produit d'un client et la transformer en expérience immersive temporaire.</p></div>
+        </div>
         <a class="source-link" href="https://aviacionaldia.com/2026/09/espacio-iberia-la-experiencia-inmersiva-de-la-aerolinea-regresa-a-madrid-con-simulador-de-vuelo-gastronomia-y-tecnologia-ia.html" target="_blank" rel="noopener">Aviación al Día ↗</a>
+        <span class="toggle-hint" aria-hidden="true"></span>
       </article>
 
-      <article class="card">
+      <article class="card" data-theme="b2c">
+        <svg class="card-icon" aria-hidden="true"><use href="#ic-b2c"></use></svg>
         <h3>Rhode débarque chez Sephora en Europe après une tournée de pop-ups</h3>
         <p class="meta">e.l.f. Beauty · lancement le 30 septembre 2026</p>
         <p class="body-text"><span class="label">Le fait</span>Après un "beach club" éphémère à Majorque et une tournée d'un kiosque itinérant à Amalfi et Copenhague, Rhode (Hailey Bieber) arrive chez Sephora dans 19 pays européens dont l'Espagne.</p>
-        <p class="body-text"><span class="label">Pourquoi ça compte</span>Mécanique phygitale devenue standard des marques DTC : construire la désirabilité via des expériences physiques limitées avant un lancement retail massif.</p>
-        <div class="action-box"><span class="label">Action concrète</span><p>Structurer un lancement retail en 2 temps pour un client DTC : micro-activation itinérante avant l'ouverture des points de vente définitifs.</p></div>
+        <div class="more">
+          <p class="body-text"><span class="label">Pourquoi ça compte</span>Mécanique phygitale devenue standard des marques DTC : construire la désirabilité via des expériences physiques limitées avant un lancement retail massif.</p>
+          <div class="action-box"><span class="label">Action concrète</span><p>Structurer un lancement retail en 2 temps pour un client DTC : micro-activation itinérante avant l'ouverture des points de vente définitifs.</p></div>
+        </div>
         <a class="source-link" href="https://investor.elfbeauty.com/stock-and-financial/press-releases/landing-news/2026/08-31-2026-140024924" target="_blank" rel="noopener">e.l.f. Beauty ↗</a>
+        <span class="toggle-hint" aria-hidden="true"></span>
       </article>
 
-      <article class="card">
+      <article class="card" data-theme="b2c">
+        <svg class="card-icon" aria-hidden="true"><use href="#ic-b2c"></use></svg>
         <h3>Van Cleef &amp; Arpels transforme Harrods en terrain de jeu cinétique</h3>
         <p class="meta">Van Cleef &amp; Arpels · installation immersive Perlée</p>
         <p class="body-text"><span class="label">Le fait</span>Installation immersive avec l'artiste Arthur Hoffner à Harrods Londres : sphères suspendues, structures graphiques animées et démonstrations d'artisanat joaillier en direct.</p>
-        <p class="body-text"><span class="label">Pourquoi ça compte</span>Référence pour le luxe expérientiel : la collection n'est plus exposée mais habitée par le visiteur.</p>
-        <div class="action-box"><span class="label">Action concrète</span><p>Remplacer une vitrine statique par une scénographie cinétique co-créée avec un artiste, pensée pour être filmée et partagée.</p></div>
+        <div class="more">
+          <p class="body-text"><span class="label">Pourquoi ça compte</span>Référence pour le luxe expérientiel : la collection n'est plus exposée mais habitée par le visiteur.</p>
+          <div class="action-box"><span class="label">Action concrète</span><p>Remplacer une vitrine statique par une scénographie cinétique co-créée avec un artiste, pensée pour être filmée et partagée.</p></div>
+        </div>
         <a class="source-link" href="https://www.vancleefarpels.com/it/en/the-maison/newsroom/van-cleef-arpels-celebrates-the-perlee-collection-with-an-immersive-display-at-harrods-london.html" target="_blank" rel="noopener">Van Cleef &amp; Arpels ↗</a>
+        <span class="toggle-hint" aria-hidden="true"></span>
       </article>
 
-      <article class="card">
+      <article class="card" data-theme="b2c">
+        <svg class="card-icon" aria-hidden="true"><use href="#ic-b2c"></use></svg>
         <h3>IKEA, Spotify Wrapped, Chappell Roan : le nouveau standard de l'activation phygitale</h3>
         <p class="meta">Zappi · septembre 2026</p>
         <p class="body-text"><span class="label">Le fait</span>Ateliers/photobooth chez IKEA, plus de 50 installations physiques Spotify Wrapped dédiées à des artistes, et une cascade de 800 pieds de cheveux roux dans le métro new-yorkais pour Chappell Roan.</p>
-        <p class="body-text"><span class="label">Pourquoi ça compte</span>L'activation la plus efficace en 2026 combine data culturelle et installation physique spectaculaire et photogénique.</p>
-        <div class="action-box"><span class="label">Action concrète</span><p>Traduire un pic de données propriétaires client (top produit, comportement dominant) en installation physique locale et visuelle.</p></div>
+        <div class="more">
+          <p class="body-text"><span class="label">Pourquoi ça compte</span>L'activation la plus efficace en 2026 combine data culturelle et installation physique spectaculaire et photogénique.</p>
+          <div class="action-box"><span class="label">Action concrète</span><p>Traduire un pic de données propriétaires client (top produit, comportement dominant) en installation physique locale et visuelle.</p></div>
+        </div>
         <a class="source-link" href="https://www.zappi.io/web/blog/2026-brand-activation-examples" target="_blank" rel="noopener">Zappi ↗</a>
+        <span class="toggle-hint" aria-hidden="true"></span>
       </article>
 
     </div>
@@ -638,58 +989,82 @@
     <p class="theme-intro">La semaine où le pop-up est devenu tour à tour outil d'internationalisation, installation artistique et accélérateur entrepreneurial.</p>
     <div class="cards">
 
-      <article class="card">
+      <article class="card" data-theme="popup">
+        <svg class="card-icon" aria-hidden="true"><use href="#ic-popup"></use></svg>
         <h3>McLaren x Mastercard installe sa F1 en plein centre commercial madrilène</h3>
         <p class="meta">MarketingDirecto · 3-12 septembre 2026, Madrid</p>
         <p class="body-text"><span class="label">Le fait</span>Pop-up gratuite à La Vaguada avec merchandising exclusif et cabine photo IA transformant le visiteur en pilote F1 — dernière étape d'une tournée européenne après Nice, Vienne, Bruxelles et Milan.</p>
-        <p class="body-text"><span class="label">Pourquoi ça compte</span>Une marque de paiement utilise le sport, la gamification IA et le retail temporaire pour créer un souvenir partageable et gratuit — brand experience pure.</p>
-        <div class="action-box"><span class="label">Action concrète</span><p>Proposer à des marques B2B/services un format "cabine photo IA + expérience immersive", léger et peu coûteux.</p></div>
+        <div class="more">
+          <p class="body-text"><span class="label">Pourquoi ça compte</span>Une marque de paiement utilise le sport, la gamification IA et le retail temporaire pour créer un souvenir partageable et gratuit — brand experience pure.</p>
+          <div class="action-box"><span class="label">Action concrète</span><p>Proposer à des marques B2B/services un format "cabine photo IA + expérience immersive", léger et peu coûteux.</p></div>
+        </div>
         <a class="source-link" href="https://www.marketingdirecto.com/anunciantes-general/llega-madrid-pop-up-store-exclusiva-mclaren-mastercard-f1-team" target="_blank" rel="noopener">MarketingDirecto ↗</a>
+        <span class="toggle-hint" aria-hidden="true"></span>
       </article>
 
-      <article class="card">
+      <article class="card" data-theme="popup">
+        <svg class="card-icon" aria-hidden="true"><use href="#ic-popup"></use></svg>
         <h3>Nude Project débarque à SoHo avec un clin d'œil à Miranda Priestly</h3>
         <p class="meta">FashionUnited España · ouverture le 12 septembre 2026</p>
         <p class="body-text"><span class="label">Le fait</span>Première boutique new-yorkaise (42 Greene Street, SoHo, 380 m²) de la marque espagnole, annoncée via un sketch mettant en scène le personnage du "Diable s'habille en Prada", ouverte jusqu'au 31 décembre.</p>
-        <p class="body-text"><span class="label">Pourquoi ça compte</span>Une marque lifestyle espagnole exporte son storytelling (culture pop + humour) plutôt que juste son produit pour s'implanter sur un marché saturé.</p>
-        <div class="action-box"><span class="label">Action concrète</span><p>S'inspirer du teasing "pop culture" pour l'annonce d'une ouverture client : un format court et hautement partageable plutôt qu'un communiqué classique.</p></div>
+        <div class="more">
+          <p class="body-text"><span class="label">Pourquoi ça compte</span>Une marque lifestyle espagnole exporte son storytelling (culture pop + humour) plutôt que juste son produit pour s'implanter sur un marché saturé.</p>
+          <div class="action-box"><span class="label">Action concrète</span><p>S'inspirer du teasing "pop culture" pour l'annonce d'une ouverture client : un format court et hautement partageable plutôt qu'un communiqué classique.</p></div>
+        </div>
         <a class="source-link" href="https://fashionunited.es/noticias/retail/nude-project-desembarca-en-nueva-york-con-una-pop-up-en-el-soho/2026090850581" target="_blank" rel="noopener">FashionUnited España ↗</a>
+        <span class="toggle-hint" aria-hidden="true"></span>
       </article>
 
-      <article class="card">
+      <article class="card" data-theme="popup">
+        <svg class="card-icon" aria-hidden="true"><use href="#ic-popup"></use></svg>
         <h3>Issey Miyake plie le ciel dans son premier pop-up milanais</h3>
         <p class="meta">L'Officiel Italia · 10 septembre-11 octobre 2026, Milan</p>
         <p class="body-text"><span class="label">Le fait</span>PLEATS PLEASE ISSEY MIYAKE ouvre son tout premier pop-up (10 Corso Como) pour lancer "Azure Colors", installation immersive inspirée du ciel et de ses nuages en mouvement.</p>
-        <p class="body-text"><span class="label">Pourquoi ça compte</span>Le pop-up est conçu comme installation artistique à part entière — le store devient le message de la collection.</p>
-        <div class="action-box"><span class="label">Action concrète</span><p>Concevoir une boutique éphémère autour d'un seul motif sensoriel fort plutôt que d'y entasser toute la gamme — plus mémorable avec un petit budget.</p></div>
+        <div class="more">
+          <p class="body-text"><span class="label">Pourquoi ça compte</span>Le pop-up est conçu comme installation artistique à part entière — le store devient le message de la collection.</p>
+          <div class="action-box"><span class="label">Action concrète</span><p>Concevoir une boutique éphémère autour d'un seul motif sensoriel fort plutôt que d'y entasser toute la gamme — plus mémorable avec un petit budget.</p></div>
+        </div>
         <a class="source-link" href="https://www.lofficielitalia.com/fashion/pleats-please-issey-miyake-10-corso-como-pop-up-store" target="_blank" rel="noopener">L'Officiel Italia ↗</a>
+        <span class="toggle-hint" aria-hidden="true"></span>
       </article>
 
-      <article class="card">
+      <article class="card" data-theme="popup">
+        <svg class="card-icon" aria-hidden="true"><use href="#ic-popup"></use></svg>
         <h3>MINI et Paul Smith transforment le KaDeWe de Berlin en showroom couleur</h3>
         <p class="meta">Bimmertoday · jusqu'au 12 septembre 2026, Berlin</p>
         <p class="body-text"><span class="label">Le fait</span>Pop-up au 2ᵉ étage du grand magasin KaDeWe pour présenter la "MINI Paul Smith Edition" (coloris exclusifs, bande signature), entrée gratuite.</p>
-        <p class="body-text"><span class="label">Pourquoi ça compte</span>Collaboration automobile x mode dans un lieu non automobile pour toucher une audience lifestyle plutôt que des acheteurs de voitures classiques.</p>
-        <div class="action-box"><span class="label">Action concrète</span><p>Pour des marques hors-mode, envisager un partenariat court avec un grand magasin existant plutôt qu'un espace dédié.</p></div>
+        <div class="more">
+          <p class="body-text"><span class="label">Pourquoi ça compte</span>Collaboration automobile x mode dans un lieu non automobile pour toucher une audience lifestyle plutôt que des acheteurs de voitures classiques.</p>
+          <div class="action-box"><span class="label">Action concrète</span><p>Pour des marques hors-mode, envisager un partenariat court avec un grand magasin existant plutôt qu'un espace dédié.</p></div>
+        </div>
         <a class="source-link" href="https://www.bimmertoday.de/2026/08/18/pop-up-store-im-kadewe-mini-paul-smith-ladt-zum-shopping-in-berlin/" target="_blank" rel="noopener">Bimmertoday ↗</a>
+        <span class="toggle-hint" aria-hidden="true"></span>
       </article>
 
-      <article class="card">
+      <article class="card" data-theme="popup">
+        <svg class="card-icon" aria-hidden="true"><use href="#ic-popup"></use></svg>
         <h3>La culture coréenne prend SoHo pendant deux semaines</h3>
         <p class="meta">Seoul Economic Daily · 10-23 septembre 2026, New York</p>
         <p class="body-text"><span class="label">Le fait</span>W CONCEPT ouvre "W Together", réunissant plus de 80 marques coréennes de mode, beauté, musique et lifestyle en sept zones thématiques.</p>
-        <p class="body-text"><span class="label">Pourquoi ça compte</span>Le pop-up comme outil de "soft power" culturel et d'entrée de marché groupée : un écosystème entier débarque sous un même toit.</p>
-        <div class="action-box"><span class="label">Action concrète</span><p>Pour tester un nouveau marché, proposer un pop-up collectif multi-marques plutôt qu'une opération solo.</p></div>
+        <div class="more">
+          <p class="body-text"><span class="label">Pourquoi ça compte</span>Le pop-up comme outil de "soft power" culturel et d'entrée de marché groupée : un écosystème entier débarque sous un même toit.</p>
+          <div class="action-box"><span class="label">Action concrète</span><p>Pour tester un nouveau marché, proposer un pop-up collectif multi-marques plutôt qu'une opération solo.</p></div>
+        </div>
         <a class="source-link" href="https://en.sedaily.com/finance/2026/09/09/w-concept-opens-k-fashion-pop-up-in-new-yorks-soho" target="_blank" rel="noopener">Seoul Economic Daily ↗</a>
+        <span class="toggle-hint" aria-hidden="true"></span>
       </article>
 
-      <article class="card">
+      <article class="card" data-theme="popup">
+        <svg class="card-icon" aria-hidden="true"><use href="#ic-popup"></use></svg>
         <h3>Pontevedra transforme sa place centrale en vitrine de 48 projets innovants</h3>
         <p class="meta">Galicia Press · 11-12 septembre 2026</p>
         <p class="body-text"><span class="label">Le fait</span>"Pont-Up Store" sur la Praza de España réunit 48 projets entrepreneurs sélectionnés parmi 151 candidatures (69% menés par des femmes), couvrant tech, design, audiovisuel et commerce durable.</p>
-        <p class="body-text"><span class="label">Pourquoi ça compte</span>Détourne le format pop-up du retail pur vers l'écosystème entrepreneurial : un espace public devient un accélérateur physique temporaire.</p>
-        <div class="action-box"><span class="label">Action concrète</span><p>Pour un client institutionnel, curer une sélection de projets/partenaires complémentaires dans un espace public temporaire plutôt qu'un simple stand.</p></div>
+        <div class="more">
+          <p class="body-text"><span class="label">Pourquoi ça compte</span>Détourne le format pop-up du retail pur vers l'écosystème entrepreneurial : un espace public devient un accélérateur physique temporaire.</p>
+          <div class="action-box"><span class="label">Action concrète</span><p>Pour un client institutionnel, curer une sélection de projets/partenaires complémentaires dans un espace public temporaire plutôt qu'un simple stand.</p></div>
+        </div>
         <a class="source-link" href="https://www.galiciapress.es/articulo/ultima-hora/2026-09-04/6003849-pont-up-store-reunira-pontevedra-48-proyectos-emprendedores-69-liderados-mujeres" target="_blank" rel="noopener">Galicia Press ↗</a>
+        <span class="toggle-hint" aria-hidden="true"></span>
       </article>
 
     </div>
@@ -704,49 +1079,69 @@
     <p class="theme-intro">Collaborations culturelles inattendues et insights comportementaux transformés en punchlines urbaines.</p>
     <div class="cards">
 
-      <article class="card">
+      <article class="card" data-theme="activation">
+        <svg class="card-icon" aria-hidden="true"><use href="#ic-activation"></use></svg>
         <h3>Gillette emmène des créateurs de contenu au Grand Prix d'Espagne de F1</h3>
         <p class="meta">El Publicista · 11 septembre 2026</p>
         <p class="body-text"><span class="label">Le fait</span>Via son partenariat avec Audi Revolut F1 Team, Gillette réunit des créateurs à Madrid autour d'activations liant précision et style de vie masculin, avant de leur faire vivre le Grand Prix de l'intérieur.</p>
-        <p class="body-text"><span class="label">Pourquoi ça compte</span>Le sponsoring sportif classique glisse vers une activation pensée pour et par les créateurs, où l'expérience vécue devient le brief de contenu.</p>
-        <div class="action-box"><span class="label">Action concrète</span><p>Concevoir pour un sponsor une journée d'activation dédiée à un groupe restreint de créateurs avec un fil rouge de marque clair.</p></div>
+        <div class="more">
+          <p class="body-text"><span class="label">Pourquoi ça compte</span>Le sponsoring sportif classique glisse vers une activation pensée pour et par les créateurs, où l'expérience vécue devient le brief de contenu.</p>
+          <div class="action-box"><span class="label">Action concrète</span><p>Concevoir pour un sponsor une journée d'activation dédiée à un groupe restreint de créateurs avec un fil rouge de marque clair.</p></div>
+        </div>
         <a class="source-link" href="https://www.elpublicista.es/anunciantes/gillette-lleva-alianza-audi-revolut-f1-team-terreno-creadores" target="_blank" rel="noopener">El Publicista ↗</a>
+        <span class="toggle-hint" aria-hidden="true"></span>
       </article>
 
-      <article class="card">
+      <article class="card" data-theme="activation">
+        <svg class="card-icon" aria-hidden="true"><use href="#ic-activation"></use></svg>
         <h3>Johnnie Walker et Sabrina Carpenter dévoilent une bouteille collector</h3>
         <p class="meta">The Whisky Wire · 8 septembre 2026</p>
         <p class="body-text"><span class="label">Le fait</span>Édition limitée du Black Label inspirée de l'album "Man's Best Friend", coloris bleu signature et motifs de pattes de chien, déployée au Royaume-Uni puis dans une sélection de marchés internationaux.</p>
-        <p class="body-text"><span class="label">Pourquoi ça compte</span>L'univers visuel de l'artiste devient littéralement le packaging du produit, prolongeant la conversation culturelle bien au-delà de la sortie d'album.</p>
-        <div class="action-box"><span class="label">Action concrète</span><p>Explorer une collaboration produit (édition limitée, packaging codesigné) avec un talent culturel local en phase de sortie de projet.</p></div>
+        <div class="more">
+          <p class="body-text"><span class="label">Pourquoi ça compte</span>L'univers visuel de l'artiste devient littéralement le packaging du produit, prolongeant la conversation culturelle bien au-delà de la sortie d'album.</p>
+          <div class="action-box"><span class="label">Action concrète</span><p>Explorer une collaboration produit (édition limitée, packaging codesigné) avec un talent culturel local en phase de sortie de projet.</p></div>
+        </div>
         <a class="source-link" href="https://thewhiskywire.com/2026/09/08/johnnie-walker-launches-limited-edition-sabrina-carpenter-black-label-bottle-design/" target="_blank" rel="noopener">The Whisky Wire ↗</a>
+        <span class="toggle-hint" aria-hidden="true"></span>
       </article>
 
-      <article class="card">
+      <article class="card" data-theme="activation">
+        <svg class="card-icon" aria-hidden="true"><use href="#ic-activation"></use></svg>
         <h3>Zara confie son archive à John Galliano</h3>
         <p class="meta">Marie Claire España · collection en boutique septembre 2026</p>
         <p class="body-text"><span class="label">Le fait</span>Accord créatif de deux ans entre Zara (Inditex) et John Galliano, qui réinterprète des pièces d'archive avec une approche inspirée de la haute couture ; première collection en magasins et en ligne dès septembre.</p>
-        <p class="body-text"><span class="label">Pourquoi ça compte</span>Même les acteurs de la fast-fashion misent sur la direction artistique de couturiers reconnus pour se repositionner vers un "luxe accessible".</p>
-        <div class="action-box"><span class="label">Action concrète</span><p>Suggérer à un client mass-market une collaboration ponctuelle avec un directeur artistique reconnu pour réinterpréter son propre catalogue.</p></div>
+        <div class="more">
+          <p class="body-text"><span class="label">Pourquoi ça compte</span>Même les acteurs de la fast-fashion misent sur la direction artistique de couturiers reconnus pour se repositionner vers un "luxe accessible".</p>
+          <div class="action-box"><span class="label">Action concrète</span><p>Suggérer à un client mass-market une collaboration ponctuelle avec un directeur artistique reconnu pour réinterpréter son propre catalogue.</p></div>
+        </div>
         <a class="source-link" href="https://www.marie-claire.es/moda/john-galliano-zara-colaboracion-creativa-colecciones-disenos-como-sera-cuando.html" target="_blank" rel="noopener">Marie Claire España ↗</a>
+        <span class="toggle-hint" aria-hidden="true"></span>
       </article>
 
-      <article class="card">
+      <article class="card" data-theme="activation">
+        <svg class="card-icon" aria-hidden="true"><use href="#ic-activation"></use></svg>
         <h3>Les clubs DiR transforment la rentrée en campagne urbaine anti-excuses</h3>
         <p class="meta">GYM FACTORY Revista · 4 septembre 2026</p>
         <p class="body-text"><span class="label">Le fait</span>"Si quieres hacerlo, hazlo" joue sur les excuses classiques pour ne pas faire de sport ("moins de promesses, plus d'haltères"), déployée en digital, TV, transports et mobilier urbain à Barcelone.</p>
-        <p class="body-text"><span class="label">Pourquoi ça compte</span>Exemple simple et réplicable : transformer un insight comportemental universel en système de messages courts diffusés sur tous les points de contact du quotidien urbain.</p>
-        <div class="action-box"><span class="label">Action concrète</span><p>Pour un pic saisonnier client, construire une mini-plateforme de messages qui retournent une objection fréquente en punchline urbaine.</p></div>
+        <div class="more">
+          <p class="body-text"><span class="label">Pourquoi ça compte</span>Exemple simple et réplicable : transformer un insight comportemental universel en système de messages courts diffusés sur tous les points de contact du quotidien urbain.</p>
+          <div class="action-box"><span class="label">Action concrète</span><p>Pour un pic saisonnier client, construire une mini-plateforme de messages qui retournent une objection fréquente en punchline urbaine.</p></div>
+        </div>
         <a class="source-link" href="https://gymfactory.net/2026/09/04/clubs-dir-lanza-la-nueva-campana-si-quieres-hacerlo-hazlo/" target="_blank" rel="noopener">GYM FACTORY Revista ↗</a>
+        <span class="toggle-hint" aria-hidden="true"></span>
       </article>
 
-      <article class="card">
+      <article class="card" data-theme="activation">
+        <svg class="card-icon" aria-hidden="true"><use href="#ic-activation"></use></svg>
         <h3>Danna lance son EP "WET DREAMS" avec Tinder comme partenaire officiel</h3>
         <p class="meta">Revista COSAS México · 27 août 2026</p>
         <p class="body-text"><span class="label">Le fait</span>Pour la sortie de son EP, l'artiste Danna s'est associée à Tinder, créant son propre profil sur l'application pour relier symboliquement le thème du désir à celui de l'app de rencontres.</p>
-        <p class="body-text"><span class="label">Pourquoi ça compte</span>Une marque tech s'insère dans un moment culturel sans publicité classique, en devenant un espace narratif plutôt qu'un simple sponsor.</p>
-        <div class="action-box"><span class="label">Action concrète</span><p>Identifier une plateforme dont l'usage quotidien peut devenir une métaphore vivante d'un lancement produit client, et en faire le lieu de l'expérience.</p></div>
+        <div class="more">
+          <p class="body-text"><span class="label">Pourquoi ça compte</span>Une marque tech s'insère dans un moment culturel sans publicité classique, en devenant un espace narratif plutôt qu'un simple sponsor.</p>
+          <div class="action-box"><span class="label">Action concrète</span><p>Identifier une plateforme dont l'usage quotidien peut devenir une métaphore vivante d'un lancement produit client, et en faire le lieu de l'expérience.</p></div>
+        </div>
         <a class="source-link" href="https://revistacosas.mx/actualidad/danna-estrena-wet-dreams-de-la-mano-de-tinder/" target="_blank" rel="noopener">Revista COSAS México ↗</a>
+        <span class="toggle-hint" aria-hidden="true"></span>
       </article>
 
     </div>
@@ -758,6 +1153,90 @@
   </footer>
 
 </main>
+
+<script>
+(function(){
+  "use strict";
+
+  /* Reading progress bar */
+  var bar = document.getElementById('progress-bar');
+  function updateProgress(){
+    var el = document.documentElement;
+    var scrollTop = el.scrollTop || document.body.scrollTop;
+    var scrollHeight = (el.scrollHeight || document.body.scrollHeight) - el.clientHeight;
+    var pct = scrollHeight > 0 ? (scrollTop / scrollHeight) * 100 : 0;
+    if (bar) bar.style.width = pct + '%';
+  }
+  window.addEventListener('scroll', updateProgress, { passive: true });
+  window.addEventListener('resize', updateProgress);
+  updateProgress();
+
+  /* Animated counters */
+  function animateCount(el, target, duration){
+    if (!el) return;
+    var startTime = null;
+    function step(ts){
+      if (!startTime) startTime = ts;
+      var progress = Math.min((ts - startTime) / duration, 1);
+      el.textContent = Math.floor(progress * target);
+      if (progress < 1) requestAnimationFrame(step);
+      else el.textContent = target;
+    }
+    requestAnimationFrame(step);
+  }
+  var cards = Array.prototype.slice.call(document.querySelectorAll('.card[data-theme]'));
+  var sourceLinks = document.querySelectorAll('.source-link, .top-item a[href]');
+  var uniqueSources = {};
+  Array.prototype.forEach.call(sourceLinks, function(a){
+    var href = a.getAttribute('href');
+    if (href) uniqueSources[href] = true;
+  });
+  animateCount(document.getElementById('count-actus'), cards.length, 900);
+  animateCount(document.getElementById('count-sources'), Object.keys(uniqueSources).length, 900);
+
+  /* Expand/collapse cards */
+  cards.forEach(function(card){
+    card.addEventListener('click', function(e){
+      if (e.target.closest && e.target.closest('a')) return;
+      card.classList.toggle('open');
+    });
+  });
+
+  /* Filter chips */
+  var chips = Array.prototype.slice.call(document.querySelectorAll('.chip'));
+  var searchInput = document.getElementById('search-input');
+
+  function applyFilters(){
+    var activeChip = document.querySelector('.chip.active');
+    var theme = activeChip ? activeChip.getAttribute('data-filter') : 'all';
+    var q = searchInput && searchInput.value ? searchInput.value.toLowerCase().trim() : '';
+
+    cards.forEach(function(card){
+      var matchesTheme = theme === 'all' || card.getAttribute('data-theme') === theme;
+      var matchesSearch = !q || card.textContent.toLowerCase().indexOf(q) !== -1;
+      card.style.display = (matchesTheme && matchesSearch) ? '' : 'none';
+    });
+
+    document.querySelectorAll('section.theme').forEach(function(sec){
+      var sectionCards = sec.querySelectorAll('.card[data-theme]');
+      var anyVisible = Array.prototype.some.call(sectionCards, function(c){
+        return c.style.display !== 'none';
+      });
+      sec.style.display = (sectionCards.length === 0 || anyVisible) ? '' : 'none';
+    });
+  }
+
+  chips.forEach(function(chip){
+    chip.addEventListener('click', function(){
+      chips.forEach(function(c){ c.classList.remove('active'); });
+      chip.classList.add('active');
+      applyFilters();
+    });
+  });
+
+  if (searchInput) searchInput.addEventListener('input', applyFilters);
+})();
+</script>
 
 </body>
 </html>

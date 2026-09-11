@@ -139,6 +139,52 @@
     color:var(--grey);
     font-size:13px;
   }
+  #progress-bar{
+    position:fixed;
+    top:0; left:0;
+    height:4px;
+    width:0%;
+    background:var(--navy-4);
+    z-index:999;
+    transition:width .08s linear;
+  }
+  .stats-row{
+    display:flex;
+    gap:32px;
+    margin-top:22px;
+    position:relative;
+    flex-wrap:wrap;
+  }
+  .stat{display:flex;flex-direction:column;gap:2px;}
+  .stat-num{
+    font-family:var(--font-label);
+    font-size:30px;
+    color:var(--white);
+    line-height:1;
+  }
+  .stat-label{
+    font-family:var(--font-label);
+    font-size:11px;
+    letter-spacing:.05em;
+    text-transform:uppercase;
+    color:#aab4d4;
+  }
+  .archive-search{
+    margin:0 0 24px;
+  }
+  #search-input{
+    font-family:var(--font-body);
+    font-size:13.5px;
+    padding:10px 16px;
+    border:1px solid var(--navy-tint-2);
+    border-radius:999px;
+    width:100%;
+    max-width:360px;
+    color:var(--black);
+    background:var(--navy-tint-1);
+  }
+  #search-input:focus{outline:2px solid var(--navy-4);outline-offset:1px;}
+  .archive-item[hidden]{display:none;}
   @media (max-width:560px){
     header.masthead{padding:44px 0 38px;}
     .archive-item{padding:18px 20px;}
@@ -147,17 +193,25 @@
 </head>
 <body>
 
+<div id="progress-bar" aria-hidden="true"></div>
+
 <header class="masthead">
   <div class="wrap">
     <p class="eyebrow">Veille Branding · Marketing · Expérience de marque</p>
     <h1 class="title">Archives de la veille hebdomadaire</h1>
     <p class="subline">Marketing, branding, tech, événements et activations de marque — Espagne &amp; Europe. Une édition par semaine.</p>
+    <div class="stats-row">
+      <div class="stat"><span class="stat-num" id="count-reports">0</span><span class="stat-label">éditions archivées</span></div>
+    </div>
   </div>
 </header>
 
 <main class="wrap">
   <h2 class="section-title">Tous les rapports</h2>
-  <div class="archive-list">
+  <div class="archive-search">
+    <input type="search" id="search-input" placeholder="Rechercher une édition (mot-clé)…" aria-label="Rechercher un rapport">
+  </div>
+  <div class="archive-list" id="archive-list">
 
     <a class="archive-item" href="reports/veille-2026-09-11.html">
       <div>
@@ -173,6 +227,50 @@
     <p>Archive personnelle de veille hebdomadaire. Chaque rapport cite ses sources originales.</p>
   </footer>
 </main>
+
+<script>
+(function(){
+  "use strict";
+
+  var bar = document.getElementById('progress-bar');
+  function updateProgress(){
+    var el = document.documentElement;
+    var scrollTop = el.scrollTop || document.body.scrollTop;
+    var scrollHeight = (el.scrollHeight || document.body.scrollHeight) - el.clientHeight;
+    var pct = scrollHeight > 0 ? (scrollTop / scrollHeight) * 100 : 0;
+    if (bar) bar.style.width = pct + '%';
+  }
+  window.addEventListener('scroll', updateProgress, { passive: true });
+  window.addEventListener('resize', updateProgress);
+  updateProgress();
+
+  function animateCount(el, target, duration){
+    if (!el) return;
+    var startTime = null;
+    function step(ts){
+      if (!startTime) startTime = ts;
+      var progress = Math.min((ts - startTime) / duration, 1);
+      el.textContent = Math.floor(progress * target);
+      if (progress < 1) requestAnimationFrame(step);
+      else el.textContent = target;
+    }
+    requestAnimationFrame(step);
+  }
+  var items = Array.prototype.slice.call(document.querySelectorAll('.archive-item'));
+  animateCount(document.getElementById('count-reports'), items.length, 700);
+
+  var searchInput = document.getElementById('search-input');
+  if (searchInput) {
+    searchInput.addEventListener('input', function(){
+      var q = searchInput.value.toLowerCase().trim();
+      items.forEach(function(item){
+        var match = !q || item.textContent.toLowerCase().indexOf(q) !== -1;
+        item.hidden = !match;
+      });
+    });
+  }
+})();
+</script>
 
 </body>
 </html>
