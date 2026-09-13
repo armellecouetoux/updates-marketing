@@ -62,66 +62,84 @@ body{background:var(--navy-tint-1); color:var(--black); font-family:var(--font);
 .email-footer{background:var(--navy-tint-1); padding:20px 28px; text-align:center; color:var(--grey); font-size:12px;}
 .email-footer p{margin:4px 0;}
 @media (max-width:480px){ .email-header{padding:26px 20px;} .email-body{padding:20px;} .email-footer{padding:16px 20px;} }
+
+.i18n-es{display:none;}
+body.lang-es .i18n-fr{display:none;}
+body.lang-es .i18n-es{display:inline;}
+body.lang-es .i18n-es.block{display:block;}
+
+.toolbar{display:flex; align-items:center; justify-content:flex-end; gap:10px;}
+.lang-toggle{
+  font-family:var(--font); font-weight:600; font-size:12.5px; color:var(--navy);
+  background:var(--white); border:1px solid var(--line); border-radius:999px; padding:9px 16px;
+  cursor:pointer; white-space:nowrap; display:inline-flex; align-items:center; gap:6px;
+  transition:background .15s ease, border-color .15s ease;
+}
+.lang-toggle:hover{background:var(--navy-tint-1);}
+.lang-toggle-fr,.lang-toggle-es{opacity:.5; transition:opacity .15s ease;}
+.lang-toggle-fr.active,.lang-toggle-es.active{opacity:1; font-weight:800;}
+.lang-toggle-sep{opacity:.4;}
 </style>
 </head>
 <body>
 
 <div class="toolbar">
-  <button id="copy-btn" type="button">📋 Copier le texte</button>
+  <button id="lang-toggle" class="lang-toggle" type="button" aria-label="Cambiar idioma"><span class="lang-toggle-fr active">🇫🇷 FR</span><span class="lang-toggle-sep">·</span><span class="lang-toggle-es">🇪🇸 ES</span></button>
+  <button id="copy-btn" type="button"><span class="copy-btn-label"><span class="i18n-fr">📋 Copier le texte</span><span class="i18n-es">📋 Copiar el texto</span></span></button>
 </div>
 
 <div class="email-wrap">
   <div class="email" id="email-content">
 
     <div class="email-header">
-      <p class="eyebrow">Veille Branding · Marketing · Expérience de marque</p>
-      <h1>Madrid bat au rythme de la F1, Publicis rafle PepsiCo et Interrail efface Eurail</h1>
-      <p>Semaine du 4 au 11 septembre 2026 — l'essentiel en 5 actus, à lire en 2 minutes.</p>
+      <p class="eyebrow"><span class="i18n-fr">Veille Branding · Marketing · Expérience de marque</span><span class="i18n-es">Vigilancia de Branding · Marketing · Experiencia de marca</span></p>
+      <h1><span class="i18n-fr">Madrid bat au rythme de la F1, Publicis rafle PepsiCo et Interrail efface Eurail</span><span class="i18n-es">Madrid late al ritmo de la F1, Publicis se lleva a PepsiCo e Interrail borra a Eurail</span></h1>
+      <p><span class="i18n-fr">Semaine du 4 au 11 septembre 2026 — l'essentiel en 5 actus, à lire en 2 minutes.</span><span class="i18n-es">Semana del 4 al 11 de septiembre de 2026 — lo esencial en 5 noticias, para leer en 2 minutos.</span></p>
     </div>
 
     <div class="email-body">
-      <p class="intro">Cette semaine : Madrid vit au rythme du Grand Prix de F1 avec une avalanche d'activations de marque, PepsiCo bouscule l'équilibre média mondial, une marque de voyage centenaire change de nom, et Nike fait entrer ses clients dans un manga. Le rapport complet (39 actus, 8 thématiques) est en un clic ci-dessous.</p>
+      <p class="intro"><span class="i18n-fr">Cette semaine : Madrid vit au rythme du Grand Prix de F1 avec une avalanche d'activations de marque, PepsiCo bouscule l'équilibre média mondial, une marque de voyage centenaire change de nom, et Nike fait entrer ses clients dans un manga. Le rapport complet (39 actus, 8 thématiques) est en un clic ci-dessous.</span><span class="i18n-es">Esta semana: Madrid vive al ritmo del Gran Premio de F1 con una avalancha de activaciones de marca, PepsiCo sacude el equilibrio de medios a nivel mundial, una marca de viajes centenaria cambia de nombre, y Nike sumerge a sus clientes en un manga. El informe completo (39 noticias, 8 temáticas) está a un clic más abajo.</span></p>
 
-      <p class="section-label">🏆 Le Top 5 de la semaine</p>
+      <p class="section-label"><span class="i18n-fr">🏆 Le Top 5 de la semaine</span><span class="i18n-es">🏆 El Top 5 de la semana</span></p>
 
       <div class="item">
-        <h3><span class="item-num">1</span>Publicis rafle le budget média mondial de PepsiCo</h3>
-        <p>PepsiCo confie sans appel d'offres son budget média mondial (1,9 Md$) à Publicis, mettant fin à 25 ans de collaboration avec Omnicom sur ce périmètre — confirmation de la consolidation des budgets média autour d'un modèle unique piloté par la donnée.</p>
-        <a class="src" href="https://www.marketingdive.com/news/pepsico-hands-global-media-to-publicis-amid-transformation-at-cpg-giant/829556/" target="_blank" rel="noopener noreferrer">Lire la source (Marketing Dive) →</a>
+        <h3><span class="item-num">1</span><span class="i18n-fr">Publicis rafle le budget média mondial de PepsiCo</span><span class="i18n-es">Publicis se lleva el presupuesto de medios global de PepsiCo</span></h3>
+        <p><span class="i18n-fr">PepsiCo confie sans appel d'offres son budget média mondial (1,9 Md$) à Publicis, mettant fin à 25 ans de collaboration avec Omnicom sur ce périmètre — confirmation de la consolidation des budgets média autour d'un modèle unique piloté par la donnée.</span><span class="i18n-es">PepsiCo confía sin concurso su presupuesto de medios global (1900 M$) a Publicis, poniendo fin a 25 años de colaboración con Omnicom en este ámbito — confirmación de la consolidación de los presupuestos de medios en torno a un modelo único gobernado por el dato.</span></p>
+        <a class="src" href="https://www.marketingdive.com/news/pepsico-hands-global-media-to-publicis-amid-transformation-at-cpg-giant/829556/" target="_blank" rel="noopener noreferrer"><span class="i18n-fr">Lire la source (Marketing Dive) →</span><span class="i18n-es">Leer la fuente (Marketing Dive) →</span></a>
       </div>
 
       <div class="item">
-        <h3><span class="item-num">2</span>Madrid lance « Madrid Beats », sa plus grande campagne touristique internationale</h3>
-        <p>Campagne de 18,8 M€ dans 13 pays, narration portée par l'acteur Walton Goggins, lancée juste avant le Grand Prix de F1 d'Espagne — un cas d'école de city branding synchronisé avec un temps fort sportif mondial.</p>
-        <a class="src" href="https://www.marketingdirecto.com/creacion/campanas-de-marketing/madrid-lanza-madrid-beats-presentacion-internacional-llevar-estilo-vida-madrileno-mundo" target="_blank" rel="noopener noreferrer">Lire la source (MarketingDirecto) →</a>
+        <h3><span class="item-num">2</span><span class="i18n-fr">Madrid lance « Madrid Beats », sa plus grande campagne touristique internationale</span><span class="i18n-es">Madrid lanza « Madrid Beats », su mayor campaña turística internacional</span></h3>
+        <p><span class="i18n-fr">Campagne de 18,8 M€ dans 13 pays, narration portée par l'acteur Walton Goggins, lancée juste avant le Grand Prix de F1 d'Espagne — un cas d'école de city branding synchronisé avec un temps fort sportif mondial.</span><span class="i18n-es">Campaña de 18,8 M€ en 13 países, narrada por el actor Walton Goggins, lanzada justo antes del Gran Premio de F1 de España — un caso de manual de city branding sincronizado con una gran cita deportiva mundial.</span></p>
+        <a class="src" href="https://www.marketingdirecto.com/creacion/campanas-de-marketing/madrid-lanza-madrid-beats-presentacion-internacional-llevar-estilo-vida-madrileno-mundo" target="_blank" rel="noopener noreferrer"><span class="i18n-fr">Lire la source (MarketingDirecto) →</span><span class="i18n-es">Leer la fuente (MarketingDirecto) →</span></a>
       </div>
 
       <div class="item">
-        <h3><span class="item-num">3</span>Eurail disparaît au profit d'Interrail à l'échelle mondiale</h3>
-        <p>Après 60 ans d'existence, la marque Eurail s'efface : toute l'offre passe sous le seul nom Interrail, avec une plateforme de marque mondiale unifiée « The Interrail Effect » — une simplification de portefeuille de marques à grande échelle.</p>
-        <a class="src" href="https://www.traveldailynews.com/ground-transportation/eurail-adopts-interrail-name-globally-with-new-brand-identity/" target="_blank" rel="noopener noreferrer">Lire la source (Travel Daily News) →</a>
+        <h3><span class="item-num">3</span><span class="i18n-fr">Eurail disparaît au profit d'Interrail à l'échelle mondiale</span><span class="i18n-es">Eurail desaparece en favor de Interrail a escala mundial</span></h3>
+        <p><span class="i18n-fr">Après 60 ans d'existence, la marque Eurail s'efface : toute l'offre passe sous le seul nom Interrail, avec une plateforme de marque mondiale unifiée « The Interrail Effect » — une simplification de portefeuille de marques à grande échelle.</span><span class="i18n-es">Tras 60 años de existencia, la marca Eurail se desvanece: toda la oferta pasa a llamarse únicamente Interrail, con una plataforma de marca mundial unificada « The Interrail Effect » — una simplificación de portafolio de marcas a gran escala.</span></p>
+        <a class="src" href="https://www.traveldailynews.com/ground-transportation/eurail-adopts-interrail-name-globally-with-new-brand-identity/" target="_blank" rel="noopener noreferrer"><span class="i18n-fr">Lire la source (Travel Daily News) →</span><span class="i18n-es">Leer la fuente (Travel Daily News) →</span></a>
       </div>
 
       <div class="item">
-        <h3><span class="item-num">4</span>Nike x One Piece : un pop-up qui fait basculer l'acheteur dans le manga</h3>
-        <p>Le pop-up mondial « Dr. B's Research Lab », ouvert à Harajuku, fait entrer les visiteurs dans l'univers du manga One Piece plutôt que dans un simple stand produit — le world-building narratif remplace le placement produit.</p>
-        <a class="src" href="https://about.nike.com/en/newsroom/releases/nike-one-piece-collection-transforms-imagination-into-motion-for-adventurers-everywhere" target="_blank" rel="noopener noreferrer">Lire la source (Nike Newsroom) →</a>
+        <h3><span class="item-num">4</span><span class="i18n-fr">Nike x One Piece : un pop-up qui fait basculer l'acheteur dans le manga</span><span class="i18n-es">Nike x One Piece: un pop-up que sumerge al comprador en el manga</span></h3>
+        <p><span class="i18n-fr">Le pop-up mondial « Dr. B's Research Lab », ouvert à Harajuku, fait entrer les visiteurs dans l'univers du manga One Piece plutôt que dans un simple stand produit — le world-building narratif remplace le placement produit.</span><span class="i18n-es">El pop-up mundial « Dr. B's Research Lab », abierto en Harajuku, sumerge a los visitantes en el universo del manga One Piece en lugar de un simple stand de producto — el world-building narrativo sustituye al emplazamiento de producto.</span></p>
+        <a class="src" href="https://about.nike.com/en/newsroom/releases/nike-one-piece-collection-transforms-imagination-into-motion-for-adventurers-everywhere" target="_blank" rel="noopener noreferrer"><span class="i18n-fr">Lire la source (Nike Newsroom) →</span><span class="i18n-es">Leer la fuente (Nike Newsroom) →</span></a>
       </div>
 
       <div class="item">
-        <h3><span class="item-num">5</span>Audi transforme la Plaza de Colón en musée éphémère de la compétition automobile</h3>
-        <p>Exposition gratuite à Madrid avec réplique grandeur nature d'un virage du circuit Madring et photobooth IA — un modèle de « brand museum éphémère » qui construit de la légitimité patrimoniale plutôt que du pur sponsoring.</p>
-        <a class="src" href="https://www.marketingnews.es/marcas/noticia/1194990054305/audi-lleva-la-formula-1-al-centro-de-madrid-con-una-gran-experiencia-en-la-plaza-de-colon.1.html" target="_blank" rel="noopener noreferrer">Lire la source (MarketingNews) →</a>
+        <h3><span class="item-num">5</span><span class="i18n-fr">Audi transforme la Plaza de Colón en musée éphémère de la compétition automobile</span><span class="i18n-es">Audi transforma la Plaza de Colón en un museo efímero de la competición automovilística</span></h3>
+        <p><span class="i18n-fr">Exposition gratuite à Madrid avec réplique grandeur nature d'un virage du circuit Madring et photobooth IA — un modèle de « brand museum éphémère » qui construit de la légitimité patrimoniale plutôt que du pur sponsoring.</span><span class="i18n-es">Exposición gratuita en Madrid con una réplica a tamaño real de una curva del circuito de Madring y fotomatón con IA — un modelo de « museo de marca efímero » que construye legitimidad patrimonial en lugar de puro patrocinio.</span></p>
+        <a class="src" href="https://www.marketingnews.es/marcas/noticia/1194990054305/audi-lleva-la-formula-1-al-centro-de-madrid-con-una-gran-experiencia-en-la-plaza-de-colon.1.html" target="_blank" rel="noopener noreferrer"><span class="i18n-fr">Lire la source (MarketingNews) →</span><span class="i18n-es">Leer la fuente (MarketingNews) →</span></a>
       </div>
 
       <div class="cta-row">
-        <a class="cta" href="../index.html">Lire le rapport complet (39 actus) →</a>
+        <a class="cta" href="../index.html"><span class="i18n-fr">Lire le rapport complet (39 actus) →</span><span class="i18n-es">Leer el informe completo (39 noticias) →</span></a>
       </div>
     </div>
 
     <div class="email-footer">
-      <p>Veille personnelle hebdomadaire — branding, marketing, activation de marque. Espagne &amp; Europe.</p>
-      <p>Édition du 11 septembre 2026 · <a href="../archive.html" style="color:var(--navy-4);">Voir toutes les archives</a></p>
+      <p><span class="i18n-fr">Veille personnelle hebdomadaire — branding, marketing, activation de marque. Espagne &amp; Europe.</span><span class="i18n-es">Vigilancia personal semanal — branding, marketing, activación de marca. España y Europa.</span></p>
+      <p><span class="i18n-fr">Édition du 11 septembre 2026</span><span class="i18n-es">Edición del 11 de septiembre de 2026</span> · <a href="../archive.html" style="color:var(--navy-4);"><span class="i18n-fr">Voir toutes les archives</span><span class="i18n-es">Ver todos los archivos</span></a></p>
     </div>
 
   </div>
@@ -132,14 +150,48 @@ body{background:var(--navy-tint-1); color:var(--black); font-family:var(--font);
   "use strict";
   var btn = document.getElementById('copy-btn');
   var content = document.getElementById('email-content');
+
+  // ----- FR / ES language toggle -----
+  var I18N = {
+    fr: { copy: '📋 Copier le texte', copied: '✅ Copié !', failed: '⚠️ Sélectionnez et copiez manuellement' },
+    es: { copy: '📋 Copiar el texto', copied: '✅ ¡Copiado!', failed: '⚠️ Selecciona y copia manualmente' }
+  };
+  var currentLang = 'fr';
+  try {
+    if (localStorage.getItem('veille-lang') === 'es') currentLang = 'es';
+  } catch(e){}
+
+  var langToggleBtn = document.getElementById('lang-toggle');
+  var copyLabel = btn ? btn.querySelector('.copy-btn-label') : null;
+
+  function applyLang(lang, save){
+    currentLang = lang;
+    document.body.classList.toggle('lang-es', lang === 'es');
+    if (langToggleBtn) {
+      var frSpan = langToggleBtn.querySelector('.lang-toggle-fr');
+      var esSpan = langToggleBtn.querySelector('.lang-toggle-es');
+      if (frSpan) frSpan.classList.toggle('active', lang === 'fr');
+      if (esSpan) esSpan.classList.toggle('active', lang === 'es');
+    }
+    if (save) {
+      try { localStorage.setItem('veille-lang', lang); } catch(e){}
+    }
+  }
+  if (langToggleBtn) {
+    langToggleBtn.addEventListener('click', function(){
+      applyLang(currentLang === 'es' ? 'fr' : 'es', true);
+    });
+  }
+  applyLang(currentLang, false);
+
   if (!btn || !content) return;
   btn.addEventListener('click', function(){
     var text = content.innerText;
     function done(ok){
-      btn.textContent = ok ? '✅ Copié !' : '⚠️ Sélectionnez et copiez manuellement';
+      if (copyLabel) copyLabel.textContent = ok ? I18N[currentLang].copied : I18N[currentLang].failed;
       btn.classList.toggle('copied', ok);
       setTimeout(function(){
-        btn.textContent = '📋 Copier le texte';
+        if (copyLabel) copyLabel.innerHTML = '<span class="i18n-fr">📋 Copier le texte</span><span class="i18n-es">📋 Copiar el texto</span>';
         btn.classList.remove('copied');
       }, 2200);
     }

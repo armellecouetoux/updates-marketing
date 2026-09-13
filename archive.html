@@ -63,6 +63,23 @@ h2.section-title{font-family:var(--font-display); font-weight:800; font-size:22p
 footer{margin-top:50px; padding:30px 0 50px; border-top:1px solid var(--line); color:var(--grey); font-size:13px;}
 @media (max-width:560px){ header.masthead{padding:44px 0 38px;} .archive-item{padding:18px 20px;} }
 
+.i18n-es{display:none;}
+body.lang-es .i18n-fr{display:none;}
+body.lang-es .i18n-es{display:inline;}
+body.lang-es .i18n-es.block{display:block;}
+
+.lang-toggle{
+  font-family:var(--font-label); font-weight:600;
+  font-size:12.5px; color:var(--white); background:transparent;
+  border:1px solid rgba(255,255,255,.4); border-radius:999px; padding:7px 14px;
+  cursor:pointer; white-space:nowrap; display:inline-flex; align-items:center; gap:6px;
+  transition:background .15s ease, border-color .15s ease;
+}
+.lang-toggle:hover{background:rgba(255,255,255,.12); border-color:var(--white);}
+.lang-toggle-fr,.lang-toggle-es{opacity:.55; transition:opacity .15s ease;}
+.lang-toggle-fr.active,.lang-toggle-es.active{opacity:1; font-weight:800;}
+.lang-toggle-sep{opacity:.4;}
+
 </style>
 </head>
 <body>
@@ -72,19 +89,22 @@ footer{margin-top:50px; padding:30px 0 50px; border-top:1px solid var(--line); c
 <header class="masthead">
   <div class="wrap">
     <div class="masthead-top">
-      <p class="eyebrow">Veille Branding · Marketing · Expérience de marque</p>
-      <a class="back-link" href="index.html">← Dernier rapport</a>
+      <p class="eyebrow"><span class="i18n-fr">Veille Branding · Marketing · Expérience de marque</span><span class="i18n-es">Vigilancia de Branding · Marketing · Experiencia de marca</span></p>
+      <div style="display:flex; align-items:center; gap:12px; flex-wrap:wrap;">
+        <a class="back-link" href="index.html"><span class="i18n-fr">← Dernier rapport</span><span class="i18n-es">← Último informe</span></a>
+        <button id="lang-toggle" class="lang-toggle" type="button" aria-label="Cambiar idioma"><span class="lang-toggle-fr active">🇫🇷 FR</span><span class="lang-toggle-sep">·</span><span class="lang-toggle-es">🇪🇸 ES</span></button>
+      </div>
     </div>
-    <h1 class="title">Archives de la veille hebdomadaire</h1>
-    <p class="subline">Marketing, branding, tech, événements et activations de marque — Espagne &amp; Europe. Une édition par semaine.</p>
+    <h1 class="title"><span class="i18n-fr">Archives de la veille hebdomadaire</span><span class="i18n-es">Archivo de la vigilancia semanal</span></h1>
+    <p class="subline"><span class="i18n-fr">Marketing, branding, tech, événements et activations de marque — Espagne &amp; Europe. Une édition par semaine.</span><span class="i18n-es">Marketing, branding, tecnología, eventos y activaciones de marca — España y Europa. Una edición por semana.</span></p>
     <div class="stats-row">
-      <div class="stat"><span class="stat-num" id="count-reports">0</span><span class="stat-label">éditions archivées</span></div>
+      <div class="stat"><span class="stat-num" id="count-reports">0</span><span class="stat-label"><span class="i18n-fr">éditions archivées</span><span class="i18n-es">ediciones archivadas</span></span></div>
     </div>
   </div>
 </header>
 
 <main class="wrap">
-  <h2 class="section-title">Tous les rapports</h2>
+  <h2 class="section-title"><span class="i18n-fr">Tous les rapports</span><span class="i18n-es">Todos los informes</span></h2>
   <div class="archive-search">
     <input type="search" id="search-input" placeholder="Rechercher une édition (mot-clé)…" aria-label="Rechercher un rapport">
   </div>
@@ -92,19 +112,19 @@ footer{margin-top:50px; padding:30px 0 50px; border-top:1px solid var(--line); c
 
     <div class="archive-item" data-href="reports/veille-2026-09-11.html">
       <div>
-        <span class="archive-date">11 septembre 2026 · Semaine du 4 au 11 septembre 2026</span>
-        <h3>Madrid bat au rythme de la F1, Publicis rafle PepsiCo et Interrail efface Eurail</h3>
+        <span class="archive-date"><span class="i18n-fr">11 septembre 2026 · Semaine du 4 au 11 septembre 2026</span><span class="i18n-es">11 de septiembre de 2026 · Semana del 4 al 11 de septiembre de 2026</span></span>
+        <h3><span class="i18n-fr">Madrid bat au rythme de la F1, Publicis rafle PepsiCo et Interrail efface Eurail</span><span class="i18n-es">Madrid late al ritmo de la F1, Publicis se lleva a PepsiCo e Interrail borra a Eurail</span></h3>
       </div>
       <div class="archive-links">
         <a class="archive-newsletter-link" href="newsletter/veille-2026-09-11.html">📧 Newsletter</a>
-        <a class="archive-arrow" href="reports/veille-2026-09-11.html">Lire le rapport →</a>
+        <a class="archive-arrow" href="reports/veille-2026-09-11.html"><span class="i18n-fr">Lire le rapport →</span><span class="i18n-es">Leer el informe →</span></a>
       </div>
     </div>
 
   </div>
 
   <footer>
-    <p>Archive personnelle de veille hebdomadaire. Chaque rapport cite ses sources originales. Dernière édition : 11 septembre 2026.</p>
+    <p><span class="i18n-fr">Archive personnelle de veille hebdomadaire. Chaque rapport cite ses sources originales. Dernière édition : 11 septembre 2026.</span><span class="i18n-es">Archivo personal de vigilancia semanal. Cada informe cita sus fuentes originales. Última edición: 11 de septiembre de 2026.</span></p>
   </footer>
 </main>
 
@@ -157,6 +177,44 @@ footer{margin-top:50px; padding:30px 0 50px; border-top:1px solid var(--line); c
       });
     });
   }
+
+  // ----- FR / ES language toggle -----
+  var I18N = {
+    fr: { searchPlaceholder: 'Rechercher une édition (mot-clé)…', searchAria: 'Rechercher un rapport' },
+    es: { searchPlaceholder: 'Buscar una edición (palabra clave)…', searchAria: 'Buscar un informe' }
+  };
+  var currentLang = 'fr';
+  try {
+    if (localStorage.getItem('veille-lang') === 'es') currentLang = 'es';
+  } catch(e){}
+
+  var langToggleBtn = document.getElementById('lang-toggle');
+
+  function applyLang(lang, save){
+    currentLang = lang;
+    document.body.classList.toggle('lang-es', lang === 'es');
+    if (langToggleBtn) {
+      var frSpan = langToggleBtn.querySelector('.lang-toggle-fr');
+      var esSpan = langToggleBtn.querySelector('.lang-toggle-es');
+      if (frSpan) frSpan.classList.toggle('active', lang === 'fr');
+      if (esSpan) esSpan.classList.toggle('active', lang === 'es');
+    }
+    if (searchInput) {
+      searchInput.setAttribute('placeholder', I18N[lang].searchPlaceholder);
+      searchInput.setAttribute('aria-label', I18N[lang].searchAria);
+    }
+    if (save) {
+      try { localStorage.setItem('veille-lang', lang); } catch(e){}
+    }
+  }
+
+  if (langToggleBtn) {
+    langToggleBtn.addEventListener('click', function(){
+      applyLang(currentLang === 'es' ? 'fr' : 'es', true);
+    });
+  }
+
+  applyLang(currentLang, false);
 })();
 
 </script>
