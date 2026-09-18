@@ -34,7 +34,7 @@ body{background:var(--white); color:var(--black); font-family:var(--font-body); 
 .wrap{max-width:var(--maxw); margin:0 auto; padding:0 20px;}
 #progress-bar{position:fixed; top:0; left:0; height:4px; width:0%; background:linear-gradient(90deg,var(--coral),var(--gold)); z-index:999; transition:width .08s linear;}
 header.masthead{background:linear-gradient(125deg, var(--navy) 0%, #1c2c52 55%, #2c2450 100%); color:var(--white); padding:56px 0 46px; position:relative; overflow:hidden;}
-header.masthead::after{content:""; position:absolute; right:-120px; top:-120px; width:340px; height:340px; border-radius:50%; background:radial-gradient(circle, var(--coral) 0%, transparent 70%); opacity:.5;}
+header.masthead::after{content:""; position:absolute; right:-120px; top:-120px; width:340px; height:340px; border-radius:50%; background:radial-gradient(circle, var(--coral) 0%, transparent 70%); opacity:.5; pointer-events:none;}
 .masthead-top{display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; position:relative;}
 .eyebrow{font-family:var(--font-label); font-weight:700; letter-spacing:.12em; text-transform:uppercase; font-size:12px; color:#aab4d4; margin:0;}
 .back-link{font-family:var(--font-label); font-weight:600; font-size:12.5px; color:var(--white); text-decoration:none; border:1px solid rgba(255,255,255,.4); border-radius:999px; padding:7px 16px; white-space:nowrap; transition:background .15s ease, border-color .15s ease;}
@@ -110,6 +110,17 @@ body.lang-es .i18n-es.block{display:block;}
   </div>
   <div class="archive-list" id="archive-list">
 
+    <div class="archive-item" data-href="reports/veille-2026-09-18.html">
+      <div>
+        <span class="archive-date"><span class="i18n-fr">18 septembre 2026 · Semaine du 11 au 18 septembre 2026</span><span class="i18n-es">18 de septiembre de 2026 · Semana del 11 al 18 de septiembre de 2026</span></span>
+        <h3><span class="i18n-fr">Netflix transforme un pub en série culte, la London Fashion Week explose les codes et l&#x27;IA marketing vise les 74 milliards</span><span class="i18n-es">Netflix convierte un pub en serie de culto, la London Fashion Week rompe los códigos y la IA de marketing apunta a los 74.000 millones</span></h3>
+      </div>
+      <div class="archive-links">
+        <a class="archive-newsletter-link" href="newsletter/veille-2026-09-18.html">📧 Newsletter</a>
+        <a class="archive-arrow" href="reports/veille-2026-09-18.html"><span class="i18n-fr">Lire le rapport →</span><span class="i18n-es">Leer el informe →</span></a>
+      </div>
+    </div>
+
     <div class="archive-item" data-href="reports/veille-2026-09-11.html">
       <div>
         <span class="archive-date"><span class="i18n-fr">11 septembre 2026 · Semaine du 4 au 11 septembre 2026</span><span class="i18n-es">11 de septiembre de 2026 · Semana del 4 al 11 de septiembre de 2026</span></span>
@@ -124,7 +135,7 @@ body.lang-es .i18n-es.block{display:block;}
   </div>
 
   <footer>
-    <p><span class="i18n-fr">Archive personnelle de veille hebdomadaire. Chaque rapport cite ses sources originales. Dernière édition : 11 septembre 2026.</span><span class="i18n-es">Archivo personal de vigilancia semanal. Cada informe cita sus fuentes originales. Última edición: 11 de septiembre de 2026.</span></p>
+    <p><span class="i18n-fr">Archive personnelle de veille hebdomadaire. Chaque rapport cite ses sources originales. Dernière édition : 18 septembre 2026.</span><span class="i18n-es">Archivo personal de vigilancia semanal. Cada informe cita sus fuentes originales. Última edición: 18 de septiembre de 2026.</span></p>
   </footer>
 </main>
 
