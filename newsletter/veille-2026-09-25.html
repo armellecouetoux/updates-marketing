@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Newsletter — Veille Branding &amp; Marketing — 25 septembre 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --black:#1e1e1e;
+  --white:#ffffff;
+  --navy:#14213d;
+  --navy-4:#4c5f94;
+  --navy-tint-1:#eef1f8;
+  --coral:#ff6b5b;
+  --coral-deep:#d9432f;
+  --gold:#ffb84d;
+  --gold-deep:#e08a2b;
+  --grey:#6b6f76;
+  --line:#e6e6e6;
+  --font:'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+}
+*{box-sizing:border-box;}
+html,body{margin:0;padding:0;}
+body{background:var(--navy-tint-1); color:var(--black); font-family:var(--font); font-weight:400; line-height:1.55; -webkit-font-smoothing:antialiased;}
+.toolbar{max-width:600px; margin:0 auto; padding:16px 20px 0; text-align:right;}
+#copy-btn{
+  font-family:var(--font); font-weight:700; font-size:13px; color:var(--white);
+  background:linear-gradient(120deg, var(--coral-deep), var(--gold-deep));
+  border:none; border-radius:999px; padding:10px 18px; cursor:pointer;
+  box-shadow:0 6px 16px rgba(217,67,47,.3); transition:transform .15s ease;
+}
+#copy-btn:hover{transform:translateY(-2px);}
+#copy-btn.copied{background:linear-gradient(120deg, var(--navy), var(--navy-4));}
+.email-wrap{max-width:600px; margin:0 auto; padding:20px; }
+.email{background:var(--white); border-radius:14px; overflow:hidden; border:1px solid var(--line);}
+.email-header{background:linear-gradient(125deg, var(--navy) 0%, #1c2c52 55%, #2c2450 100%); color:var(--white); padding:34px 28px;}
+.eyebrow{font-family:var(--font); font-weight:700; letter-spacing:.1em; text-transform:uppercase; font-size:11px; color:#aab4d4; margin:0 0 10px;}
+.email-header h1{font-family:var(--font); font-weight:800; font-size:24px; line-height:1.25; margin:0 0 10px;}
+.email-header p{font-size:13.5px; color:#c7cfe6; margin:0;}
+.email-body{padding:28px;}
+.intro{font-size:14.5px; color:#333; margin:0 0 26px; line-height:1.6;}
+.section-label{font-family:var(--font); font-weight:800; font-size:12px; letter-spacing:.06em; text-transform:uppercase; color:var(--navy); margin:0 0 16px; display:flex; align-items:center; gap:8px;}
+.item{padding:0 0 20px; margin:0 0 20px; border-bottom:1px solid var(--line);}
+.item:last-child{border-bottom:none; margin-bottom:0; padding-bottom:0;}
+.item-num{
+  display:inline-flex; align-items:center; justify-content:center; width:22px; height:22px;
+  border-radius:50%; background:linear-gradient(120deg,var(--coral-deep),var(--gold-deep)); color:var(--white);
+  font-family:var(--font); font-weight:800; font-size:11.5px; margin-right:8px; vertical-align:middle;
+}
+.item h3{font-family:var(--font); font-weight:700; font-size:16px; margin:0 0 6px; color:var(--black); display:inline;}
+.item p{font-size:13.5px; color:#333; margin:8px 0 8px; line-height:1.55;}
+.item a.src{font-family:var(--font); font-weight:700; font-size:12.5px; color:var(--navy); text-decoration:none; border-bottom:1px solid var(--navy-tint-1);}
+.cta-row{text-align:center; margin:30px 0 6px;}
+.cta{
+  display:inline-block; font-family:var(--font); font-weight:700; font-size:13.5px; color:var(--white);
+  background:linear-gradient(120deg, var(--navy), var(--coral-deep)); text-decoration:none;
+  border-radius:999px; padding:12px 24px;
+}
+.email-footer{background:var(--navy-tint-1); padding:20px 28px; text-align:center; color:var(--grey); font-size:12px;}
+.email-footer p{margin:4px 0;}
+@media (max-width:480px){ .email-header{padding:26px 20px;} .email-body{padding:20px;} .email-footer{padding:16px 20px;} }
+
+.i18n-es{display:none;}
+body.lang-es .i18n-fr{display:none;}
+body.lang-es .i18n-es{display:inline;}
+body.lang-es .i18n-es.block{display:block;}
+
+.toolbar{display:flex; align-items:center; justify-content:flex-end; gap:10px;}
+.lang-toggle{
+  font-family:var(--font); font-weight:600; font-size:12.5px; color:var(--navy);
+  background:var(--white); border:1px solid var(--line); border-radius:999px; padding:9px 16px;
+  cursor:pointer; white-space:nowrap; display:inline-flex; align-items:center; gap:6px;
+  transition:background .15s ease, border-color .15s ease;
+}
+.lang-toggle:hover{background:var(--navy-tint-1);}
+.lang-toggle-fr,.lang-toggle-es{opacity:.5; transition:opacity .15s ease;}
+.lang-toggle-fr.active,.lang-toggle-es.active{opacity:1; font-weight:800;}
+.lang-toggle-sep{opacity:.4;}
+</style>
+</head>
+<body>
+
+<div class="toolbar">
+  <button id="lang-toggle" class="lang-toggle" type="button" aria-label="Cambiar idioma"><span class="lang-toggle-fr active">🇫🇷 FR</span><span class="lang-toggle-sep">·</span><span class="lang-toggle-es">🇪🇸 ES</span></button>
+  <button id="copy-btn" type="button"><span class="copy-btn-label"><span class="i18n-fr">📋 Copier le texte</span><span class="i18n-es">📋 Copiar el texto</span></span></button>
+</div>
+
+<div class="email-wrap">
+  <div class="email" id="email-content">
+
+    <div class="email-header">
+      <p class="eyebrow"><span class="i18n-fr">Veille Branding · Marketing · Expérience de marque</span><span class="i18n-es">Vigilancia de Branding · Marketing · Experiencia de marca</span></p>
+      <h1><span class="i18n-fr">McLaren réinvente son emblème, Shein transforme Callao en pays des merveilles et la pub par IA déçoit malgré les apparences</span><span class="i18n-es">McLaren reinventa su emblema, Shein convierte Callao en un país de las maravillas y la publicidad por IA decepciona pese a las apariencias</span></h1>
+      <p><span class="i18n-fr">Semaine du 18 septembre 2026 au 25 septembre 2026 — l'essentiel en 5 actus, à lire en 2 minutes.</span><span class="i18n-es">Semana del 18 al 25 de septiembre de 2026 — lo esencial en 5 noticias, para leer en 2 minutos.</span></p>
+    </div>
+
+    <div class="email-body">
+      <p class="intro"><span class="i18n-fr">Cette semaine : McLaren dévoile un nouveau wordmark inspiré de l'histoire de son fondateur, Shein transforme les Cines Callao de Madrid en expérience « Alice au pays des merveilles » pour plus de 6 000 visiteurs, une étude Harvard Business Review montre que les publicités générées par IA sous-performent même quand on ne les distingue pas des créations humaines, DMEXCO réunit 40 000 professionnels du marketing à Cologne, et ChatGPT Ads franchit les 60 pays couverts en se connectant à Shopify. Le rapport complet (38 actus, 8 thématiques) est en un clic ci-dessous.</span><span class="i18n-es">Esta semana: McLaren presenta un nuevo wordmark inspirado en la historia de su fundador, Shein convierte los Cines Callao de Madrid en una experiencia «Alicia en el país de las maravillas» para más de 6.000 visitantes, un estudio de Harvard Business Review muestra que los anuncios generados por IA rinden peor incluso cuando no se distinguen de las creaciones humanas, DMEXCO reúne a 40.000 profesionales del marketing en Colonia, y ChatGPT Ads supera los 60 países cubiertos al conectarse con Shopify. El informe completo (38 noticias, 8 temáticas) está a un clic más abajo.</span></p>
+
+      <p class="section-label"><span class="i18n-fr">🏆 Le Top 5 de la semaine</span><span class="i18n-es">🏆 El Top 5 de la semana</span></p>
+
+      <div class="item">
+        <h3><span class="item-num">1</span><span class="i18n-fr">ChatGPT Ads s'étend à sept nouveaux marchés et se branche sur Shopify</span><span class="i18n-es">ChatGPT Ads se expande a siete nuevos mercados y se conecta con Shopify</span></h3>
+        <p><span class="i18n-fr">Les 23 et 24 septembre 2026, OpenAI a étendu ChatGPT Ads à l'Indonésie, la Malaisie, les Philippines, Singapour, la Thaïlande, le Vietnam et Taïwan (plus de 60 pays couverts), et lancé une application Shopify permettant aux marchands de synchroniser leur catalogue produits directement dans la plateforme publicitaire.</span><span class="i18n-es">Los días 23 y 24 de septiembre de 2026, OpenAI amplió ChatGPT Ads a Indonesia, Malasia, Filipinas, Singapur, Tailandia, Vietnam y Taiwán (más de 60 países cubiertos), y lanzó una aplicación para Shopify que permite a los comerciantes sincronizar su catálogo de productos directamente en la plataforma publicitaria.</span></p>
+        <a class="src" href="https://technode.global/2026/09/24/openai-chatgpt-ads-southeast-asia-taiwan/" target="_blank" rel="noopener noreferrer"><span class="i18n-fr">Lire la source (Technode Global) →</span><span class="i18n-es">Leer la fuente (Technode Global) →</span></a>
+      </div>
+      <div class="item">
+        <h3><span class="item-num">2</span><span class="i18n-fr">McLaren dévoile un nouveau wordmark ancré dans l'histoire de son fondateur</span><span class="i18n-es">McLaren presenta un nuevo wordmark inspirado en la historia de su fundador</span></h3>
+        <p><span class="i18n-fr">Entre le 22 et le 24 septembre 2026, McLaren a révélé une identité unifiée pour ses divisions Racing et Automotive, centrée sur un nouveau wordmark inspiré des enseignes des années 1920 de la station-service familiale de Bruce McLaren à Remuera, en Nouvelle-Zélande, accompagné d'une police sur mesure baptisée « McLaren Sans ». Le badge Speedmark et l'orange « papaya » emblématiques sont conservés.</span><span class="i18n-es">Entre el 22 y el 24 de septiembre de 2026, McLaren reveló una identidad unificada para sus divisiones Racing y Automotive, centrada en un nuevo wordmark inspirado en los rótulos de los años 20 de la gasolinera familiar de Bruce McLaren en Remuera, Nueva Zelanda, acompañado de una tipografía a medida llamada «McLaren Sans». El emblemático Speedmark y el naranja «papaya» se conservan.</span></p>
+        <a class="src" href="https://www.carscoops.com/2026/09/mclaren-new-logo/" target="_blank" rel="noopener noreferrer"><span class="i18n-fr">Lire la source (Carscoops) →</span><span class="i18n-es">Leer la fuente (Carscoops) →</span></a>
+      </div>
+      <div class="item">
+        <h3><span class="item-num">3</span><span class="i18n-fr">Une étude de Harvard Business Review montre que les pubs générées par IA sous-performent</span><span class="i18n-es">Un estudio de Harvard Business Review muestra que los anuncios generados por IA rinden peor</span></h3>
+        <p><span class="i18n-fr">En septembre 2026, une recherche relayée par Harvard Business Review montre que les publicités générées par IA obtiennent de moins bons résultats business que celles conçues par des humains — même lorsque les consommateurs sont incapables de faire visuellement la différence entre les deux.</span><span class="i18n-es">En septiembre de 2026, una investigación difundida por Harvard Business Review muestra que los anuncios generados por IA obtienen peores resultados de negocio que los creados por personas — incluso cuando los consumidores no logran distinguir visualmente entre ambos.</span></p>
+        <a class="src" href="https://hbr.org/2026/09/research-ai-generated-ads-perform-worse-than-human-made-ones-even-when-customers-cant-tell-them-apart" target="_blank" rel="noopener noreferrer"><span class="i18n-fr">Lire la source (Harvard Business Review) →</span><span class="i18n-es">Leer la fuente (Harvard Business Review) →</span></a>
+      </div>
+      <div class="item">
+        <h3><span class="item-num">4</span><span class="i18n-fr">DMEXCO 2026 réunit 40 000 professionnels autour de « Scaling Intelligence »</span><span class="i18n-es">DMEXCO 2026 reúne a 40.000 profesionales bajo el lema «Scaling Intelligence»</span></h3>
+        <p><span class="i18n-fr">Les 23 et 24 septembre 2026, DMEXCO a réuni à Cologne plus de 700 exposants et environ 40 000 visiteurs professionnels autour du thème « Scaling Intelligence », avec des keynotes de Microsoft, Google, WPP et dix sommets thématiques sur l'adtech, la martech et le commerce média.</span><span class="i18n-es">Los días 23 y 24 de septiembre de 2026, DMEXCO reunió en Colonia a más de 700 expositores y unos 40.000 visitantes profesionales bajo el tema «Scaling Intelligence», con keynotes de Microsoft, Google, WPP y diez cumbres temáticas sobre adtech, martech y comercio de medios.</span></p>
+        <a class="src" href="https://dmexco.com/press/dmexco-highlights-2026-how-ai-is-shaping-the-future-of-marketing-media-and-commerce/" target="_blank" rel="noopener noreferrer"><span class="i18n-fr">Lire la source (DMEXCO) →</span><span class="i18n-es">Leer la fuente (DMEXCO) →</span></a>
+      </div>
+      <div class="item">
+        <h3><span class="item-num">5</span><span class="i18n-fr">Shein transforme les Cines Callao de Madrid en expérience « Alice au pays des merveilles »</span><span class="i18n-es">Shein transforma los Cines Callao de Madrid en una experiencia «Alicia en el país de las maravillas»</span></h3>
+        <p><span class="i18n-fr">Du 18 au 20 septembre 2026, Shein a organisé « A través del espejo » aux Cines Callao, attirant plus de 6 000 visiteurs à travers un miroir géant menant à des zones thématiques (forêt, thé dansant, cour de la Reine de Cœur) présentant les tendances automne-hiver 2026, avec ateliers, jeux et un « passeport » Shein à tamponner.</span><span class="i18n-es">Del 18 al 20 de septiembre de 2026, Shein organizó «A través del espejo» en los Cines Callao, atrayendo a más de 6.000 visitantes a través de un espejo gigante que llevaba a zonas temáticas (bosque, té danzante, corte de la Reina de Corazones) presentando las tendencias otoño-invierno 2026, con talleres, juegos y un «pasaporte» Shein para sellar.</span></p>
+        <a class="src" href="https://www.puromarketing.com/146/217481/shein-transforma-cines-callao-madrid-evento-inmersivo-moda-musica" target="_blank" rel="noopener noreferrer"><span class="i18n-fr">Lire la source (Puromarketing) →</span><span class="i18n-es">Leer la fuente (Puromarketing) →</span></a>
+      </div>
+
+      <div class="cta-row">
+        <a class="cta" href="../index.html"><span class="i18n-fr">Lire le rapport complet (38 actus) →</span><span class="i18n-es">Leer el informe completo (38 noticias) →</span></a>
+      </div>
+    </div>
+
+    <div class="email-footer">
+      <p><span class="i18n-fr">Veille personnelle hebdomadaire — branding, marketing, activation de marque. Espagne &amp; Europe.</span><span class="i18n-es">Vigilancia personal semanal — branding, marketing, activación de marca. España y Europa.</span></p>
+      <p><span class="i18n-fr">Édition du 25 septembre 2026</span><span class="i18n-es">Edición del 25 de septiembre de 2026</span> · <a href="../archive.html" style="color:var(--navy-4);"><span class="i18n-fr">Voir toutes les archives</span><span class="i18n-es">Ver todos los archivos</span></a></p>
+    </div>
+
+  </div>
+</div>
+
+<script>
+(function(){
+  "use strict";
+  var btn = document.getElementById('copy-btn');
+  var content = document.getElementById('email-content');
+
+  // ----- FR / ES language toggle -----
+  var I18N = {
+    fr: { copy: '📋 Copier le texte', copied: '✅ Copié !', failed: '⚠️ Sélectionnez et copiez manuellement' },
+    es: { copy: '📋 Copiar el texto', copied: '✅ ¡Copiado!', failed: '⚠️ Selecciona y copia manualmente' }
+  };
+  var currentLang = 'fr';
+  try {
+    if (localStorage.getItem('veille-lang') === 'es') currentLang = 'es';
+  } catch(e){}
+
+  var langToggleBtn = document.getElementById('lang-toggle');
+  var copyLabel = btn ? btn.querySelector('.copy-btn-label') : null;
+
+  function applyLang(lang, save){
+    currentLang = lang;
+    document.body.classList.toggle('lang-es', lang === 'es');
+    if (langToggleBtn) {
+      var frSpan = langToggleBtn.querySelector('.lang-toggle-fr');
+      var esSpan = langToggleBtn.querySelector('.lang-toggle-es');
+      if (frSpan) frSpan.classList.toggle('active', lang === 'fr');
+      if (esSpan) esSpan.classList.toggle('active', lang === 'es');
+    }
+    if (save) {
+      try { localStorage.setItem('veille-lang', lang); } catch(e){}
+    }
+  }
+  if (langToggleBtn) {
+    langToggleBtn.addEventListener('click', function(){
+      applyLang(currentLang === 'es' ? 'fr' : 'es', true);
+    });
+  }
+  applyLang(currentLang, false);
+
+  if (!btn || !content) return;
+  btn.addEventListener('click', function(){
+    var text = content.innerText;
+    function done(ok){
+      if (copyLabel) copyLabel.textContent = ok ? I18N[currentLang].copied : I18N[currentLang].failed;
+      btn.classList.toggle('copied', ok);
+      setTimeout(function(){
+        if (copyLabel) copyLabel.innerHTML = '<span class="i18n-fr">📋 Copier le texte</span><span class="i18n-es">📋 Copiar el texto</span>';
+        btn.classList.remove('copied');
+      }, 2200);
+    }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(function(){ done(true); }, function(){ done(false); });
+    } else {
+      try {
+        var range = document.createRange();
+        range.selectNode(content);
+        var sel = window.getSelection();
+        sel.removeAllRanges();
+        sel.addRange(range);
+        var ok = document.execCommand('copy');
+        sel.removeAllRanges();
+        done(ok);
+      } catch (e) {
+        done(false);
+      }
+    }
+  });
+})();
+</script>
+
+</body>
+</html>
