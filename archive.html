@@ -8,78 +8,54 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-
 :root{
-  --black:#1e1e1e;
-  --white:#ffffff;
-  --navy:#14213d;
-  --navy-4:#4c5f94;
-  --navy-tint-1:#eef1f8;
-  --navy-tint-2:#e2e7f3;
-  --grey:#6b6f76;
-  --line:#e6e6e6;
-  --font-display:'Manrope', sans-serif;
-  --font-label:'Manrope', sans-serif;
-  --font-body:'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
-  --radius:14px;
-  --maxw:920px;
-  --coral:#ff6b5b;
-  --coral-deep:#d9432f;
-  --gold:#ffb84d;
-  --gold-deep:#e08a2b;
+  --bg:#F3EDE2; --panel:#FBF8F2; --panel-line:#E4DACB; --ink:#2B2621; --ink-soft:#7A7167;
+  --accent:#B27A50; --accent-soft:#DCC7AE; --dark:#2B2621;
+  --font:'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+  --radius:14px; --maxw:920px;
 }
 *{box-sizing:border-box;}
 html,body{margin:0;padding:0;}
-body{background:var(--white); color:var(--black); font-family:var(--font-body); line-height:1.5; -webkit-font-smoothing:antialiased; overflow-x:hidden;}
+body{background:var(--bg); color:var(--ink); font-family:var(--font); line-height:1.5; -webkit-font-smoothing:antialiased; overflow-x:hidden;}
 .wrap{max-width:var(--maxw); margin:0 auto; padding:0 20px;}
-#progress-bar{position:fixed; top:0; left:0; height:4px; width:0%; background:linear-gradient(90deg,var(--coral),var(--gold)); z-index:999; transition:width .08s linear;}
-header.masthead{background:linear-gradient(125deg, var(--navy) 0%, #1c2c52 55%, #2c2450 100%); color:var(--white); padding:56px 0 46px; position:relative; overflow:hidden;}
-header.masthead::after{content:""; position:absolute; right:-120px; top:-120px; width:340px; height:340px; border-radius:50%; background:radial-gradient(circle, var(--coral) 0%, transparent 70%); opacity:.5; pointer-events:none;}
+#progress-bar{position:fixed; top:0; left:0; height:3px; width:0%; background:var(--accent); z-index:999; transition:width .08s linear;}
+header.masthead{background:var(--dark); color:#F3EDE2; padding:56px 0 46px; position:relative; overflow:hidden;}
 .masthead-top{display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; position:relative;}
-.eyebrow{font-family:var(--font-label); font-weight:700; letter-spacing:.12em; text-transform:uppercase; font-size:12px; color:#aab4d4; margin:0;}
-.back-link{font-family:var(--font-label); font-weight:600; font-size:12.5px; color:var(--white); text-decoration:none; border:1px solid rgba(255,255,255,.4); border-radius:999px; padding:7px 16px; white-space:nowrap; transition:background .15s ease, border-color .15s ease;}
-.back-link:hover{background:rgba(255,255,255,.12); border-color:var(--white);}
-h1.title{font-family:var(--font-display); font-weight:800; font-size:clamp(28px, 4.4vw, 44px); line-height:1.15; margin:18px 0 16px; max-width:760px; position:relative;}
-.subline{font-size:15px; color:#c7cfe6; max-width:600px; margin:0; position:relative;}
+.eyebrow{font-family:var(--font); font-weight:700; letter-spacing:.12em; text-transform:uppercase; font-size:12px; color:var(--accent-soft); margin:0;}
+.back-link{font-family:var(--font); font-weight:600; font-size:12.5px; color:#F3EDE2; text-decoration:none; border:1px solid rgba(243,237,226,.4); border-radius:999px; padding:7px 16px; white-space:nowrap; transition:background .15s ease, border-color .15s ease;}
+.back-link:hover{background:rgba(243,237,226,.12); border-color:#F3EDE2;}
+h1.title{font-family:var(--font); font-weight:800; font-size:clamp(28px, 4.4vw, 42px); line-height:1.18; margin:18px 0 16px; max-width:760px; position:relative;}
+.subline{font-size:15px; color:#D9CFC0; max-width:600px; margin:0; position:relative;}
 .stats-row{display:flex; gap:32px; margin-top:22px; position:relative; flex-wrap:wrap;}
 .stat{display:flex; flex-direction:column; gap:2px;}
-.stat-num{font-family:var(--font-label); font-weight:800; font-size:30px; color:var(--white); line-height:1;}
-.stat-label{font-family:var(--font-label); font-weight:700; font-size:11px; letter-spacing:.05em; text-transform:uppercase; color:#aab4d4;}
+.stat-num{font-family:var(--font); font-weight:800; font-size:30px; color:#F3EDE2; line-height:1;}
+.stat-label{font-family:var(--font); font-weight:700; font-size:11px; letter-spacing:.05em; text-transform:uppercase; color:var(--accent-soft);}
 main{padding:48px 0 20px;}
-h2.section-title{font-family:var(--font-display); font-weight:800; font-size:22px; color:var(--navy); margin:0 0 24px;}
+h2.section-title{font-family:var(--font); font-weight:800; font-size:22px; color:var(--ink); margin:0 0 24px;}
 .archive-search{margin:0 0 24px;}
-#search-input{font-family:var(--font-body); font-size:13.5px; padding:10px 16px; border:1px solid var(--navy-tint-2); border-radius:999px; width:100%; max-width:360px; color:var(--black); background:var(--navy-tint-1);}
-#search-input:focus{outline:2px solid var(--navy-4); outline-offset:1px;}
+#search-input{font-family:var(--font); font-size:13.5px; padding:10px 16px; border:1px solid var(--panel-line); border-radius:999px; width:100%; max-width:360px; color:var(--ink); background:var(--panel);}
+#search-input:focus{outline:2px solid var(--accent); outline-offset:1px;}
 .archive-list{display:flex; flex-direction:column; gap:16px;}
-.archive-item{display:flex; align-items:center; justify-content:space-between; gap:20px; flex-wrap:wrap; background:var(--navy-tint-1); border:1px solid var(--navy-tint-2); border-radius:var(--radius); padding:22px 26px; text-decoration:none; color:var(--black); cursor:pointer; transition:box-shadow .15s ease, transform .15s ease, border-color .15s ease;}
-.archive-item:hover{box-shadow:0 10px 26px rgba(217,67,47,.18); transform:translateY(-2px); border-color:var(--coral);}
-.archive-date{font-family:var(--font-label); font-weight:700; font-size:12px; letter-spacing:.06em; text-transform:uppercase; color:var(--navy-4); display:block; margin-bottom:6px;}
-.archive-item h3{font-family:var(--font-display); font-weight:700; font-size:18px; margin:0; color:var(--navy); max-width:640px;}
+.archive-item{display:flex; align-items:center; justify-content:space-between; gap:20px; flex-wrap:wrap; background:var(--panel); border:1px solid var(--panel-line); border-radius:var(--radius); padding:22px 26px; text-decoration:none; color:var(--ink); cursor:pointer; transition:box-shadow .15s ease, transform .15s ease, border-color .15s ease;}
+.archive-item:hover{box-shadow:0 10px 22px rgba(43,38,33,.10); transform:translateY(-2px); border-color:var(--accent);}
+.archive-date{font-family:var(--font); font-weight:700; font-size:12px; letter-spacing:.06em; text-transform:uppercase; color:var(--ink-soft); display:block; margin-bottom:6px;}
+.archive-item h3{font-family:var(--font); font-weight:700; font-size:18px; margin:0; color:var(--ink); max-width:640px;}
 .archive-links{display:flex; align-items:center; gap:14px; flex-wrap:wrap;}
-.archive-arrow{font-family:var(--font-label); font-weight:700; font-size:13px; color:var(--navy-4); white-space:nowrap; text-decoration:none; z-index:1; position:relative;}
-.archive-newsletter-link{font-family:var(--font-label); font-weight:700; font-size:12.5px; color:var(--coral-deep); white-space:nowrap; text-decoration:none; border-bottom:1px solid var(--coral); z-index:1; position:relative;}
-.archive-newsletter-link:hover{color:var(--gold-deep); border-color:var(--gold-deep);}
+.archive-arrow{font-family:var(--font); font-weight:700; font-size:13px; color:var(--ink-soft); white-space:nowrap; text-decoration:none; z-index:1; position:relative;}
+.archive-newsletter-link{font-family:var(--font); font-weight:700; font-size:12.5px; color:var(--accent); white-space:nowrap; text-decoration:none; border-bottom:1px solid var(--accent-soft); z-index:1; position:relative;}
+.archive-newsletter-link:hover{color:#8f6540; border-color:#8f6540;}
 .archive-item[hidden]{display:none;}
-footer{margin-top:50px; padding:30px 0 50px; border-top:1px solid var(--line); color:var(--grey); font-size:13px;}
+footer{margin-top:50px; padding:30px 0 50px; border-top:1px solid var(--panel-line); color:var(--ink-soft); font-size:13px;}
 @media (max-width:560px){ header.masthead{padding:44px 0 38px;} .archive-item{padding:18px 20px;} }
-
 .i18n-es{display:none;}
 body.lang-es .i18n-fr{display:none;}
 body.lang-es .i18n-es{display:inline;}
 body.lang-es .i18n-es.block{display:block;}
-
-.lang-toggle{
-  font-family:var(--font-label); font-weight:600;
-  font-size:12.5px; color:var(--white); background:transparent;
-  border:1px solid rgba(255,255,255,.4); border-radius:999px; padding:7px 14px;
-  cursor:pointer; white-space:nowrap; display:inline-flex; align-items:center; gap:6px;
-  transition:background .15s ease, border-color .15s ease;
-}
-.lang-toggle:hover{background:rgba(255,255,255,.12); border-color:var(--white);}
+.lang-toggle{font-family:var(--font); font-weight:600; font-size:12.5px; color:#F3EDE2; background:transparent; border:1px solid rgba(243,237,226,.4); border-radius:999px; padding:7px 14px; cursor:pointer; white-space:nowrap; display:inline-flex; align-items:center; gap:6px; transition:background .15s ease, border-color .15s ease;}
+.lang-toggle:hover{background:rgba(243,237,226,.12); border-color:#F3EDE2;}
 .lang-toggle-fr,.lang-toggle-es{opacity:.55; transition:opacity .15s ease;}
-.lang-toggle-fr.active,.lang-toggle-es.active{opacity:1; font-weight:800;}
+.lang-toggle-fr.active,.lang-toggle-es.active{opacity:1; font-weight:800; color:var(--accent-soft);}
 .lang-toggle-sep{opacity:.4;}
-
 </style>
 </head>
 <body>
@@ -95,8 +71,8 @@ body.lang-es .i18n-es.block{display:block;}
         <button id="lang-toggle" class="lang-toggle" type="button" aria-label="Cambiar idioma"><span class="lang-toggle-fr active">🇫🇷 FR</span><span class="lang-toggle-sep">·</span><span class="lang-toggle-es">🇪🇸 ES</span></button>
       </div>
     </div>
-    <h1 class="title"><span class="i18n-fr">Archives de la veille hebdomadaire</span><span class="i18n-es">Archivo de la vigilancia semanal</span></h1>
-    <p class="subline"><span class="i18n-fr">Marketing, branding, tech, événements et activations de marque — Espagne &amp; Europe. Une édition par semaine.</span><span class="i18n-es">Marketing, branding, tecnología, eventos y activaciones de marca — España y Europa. Una edición por semana.</span></p>
+    <h1 class="title"><span class="i18n-fr">Archives de la veille</span><span class="i18n-es">Archivo de la vigilancia</span></h1>
+    <p class="subline"><span class="i18n-fr">Marketing, branding, tech, événements et activations de marque — Espagne &amp; Europe. Une édition tous les 2 jours environ.</span><span class="i18n-es">Marketing, branding, tecnología, eventos y activaciones de marca — España y Europa. Una edición cada 2 días aproximadamente.</span></p>
     <div class="stats-row">
       <div class="stat"><span class="stat-num" id="count-reports">0</span><span class="stat-label"><span class="i18n-fr">éditions archivées</span><span class="i18n-es">ediciones archivadas</span></span></div>
     </div>
@@ -146,12 +122,11 @@ body.lang-es .i18n-es.block{display:block;}
   </div>
 
   <footer>
-    <p><span class="i18n-fr">Archive personnelle de veille hebdomadaire. Chaque rapport cite ses sources originales. Dernière édition : 25 septembre 2026.</span><span class="i18n-es">Archivo personal de vigilancia semanal. Cada informe cita sus fuentes originales. Última edición: 25 de septiembre de 2026.</span></p>
+    <p><span class="i18n-fr">Archive personnelle de veille. Chaque rapport cite ses sources originales. Dernière édition : 25 septembre 2026.</span><span class="i18n-es">Archivo personal de vigilancia. Cada informe cita sus fuentes originales. Última edición: 25 de septiembre de 2026.</span></p>
   </footer>
 </main>
 
 <script>
-
 (function(){
   "use strict";
   var bar = document.getElementById('progress-bar');
@@ -200,7 +175,6 @@ body.lang-es .i18n-es.block{display:block;}
     });
   }
 
-  // ----- FR / ES language toggle -----
   var I18N = {
     fr: { searchPlaceholder: 'Rechercher une édition (mot-clé)…', searchAria: 'Rechercher un rapport' },
     es: { searchPlaceholder: 'Buscar una edición (palabra clave)…', searchAria: 'Buscar un informe' }
@@ -238,7 +212,6 @@ body.lang-es .i18n-es.block{display:block;}
 
   applyLang(currentLang, false);
 })();
-
 </script>
 
 </body>
