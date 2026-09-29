@@ -8,7 +8,6 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-<style>
 
 :root{
   --bg:#F3EDE2;
@@ -159,7 +158,26 @@ body.lang-es .i18n-fr{display:none;}
 body.lang-es .i18n-es{display:inline;}
 body.lang-es .i18n-es.block{display:block;}
 
-</style>
+/* --- Micro-interactions & scroll-reveal (motion-safe) --- */
+.controls{transition:background-color .25s ease, box-shadow .25s ease, backdrop-filter .25s ease;}
+.controls.is-scrolled{background-color:rgba(243,237,226,.88); backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px); box-shadow:0 6px 18px rgba(43,38,33,.08);}
+.card{transition:transform .22s cubic-bezier(.25,.8,.25,1), box-shadow .22s cubic-bezier(.25,.8,.25,1), border-color .22s ease;}
+.chip{transition:background-color .18s ease, color .18s ease, border-color .18s ease, transform .18s ease;}
+.quicklinks a, .archive-arrow{background-image:linear-gradient(currentColor, currentColor); background-repeat:no-repeat; background-position:left 100%; background-size:0 1px; transition:background-size .2s ease;}
+.quicklinks a:hover, .archive-arrow:hover{background-size:100% 1px;}
+.carousel-dot{transition:background-color .15s ease, transform .15s ease, width .2s ease;}
+.carousel-dot:hover, .carousel-dot:focus-visible{transform:scale(1.3);}
+.carousel-arrow{transition:background-color .15s ease, transform .15s ease;}
+.carousel-arrow:hover, .carousel-arrow:focus-visible{transform:translateY(-50%) scale(1.08);}
+header.masthead, main{transition:opacity .15s ease;}
+body.lang-fade header.masthead, body.lang-fade main{opacity:.45;}
+@media (prefers-reduced-motion: no-preference){
+  .reveal-init{opacity:0; transform:translateY(16px); transition:opacity .45s ease-out, transform .45s ease-out;}
+  .reveal-init.reveal-in{opacity:1; transform:translateY(0);}
+}
+@media (prefers-reduced-motion: reduce){
+  .controls, .card, .chip, .quicklinks a, .archive-arrow, .carousel-dot, .carousel-arrow, header.masthead, main{transition:none !important;}
+}
 
 </style>
 </head>
@@ -180,8 +198,8 @@ body.lang-es .i18n-es.block{display:block;}
     <p class="subline"><span><span class="i18n-fr">27-29 septembre 2026 — marketing, branding, tech et événements B2B/B2C en Espagne et en Europe.</span><span class="i18n-es">27-29 de septiembre de 2026 — marketing, branding, tecnología y eventos B2B/B2C en España y Europa.</span></span></p>
     <p style="position:relative; margin:20px 0 0;"><a class="newsletter-cta" href="newsletter/veille-2026-09-29.html"><span><span class="i18n-fr">📧 Voir la newsletter de cette édition →</span><span class="i18n-es">📧 Ver la newsletter de esta edición →</span></span></a></p>
     <div class="stats-row">
-      <div class="stat"><span class="stat-num" data-target="5">0</span><span class="stat-label"><span><span class="i18n-fr">actus cette période</span><span class="i18n-es">noticias de este período</span></span></span></div>
-      <div class="stat"><span class="stat-num" data-target="5">0</span><span class="stat-label"><span><span class="i18n-fr">sources citées</span><span class="i18n-es">fuentes citadas</span></span></span></div>
+      <div class="stat"><span class="stat-num" data-target="9">0</span><span class="stat-label"><span><span class="i18n-fr">actus cette période</span><span class="i18n-es">noticias de este período</span></span></span></div>
+      <div class="stat"><span class="stat-num" data-target="9">0</span><span class="stat-label"><span><span class="i18n-fr">sources citées</span><span class="i18n-es">fuentes citadas</span></span></span></div>
       <div class="stat"><span class="stat-num" data-target="4">0</span><span class="stat-label"><span><span class="i18n-fr">thématiques couvertes</span><span class="i18n-es">temáticas cubiertas</span></span></span></div>
     </div>
   </div>
@@ -380,6 +398,38 @@ body.lang-es .i18n-es.block{display:block;}
             <p><span class="i18n-fr">L&#x27;Oréal Paris ouvre son défilé au grand public, gratuit, au pied de la Tour Eiffel.</span><span class="i18n-es">L&#x27;Oréal Paris abre su desfile al gran público, gratis, a los pies de la Torre Eiffel.</span></p>
           </div>
         </div>
+<div class="carousel-slide" data-theme="branding">
+          <div class="carousel-slide-media"><img src="https://images.unsplash.com/photo-1608222351212-18fe0ec7b13b?auto=format&fit=crop&w=1200&q=70" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.parentElement.classList.add('media-fallback')"></div>
+          <div class="carousel-slide-content">
+            <span class="carousel-badge">🎨 <span><span class="i18n-fr">Branding</span><span class="i18n-es">Branding</span></span></span>
+            <h3><span class="i18n-fr">IGT réinvente son image au G2E 2026</span><span class="i18n-es">IGT reinventa su imagen en el G2E 2026</span></h3>
+            <p><span class="i18n-fr">Même les marques B2B du jeu misent sur l&#x27;émotion : nouvelle identité dévoilée à Las Vegas.</span><span class="i18n-es">Hasta las marcas B2B del juego apuestan por la emoción: nueva identidad presentada en Las Vegas.</span></p>
+          </div>
+        </div>
+<div class="carousel-slide" data-theme="branding">
+          <div class="carousel-slide-media"><img src="https://images.unsplash.com/photo-1626125345510-4603468eedfb?auto=format&fit=crop&w=1200&q=70" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.parentElement.classList.add('media-fallback')"></div>
+          <div class="carousel-slide-content">
+            <span class="carousel-badge">🎨 <span><span class="i18n-fr">Branding</span><span class="i18n-es">Branding</span></span></span>
+            <h3><span class="i18n-fr">Joinup clarifie sa promesse après son rachat</span><span class="i18n-es">Joinup clarifica su promesa tras su adquisición</span></h3>
+            <p><span class="i18n-fr">« Movilidad sin movidas » : la mobilité corporate espagnole affirme son nouveau positionnement.</span><span class="i18n-es">«Movilidad sin movidas»: la movilidad corporativa española afirma su nuevo posicionamiento.</span></p>
+          </div>
+        </div>
+<div class="carousel-slide" data-theme="evenements">
+          <div class="carousel-slide-media"><img src="https://images.unsplash.com/photo-1694903110330-cc64b7e1d21d?auto=format&fit=crop&w=1200&q=70" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.parentElement.classList.add('media-fallback')"></div>
+          <div class="carousel-slide-content">
+            <span class="carousel-badge">🎪 <span><span class="i18n-fr">Événements</span><span class="i18n-es">Eventos</span></span></span>
+            <h3><span class="i18n-fr">L&#x27;EMMS 2026 mise tout sur les agents IA</span><span class="i18n-es">El EMMS 2026 lo apuesta todo a los agentes de IA</span></h3>
+            <p><span class="i18n-fr">Trois jours gratuits, TikTok et Amazon au programme : le marketing accélère vers l&#x27;IA agentique.</span><span class="i18n-es">Tres días gratuitos, con TikTok y Amazon en el programa: el marketing acelera hacia la IA agéntica.</span></p>
+          </div>
+        </div>
+<div class="carousel-slide" data-theme="evenements">
+          <div class="carousel-slide-media"><img src="https://images.unsplash.com/photo-1763705857736-2b4f16a33758?auto=format&fit=crop&w=1200&q=70" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.parentElement.classList.add('media-fallback')"></div>
+          <div class="carousel-slide-content">
+            <span class="carousel-badge">🎪 <span><span class="i18n-fr">Événements</span><span class="i18n-es">Eventos</span></span></span>
+            <h3><span class="i18n-fr">600 marketeurs réunis à La Corogne</span><span class="i18n-es">600 marketers reunidos en A Coruña</span></h3>
+            <p><span class="i18n-fr">La Raiola Marketing Conference prouve qu&#x27;un sujet ciblé (IA, SEO) fait plus qu&#x27;un gros budget.</span><span class="i18n-es">La Raiola Marketing Conference demuestra que un tema bien enfocado (IA, SEO) pesa más que un gran presupuesto.</span></p>
+          </div>
+        </div>
       </div>
       <button class="carousel-arrow prev" type="button" aria-label="Précédent">‹</button>
       <button class="carousel-arrow next" type="button" aria-label="Suivant">›</button>
@@ -450,7 +500,61 @@ body.lang-es .i18n-es.block{display:block;}
     </div>
   </div>
 </article>
+    <article class="card" data-theme="branding" data-search="igt dévoile sa nouvelle identité de marque au g2e 2026 à las vegas igt presenta su nueva identidad de marca en el g2e 2026 de las vegas igt a dévoilé le 29 septembre sa nouvelle identité de marque lors du global gaming expo (g2e) 2026 à las vegas, un an après sa fusion avec everi holdings. la nouvelle image, construite autour des principes « fluide, sans friction et magnétique », se déploie sur son stand et l&#x27;ensemble de ses supports. igt presentó el 29 de septiembre su nueva identidad de marca en el global gaming expo (g2e) 2026 de las vegas, un año después de su fusión con everi holdings. la nueva imagen, construida en torno a los principios «fluido, sin fricción y magnético», se despliega en su stand y en todos sus soportes. une entreprise b2b du secteur du jeu, souvent perçue comme technique et austère, choisit une identité plus sensorielle et centrée sur l&#x27;expérience — un signal que même les marques d&#x27;infrastructure misent désormais sur l&#x27;émotion pour se différencier auprès des opérateurs. una empresa b2b del sector del juego, a menudo percibida como técnica y austera, elige una identidad más sensorial y centrada en la experiencia — una señal de que incluso las marcas de infraestructura apuestan ahora por la emoción para diferenciarse ante los operadores. pour un client b2b technique, tester un moodboard qui remplace le vocabulaire de performance (fiable, robuste, puissant) par un vocabulaire d&#x27;expérience (fluide, magnétique, sans friction) et mesurer la réaction en interne avant le prochain rebranding. para un cliente b2b técnico, probar un moodboard que sustituya el vocabulario de rendimiento (fiable, robusto, potente) por un vocabulario de experiencia (fluido, magnético, sin fricción) y medir la reacción interna antes del próximo rebranding." tabindex="0" role="button" aria-expanded="false" id="card-branding-1">
+  <div class="card-media"><img src="https://images.unsplash.com/photo-1608222351212-18fe0ec7b13b?auto=format&fit=crop&w=1200&q=70" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.closest('.card-media').classList.add('media-fallback')"><div class="fallback-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="42" height="42" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9.5"/><path d="M8 13l2.5-3 2 2.5L16 9"/></svg></div><span class="badge"><span><span class="i18n-fr">Branding</span><span class="i18n-es">Branding</span></span> <span class="badge-emoji">🎨</span></span></div>
+  <div class="card-body">
+    <div class="card-title-row">
+      <h3 class="card-title"><span><span class="i18n-fr">IGT dévoile sa nouvelle identité de marque au G2E 2026 à Las Vegas</span><span class="i18n-es">IGT presenta su nueva identidad de marca en el G2E 2026 de Las Vegas</span></span></h3>
+      <span class="read-tag">3 min</span>
     </div>
+    <p class="card-fact"><span><span class="i18n-fr">IGT a dévoilé le 29 septembre sa nouvelle identité de marque lors du Global Gaming Expo (G2E) 2026 à Las Vegas, un an après sa fusion avec Everi Holdings. La nouvelle image, construite autour des principes « fluide, sans friction et magnétique », se déploie sur son stand et l&#x27;ensemble de ses supports.</span><span class="i18n-es">IGT presentó el 29 de septiembre su nueva identidad de marca en el Global Gaming Expo (G2E) 2026 de Las Vegas, un año después de su fusión con Everi Holdings. La nueva imagen, construida en torno a los principios «fluido, sin fricción y magnético», se despliega en su stand y en todos sus soportes.</span></span></p>
+    <div class="card-more">
+      <p class="card-label"><span><span class="i18n-fr">Pourquoi ça compte</span><span class="i18n-es">Por qué importa</span></span></p>
+      <p class="card-why"><span><span class="i18n-fr">Une entreprise B2B du secteur du jeu, souvent perçue comme technique et austère, choisit une identité plus sensorielle et centrée sur l&#x27;expérience — un signal que même les marques d&#x27;infrastructure misent désormais sur l&#x27;émotion pour se différencier auprès des opérateurs.</span><span class="i18n-es">Una empresa B2B del sector del juego, a menudo percibida como técnica y austera, elige una identidad más sensorial y centrada en la experiencia — una señal de que incluso las marcas de infraestructura apuestan ahora por la emoción para diferenciarse ante los operadores.</span></span></p>
+      <p class="card-label"><span><span class="i18n-fr">Action concrète</span><span class="i18n-es">Acción concreta</span></span></p>
+      <p class="card-action">💡 <span><span class="i18n-fr">Pour un client B2B technique, tester un moodboard qui remplace le vocabulaire de performance (fiable, robuste, puissant) par un vocabulaire d&#x27;expérience (fluide, magnétique, sans friction) et mesurer la réaction en interne avant le prochain rebranding.</span><span class="i18n-es">Para un cliente B2B técnico, probar un moodboard que sustituya el vocabulario de rendimiento (fiable, robusto, potente) por un vocabulario de experiencia (fluido, magnético, sin fricción) y medir la reacción interna antes del próximo rebranding.</span></span></p>
+      <p class="card-source"><span><span class="i18n-fr">Source :</span><span class="i18n-es">Fuente:</span></span> <a href="https://www.prnewswire.com/news-releases/igt-unveils-new-brand-identity-at-2026-global-gaming-expo-302890998.html" target="_blank" rel="noopener noreferrer">IGT (PR Newswire) ↗</a></p>
+      <div class="social-pack" hidden>
+        <div class="social-pack-inner">
+          <p class="social-row"><strong>Titular</strong><br>IGT estrena nueva identidad de marca en el G2E 2026</p><p class="social-row"><strong>Descripción</strong><br>IGT presentó el 29 de septiembre en el Global Gaming Expo de Las Vegas su nueva identidad de marca, construida en torno a los principios de fluidez, ausencia de fricción y magnetismo. El cambio llega un año después de la fusión con Everi Holdings y busca reflejar una experiencia pensada para jugadores y operadores por igual.</p><p class="social-row"><strong>Why it matters?</strong><br>Why it matters: Si hasta las marcas B2B de infraestructura de juego apuestan por el lenguaje emocional, ¿qué le queda al posicionamiento puramente técnico?</p><p class="social-row"><strong>CC take</strong><br>CC TAKE: Even the pipes want to feel like poetry now.</p><p class="social-row"><strong>Copy out + CTA</strong><br>Mientras el G2E sigue abierto hasta el 1 de octubre, la nueva imagen de IGT ya circula entre operadores del sector. ¿Has visto algún rebranding B2B reciente que te sorprendiera por lo poco "corporativo" que resultó?</p><p class="social-row"><strong>Consejo muy Armi</strong><br>Consejo muy Armi: la próxima vez que trabajes con un cliente B2B técnico, documenta en vídeo corto el "detrás" del cambio de identidad — el moodboard, los descartes, la razón del giro emocional — contenido que humaniza una marca que normalmente solo habla de especificaciones.</p>
+          <button class="social-copy-btn" type="button" data-pack="Titular\nIGT estrena nueva identidad de marca en el G2E 2026\nDescripción\nIGT presentó el 29 de septiembre en el Global Gaming Expo de Las Vegas su nueva identidad de marca, construida en torno a los principios de fluidez, ausencia de fricción y magnetismo. El cambio llega un año después de la fusión con Everi Holdings y busca reflejar una experiencia pensada para jugadores y operadores por igual.\nWhy it matters?\nWhy it matters: Si hasta las marcas B2B de infraestructura de juego apuestan por el lenguaje emocional, ¿qué le queda al posicionamiento puramente técnico?\nCC take\nCC TAKE: Even the pipes want to feel like poetry now.\nCopy out + CTA\nMientras el G2E sigue abierto hasta el 1 de octubre, la nueva imagen de IGT ya circula entre operadores del sector. ¿Has visto algún rebranding B2B reciente que te sorprendiera por lo poco &quot;corporativo&quot; que resultó?\nConsejo muy Armi\nConsejo muy Armi: la próxima vez que trabajes con un cliente B2B técnico, documenta en vídeo corto el &quot;detrás&quot; del cambio de identidad — el moodboard, los descartes, la razón del giro emocional — contenido que humaniza una marca que normalmente solo habla de especificaciones.">📋 <span class="i18n-fr">Copier</span><span class="i18n-es">Copiar</span></button>
+        </div>
+      </div>
+    </div>
+    <div class="card-btn-row">
+      <button class="card-toggle" type="button" aria-hidden="true"><span class="card-toggle-label"><span><span class="i18n-fr">Voir plus</span><span class="i18n-es">Ver más</span></span></span> <span class="chevron">▾</span></button>
+      <button class="card-social-toggle" type="button"><span><span class="i18n-fr">📱 Copy réseaux</span><span class="i18n-es">📱 Copy redes</span></span></button>
+    </div>
+  </div>
+</article>
+<article class="card" data-theme="branding" data-search="joinup lance « movilidad sin movidas », son nouveau positionnement de marque joinup lanza «movilidad sin movidas», su nuevo posicionamiento de marca la plateforme espagnole de mobilité corporate joinup, récemment rachetée par eysa, a dévoilé le 29 septembre sa première grande campagne de marque, « movilidad sin movidas » (mobilité sans embrouilles), qui installe son nouveau territoire stratégique : « bienvenue à la mobilité engagée ». la plataforma española de movilidad corporativa joinup, recientemente adquirida por eysa, presentó el 29 de septiembre su primera gran campaña de marca, «movilidad sin movidas», que instala su nuevo territorio estratégico: «bienvenido a la movilidad comprometida». juste après un rachat, une marque choisit de clarifier sa promesse plutôt que de la diluer — un rappel que les opérations de fusion-acquisition sont un moment clé pour retravailler le positionnement avant que la confusion ne s&#x27;installe chez les clients. justo después de una adquisición, una marca elige clarificar su promesa en lugar de diluirla — un recordatorio de que las operaciones de fusión y adquisición son un momento clave para retrabajar el posicionamiento antes de que se instale la confusión entre los clientes. après toute acquisition ou fusion chez un client, proposer dans les 90 jours un sprint de clarification de positionnement pour transformer l&#x27;incertitude du changement en message de marque offensif, avant que la concurrence ne s&#x27;engouffre dans le flou. tras cualquier adquisición o fusión de un cliente, proponer en los primeros 90 días un sprint de clarificación de posicionamiento para convertir la incertidumbre del cambio en un mensaje de marca ofensivo, antes de que la competencia aproveche la confusión." tabindex="0" role="button" aria-expanded="false" id="card-branding-2">
+  <div class="card-media"><img src="https://images.unsplash.com/photo-1626125345510-4603468eedfb?auto=format&fit=crop&w=1200&q=70" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.closest('.card-media').classList.add('media-fallback')"><div class="fallback-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="42" height="42" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9.5"/><path d="M8 13l2.5-3 2 2.5L16 9"/></svg></div><span class="badge"><span><span class="i18n-fr">Branding</span><span class="i18n-es">Branding</span></span> <span class="badge-emoji">🎨</span></span></div>
+  <div class="card-body">
+    <div class="card-title-row">
+      <h3 class="card-title"><span><span class="i18n-fr">Joinup lance « Movilidad sin movidas », son nouveau positionnement de marque</span><span class="i18n-es">Joinup lanza «Movilidad sin movidas», su nuevo posicionamiento de marca</span></span></h3>
+      <span class="read-tag">3 min</span>
+    </div>
+    <p class="card-fact"><span><span class="i18n-fr">La plateforme espagnole de mobilité corporate Joinup, récemment rachetée par Eysa, a dévoilé le 29 septembre sa première grande campagne de marque, « Movilidad sin movidas » (mobilité sans embrouilles), qui installe son nouveau territoire stratégique : « Bienvenue à la mobilité engagée ».</span><span class="i18n-es">La plataforma española de movilidad corporativa Joinup, recientemente adquirida por Eysa, presentó el 29 de septiembre su primera gran campaña de marca, «Movilidad sin movidas», que instala su nuevo territorio estratégico: «Bienvenido a la movilidad comprometida».</span></span></p>
+    <div class="card-more">
+      <p class="card-label"><span><span class="i18n-fr">Pourquoi ça compte</span><span class="i18n-es">Por qué importa</span></span></p>
+      <p class="card-why"><span><span class="i18n-fr">Juste après un rachat, une marque choisit de clarifier sa promesse plutôt que de la diluer — un rappel que les opérations de fusion-acquisition sont un moment clé pour retravailler le positionnement avant que la confusion ne s&#x27;installe chez les clients.</span><span class="i18n-es">Justo después de una adquisición, una marca elige clarificar su promesa en lugar de diluirla — un recordatorio de que las operaciones de fusión y adquisición son un momento clave para retrabajar el posicionamiento antes de que se instale la confusión entre los clientes.</span></span></p>
+      <p class="card-label"><span><span class="i18n-fr">Action concrète</span><span class="i18n-es">Acción concreta</span></span></p>
+      <p class="card-action">💡 <span><span class="i18n-fr">Après toute acquisition ou fusion chez un client, proposer dans les 90 jours un sprint de clarification de positionnement pour transformer l&#x27;incertitude du changement en message de marque offensif, avant que la concurrence ne s&#x27;engouffre dans le flou.</span><span class="i18n-es">Tras cualquier adquisición o fusión de un cliente, proponer en los primeros 90 días un sprint de clarificación de posicionamiento para convertir la incertidumbre del cambio en un mensaje de marca ofensivo, antes de que la competencia aproveche la confusión.</span></span></p>
+      <p class="card-source"><span><span class="i18n-fr">Source :</span><span class="i18n-es">Fuente:</span></span> <a href="https://dircomfidencial.com/marketing/movilidad-sin-movidas-la-campana-con-la-que-joinup-estrena-nuevo-posicionamiento-20260929-1216/" target="_blank" rel="noopener noreferrer">Dircomfidencial ↗</a></p>
+      <div class="social-pack" hidden>
+        <div class="social-pack-inner">
+          <p class="social-row"><strong>Titular</strong><br>Joinup estrena posicionamiento con «Movilidad sin movidas»</p><p class="social-row"><strong>Descripción</strong><br>Joinup, la plataforma de movilidad corporativa recién adquirida por Eysa, presentó el 29 de septiembre su primera gran campaña de marca bajo el lema «Movilidad sin movidas». La compañía instala así su nuevo territorio estratégico, «Bienvenido a la movilidad comprometida», apostando por tecnología, atención humana y centralización para simplificar los viajes de trabajo.</p><p class="social-row"><strong>Why it matters?</strong><br>Why it matters: ¿Cuántas marcas aprovechan de verdad los primeros meses tras una adquisición para reposicionarse, en lugar de esperar a que el mercado decida por ellas?</p><p class="social-row"><strong>CC take</strong><br>CC TAKE: The best time to clarify your brand is right when everyone assumes you're confused.</p><p class="social-row"><strong>Copy out + CTA</strong><br>La campaña llega apenas seis días después de confirmarse la compra por parte de Eysa — un timing que no parece casual. ¿Tú cuándo recomendarías a una marca reposicionarse: justo tras el cambio, o esperar a que se asiente el polvo?</p><p class="social-row"><strong>Consejo muy Armi</strong><br>Consejo muy Armi: crea una plantilla propia de "sprint de reposicionamiento post-fusión" — un mini proceso de 2 semanas que puedas ofrecer a clientes que acaban de comprar o ser comprados, y compártelo en LinkedIn como caso de método, no solo de resultado.</p>
+          <button class="social-copy-btn" type="button" data-pack="Titular\nJoinup estrena posicionamiento con «Movilidad sin movidas»\nDescripción\nJoinup, la plataforma de movilidad corporativa recién adquirida por Eysa, presentó el 29 de septiembre su primera gran campaña de marca bajo el lema «Movilidad sin movidas». La compañía instala así su nuevo territorio estratégico, «Bienvenido a la movilidad comprometida», apostando por tecnología, atención humana y centralización para simplificar los viajes de trabajo.\nWhy it matters?\nWhy it matters: ¿Cuántas marcas aprovechan de verdad los primeros meses tras una adquisición para reposicionarse, en lugar de esperar a que el mercado decida por ellas?\nCC take\nCC TAKE: The best time to clarify your brand is right when everyone assumes you're confused.\nCopy out + CTA\nLa campaña llega apenas seis días después de confirmarse la compra por parte de Eysa — un timing que no parece casual. ¿Tú cuándo recomendarías a una marca reposicionarse: justo tras el cambio, o esperar a que se asiente el polvo?\nConsejo muy Armi\nConsejo muy Armi: crea una plantilla propia de &quot;sprint de reposicionamiento post-fusión&quot; — un mini proceso de 2 semanas que puedas ofrecer a clientes que acaban de comprar o ser comprados, y compártelo en LinkedIn como caso de método, no solo de resultado.">📋 <span class="i18n-fr">Copier</span><span class="i18n-es">Copiar</span></button>
+        </div>
+      </div>
+    </div>
+    <div class="card-btn-row">
+      <button class="card-toggle" type="button" aria-hidden="true"><span class="card-toggle-label"><span><span class="i18n-fr">Voir plus</span><span class="i18n-es">Ver más</span></span></span> <span class="chevron">▾</span></button>
+      <button class="card-social-toggle" type="button"><span><span class="i18n-fr">📱 Copy réseaux</span><span class="i18n-es">📱 Copy redes</span></span></button>
+    </div>
+  </div>
+</article>
+</div>
   </section>
 
   <section class="theme-section" data-theme-section="tech">
@@ -543,7 +647,61 @@ body.lang-es .i18n-es.block{display:block;}
     </div>
   </div>
 </article>
+    <article class="card" data-theme="evenements" data-search="l&#x27;emms 2026 ouvre trois jours de conférences gratuites sur le marketing et l&#x27;ia el emms 2026 abre tres días de conferencias gratuitas sobre marketing e ia organisé par doppler, l&#x27;emms 2026 démarre le 29 septembre pour trois jours de conférences en ligne et gratuites dédiées au marketing digital et à l&#x27;e-commerce, avec des intervenants de tiktok, amazon et canva. l&#x27;édition se concentre sur la montée des agents ia capables d&#x27;exécuter des campagnes marketing de bout en bout. organizado por doppler, el emms 2026 arranca el 29 de septiembre con tres días de conferencias online y gratuitas sobre marketing digital y e-commerce, con ponentes de tiktok, amazon y canva. la edición se centra en el avance de los agentes de ia capaces de ejecutar campañas de marketing de punta a punta. le passage d&#x27;outils ia « assistants » à des agents qui exécutent des campagnes sans supervision constante change la nature même du métier de marketeur — un sujet que même les événements gratuits grand public jugent désormais prioritaire. el paso de herramientas de ia «asistentes» a agentes que ejecutan campañas sin supervisión constante cambia la propia naturaleza del oficio de marketer — un tema que hasta los eventos gratuitos de gran público consideran ya prioritario. suivre au moins une session sur les agents ia de l&#x27;emms 2026 (accès gratuit) pour identifier un cas d&#x27;usage concret à proposer à ses clients avant la fin de l&#x27;année, plutôt que de continuer à vendre du contenu généré au coup par coup. seguir al menos una sesión sobre agentes de ia del emms 2026 (acceso gratuito) para identificar un caso de uso concreto que proponer a los clientes antes de fin de año, en lugar de seguir vendiendo contenido generado caso por caso." tabindex="0" role="button" aria-expanded="false" id="card-evenements-2">
+  <div class="card-media"><img src="https://images.unsplash.com/photo-1694903110330-cc64b7e1d21d?auto=format&fit=crop&w=1200&q=70" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.closest('.card-media').classList.add('media-fallback')"><div class="fallback-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="42" height="42" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9.5"/><path d="M8 13l2.5-3 2 2.5L16 9"/></svg></div><span class="badge"><span><span class="i18n-fr">Événements</span><span class="i18n-es">Eventos</span></span> <span class="badge-emoji">🎪</span></span></div>
+  <div class="card-body">
+    <div class="card-title-row">
+      <h3 class="card-title"><span><span class="i18n-fr">L&#x27;EMMS 2026 ouvre trois jours de conférences gratuites sur le marketing et l&#x27;IA</span><span class="i18n-es">El EMMS 2026 abre tres días de conferencias gratuitas sobre marketing e IA</span></span></h3>
+      <span class="read-tag">2 min</span>
     </div>
+    <p class="card-fact"><span><span class="i18n-fr">Organisé par Doppler, l&#x27;EMMS 2026 démarre le 29 septembre pour trois jours de conférences en ligne et gratuites dédiées au marketing digital et à l&#x27;e-commerce, avec des intervenants de TikTok, Amazon et Canva. L&#x27;édition se concentre sur la montée des agents IA capables d&#x27;exécuter des campagnes marketing de bout en bout.</span><span class="i18n-es">Organizado por Doppler, el EMMS 2026 arranca el 29 de septiembre con tres días de conferencias online y gratuitas sobre marketing digital y e-commerce, con ponentes de TikTok, Amazon y Canva. La edición se centra en el avance de los agentes de IA capaces de ejecutar campañas de marketing de punta a punta.</span></span></p>
+    <div class="card-more">
+      <p class="card-label"><span><span class="i18n-fr">Pourquoi ça compte</span><span class="i18n-es">Por qué importa</span></span></p>
+      <p class="card-why"><span><span class="i18n-fr">Le passage d&#x27;outils IA « assistants » à des agents qui exécutent des campagnes sans supervision constante change la nature même du métier de marketeur — un sujet que même les événements gratuits grand public jugent désormais prioritaire.</span><span class="i18n-es">El paso de herramientas de IA «asistentes» a agentes que ejecutan campañas sin supervisión constante cambia la propia naturaleza del oficio de marketer — un tema que hasta los eventos gratuitos de gran público consideran ya prioritario.</span></span></p>
+      <p class="card-label"><span><span class="i18n-fr">Action concrète</span><span class="i18n-es">Acción concreta</span></span></p>
+      <p class="card-action">💡 <span><span class="i18n-fr">Suivre au moins une session sur les agents IA de l&#x27;EMMS 2026 (accès gratuit) pour identifier un cas d&#x27;usage concret à proposer à ses clients avant la fin de l&#x27;année, plutôt que de continuer à vendre du contenu généré au coup par coup.</span><span class="i18n-es">Seguir al menos una sesión sobre agentes de IA del EMMS 2026 (acceso gratuito) para identificar un caso de uso concreto que proponer a los clientes antes de fin de año, en lugar de seguir vendiendo contenido generado caso por caso.</span></span></p>
+      <p class="card-source"><span><span class="i18n-fr">Source :</span><span class="i18n-es">Fuente:</span></span> <a href="https://vive.click/llega-el-emms-2026-con-un-tema-central-los-agentes-de-ia-ya-ejecutan-campanas-de-marketing-de-punta-a-punta/" target="_blank" rel="noopener noreferrer">Vive Click ↗</a></p>
+      <div class="social-pack" hidden>
+        <div class="social-pack-inner">
+          <p class="social-row"><strong>Titular</strong><br>El EMMS 2026 arranca con los agentes de IA como protagonistas</p><p class="social-row"><strong>Descripción</strong><br>Doppler organiza desde el 29 de septiembre el EMMS 2026, tres días de conferencias online y gratuitas sobre marketing digital y e-commerce, con ponentes de TikTok, Amazon y Canva. La edición pone el foco en los agentes de IA capaces de ejecutar campañas de marketing de principio a fin, más allá de la asistencia puntual.</p><p class="social-row"><strong>Why it matters?</strong><br>Why it matters: Si los agentes de IA ya ejecutan campañas enteras, ¿qué parte del trabajo de un equipo de marketing sigue siendo insustituible?</p><p class="social-row"><strong>CC take</strong><br>CC TAKE: The assistant era is over. The agent era just clocked in.</p><p class="social-row"><strong>Copy out + CTA</strong><br>El evento es gratuito y sigue abierto hasta el 1 de octubre. ¿Ya has probado algún agente de IA que ejecute una campaña completa sin supervisión constante, o todavía te genera desconfianza soltarle las riendas?</p><p class="social-row"><strong>Consejo muy Armi</strong><br>Consejo muy Armi: apúntate a una sesión del EMMS y toma notas en vivo para un hilo o carrusel de "lo que aprendí en una hora" — es contenido de autoridad fácil de producir que además demuestra que estás al día sin tener que asistir a eventos presenciales.</p>
+          <button class="social-copy-btn" type="button" data-pack="Titular\nEl EMMS 2026 arranca con los agentes de IA como protagonistas\nDescripción\nDoppler organiza desde el 29 de septiembre el EMMS 2026, tres días de conferencias online y gratuitas sobre marketing digital y e-commerce, con ponentes de TikTok, Amazon y Canva. La edición pone el foco en los agentes de IA capaces de ejecutar campañas de marketing de principio a fin, más allá de la asistencia puntual.\nWhy it matters?\nWhy it matters: Si los agentes de IA ya ejecutan campañas enteras, ¿qué parte del trabajo de un equipo de marketing sigue siendo insustituible?\nCC take\nCC TAKE: The assistant era is over. The agent era just clocked in.\nCopy out + CTA\nEl evento es gratuito y sigue abierto hasta el 1 de octubre. ¿Ya has probado algún agente de IA que ejecute una campaña completa sin supervisión constante, o todavía te genera desconfianza soltarle las riendas?\nConsejo muy Armi\nConsejo muy Armi: apúntate a una sesión del EMMS y toma notas en vivo para un hilo o carrusel de &quot;lo que aprendí en una hora&quot; — es contenido de autoridad fácil de producir que además demuestra que estás al día sin tener que asistir a eventos presenciales.">📋 <span class="i18n-fr">Copier</span><span class="i18n-es">Copiar</span></button>
+        </div>
+      </div>
+    </div>
+    <div class="card-btn-row">
+      <button class="card-toggle" type="button" aria-hidden="true"><span class="card-toggle-label"><span><span class="i18n-fr">Voir plus</span><span class="i18n-es">Ver más</span></span></span> <span class="chevron">▾</span></button>
+      <button class="card-social-toggle" type="button"><span><span class="i18n-fr">📱 Copy réseaux</span><span class="i18n-es">📱 Copy redes</span></span></button>
+    </div>
+  </div>
+</article>
+<article class="card" data-theme="evenements" data-search="la raiola marketing conference réunit 600 professionnels à la corogne la raiola marketing conference reúne a 600 profesionales en a coruña la 9e édition de la raiola marketing conference (rmc) s&#x27;est tenue le 26 septembre au palexco de la corogne, réunissant 600 professionnels du marketing digital autour de l&#x27;intelligence artificielle, du seo et de l&#x27;entrepreneuriat en ligne, avec huit conférences et deux tables rondes. la novena edición de la raiola marketing conference (rmc) se celebró el 26 de septiembre en el palexco de a coruña, reuniendo a 600 profesionales del marketing digital en torno a la inteligencia artificial, el seo y el emprendimiento online, con ocho ponencias y dos mesas redondas. sans budget de star internationale ni lieu iconique, un événement régional organisé par une entreprise d&#x27;hébergement web attire 600 professionnels sur un seul sujet bien ciblé — la preuve qu&#x27;un positionnement de contenu clair fait plus qu&#x27;un gros budget événementiel. sin presupuesto de estrella internacional ni sede icónica, un evento regional organizado por una empresa de hosting atrae a 600 profesionales sobre un tema bien acotado — la prueba de que un posicionamiento de contenido claro pesa más que un gran presupuesto de evento. analyser le programme de la rmc (ia, seo, entrepreneuriat — trois sujets, huit sessions, deux tables rondes) comme modèle pour concevoir à moindre coût un événement client b2b ultra-ciblé plutôt qu&#x27;un format généraliste qui dilue le message. analizar el programa de la rmc (ia, seo, emprendimiento — tres temas, ocho ponencias, dos mesas redondas) como modelo para diseñar a menor coste un evento de cliente b2b ultra-enfocado en lugar de un formato generalista que diluye el mensaje." tabindex="0" role="button" aria-expanded="false" id="card-evenements-3">
+  <div class="card-media"><img src="https://images.unsplash.com/photo-1763705857736-2b4f16a33758?auto=format&fit=crop&w=1200&q=70" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.closest('.card-media').classList.add('media-fallback')"><div class="fallback-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="42" height="42" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9.5"/><path d="M8 13l2.5-3 2 2.5L16 9"/></svg></div><span class="badge"><span><span class="i18n-fr">Événements</span><span class="i18n-es">Eventos</span></span> <span class="badge-emoji">🎪</span></span></div>
+  <div class="card-body">
+    <div class="card-title-row">
+      <h3 class="card-title"><span><span class="i18n-fr">La Raiola Marketing Conference réunit 600 professionnels à La Corogne</span><span class="i18n-es">La Raiola Marketing Conference reúne a 600 profesionales en A Coruña</span></span></h3>
+      <span class="read-tag">2 min</span>
+    </div>
+    <p class="card-fact"><span><span class="i18n-fr">La 9e édition de la Raiola Marketing Conference (RMC) s&#x27;est tenue le 26 septembre au Palexco de La Corogne, réunissant 600 professionnels du marketing digital autour de l&#x27;intelligence artificielle, du SEO et de l&#x27;entrepreneuriat en ligne, avec huit conférences et deux tables rondes.</span><span class="i18n-es">La novena edición de la Raiola Marketing Conference (RMC) se celebró el 26 de septiembre en el Palexco de A Coruña, reuniendo a 600 profesionales del marketing digital en torno a la inteligencia artificial, el SEO y el emprendimiento online, con ocho ponencias y dos mesas redondas.</span></span></p>
+    <div class="card-more">
+      <p class="card-label"><span><span class="i18n-fr">Pourquoi ça compte</span><span class="i18n-es">Por qué importa</span></span></p>
+      <p class="card-why"><span><span class="i18n-fr">Sans budget de star internationale ni lieu iconique, un événement régional organisé par une entreprise d&#x27;hébergement web attire 600 professionnels sur un seul sujet bien ciblé — la preuve qu&#x27;un positionnement de contenu clair fait plus qu&#x27;un gros budget événementiel.</span><span class="i18n-es">Sin presupuesto de estrella internacional ni sede icónica, un evento regional organizado por una empresa de hosting atrae a 600 profesionales sobre un tema bien acotado — la prueba de que un posicionamiento de contenido claro pesa más que un gran presupuesto de evento.</span></span></p>
+      <p class="card-label"><span><span class="i18n-fr">Action concrète</span><span class="i18n-es">Acción concreta</span></span></p>
+      <p class="card-action">💡 <span><span class="i18n-fr">Analyser le programme de la RMC (IA, SEO, entrepreneuriat — trois sujets, huit sessions, deux tables rondes) comme modèle pour concevoir à moindre coût un événement client B2B ultra-ciblé plutôt qu&#x27;un format généraliste qui dilue le message.</span><span class="i18n-es">Analizar el programa de la RMC (IA, SEO, emprendimiento — tres temas, ocho ponencias, dos mesas redondas) como modelo para diseñar a menor coste un evento de cliente B2B ultra-enfocado en lugar de un formato generalista que diluye el mensaje.</span></span></p>
+      <p class="card-source"><span><span class="i18n-fr">Source :</span><span class="i18n-es">Fuente:</span></span> <a href="https://www.elespanol.com/quincemil/economia/tecnologia/20260926/coruna-convierte-hoy-epicentro-marketing-digital-galicia-profesionales/1003744398347_0.html" target="_blank" rel="noopener noreferrer">El Español (Quincemil) ↗</a></p>
+      <div class="social-pack" hidden>
+        <div class="social-pack-inner">
+          <p class="social-row"><strong>Titular</strong><br>600 profesionales del marketing se citan en A Coruña en la Raiola Marketing Conference</p><p class="social-row"><strong>Descripción</strong><br>La novena edición de la Raiola Marketing Conference se celebró el 26 de septiembre en el Palexco de A Coruña, reuniendo a 600 profesionales del marketing digital en torno a la inteligencia artificial, el SEO y el emprendimiento online. El evento, organizado por Raiola Networks, incluyó ocho ponencias y dos mesas redondas con 15 especialistas del sector.</p><p class="social-row"><strong>Why it matters?</strong><br>Why it matters: ¿Hace falta un lugar icónico o una gran estrella para llenar un evento de marketing, o basta con clavar el tema exacto que tu audiencia necesita ahora mismo?</p><p class="social-row"><strong>CC take</strong><br>CC TAKE: 600 marketers picked SEO and AI over a Saturday off. That's your positioning lesson right there.</p><p class="social-row"><strong>Copy out + CTA</strong><br>Nueve ediciones después, la RMC se consolida como la cita de marketing digital más grande de Galicia. ¿Conoces algún evento regional similar que esté ganando terreno frente a los grandes congresos nacionales?</p><p class="social-row"><strong>Consejo muy Armi</strong><br>Consejo muy Armi: si organizas eventos para clientes fuera de Madrid o Barcelona, usa el caso RMC como argumento: un evento regional bien enfocado en un tema de nicho puede atraer tanto talento y visibilidad como uno nacional genérico, con una fracción del presupuesto.</p>
+          <button class="social-copy-btn" type="button" data-pack="Titular\n600 profesionales del marketing se citan en A Coruña en la Raiola Marketing Conference\nDescripción\nLa novena edición de la Raiola Marketing Conference se celebró el 26 de septiembre en el Palexco de A Coruña, reuniendo a 600 profesionales del marketing digital en torno a la inteligencia artificial, el SEO y el emprendimiento online. El evento, organizado por Raiola Networks, incluyó ocho ponencias y dos mesas redondas con 15 especialistas del sector.\nWhy it matters?\nWhy it matters: ¿Hace falta un lugar icónico o una gran estrella para llenar un evento de marketing, o basta con clavar el tema exacto que tu audiencia necesita ahora mismo?\nCC take\nCC TAKE: 600 marketers picked SEO and AI over a Saturday off. That's your positioning lesson right there.\nCopy out + CTA\nNueve ediciones después, la RMC se consolida como la cita de marketing digital más grande de Galicia. ¿Conoces algún evento regional similar que esté ganando terreno frente a los grandes congresos nacionales?\nConsejo muy Armi\nConsejo muy Armi: si organizas eventos para clientes fuera de Madrid o Barcelona, usa el caso RMC como argumento: un evento regional bien enfocado en un tema de nicho puede atraer tanto talento y visibilidad como uno nacional genérico, con una fracción del presupuesto.">📋 <span class="i18n-fr">Copier</span><span class="i18n-es">Copiar</span></button>
+        </div>
+      </div>
+    </div>
+    <div class="card-btn-row">
+      <button class="card-toggle" type="button" aria-hidden="true"><span class="card-toggle-label"><span><span class="i18n-fr">Voir plus</span><span class="i18n-es">Ver más</span></span></span> <span class="chevron">▾</span></button>
+      <button class="card-social-toggle" type="button"><span><span class="i18n-fr">📱 Copy réseaux</span><span class="i18n-es">📱 Copy redes</span></span></button>
+    </div>
+  </div>
+</article>
+</div>
   </section>
 
   <section class="quicklinks">
@@ -563,7 +721,6 @@ body.lang-es .i18n-es.block{display:block;}
   </footer>
 </main>
 
-<script>
 <script>
 
 (function(){
@@ -737,6 +894,42 @@ body.lang-es .i18n-es.block{display:block;}
     startAutoplay();
   }
 
+  // ----- Scroll reveal (motion-safe) -----
+  (function(){
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    if (!('IntersectionObserver' in window)) return;
+    var groups = Array.prototype.slice.call(document.querySelectorAll('.card-grid, .top5-grid'));
+    groups.forEach(function(group){
+      Array.prototype.slice.call(group.children).forEach(function(el, i){
+        el.classList.add('reveal-init');
+        el.style.transitionDelay = (i * 70) + 'ms';
+      });
+    });
+    Array.prototype.slice.call(document.querySelectorAll('.carousel-section, .quicklinks')).forEach(function(el){
+      el.classList.add('reveal-init');
+    });
+    var observer = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if (entry.isIntersecting){
+          entry.target.classList.add('reveal-in');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {threshold:.12, rootMargin:'0px 0px -40px 0px'});
+    Array.prototype.slice.call(document.querySelectorAll('.reveal-init')).forEach(function(el){ observer.observe(el); });
+  })();
+
+  // ----- Sticky header blur on scroll -----
+  (function(){
+    var controlsBar = document.querySelector('.controls');
+    if (!controlsBar) return;
+    function onControlsScroll(){
+      controlsBar.classList.toggle('is-scrolled', (window.scrollY || document.documentElement.scrollTop) > 8);
+    }
+    window.addEventListener('scroll', onControlsScroll, { passive: true });
+    onControlsScroll();
+  })();
+
   // ----- FR / ES language toggle -----
   var currentLang = 'fr';
   try { if (localStorage.getItem('veille-lang') === 'es') currentLang = 'es'; } catch(e){}
@@ -757,17 +950,24 @@ body.lang-es .i18n-es.block{display:block;}
     if (searchInput && I18N_UI[lang]) searchInput.setAttribute('placeholder', I18N_UI[lang].searchPlaceholder);
     if (save) { try { localStorage.setItem('veille-lang', lang); } catch(e){} }
   }
+  function switchLang(lang, save){
+    var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduced) { applyLang(lang, save); return; }
+    document.body.classList.add('lang-fade');
+    setTimeout(function(){
+      applyLang(lang, save);
+      requestAnimationFrame(function(){ document.body.classList.remove('lang-fade'); });
+    }, 150);
+  }
   if (langToggleBtn) {
     langToggleBtn.addEventListener('click', function(){
-      applyLang(currentLang === 'es' ? 'fr' : 'es', true);
+      switchLang(currentLang === 'es' ? 'fr' : 'es', true);
     });
   }
   applyLang(currentLang, false);
 
   applyFilters();
 })();
-
-</script>
 
 </script>
 </body>
