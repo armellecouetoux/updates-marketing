@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Newsletter &#8212; Veille Branding &amp; Marketing &#8212; 1er octobre 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+
+:root{
+  --bg:#F3EDE2; --panel:#FBF8F2; --panel-line:#E4DACB; --ink:#2B2621; --ink-soft:#7A7167;
+  --accent:#B27A50; --accent-soft:#DCC7AE; --dark:#2B2621;
+  --font:'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+}
+*{box-sizing:border-box;}
+html,body{margin:0;padding:0;}
+body{background:var(--bg); color:var(--ink); font-family:var(--font); font-weight:400; line-height:1.55; -webkit-font-smoothing:antialiased;}
+.toolbar{max-width:600px; margin:0 auto; padding:16px 20px 0; display:flex; align-items:center; justify-content:flex-end; gap:10px;}
+#copy-btn{font-family:var(--font); font-weight:700; font-size:13px; color:#fff; background:var(--accent); border:none; border-radius:999px; padding:10px 18px; cursor:pointer; transition:transform .15s ease;}
+#copy-btn:hover{transform:translateY(-2px);}
+#copy-btn.copied{background:var(--dark);}
+.lang-toggle{font-family:var(--font); font-weight:600; font-size:12.5px; color:var(--ink); background:var(--panel); border:1px solid var(--panel-line); border-radius:999px; padding:9px 16px; cursor:pointer; white-space:nowrap; display:inline-flex; align-items:center; gap:6px;}
+.lang-toggle-fr,.lang-toggle-es{opacity:.5;}
+.lang-toggle-fr.active,.lang-toggle-es.active{opacity:1; font-weight:800; color:var(--accent);}
+.email-wrap{max-width:600px; margin:0 auto; padding:20px;}
+.email{background:var(--panel); border-radius:14px; overflow:hidden; border:1px solid var(--panel-line);}
+.email-header{background:var(--dark); color:#F3EDE2; padding:34px 28px;}
+.eyebrow{font-family:var(--font); font-weight:700; letter-spacing:.1em; text-transform:uppercase; font-size:11px; color:var(--accent-soft); margin:0 0 10px;}
+.email-header h1{font-family:var(--font); font-weight:800; font-size:23px; line-height:1.28; margin:0 0 10px;}
+.email-header p{font-size:13.5px; color:#D9CFC0; margin:0;}
+.email-body{padding:28px;}
+.intro{font-size:14.5px; color:var(--ink); margin:0 0 26px; line-height:1.6;}
+.section-label{font-family:var(--font); font-weight:800; font-size:12px; letter-spacing:.06em; text-transform:uppercase; color:var(--ink); margin:0 0 16px;}
+.item{padding:0 0 20px; margin:0 0 20px; border-bottom:1px solid var(--panel-line);}
+.item:last-child{border-bottom:none; margin-bottom:0; padding-bottom:0;}
+.item-num{display:inline-flex; align-items:center; justify-content:center; width:22px; height:22px; border-radius:50%; background:var(--accent); color:#fff; font-family:var(--font); font-weight:800; font-size:11.5px; margin-right:8px; vertical-align:middle;}
+.item h3{font-family:var(--font); font-weight:700; font-size:16px; margin:0 0 6px; color:var(--ink); display:inline;}
+.item p{font-size:13.5px; color:var(--ink); margin:8px 0 8px; line-height:1.55;}
+.item a.src{font-family:var(--font); font-weight:700; font-size:12.5px; color:var(--accent); text-decoration:none; border-bottom:1px solid var(--accent-soft);}
+.cta-row{text-align:center; margin:30px 0 6px;}
+.cta{display:inline-block; font-family:var(--font); font-weight:700; font-size:13.5px; color:#fff; background:var(--dark); text-decoration:none; border-radius:999px; padding:12px 24px;}
+.email-footer{background:var(--bg); padding:20px 28px; text-align:center; color:var(--ink-soft); font-size:12px;}
+.email-footer p{margin:4px 0;}
+.email-footer a{color:var(--accent);}
+@media (max-width:480px){ .email-header{padding:26px 20px;} .email-body{padding:20px;} .email-footer{padding:16px 20px;} }
+.i18n-es{display:none;}
+body.lang-es .i18n-fr{display:none;}
+body.lang-es .i18n-es{display:inline;}
+
+/* --- Micro-interactions & scroll-reveal (motion-safe) --- */
+.email{transition:opacity .15s ease;}
+body.lang-fade .email{opacity:.45;}
+.item a.src{transition:color .18s ease, border-color .18s ease;}
+.cta{transition:transform .2s cubic-bezier(.25,.8,.25,1), background-color .2s ease;}
+.cta:hover{transform:translateY(-2px);}
+@media (prefers-reduced-motion: no-preference){
+  .reveal-init{opacity:0; transform:translateY(16px); transition:opacity .45s ease-out, transform .45s ease-out;}
+  .reveal-init.reveal-in{opacity:1; transform:translateY(0);}
+}
+@media (prefers-reduced-motion: reduce){
+  .email, .item a.src, .cta{transition:none !important;}
+}
+
+</style>
+</head>
+<body>
+
+<div class="toolbar">
+  <button id="lang-toggle" class="lang-toggle" type="button" aria-label="Cambiar idioma"><span class="lang-toggle-fr active">&#x1F1EB;&#x1F1F7; FR</span><span>&#183;</span><span class="lang-toggle-es">&#x1F1EA;&#x1F1F8; ES</span></button>
+  <button id="copy-btn" type="button"><span class="copy-btn-label"><span><span class="i18n-fr">&#128203; Copier le texte</span><span class="i18n-es">&#128203; Copiar el texto</span></span></span></button>
+</div>
+
+<div class="email-wrap">
+  <div class="email" id="email-content">
+
+    <div class="email-header">
+      <p class="eyebrow"><span><span class="i18n-fr">Veille Branding &#183; Marketing &#183; Exp&#233;rience de marque</span><span class="i18n-es">Vigilancia de Branding &#183; Marketing &#183; Experiencia de marca</span></span></p>
+      <h1><span><span class="i18n-fr">IKEA souffle ses 30 bougies, Disney envahit Málaga et le pop-up devient permanent</span><span class="i18n-es">IKEA sopla sus 30 velas, Disney invade Málaga y el pop-up se vuelve permanente</span></span></h1>
+      <p><span><span class="i18n-fr">1er octobre 2026 &#183; P&#233;riode du 29 septembre au 1er octobre 2026 &#8212; l&#8217;essentiel en 5 actus, &#224; lire en 2 minutes.</span><span class="i18n-es">1 de octubre de 2026 &#183; Per&#237;odo del 29 de septiembre al 1 de octubre de 2026 &#8212; lo esencial en 5 noticias, para leer en 2 minutos.</span></span></p>
+    </div>
+
+    <div class="email-body">
+      <p class="intro"><span><span class="i18n-fr">Sur ces trois derniers jours&#160;: IKEA f&#234;te ses 30 ans en Espagne avec une campagne 100&#160;% &#233;motion, l&#8217;&#233;v&#233;nement &#171;&#160;Hoy Es Marketing&#160;&#187; r&#233;unit CUPRA, Google et MediaMarkt &#224; Valence, Jean Paul Gaultier transforme le Marais en parcours sensoriel, Disney d&#233;ploie Star Wars &#224; la Comic-Con de M&#225;laga et NikeSKIMS ouvre son plus grand pop-up &#224; Shanghai. Le rapport complet est en un clic ci-dessous.</span><span class="i18n-es">En estos &#250;ltimos tres d&#237;as: IKEA celebra sus 30 a&#241;os en Espa&#241;a con una campa&#241;a 100% emoci&#243;n, el evento &#171;Hoy Es Marketing&#187; re&#250;ne a CUPRA, Google y MediaMarkt en Valencia, Jean Paul Gaultier transforma el Marais en un recorrido sensorial, Disney despliega Star Wars en la Comic-Con de M&#225;laga y NikeSKIMS abre su pop-up m&#225;s grande en Shangh&#225;i. El informe completo est&#225; a un clic m&#225;s abajo.</span></span></p>
+      <p class="section-label"><span><span class="i18n-fr">&#127942; Le Top 5 de la p&#233;riode</span><span class="i18n-es">&#127942; El Top 5 del per&#237;odo</span></span></p>
+      <div class="item">
+        <h3><span class="item-num">1</span><span><span class="i18n-fr">IKEA fête ses 30 ans en Espagne avec « Viva el poder del hogar »</span><span class="i18n-es">IKEA celebra sus 30 años en España con «Viva el poder del hogar»</span></span></h3>
+        <p><span><span class="i18n-fr">Le 30 septembre, IKEA a lancé en Espagne la campagne « Viva el poder del hogar » pour célébrer les 30 ans de l&#x27;ouverture de ses deux premiers magasins dans la péninsule. La marque suédoise capitalise sur trois décennies de présence pour réaffirmer le rôle du foyer comme espace de transformation personnelle.</span><span class="i18n-es">El 30 de septiembre, IKEA lanzó en España la campaña «Viva el poder del hogar» para celebrar los 30 años de la apertura de sus dos primeras tiendas en la península. La marca sueca capitaliza tres décadas de presencia para reafirmar el papel del hogar como espacio de transformación personal.</span></span></p>
+        <a class="src" href="https://dircomfidencial.com/marketing/ikea-celebra-los-30-anos-de-su-primer-anuncio-en-espana-20260930-0403/" target="_blank" rel="noopener noreferrer"><span><span class="i18n-fr">Lire la source (Dircomfidencial) &#8594;</span><span class="i18n-es">Leer la fuente (Dircomfidencial) &#8594;</span></span></a>
+      </div>
+      <div class="item">
+        <h3><span class="item-num">2</span><span><span class="i18n-fr">« Hoy Es Marketing » réunit CUPRA, Google et MediaMarkt à Valence pour juger le marketing</span><span class="i18n-es">«Hoy Es Marketing» reúne a CUPRA, Google y MediaMarkt en Valencia para juzgar al marketing</span></span></h3>
+        <p><span><span class="i18n-fr">L&#x27;événement « Hoy Es Marketing », organisé par ESIC, s&#x27;est tenu le 30 septembre à La Rambleta de Valence sous le thème « Le marketing sera jugé ». Patrick Sievers (CUPRA), Clara Vila (Froneri Iberia) et Marta Domínguez (MediaMarkt Espagne) y ont partagé un regard critique sur la discipline, bousculée par l&#x27;IA et la fragmentation des audiences.</span><span class="i18n-es">El evento «Hoy Es Marketing», organizado por ESIC, se celebró el 30 de septiembre en La Rambleta de Valencia bajo el lema «El marketing será juzgado». Patrick Sievers (CUPRA), Clara Vila (Froneri Iberia) y Marta Domínguez (MediaMarkt España) compartieron una mirada crítica sobre la disciplina, sacudida por la IA y la fragmentación de audiencias.</span></span></p>
+        <a class="src" href="https://www.esic.edu/noticias/hoy-es-marketing-reune-en-valencia-grandes-marcas-para-analizar-los-retos-actuales-del" target="_blank" rel="noopener noreferrer"><span><span class="i18n-fr">Lire la source (ESIC) &#8594;</span><span class="i18n-es">Leer la fuente (ESIC) &#8594;</span></span></a>
+      </div>
+      <div class="item">
+        <h3><span class="item-num">3</span><span><span class="i18n-fr">Jean Paul Gaultier transforme le Marais en parcours sensoriel gratuit</span><span class="i18n-es">Jean Paul Gaultier transforma el Marais en un recorrido sensorial gratuito</span></span></h3>
+        <p><span><span class="i18n-fr">Du 1er au 3 octobre, la Maison Jean Paul Gaultier installe à Lafayette Anticipations (Marais, Paris) une expérience sensorielle gratuite et sans réservation autour de son nouveau parfum féminin. Le parcours recrée une rue parisienne imaginée par Gaultier et Francis Menuge, avec buraliste, fleuriste, gantier et chocolatier, chaque étape incarnant une facette du parfum.</span><span class="i18n-es">Del 1 al 3 de octubre, la Maison Jean Paul Gaultier instala en Lafayette Anticipations (Marais, París) una experiencia sensorial gratuita y sin reserva en torno a su nuevo perfume femenino. El recorrido recrea una calle parisina imaginada por Gaultier y Francis Menuge, con estanco, florista, guantero y chocolatero, cada parada encarnando una faceta del perfume.</span></span></p>
+        <a class="src" href="https://www.sortiraparis.com/en/what-to-do-in-paris/shopping-fashion/articles/352897-jean-paul-gaultier-brings-a-free-sensory-experience-centered-on-its-perfume-to-paris-landing-in-le-marais" target="_blank" rel="noopener noreferrer"><span><span class="i18n-fr">Lire la source (Sortiraparis) &#8594;</span><span class="i18n-es">Leer la fuente (Sortiraparis) &#8594;</span></span></a>
+      </div>
+      <div class="item">
+        <h3><span class="item-num">4</span><span><span class="i18n-fr">San Diego Comic-Con Málaga ouvre ses portes avec Disney et Star Wars comme alliés</span><span class="i18n-es">San Diego Comic-Con Málaga abre sus puertas con Disney y Star Wars como aliados</span></span></h3>
+        <p><span><span class="i18n-fr">La deuxième édition de San Diego Comic-Con Málaga se tient du 1er au 4 octobre au FYCMA, avec plus de 300 heures de contenu sur 90 000 m² et jusqu&#x27;à 22 500 visiteurs par jour. Disney, partenaire principal de cette édition, y déploie ses univers Star Wars, aux côtés d&#x27;invités comme Karl Urban (The Boys).</span><span class="i18n-es">La segunda edición de San Diego Comic-Con Málaga se celebra del 1 al 4 de octubre en el FYCMA, con más de 300 horas de contenido en 90.000 m² y hasta 22.500 visitantes por día. Disney, socio principal de esta edición, despliega sus universos de Star Wars, junto a invitados como Karl Urban (The Boys).</span></span></p>
+        <a class="src" href="https://www.ecartelera.com/noticias/san-diego-comic-malaga-2026-detalles-83604/" target="_blank" rel="noopener noreferrer"><span><span class="i18n-fr">Lire la source (eCartelera) &#8594;</span><span class="i18n-es">Leer la fuente (eCartelera) &#8594;</span></span></a>
+      </div>
+      <div class="item">
+        <h3><span class="item-num">5</span><span><span class="i18n-fr">NikeSKIMS ouvre son premier magasin physique, un pop-up géant à Shanghai</span><span class="i18n-es">NikeSKIMS abre su primera tienda física, un pop-up gigante en Shanghái</span></span></h3>
+        <p><span><span class="i18n-fr">NikeSKIMS a ouvert le 29 septembre son premier espace physique en Chine continentale, un pop-up au HKRI Taikoo Hui de Shanghai qui restera ouvert jusqu&#x27;en février 2027 — son plus grand et plus long pop-up à ce jour. Kim Kardashian, Kris Jenner et Khloé Kardashian ont participé au lancement, aux côtés de célébrités chinoises.</span><span class="i18n-es">NikeSKIMS abrió el 29 de septiembre su primer espacio físico en China continental, un pop-up en el HKRI Taikoo Hui de Shanghái que permanecerá abierto hasta febrero de 2027 — su pop-up más grande y de mayor duración hasta la fecha. Kim Kardashian, Kris Jenner y Khloé Kardashian participaron en el lanzamiento, junto a celebridades chinas.</span></span></p>
+        <a class="src" href="https://luxe.digital/news/nikeskims-opens-first-china-store/" target="_blank" rel="noopener noreferrer"><span><span class="i18n-fr">Lire la source (Luxe Digital) &#8594;</span><span class="i18n-es">Leer la fuente (Luxe Digital) &#8594;</span></span></a>
+      </div>
+
+      <div class="cta-row">
+        <a class="cta" href="../reports/veille-2026-10-01.html"><span><span class="i18n-fr">Lire le rapport complet (12 actus) &#8594;</span><span class="i18n-es">Leer el informe completo (12 noticias) &#8594;</span></span></a>
+      </div>
+    </div>
+
+    <div class="email-footer">
+      <p><span><span class="i18n-fr">Veille personnelle &#8212; branding, marketing, activation de marque. Espagne &amp; Europe.</span><span class="i18n-es">Vigilancia personal &#8212; branding, marketing, activaci&#243;n de marca. Espa&#241;a y Europa.</span></span></p>
+      <p><span><span class="i18n-fr">&#201;dition du 1er octobre 2026</span><span class="i18n-es">Edici&#243;n del 1 de octubre de 2026</span></span> &#183; <a href="../archive.html"><span><span class="i18n-fr">Voir toutes les archives</span><span class="i18n-es">Ver todos los archivos</span></span></a></p>
+    </div>
+
+  </div>
+</div>
+
+<script>
+
+(function(){
+  "use strict";
+  var btn = document.getElementById('copy-btn');
+  var content = document.getElementById('email-content');
+
+  // ----- Scroll reveal (motion-safe) -----
+  (function(){
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    if (!('IntersectionObserver' in window)) return;
+    var items = Array.prototype.slice.call(document.querySelectorAll('.item'));
+    items.forEach(function(el, i){
+      el.classList.add('reveal-init');
+      el.style.transitionDelay = (i * 70) + 'ms';
+    });
+    var observer = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if (entry.isIntersecting){
+          entry.target.classList.add('reveal-in');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {threshold:.12, rootMargin:'0px 0px -40px 0px'});
+    items.forEach(function(el){ observer.observe(el); });
+  })();
+
+  var currentLang = 'fr';
+  try { if (localStorage.getItem('veille-lang') === 'es') currentLang = 'es'; } catch(e){}
+  var langToggleBtn = document.getElementById('lang-toggle');
+  var copyLabel = btn ? btn.querySelector('.copy-btn-label') : null;
+  var I18N = {
+    fr: { copy: '📋 Copier le texte', copied: '✅ Copié !', failed: '⚠️ Sélectionnez et copiez manuellement' },
+    es: { copy: '📋 Copiar el texto', copied: '✅ ¡Copiado!', failed: '⚠️ Selecciona y copia manualmente' }
+  };
+  function applyLang(lang, save){
+    currentLang = lang;
+    document.body.classList.toggle('lang-es', lang === 'es');
+    if (langToggleBtn) {
+      var frSpan = langToggleBtn.querySelector('.lang-toggle-fr');
+      var esSpan = langToggleBtn.querySelector('.lang-toggle-es');
+      if (frSpan) frSpan.classList.toggle('active', lang === 'fr');
+      if (esSpan) esSpan.classList.toggle('active', lang === 'es');
+    }
+    if (save) { try { localStorage.setItem('veille-lang', lang); } catch(e){} }
+  }
+  function switchLang(lang, save){
+    var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduced) { applyLang(lang, save); return; }
+    document.body.classList.add('lang-fade');
+    setTimeout(function(){
+      applyLang(lang, save);
+      requestAnimationFrame(function(){ document.body.classList.remove('lang-fade'); });
+    }, 150);
+  }
+  if (langToggleBtn) {
+    langToggleBtn.addEventListener('click', function(){ switchLang(currentLang === 'es' ? 'fr' : 'es', true); });
+  }
+  applyLang(currentLang, false);
+  if (!btn || !content) return;
+  btn.addEventListener('click', function(){
+    var text = content.innerText;
+    function done(ok){
+      if (copyLabel) copyLabel.textContent = ok ? I18N[currentLang].copied : I18N[currentLang].failed;
+      btn.classList.toggle('copied', ok);
+      setTimeout(function(){
+        if (copyLabel) copyLabel.innerHTML = '<span class="i18n-fr">📋 Copier le texte</span><span class="i18n-es">📋 Copiar el texto</span>';
+        btn.classList.remove('copied');
+      }, 2200);
+    }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(function(){ done(true); }, function(){ done(false); });
+    } else {
+      try {
+        var range = document.createRange();
+        range.selectNode(content);
+        var sel = window.getSelection();
+        sel.removeAllRanges();
+        sel.addRange(range);
+        var ok = document.execCommand('copy');
+        sel.removeAllRanges();
+        done(ok);
+      } catch (e) { done(false); }
+    }
+  });
+})();
+
+</script>
+
+</body>
+</html>
