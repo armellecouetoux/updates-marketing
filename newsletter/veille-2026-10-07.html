@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Newsletter — Veille Branding &amp; Marketing — 7 octobre 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+
+:root{
+  --bg:#F3EDE2; --panel:#FBF8F2; --panel-line:#E4DACB; --ink:#2B2621; --ink-soft:#7A7167;
+  --accent:#B27A50; --accent-soft:#DCC7AE; --dark:#2B2621;
+  --font:'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+}
+*{box-sizing:border-box;}
+html,body{margin:0;padding:0;}
+body{background:var(--bg); color:var(--ink); font-family:var(--font); font-weight:400; line-height:1.55; -webkit-font-smoothing:antialiased;}
+.toolbar{max-width:600px; margin:0 auto; padding:16px 20px 0; display:flex; align-items:center; justify-content:flex-end; gap:10px;}
+#copy-btn{font-family:var(--font); font-weight:700; font-size:13px; color:#fff; background:var(--accent); border:none; border-radius:999px; padding:10px 18px; cursor:pointer; transition:transform .15s ease;}
+#copy-btn:hover{transform:translateY(-2px);}
+#copy-btn.copied{background:var(--dark);}
+.lang-toggle{font-family:var(--font); font-weight:600; font-size:12.5px; color:var(--ink); background:var(--panel); border:1px solid var(--panel-line); border-radius:999px; padding:9px 16px; cursor:pointer; white-space:nowrap; display:inline-flex; align-items:center; gap:6px;}
+.lang-toggle-fr,.lang-toggle-es{opacity:.5;}
+.lang-toggle-fr.active,.lang-toggle-es.active{opacity:1; font-weight:800; color:var(--accent);}
+.email-wrap{max-width:600px; margin:0 auto; padding:20px;}
+.email{background:var(--panel); border-radius:14px; overflow:hidden; border:1px solid var(--panel-line);}
+.email-header{background:var(--dark); color:#F3EDE2; padding:34px 28px;}
+.eyebrow{font-family:var(--font); font-weight:700; letter-spacing:.1em; text-transform:uppercase; font-size:11px; color:var(--accent-soft); margin:0 0 10px;}
+.email-header h1{font-family:var(--font); font-weight:800; font-size:23px; line-height:1.28; margin:0 0 10px;}
+.email-header p{font-size:13.5px; color:#D9CFC0; margin:0;}
+.email-body{padding:28px;}
+.intro{font-size:14.5px; color:var(--ink); margin:0 0 26px; line-height:1.6;}
+.section-label{font-family:var(--font); font-weight:800; font-size:12px; letter-spacing:.06em; text-transform:uppercase; color:var(--ink); margin:0 0 16px;}
+.item{padding:0 0 20px; margin:0 0 20px; border-bottom:1px solid var(--panel-line);}
+.item:last-child{border-bottom:none; margin-bottom:0; padding-bottom:0;}
+.item-num{display:inline-flex; align-items:center; justify-content:center; width:22px; height:22px; border-radius:50%; background:var(--accent); color:#fff; font-family:var(--font); font-weight:800; font-size:11.5px; margin-right:8px; vertical-align:middle;}
+.item h3{font-family:var(--font); font-weight:700; font-size:16px; margin:0 0 6px; color:var(--ink); display:inline;}
+.item p{font-size:13.5px; color:var(--ink); margin:8px 0 8px; line-height:1.55;}
+.item a.src{font-family:var(--font); font-weight:700; font-size:12.5px; color:var(--accent); text-decoration:none; border-bottom:1px solid var(--accent-soft);}
+.cta-row{text-align:center; margin:30px 0 6px;}
+.cta{display:inline-block; font-family:var(--font); font-weight:700; font-size:13.5px; color:#fff; background:var(--dark); text-decoration:none; border-radius:999px; padding:12px 24px;}
+.email-footer{background:var(--bg); padding:20px 28px; text-align:center; color:var(--ink-soft); font-size:12px;}
+.email-footer p{margin:4px 0;}
+.email-footer a{color:var(--accent);}
+@media (max-width:480px){ .email-header{padding:26px 20px;} .email-body{padding:20px;} .email-footer{padding:16px 20px;} }
+.i18n-es{display:none;}
+body.lang-es .i18n-fr{display:none;}
+body.lang-es .i18n-es{display:inline;}
+
+/* --- Micro-interactions & scroll-reveal (motion-safe) --- */
+.email{transition:opacity .15s ease;}
+body.lang-fade .email{opacity:.45;}
+.item a.src{transition:color .18s ease, border-color .18s ease;}
+.cta{transition:transform .2s cubic-bezier(.25,.8,.25,1), background-color .2s ease;}
+.cta:hover{transform:translateY(-2px);}
+@media (prefers-reduced-motion: no-preference){
+  .reveal-init{opacity:0; transform:translateY(16px); transition:opacity .45s ease-out, transform .45s ease-out;}
+  .reveal-init.reveal-in{opacity:1; transform:translateY(0);}
+}
+@media (prefers-reduced-motion: reduce){
+  .email, .item a.src, .cta{transition:none !important;}
+}
+
+</style>
+
+</head>
+<body>
+
+<div class="toolbar">
+  <button id="lang-toggle" class="lang-toggle" type="button" aria-label="Cambiar idioma"><span class="lang-toggle-fr active">&#x1F1EB;&#x1F1F7; FR</span><span>·</span><span class="lang-toggle-es">&#x1F1EA;&#x1F1F8; ES</span></button>
+  <button id="copy-btn" type="button"><span class="copy-btn-label"><span><span class="i18n-fr">&#128203; Copier le texte</span><span class="i18n-es">&#128203; Copiar el texto</span></span></span></button>
+</div>
+
+<div class="email-wrap">
+  <div class="email" id="email-content">
+
+    <div class="email-header">
+      <p class="eyebrow"><span><span class="i18n-fr">Veille Branding · Marketing · Expérience de marque</span><span class="i18n-es">Vigilancia de Branding · Marketing · Experiencia de marca</span></span></p>
+      <h1><span><span class="i18n-fr">Les élections plombent la pub espagnole, les créateurs décrochent 100 M$ et Séoul s'installe à Paris</span><span class="i18n-es">Las elecciones frenan la publicidad, los creadores logran 100 M$ y Seúl aterriza en París</span></span></h1>
+      <p><span><span class="i18n-fr">7 octobre 2026 · Période du 5 au 7 octobre 2026 — l'essentiel en 5 actus, à lire en 2 minutes.</span><span class="i18n-es">7 de octubre de 2026 · Período del 5 al 7 de octubre de 2026 — lo esencial en 5 noticias, para leer en 2 minutos.</span></span></p>
+    </div>
+
+    <div class="email-body">
+      <p class="intro"><span><span class="i18n-fr">Sur ces trois derniers jours : les élections générales du 29 novembre gèlent 2 Md€ d'investissement publicitaire institutionnel, Advertising Week New York rouvre sous pavillon Apollo avec le défi à 100 M$ de Dhar Mann entre créateurs et marques, l'Espagne rafle 42 métaux aux FIAP 2026 (LLYC en tête), les Galeries Lafayette accueillent un pop-up dédié à la mode coréenne et 850 responsables de l'expérience client se retrouvent à Amsterdam. Le rapport complet est à un clic ci-dessous.</span><span class="i18n-es">En estos últimos tres días: las elecciones generales del 29 de noviembre congelan 2.000 M€ de inversión publicitaria institucional, Advertising Week New York reabre bajo el paraguas de Apollo con el reto de 100 M$ entre creadores y marcas de Dhar Mann, España arrasa con 42 metales en los FIAP 2026 (LLYC a la cabeza), Galeries Lafayette estrena un pop-up dedicado a la moda coreana y 850 responsables de experiencia de cliente se citan en Ámsterdam. El informe completo está a un clic más abajo.</span></span></p>
+      <p class="section-label"><span><span class="i18n-fr">&#127942; Le Top 5 de la période</span><span class="i18n-es">&#127942; El Top 5 del período</span></span></p>
+      <div class="item">
+        <h3><span class="item-num">1</span><span><span class="i18n-fr">Les élections dans l'urne, 2 Md€ de pub en suspens</span><span class="i18n-es">Las elecciones en la urna, 2.000 M€ de publicidad en vilo</span></span></h3>
+        <p><span><span class="i18n-fr">Les élections générales convoquées pour le 29 novembre tombent à l'un des pires moments possibles pour les médias : l'investissement publicitaire du dernier trimestre — l'Administration générale de l'État étant le premier annonceur d'Espagne — avoisine les 2 Md€, plus qu'à n'importe quel autre trimestre de l'année. Pendant la période électorale, le gouvernement ne pourra diffuser de campagnes, sauf celles déclarées d'intérêt général.</span><span class="i18n-es">Las elecciones generales convocadas para el 29 de noviembre llegan en uno de los peores momentos posibles para los medios: la inversión publicitaria del último trimestre —la Administración General del Estado es el mayor anunciante de España— ronda los 2.000 M€, más que en cualquier otro trimestre del año. Durante el periodo electoral, el Gobierno no podrá emitir campañas salvo las declaradas de interés general.</span></span></p>
+        <a class="src" href="https://dircomfidencial.com/marketing/las-elecciones-dejan-en-el-aire-2-000-me-de-inversion-publicitaria-en-medios-20261006-0405/" target="_blank" rel="noopener noreferrer"><span><span class="i18n-fr">Lire la source (Dircomfidencial) →</span><span class="i18n-es">Leer la fuente (Dircomfidencial) →</span></span></a>
+      </div>
+      <div class="item">
+        <h3><span class="item-num">2</span><span><span class="i18n-fr">L'Espagne, pays le plus primé des FIAP 2026, LLYC en tête</span><span class="i18n-es">LLYC lidera el palmarés español en los FIAP 2026 con 11 metales</span></span></h3>
+        <p><span><span class="i18n-fr">L'Espagne se consacre pays le plus primé du FIAP (Festival Ibéro-américain de la Créativité) 2026, avec 42 métaux au total. LLYC mène le palmarès espagnol avec 11 métaux, dont 10 pour « Sosegá », de Cervezas Alhambra — qui devient la campagne espagnole la plus primée du festival — plus un argent supplémentaire pour « Resistiré », d'Adolfo Domínguez.</span><span class="i18n-es">España se consagra como el país más premiado del FIAP (Festival Iberoamericano de la Creatividad) 2026, con 42 metales en total. LLYC encabeza el palmarés español con 11 metales, la mayoría (10) gracias a «Sosegá», de Cervezas Alhambra, que se convierte en la campaña española más premiada del festival, más una plata adicional por «Resistiré», de Adolfo Domínguez.</span></span></p>
+        <a class="src" href="https://prnoticias.com/2026/10/06/llyc-lidera-el-palmares-espanol-en-los-fiap-2026/" target="_blank" rel="noopener noreferrer"><span><span class="i18n-fr">Lire la source (PRNoticias) →</span><span class="i18n-es">Leer la fuente (PRNoticias) →</span></span></a>
+      </div>
+      <div class="item">
+        <h3><span class="item-num">3</span><span><span class="i18n-fr">850 pros de la relation client réunis à Amsterdam</span><span class="i18n-es">Customer Contact Week Europe reúne a 850 líderes de experiencia de cliente en Ámsterdam</span></span></h3>
+        <p><span><span class="i18n-fr">Le sommet CCW Europe revient à Amsterdam du 5 au 7 octobre, avec plus de 850 participants, 250 intervenants et 125 sessions réparties sur trois jours ; des marques comme Booking.com, Decathlon, Philips, ABN AMRO ou Mercedes-Benz y partagent comment elles équilibrent IA et automatisation avec un service à touche humaine.</span><span class="i18n-es">La cumbre CCW Europe regresa a Ámsterdam del 5 al 7 de octubre, con más de 850 asistentes, 250 ponentes y 125 sesiones repartidas en tres días, con marcas como Booking.com, Decathlon, Philips, ABN AMRO o Mercedes-Benz compartiendo cómo equilibran la IA y la automatización con un servicio con toque humano.</span></span></p>
+        <a class="src" href="https://www.cmswire.com/events/conference/customer-contact-week-europe-amsterdam-2026/" target="_blank" rel="noopener noreferrer"><span><span class="i18n-fr">Lire la source (CMSWire) →</span><span class="i18n-es">Leer la fuente (CMSWire) →</span></span></a>
+      </div>
+      <div class="item">
+        <h3><span class="item-num">4</span><span><span class="i18n-fr">La mode coréenne investit les Galeries Lafayette à Paris</span><span class="i18n-es">«Meet Your Seoul»: la moda coreana aterriza en Galeries Lafayette París</span></span></h3>
+        <p><span><span class="i18n-fr">Du 6 au 27 octobre, les Galeries Lafayette Haussmann accueillent « Meet Your Seoul », un pop-up entièrement dédié à cinq marques émergentes de la mode coréenne (dont KIMHĒKIM et RE RHÉE), organisé avec l'agence sud-coréenne KOCCA et le groupe The Hyundai, à l'occasion du 140ᵉ anniversaire des relations diplomatiques entre la France et la Corée du Sud.</span><span class="i18n-es">Del 6 al 27 de octubre, Galeries Lafayette Haussmann acoge «Meet Your Seoul», un pop-up 100% dedicado a cinco marcas emergentes de la moda coreana (entre ellas KIMHĒKIM y RE RHÉE), organizado junto a la agencia surcoreana KOCCA y el grupo The Hyundai, coincidiendo con el 140º aniversario de las relaciones diplomáticas entre Francia y Corea del Sur.</span></span></p>
+        <a class="src" href="https://www.sortiraparis.com/en/what-to-do-in-paris/shopping-fashion/articles/352457-meet-your-seoul-lak-fashion-s-installation-at-galeries-lafayette-haussmann-in-paris" target="_blank" rel="noopener noreferrer"><span><span class="i18n-fr">Lire la source (Sortir à Paris) →</span><span class="i18n-es">Leer la fuente (Sortir à Paris) →</span></span></a>
+      </div>
+      <div class="item">
+        <h3><span class="item-num">5</span><span><span class="i18n-fr">Dhar Mann lance un défi créateurs-marques à 100 M$</span><span class="i18n-es">Advertising Week lanza un reto de 100 M$ entre creadores y marcas de la mano de Dhar Mann</span></span></h3>
+        <p><span><span class="i18n-fr">Advertising Week New York nomme le créateur Dhar Mann son premier « chief creator officer » et lance le « 100 Million Dollar Creator Challenge » : quatre jours de programmation visant à conclure de vraies affaires entre créateurs et marques. Le 6 octobre, « Creator Karaoke » (présenté par Christina Milian et Julianne Hough) associe 25 créateurs à 25 dirigeants de marque via des performances musicales ; le 7 octobre, « Creator Omakase » réunit créateurs et marques lors d'un dîner intimiste avec Rick Ross, où les marques cèdent le contrôle créatif. Plus de 2 500 créateurs sont attendus, contre environ 1 000 en 2025.</span><span class="i18n-es">Advertising Week New York nombra al creador Dhar Mann su primer "chief creator officer" y lanza el "100 Million Dollar Creator Challenge": cuatro días de programación que buscan cerrar negocios reales entre creadores y marcas. El 6 de octubre, "Creator Karaoke" (presentado por Christina Milian y Julianne Hough) empareja a 25 creadores con 25 directivos de marca a través de actuaciones musicales; el 7 de octubre, "Creator Omakase" junta a creadores y marcas en una cena íntima con Rick Ross donde las marcas ceden el control creativo. Se esperan más de 2.500 creadores, frente a unos 1.000 en 2025.</span></span></p>
+        <a class="src" href="https://www.thedrum.com/news/advertising-week-sets-100m-creator-brand-dealmaking-target-with-dhar-mann" target="_blank" rel="noopener noreferrer"><span><span class="i18n-fr">Lire la source (The Drum) →</span><span class="i18n-es">Leer la fuente (The Drum) →</span></span></a>
+      </div>
+
+      <div class="cta-row">
+        <a class="cta" href="../reports/veille-2026-10-07.html"><span><span class="i18n-fr">Lire le rapport complet (11 actus) →</span><span class="i18n-es">Leer el informe completo (11 noticias) →</span></span></a>
+      </div>
+    </div>
+
+    <div class="email-footer">
+      <p><span><span class="i18n-fr">Veille personnelle &#8212; branding, marketing, activation de marque. Espagne &amp; Europe.</span><span class="i18n-es">Vigilancia personal &#8212; branding, marketing, activación de marca. España y Europa.</span></span></p>
+      <p><span><span class="i18n-fr">&#201;dition du 7 octobre 2026</span><span class="i18n-es">Edición del 7 de octubre de 2026</span></span> · <a href="../archive.html"><span><span class="i18n-fr">Voir toutes les archives</span><span class="i18n-es">Ver todos los archivos</span></span></a></p>
+    </div>
+
+  </div>
+</div>
+<script>
+
+(function(){
+  "use strict";
+  var btn = document.getElementById('copy-btn');
+  var content = document.getElementById('email-content');
+
+  // ----- Scroll reveal (motion-safe) -----
+  (function(){
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    if (!('IntersectionObserver' in window)) return;
+    var items = Array.prototype.slice.call(document.querySelectorAll('.item'));
+    items.forEach(function(el, i){
+      el.classList.add('reveal-init');
+      el.style.transitionDelay = (i * 70) + 'ms';
+    });
+    var observer = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if (entry.isIntersecting){
+          entry.target.classList.add('reveal-in');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {threshold:.12, rootMargin:'0px 0px -40px 0px'});
+    items.forEach(function(el){ observer.observe(el); });
+  })();
+
+  var currentLang = 'fr';
+  try { if (localStorage.getItem('veille-lang') === 'es') currentLang = 'es'; } catch(e){}
+  var langToggleBtn = document.getElementById('lang-toggle');
+  var copyLabel = btn ? btn.querySelector('.copy-btn-label') : null;
+  var I18N = {
+    fr: { copy: '📋 Copier le texte', copied: '✅ Copié !', failed: '⚠️ Sélectionnez et copiez manuellement' },
+    es: { copy: '📋 Copiar el texto', copied: '✅ ¡Copiado!', failed: '⚠️ Selecciona y copia manualmente' }
+  };
+  function applyLang(lang, save){
+    currentLang = lang;
+    document.body.classList.toggle('lang-es', lang === 'es');
+    if (langToggleBtn) {
+      var frSpan = langToggleBtn.querySelector('.lang-toggle-fr');
+      var esSpan = langToggleBtn.querySelector('.lang-toggle-es');
+      if (frSpan) frSpan.classList.toggle('active', lang === 'fr');
+      if (esSpan) esSpan.classList.toggle('active', lang === 'es');
+    }
+    if (save) { try { localStorage.setItem('veille-lang', lang); } catch(e){} }
+  }
+  function switchLang(lang, save){
+    var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduced) { applyLang(lang, save); return; }
+    document.body.classList.add('lang-fade');
+    setTimeout(function(){
+      applyLang(lang, save);
+      requestAnimationFrame(function(){ document.body.classList.remove('lang-fade'); });
+    }, 150);
+  }
+  if (langToggleBtn) {
+    langToggleBtn.addEventListener('click', function(){ switchLang(currentLang === 'es' ? 'fr' : 'es', true); });
+  }
+  applyLang(currentLang, false);
+  if (!btn || !content) return;
+  btn.addEventListener('click', function(){
+    var text = content.innerText;
+    function done(ok){
+      if (copyLabel) copyLabel.textContent = ok ? I18N[currentLang].copied : I18N[currentLang].failed;
+      btn.classList.toggle('copied', ok);
+      setTimeout(function(){
+        if (copyLabel) copyLabel.innerHTML = '<span class="i18n-fr">📋 Copier le texte</span><span class="i18n-es">📋 Copiar el texto</span>';
+        btn.classList.remove('copied');
+      }, 2200);
+    }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(function(){ done(true); }, function(){ done(false); });
+    } else {
+      try {
+        var range = document.createRange();
+        range.selectNode(content);
+        var sel = window.getSelection();
+        sel.removeAllRanges();
+        sel.addRange(range);
+        var ok = document.execCommand('copy');
+        sel.removeAllRanges();
+        done(ok);
+      } catch (e) { done(false); }
+    }
+  });
+})();
+
+</script>
+
+</body>
+</html>
