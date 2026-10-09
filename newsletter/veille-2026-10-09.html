@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Newsletter — Veille Branding &amp; Marketing — 9 octobre 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+
+:root{
+  --bg:#F3EDE2; --panel:#FBF8F2; --panel-line:#E4DACB; --ink:#2B2621; --ink-soft:#7A7167;
+  --accent:#B27A50; --accent-soft:#DCC7AE; --dark:#2B2621;
+  --font:'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+}
+*{box-sizing:border-box;}
+html,body{margin:0;padding:0;}
+body{background:var(--bg); color:var(--ink); font-family:var(--font); font-weight:400; line-height:1.55; -webkit-font-smoothing:antialiased;}
+.toolbar{max-width:600px; margin:0 auto; padding:16px 20px 0; display:flex; align-items:center; justify-content:flex-end; gap:10px;}
+#copy-btn{font-family:var(--font); font-weight:700; font-size:13px; color:#fff; background:var(--accent); border:none; border-radius:999px; padding:10px 18px; cursor:pointer; transition:transform .15s ease;}
+#copy-btn:hover{transform:translateY(-2px);}
+#copy-btn.copied{background:var(--dark);}
+.lang-toggle{font-family:var(--font); font-weight:600; font-size:12.5px; color:var(--ink); background:var(--panel); border:1px solid var(--panel-line); border-radius:999px; padding:9px 16px; cursor:pointer; white-space:nowrap; display:inline-flex; align-items:center; gap:6px;}
+.lang-toggle-fr,.lang-toggle-es{opacity:.5;}
+.lang-toggle-fr.active,.lang-toggle-es.active{opacity:1; font-weight:800; color:var(--accent);}
+.email-wrap{max-width:600px; margin:0 auto; padding:20px;}
+.email{background:var(--panel); border-radius:14px; overflow:hidden; border:1px solid var(--panel-line);}
+.email-header{background:var(--dark); color:#F3EDE2; padding:34px 28px;}
+.eyebrow{font-family:var(--font); font-weight:700; letter-spacing:.1em; text-transform:uppercase; font-size:11px; color:var(--accent-soft); margin:0 0 10px;}
+.email-header h1{font-family:var(--font); font-weight:800; font-size:23px; line-height:1.28; margin:0 0 10px;}
+.email-header p{font-size:13.5px; color:#D9CFC0; margin:0;}
+.email-body{padding:28px;}
+.intro{font-size:14.5px; color:var(--ink); margin:0 0 26px; line-height:1.6;}
+.section-label{font-family:var(--font); font-weight:800; font-size:12px; letter-spacing:.06em; text-transform:uppercase; color:var(--ink); margin:0 0 16px;}
+.item{padding:0 0 20px; margin:0 0 20px; border-bottom:1px solid var(--panel-line);}
+.item:last-child{border-bottom:none; margin-bottom:0; padding-bottom:0;}
+.item-num{display:inline-flex; align-items:center; justify-content:center; width:22px; height:22px; border-radius:50%; background:var(--accent); color:#fff; font-family:var(--font); font-weight:800; font-size:11.5px; margin-right:8px; vertical-align:middle;}
+.item h3{font-family:var(--font); font-weight:700; font-size:16px; margin:0 0 6px; color:var(--ink); display:inline;}
+.item p{font-size:13.5px; color:var(--ink); margin:8px 0 8px; line-height:1.55;}
+.item a.src{font-family:var(--font); font-weight:700; font-size:12.5px; color:var(--accent); text-decoration:none; border-bottom:1px solid var(--accent-soft);}
+.cta-row{text-align:center; margin:30px 0 6px;}
+.cta{display:inline-block; font-family:var(--font); font-weight:700; font-size:13.5px; color:#fff; background:var(--dark); text-decoration:none; border-radius:999px; padding:12px 24px;}
+.email-footer{background:var(--bg); padding:20px 28px; text-align:center; color:var(--ink-soft); font-size:12px;}
+.email-footer p{margin:4px 0;}
+.email-footer a{color:var(--accent);}
+@media (max-width:480px){ .email-header{padding:26px 20px;} .email-body{padding:20px;} .email-footer{padding:16px 20px;} }
+.i18n-es{display:none;}
+body.lang-es .i18n-fr{display:none;}
+body.lang-es .i18n-es{display:inline;}
+
+/* --- Micro-interactions & scroll-reveal (motion-safe) --- */
+.email{transition:opacity .15s ease;}
+body.lang-fade .email{opacity:.45;}
+.item a.src{transition:color .18s ease, border-color .18s ease;}
+.cta{transition:transform .2s cubic-bezier(.25,.8,.25,1), background-color .2s ease;}
+.cta:hover{transform:translateY(-2px);}
+@media (prefers-reduced-motion: no-preference){
+  .reveal-init{opacity:0; transform:translateY(16px); transition:opacity .45s ease-out, transform .45s ease-out;}
+  .reveal-init.reveal-in{opacity:1; transform:translateY(0);}
+}
+@media (prefers-reduced-motion: reduce){
+  .email, .item a.src, .cta{transition:none !important;}
+}
+
+</style>
+
+</head>
+<body>
+
+<div class="toolbar">
+  <button id="lang-toggle" class="lang-toggle" type="button" aria-label="Cambiar idioma"><span class="lang-toggle-fr active">&#x1F1EB;&#x1F1F7; FR</span><span>·</span><span class="lang-toggle-es">&#x1F1EA;&#x1F1F8; ES</span></button>
+  <button id="copy-btn" type="button"><span class="copy-btn-label"><span><span class="i18n-fr">&#128203; Copier le texte</span><span class="i18n-es">&#128203; Copiar el texto</span></span></span></button>
+</div>
+
+<div class="email-wrap">
+  <div class="email" id="email-content">
+
+    <div class="email-header">
+      <p class="eyebrow"><span><span class="i18n-fr">Veille Branding · Marketing · Expérience de marque</span><span class="i18n-es">Vigilancia de Branding · Marketing · Experiencia de marca</span></span></p>
+      <h1><span><span class="i18n-fr">L'IA s'invite dans vos pubs, Biarritz interroge les marques et Gaultier transforme un parfum en jeu</span><span class="i18n-es">La IA se cuela en tus anuncios, Biarritz interroga a las marcas y Gaultier convierte un perfume en juego</span></span></h1>
+      <p><span><span class="i18n-fr">9 octobre 2026 · Période du 7 au 9 octobre 2026 — l'essentiel en 5 actus, à lire en 2 minutes.</span><span class="i18n-es">9 de octubre de 2026 · Período del 7 al 9 de octubre de 2026 — lo esencial en 5 noticias, para leer en 2 minutos.</span></span></p>
+    </div>
+
+    <div class="email-body">
+      <p class="intro"><span><span class="i18n-fr">Sur ces trois derniers jours&nbsp;: Meta teste une IA agentique capable de piloter seule une campagne dans Ads Manager, Biarritz réunit 460 décideurs autour de la question d'une marque sans contact direct avec son client, IQOS ouvre sa 2ᵉ boutique immersive en Espagne, Jean Paul Gaultier transforme son nouveau parfum en pop-up ludique à Paris et Telepizza mise sur l'humour pour lancer sa pizza-burger. Le rapport complet est à un clic ci-dessous.</span><span class="i18n-es">En estos últimos tres días&nbsp;: Meta prueba una IA agéntica capaz de pilotar sola una campaña en Ads Manager, Biarritz reúne a 460 decisores en torno a la pregunta de una marca sin contacto directo con su cliente, IQOS abre su segunda boutique inmersiva en España, Jean Paul Gaultier convierte su nuevo perfume en un pop-up lúdico en París y Telepizza apuesta por el humor para lanzar su pizza-burger. El informe completo está a un clic más abajo.</span></span></p>
+      <p class="section-label"><span><span class="i18n-fr">&#127942; Le Top 5 de la période</span><span class="i18n-es">&#127942; El Top 5 del período</span></span></p>
+      <div class="item">
+        <h3><span class="item-num">1</span><span><span class="i18n-fr">Meta lance une IA qui pilote vos pubs à votre place</span><span class="i18n-es">Meta lanza una IA que gestiona tus anuncios por ti</span></span></h3>
+        <p><span><span class="i18n-fr">Lors d'Advertising Week New York, Meta a annoncé l'arrivée d'une IA agentique dans Ads Manager&nbsp;: son assistant peut désormais créer une campagne, générer visuels et textes, ajuster le ciblage ou le budget sur simple instruction en langage naturel. La fonction agentique est encore en test auprès de certains annonceurs, tandis que le studio créatif étendu et la génération vidéo à partir d'images fixes sont déjà disponibles pour tous.</span><span class="i18n-es">En Advertising Week New York, Meta anunció una IA agéntica dentro de Ads Manager&nbsp;: su asistente ya puede crear una campaña, generar imágenes y textos, o ajustar la segmentación y el presupuesto a partir de una instrucción en lenguaje natural. La función agéntica todavía está en pruebas con algunos anunciantes, mientras que el estudio creativo ampliado y la generación de vídeo a partir de imágenes fijas ya están disponibles para todos.</span></span></p>
+        <a class="src" href="https://www.socialmediatoday.com/news/meta-introduces-new-ai-powered-tools-at-ad-week-2026/832288/" target="_blank" rel="noopener noreferrer"><span><span class="i18n-fr">Lire la source (Social Media Today) →</span><span class="i18n-es">Leer la fuente (Social Media Today) →</span></span></a>
+      </div>
+      <div class="item">
+        <h3><span class="item-num">2</span><span><span class="i18n-fr">Biarritz met les marques face aux agents IA</span><span class="i18n-es">Biarritz enfrenta a las marcas con los agentes de IA</span></span></h3>
+        <p><span><span class="i18n-fr">La 12ᵉ édition de One to One IA x Expérience Client s'est tenue du 6 au 8 octobre à Biarritz, réunissant 460 décideurs et plus d'une centaine d'exposants autour d'un fil rouge provocateur&nbsp;: « No Brands — Stupeur, tremblements et IA ». La question posée&nbsp;: que reste-t-il du lien à la marque quand un agent IA, un moteur de recherche ou un assistant s'interpose entre elle et son client&nbsp;?</span><span class="i18n-es">La 12.ª edición de One to One IA x Expérience Client se celebró del 6 al 8 de octubre en Biarritz, reuniendo a 460 decisores y más de un centenar de expositores bajo un hilo conductor provocador&nbsp;: «No Brands — Stupeur, tremblements et IA». La pregunta que plantea&nbsp;: ¿qué queda del vínculo con la marca cuando un agente de IA, un buscador o un asistente se interpone entre ella y su cliente?</span></span></p>
+        <a class="src" href="https://fr.themedialeader.com/?p=219926" target="_blank" rel="noopener noreferrer"><span><span class="i18n-fr">Lire la source (The Media Leader) →</span><span class="i18n-es">Leer la fuente (The Media Leader) →</span></span></a>
+      </div>
+      <div class="item">
+        <h3><span class="item-num">3</span><span><span class="i18n-fr">IQOS ouvre sa 2ᵉ boutique immersive en Espagne</span><span class="i18n-es">IQOS abre su segunda boutique inmersiva en España</span></span></h3>
+        <p><span><span class="i18n-fr">Philip Morris España a ouvert à Saragosse sa deuxième boutique au nouveau concept « Boutique 2.0 », après celle de Bilbao. L'espace dépasse la simple vente pour proposer une expérience immersive, avec notamment une œuvre de l'artiste local Roberto Coromina intégrée au lieu.</span><span class="i18n-es">Philip Morris España abrió en Zaragoza su segunda tienda con el nuevo concepto «Boutique 2.0», tras la de Bilbao. El espacio va más allá de la venta al uso e incorpora una experiencia inmersiva, con una obra del artista local Roberto Coromina integrada en el propio local.</span></span></p>
+        <a class="src" href="https://www.elespanol.com/aragon/actualidad/20261008/abre-primera-tienda-iqos-zaragoza-ofrecemos-experiencia-inmersiva-consumidores/1003744413463_0.html" target="_blank" rel="noopener noreferrer"><span><span class="i18n-fr">Lire la source (El Español) →</span><span class="i18n-es">Leer la fuente (El Español) →</span></span></a>
+      </div>
+      <div class="item">
+        <h3><span class="item-num">4</span><span><span class="i18n-fr">Gaultier transforme un parfum en jeu immersif</span><span class="i18n-es">Gaultier convierte un perfume en juego inmersivo</span></span></h3>
+        <p><span><span class="i18n-fr">Jean Paul Gaultier installe du 8 au 11 octobre un pop-up immersif sur la terrasse de la Canopée des Halles à Paris, conçu avec l'agence Wild Buzz pour lancer « La Favorite », son premier grand parfum féminin depuis Scandal. Les visiteurs reçoivent un bracelet parfumé, traversent un café à la thématique du parfum, croisent une Tour Eiffel réinventée et terminent par un jeu inspiré du flacon iconique, avec des cadeaux à récupérer chez Sephora Les Halles.</span><span class="i18n-es">Jean Paul Gaultier instala del 8 al 11 de octubre un pop-up inmersivo en la terraza de la Canopée des Halles de París, diseñado con la agencia Wild Buzz para lanzar «La Favorite», su primer gran perfume femenino desde Scandal. Los visitantes reciben una pulsera perfumada, atraviesan un café temático, pasan junto a una Torre Eiffel reinterpretada y terminan con un juego inspirado en el icónico frasco, con regalos que se recogen en Sephora Les Halles.</span></span></p>
+        <a class="src" href="https://jai-un-pote-dans-la.com/la-favorite-jean-paul-gaultier-devoile-un-pop-up-immersif-avec-wild-buzz-agency/" target="_blank" rel="noopener noreferrer"><span><span class="i18n-fr">Lire la source (J'ai un pote dans la) →</span><span class="i18n-es">Leer la fuente (J'ai un pote dans la) →</span></span></a>
+      </div>
+      <div class="item">
+        <h3><span class="item-num">5</span><span><span class="i18n-fr">Telepizza réunit tout le monde autour d'une pizza-burger</span><span class="i18n-es">Telepizza junta a todos alrededor de una pizza-burger</span></span></h3>
+        <p><span><span class="i18n-fr">Telepizza relance sa gamme avec « Telepizza Burger », une pizza au goût de hamburger, portée par un spot humoristique signé Manifiesto&nbsp;: une ado prête à sortir change ses plans en découvrant que le livreur a apporté des pizzas « burger ». L'offre associée, « TusTresXMenos », propose trois pizzas à 7,95&nbsp;€ pièce à domicile.</span><span class="i18n-es">Telepizza relanza su gama con «Telepizza Burger», una pizza con sabor a hamburguesa, impulsada por un spot de humor firmado por Manifiesto&nbsp;: una adolescente lista para salir de fiesta cambia de planes al descubrir que el repartidor ha traído pizzas «burger». La oferta asociada, «TusTresXMenos», ofrece tres pizzas a domicilio a 7,95&nbsp;€ cada una.</span></span></p>
+        <a class="src" href="https://www.elespanol.com/sociedad/20261008/pizza-burger-mismo-bocado-novedad-telepizza-juntar-alrededor-mesa/1003744413328_0.html" target="_blank" rel="noopener noreferrer"><span><span class="i18n-fr">Lire la source (El Español) →</span><span class="i18n-es">Leer la fuente (El Español) →</span></span></a>
+      </div>
+
+      <div class="cta-row">
+        <a class="cta" href="../reports/veille-2026-10-09.html"><span><span class="i18n-fr">Lire le rapport complet (7 actus) →</span><span class="i18n-es">Leer el informe completo (7 noticias) →</span></span></a>
+      </div>
+    </div>
+
+    <div class="email-footer">
+      <p><span><span class="i18n-fr">Veille personnelle &#8212; branding, marketing, activation de marque. Espagne &amp; Europe.</span><span class="i18n-es">Vigilancia personal &#8212; branding, marketing, activación de marca. España y Europa.</span></span></p>
+      <p><span><span class="i18n-fr">&#201;dition du 9 octobre 2026</span><span class="i18n-es">Edición del 9 de octubre de 2026</span></span> · <a href="../archive.html"><span><span class="i18n-fr">Voir toutes les archives</span><span class="i18n-es">Ver todos los archivos</span></span></a></p>
+    </div>
+
+  </div>
+</div>
+<script>
+
+(function(){
+  "use strict";
+  var btn = document.getElementById('copy-btn');
+  var content = document.getElementById('email-content');
+
+  // ----- Scroll reveal (motion-safe) -----
+  (function(){
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    if (!('IntersectionObserver' in window)) return;
+    var items = Array.prototype.slice.call(document.querySelectorAll('.item'));
+    items.forEach(function(el, i){
+      el.classList.add('reveal-init');
+      el.style.transitionDelay = (i * 70) + 'ms';
+    });
+    var observer = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if (entry.isIntersecting){
+          entry.target.classList.add('reveal-in');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {threshold:.12, rootMargin:'0px 0px -40px 0px'});
+    items.forEach(function(el){ observer.observe(el); });
+  })();
+
+  var currentLang = 'fr';
+  try { if (localStorage.getItem('veille-lang') === 'es') currentLang = 'es'; } catch(e){}
+  var langToggleBtn = document.getElementById('lang-toggle');
+  var copyLabel = btn ? btn.querySelector('.copy-btn-label') : null;
+  var I18N = {
+    fr: { copy: '📋 Copier le texte', copied: '✅ Copié !', failed: '⚠️ Sélectionnez et copiez manuellement' },
+    es: { copy: '📋 Copiar el texto', copied: '✅ ¡Copiado!', failed: '⚠️ Selecciona y copia manualmente' }
+  };
+  function applyLang(lang, save){
+    currentLang = lang;
+    document.body.classList.toggle('lang-es', lang === 'es');
+    if (langToggleBtn) {
+      var frSpan = langToggleBtn.querySelector('.lang-toggle-fr');
+      var esSpan = langToggleBtn.querySelector('.lang-toggle-es');
+      if (frSpan) frSpan.classList.toggle('active', lang === 'fr');
+      if (esSpan) esSpan.classList.toggle('active', lang === 'es');
+    }
+    if (save) { try { localStorage.setItem('veille-lang', lang); } catch(e){} }
+  }
+  function switchLang(lang, save){
+    var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduced) { applyLang(lang, save); return; }
+    document.body.classList.add('lang-fade');
+    setTimeout(function(){
+      applyLang(lang, save);
+      requestAnimationFrame(function(){ document.body.classList.remove('lang-fade'); });
+    }, 150);
+  }
+  if (langToggleBtn) {
+    langToggleBtn.addEventListener('click', function(){ switchLang(currentLang === 'es' ? 'fr' : 'es', true); });
+  }
+  applyLang(currentLang, false);
+  if (!btn || !content) return;
+  btn.addEventListener('click', function(){
+    var text = content.innerText;
+    function done(ok){
+      if (copyLabel) copyLabel.textContent = ok ? I18N[currentLang].copied : I18N[currentLang].failed;
+      btn.classList.toggle('copied', ok);
+      setTimeout(function(){
+        if (copyLabel) copyLabel.innerHTML = '<span class="i18n-fr">📋 Copier le texte</span><span class="i18n-es">📋 Copiar el texto</span>';
+        btn.classList.remove('copied');
+      }, 2200);
+    }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(function(){ done(true); }, function(){ done(false); });
+    } else {
+      try {
+        var range = document.createRange();
+        range.selectNode(content);
+        var sel = window.getSelection();
+        sel.removeAllRanges();
+        sel.addRange(range);
+        var ok = document.execCommand('copy');
+        sel.removeAllRanges();
+        done(ok);
+      } catch (e) { done(false); }
+    }
+  });
+})();
+
+</script>
+
+</body>
+</html>
