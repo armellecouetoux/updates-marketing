@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Veille Branding &amp; Marketing — 13 octobre 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+
+:root{
+  --bg:#F3EDE2;
+  --panel:#FBF8F2;
+  --panel-line:#E4DACB;
+  --ink:#2B2621;
+  --ink-soft:#7A7167;
+  --accent:#B27A50;
+  --accent-soft:#DCC7AE;
+  --dark:#2B2621;
+  --dark-2:#3A332B;
+  --font:'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+  --radius:16px;
+  --maxw:1180px;
+}
+*{box-sizing:border-box;}
+html,body{margin:0;padding:0;}
+body{background:var(--bg); color:var(--ink); font-family:var(--font); font-weight:400; line-height:1.55; -webkit-font-smoothing:antialiased; overflow-x:hidden;}
+.wrap{max-width:var(--maxw); margin:0 auto; padding:0 20px;}
+a{color:var(--accent);}
+
+#progress-bar{position:fixed; top:0; left:0; height:3px; width:0%; background:var(--accent); z-index:999; transition:width .08s linear;}
+
+header.masthead{background:var(--dark); color:#F3EDE2; padding:52px 0 44px; position:relative; overflow:hidden;}
+.masthead-top{display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; position:relative;}
+.eyebrow{font-family:var(--font); font-weight:700; letter-spacing:.1em; text-transform:uppercase; font-size:11.5px; color:var(--accent-soft); margin:0;}
+.header-actions{display:flex; align-items:center; gap:12px; flex-wrap:wrap;}
+.archive-link{font-family:var(--font); font-weight:600; font-size:12.5px; color:#F3EDE2; text-decoration:none; border:1px solid rgba(243,237,226,.4); border-radius:999px; padding:7px 16px; white-space:nowrap; transition:background .15s ease, border-color .15s ease;}
+.archive-link:hover{background:rgba(243,237,226,.12); border-color:#F3EDE2;}
+h1.title{font-family:var(--font); font-weight:800; font-size:clamp(26px, 4.2vw, 44px); line-height:1.18; margin:18px 0 14px; max-width:920px; position:relative;}
+h1.title .accent-underline{border-bottom:3px solid var(--accent); padding-bottom:2px;}
+.subline{font-size:15px; color:#D9CFC0; max-width:680px; margin:0; position:relative;}
+.newsletter-cta{display:inline-flex; align-items:center; gap:8px; font-family:var(--font); font-weight:700; font-size:13px; color:var(--dark); text-decoration:none; background:var(--accent-soft); border-radius:999px; padding:10px 20px; transition:transform .15s ease, background .15s ease; white-space:nowrap;}
+.newsletter-cta:hover{transform:translateY(-2px); background:#e9d9c4;}
+.stats-row{display:flex; gap:36px; margin-top:26px; flex-wrap:wrap; position:relative;}
+.stat{display:flex; flex-direction:column; gap:2px;}
+.stat-num{font-family:var(--font); font-weight:800; font-size:32px; color:#F3EDE2; line-height:1;}
+.stat-label{font-family:var(--font); font-weight:700; font-size:11px; letter-spacing:.05em; text-transform:uppercase; color:var(--accent-soft);}
+
+.lang-toggle{font-family:var(--font); font-weight:600; font-size:12.5px; color:#F3EDE2; background:transparent; border:1px solid rgba(243,237,226,.4); border-radius:999px; padding:7px 14px; cursor:pointer; white-space:nowrap; display:inline-flex; align-items:center; gap:6px; transition:background .15s ease, border-color .15s ease;}
+.lang-toggle:hover{background:rgba(243,237,226,.12); border-color:#F3EDE2;}
+.lang-toggle-fr,.lang-toggle-es{opacity:.55; transition:opacity .15s ease;}
+.lang-toggle-fr.active,.lang-toggle-es.active{opacity:1; font-weight:800; color:var(--accent-soft);}
+.lang-toggle-sep{opacity:.4;}
+
+main{padding:40px 0 20px;}
+.controls{display:flex; flex-wrap:wrap; gap:16px; align-items:center; justify-content:space-between; margin-bottom:36px; position:sticky; top:0; background:var(--bg); z-index:50; padding:14px 0; border-bottom:1px solid var(--panel-line);}
+.chips{display:flex; flex-wrap:wrap; gap:8px;}
+.chip{font-family:var(--font); font-weight:600; font-size:12.5px; letter-spacing:.02em; background:var(--panel); color:var(--ink); border:1px solid var(--panel-line); border-radius:999px; padding:8px 16px; cursor:pointer; transition:all .15s ease; white-space:nowrap;}
+.chip:hover{border-color:var(--accent); transform:translateY(-1px);}
+.chip.active{background:var(--dark); color:#F3EDE2; border-color:var(--dark);}
+.search-wrap{flex:0 1 320px; min-width:220px;}
+#search-input{width:100%; font-family:var(--font); font-size:13.5px; padding:10px 16px; border:1px solid var(--panel-line); border-radius:999px; background:var(--panel); color:var(--ink);}
+#search-input:focus{outline:2px solid var(--accent); outline-offset:1px;}
+
+.section-title{font-family:var(--font); font-weight:800; font-size:23px; color:var(--ink); margin:0 0 22px; display:flex; align-items:center; gap:10px;}
+.section-emoji{font-size:22px;}
+.section-intro{font-size:14px; color:var(--ink-soft); margin:-12px 0 22px; max-width:680px;}
+.top5-section{margin-bottom:56px;}
+.top5-title{font-size:27px;}
+.top5-grid{display:grid; grid-template-columns:repeat(auto-fit, minmax(300px,1fr)); gap:22px;}
+
+.theme-section{margin-bottom:52px; scroll-margin-top:90px;}
+.card-grid{display:grid; grid-template-columns:repeat(auto-fit, minmax(300px,1fr)); gap:20px;}
+
+.card{background:var(--panel); border:1px solid var(--panel-line); border-radius:var(--radius); overflow:hidden; cursor:pointer; transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease; display:flex; flex-direction:column; box-shadow:0 1px 2px rgba(43,38,33,.04);}
+.card:hover{transform:translateY(-4px); box-shadow:0 10px 24px rgba(43,38,33,.10); border-color:var(--accent);}
+.card:focus-visible{outline:2px solid var(--accent); outline-offset:2px;}
+.card-media{position:relative; aspect-ratio:5/3; overflow:hidden; background:var(--dark);}
+.card-media img{width:100%; height:100%; object-fit:cover; display:block; transition:transform .35s ease;}
+.card:hover .card-media img{transform:scale(1.05);}
+.card-media .fallback-icon{display:none; width:100%; height:100%; align-items:center; justify-content:center; color:var(--accent-soft); background:linear-gradient(135deg,#3A332B,#2B2621);}
+.card-media.media-fallback .fallback-icon{display:flex;}
+.card-media.media-fallback img{display:none;}
+.card-media .badge{position:absolute; top:12px; left:12px; background:rgba(251,248,242,.94); color:var(--ink); font-family:var(--font); font-weight:700; font-size:11px; letter-spacing:.03em; padding:6px 12px; border-radius:999px; display:flex; align-items:center; gap:5px;}
+.card-body{padding:20px 20px 16px; display:flex; flex-direction:column; gap:10px; flex:1;}
+.card-title-row{display:flex; align-items:baseline; justify-content:space-between; gap:10px;}
+.card-title{font-family:var(--font); font-weight:700; font-size:18px; line-height:1.28; color:var(--ink); margin:0;}
+.read-tag{font-family:var(--font); font-weight:600; font-size:11px; color:var(--ink-soft); white-space:nowrap;}
+.card-fact{font-size:14px; color:var(--ink); margin:0; line-height:1.55;}
+.card-more{max-height:0; opacity:0; overflow:hidden; transition:max-height .4s ease, opacity .3s ease, margin .4s ease;}
+.card.expanded .card-more{max-height:1400px; opacity:1; margin-top:4px;}
+.card-label{font-family:var(--font); font-weight:700; font-size:11.5px; letter-spacing:.05em; text-transform:uppercase; color:var(--accent); margin:12px 0 4px;}
+.card-why, .card-action{font-size:13.5px; color:var(--ink); margin:0 0 4px; line-height:1.5;}
+.card-source{font-size:12.5px; color:var(--ink-soft); margin:10px 0 0;}
+.card-source a{color:var(--ink); font-weight:600; text-decoration:none; border-bottom:1px solid var(--panel-line);}
+.card-source a:hover{border-color:var(--accent);}
+.card-btn-row{margin-top:auto; display:flex; align-items:center; justify-content:space-between; gap:10px; padding-top:8px;}
+.card-toggle{background:none; border:none; cursor:pointer; font-family:var(--font); font-weight:600; font-size:12px; color:var(--ink-soft); padding:6px 0; display:flex; align-items:center; gap:4px;}
+.chevron{transition:transform .25s ease; display:inline-block;}
+.card.expanded .chevron{transform:rotate(180deg);}
+.card.expanded .card-toggle{color:var(--accent);}
+.card-social-toggle{background:none; border:1px solid var(--panel-line); border-radius:999px; cursor:pointer; font-family:var(--font); font-weight:600; font-size:11.5px; color:var(--ink-soft); padding:6px 12px; transition:border-color .15s ease, color .15s ease;}
+.card-social-toggle:hover{border-color:var(--accent); color:var(--accent);}
+.card-btn-actions{display:flex; align-items:center; gap:8px;}
+
+.social-pack{margin-top:10px; border-top:1px dashed var(--panel-line); padding-top:10px;}
+.social-pack-inner{background:var(--bg); border:1px solid var(--panel-line); border-radius:12px; padding:14px 16px;}
+.social-row{font-size:12.5px; color:var(--ink); margin:0 0 8px; line-height:1.5;}
+.social-row strong{color:var(--accent); display:block; font-size:11px; letter-spacing:.04em; text-transform:uppercase; margin-bottom:2px;}
+.social-copy-btn{font-family:var(--font); font-weight:700; font-size:12px; color:var(--ink); background:var(--accent-soft); border:none; border-radius:999px; padding:8px 16px; cursor:pointer; margin-top:4px; transition:background .15s ease;}
+.social-copy-btn:hover{background:#e9d9c4;}
+.social-copy-btn.copied{background:var(--accent); color:#fff;}
+
+.top5-hero{position:relative;}
+.top5-hero .card-media{aspect-ratio:16/10;}
+.top5-hero::before{content:"★"; position:absolute; top:14px; right:14px; z-index:2; background:var(--dark); color:#F3EDE2; width:28px; height:28px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:13px;}
+.top5-hero .card-title{font-size:19px;}
+
+.no-results{text-align:center; color:var(--ink-soft); font-family:var(--font); font-weight:600; padding:40px 0; font-size:15px;}
+.card[hidden]{display:none;}
+
+/* Carrousel */
+.carousel-section{margin-bottom:56px;}
+.carousel{position:relative; border-radius:var(--radius); overflow:hidden; background:linear-gradient(135deg, #d8cbb6 0%, #cbb99e 100%); outline:none;}
+.carousel-track{display:flex; transition:transform .5s cubic-bezier(.65,0,.35,1);}
+.carousel-slide{flex:0 0 100%; display:flex; align-items:flex-end; min-height:340px; position:relative; padding:32px;}
+.carousel-slide-media{position:absolute; inset:0; z-index:0;}
+.carousel-slide-media img{width:100%; height:100%; object-fit:cover; display:block; opacity:.55;}
+.carousel-slide-media::after{content:""; position:absolute; inset:0; background:linear-gradient(0deg, rgba(43,38,33,.82) 0%, rgba(43,38,33,.25) 60%, rgba(43,38,33,.15) 100%);}
+.carousel-slide-media.media-fallback img{display:none;}
+.carousel-slide-content{position:relative; z-index:1; max-width:640px; color:#F3EDE2;}
+.carousel-badge{display:inline-block; font-family:var(--font); font-weight:700; font-size:11px; letter-spacing:.03em; background:rgba(243,237,226,.16); border:1px solid rgba(243,237,226,.35); border-radius:999px; padding:6px 14px; margin-bottom:14px;}
+.carousel-slide-content h3{font-family:var(--font); font-weight:800; font-size:clamp(19px,2.6vw,25px); line-height:1.25; margin:0 0 10px; color:#F3EDE2;}
+.carousel-slide-content p{font-size:14px; color:#E4D9C8; margin:0; max-width:520px;}
+.carousel-arrow{position:absolute; top:50%; transform:translateY(-50%); z-index:2; width:40px; height:40px; border-radius:50%; border:1px solid rgba(243,237,226,.4); background:rgba(43,38,33,.55); color:#F3EDE2; font-size:17px; cursor:pointer; display:flex; align-items:center; justify-content:center; transition:background .15s ease;}
+.carousel-arrow:hover{background:var(--accent);}
+.carousel-arrow.prev{left:16px;}
+.carousel-arrow.next{right:16px;}
+.carousel-dots{display:flex; gap:8px; justify-content:center; flex-wrap:wrap; padding:16px 10px 4px; position:relative; z-index:1; max-height:44px; overflow-y:auto;}
+.carousel-dot{width:8px; height:8px; border-radius:50%; background:rgba(43,38,33,.25); border:none; cursor:pointer; padding:0;}
+.carousel-dot.active{background:var(--accent); width:20px; border-radius:6px; transition:width .2s ease;}
+@media (max-width:640px){ .carousel-slide{min-height:280px; padding:22px;} .carousel-arrow{width:34px; height:34px; font-size:14px;} }
+
+.quicklinks{background:var(--panel); border:1px solid var(--panel-line); border-radius:var(--radius); padding:24px 26px; margin-bottom:20px;}
+.quicklinks ul{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:10px;}
+.quicklink-item{font-size:13.5px; color:var(--ink); border-bottom:1px dashed var(--panel-line); padding-bottom:9px;}
+.quicklink-item:last-child{border-bottom:none; padding-bottom:0;}
+.quicklink-title{font-weight:700;}
+.quicklink-source{color:var(--ink-soft);}
+.quicklinks a{color:var(--accent); font-weight:700; text-decoration:none;}
+
+.edition-note{background:var(--panel); border:1px solid var(--panel-line); border-radius:var(--radius); padding:20px 24px; margin-bottom:40px; font-size:13.5px; color:var(--ink-soft); line-height:1.6;}
+
+footer{margin-top:40px; padding:28px 0 50px; border-top:1px solid var(--panel-line); color:var(--ink-soft); font-size:13px;}
+
+@media (max-width:640px){ header.masthead{padding:40px 0 36px;} .controls{position:static;} .stats-row{gap:24px;} }
+
+.i18n-es{display:none;}
+body.lang-es .i18n-fr{display:none;}
+body.lang-es .i18n-es{display:inline;}
+body.lang-es .i18n-es.block{display:block;}
+
+/* --- Micro-interactions & scroll-reveal (motion-safe) --- */
+.controls{transition:background-color .25s ease, box-shadow .25s ease, backdrop-filter .25s ease;}
+.controls.is-scrolled{background-color:rgba(243,237,226,.88); backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px); box-shadow:0 6px 18px rgba(43,38,33,.08);}
+.card{transition:transform .22s cubic-bezier(.25,.8,.25,1), box-shadow .22s cubic-bezier(.25,.8,.25,1), border-color .22s ease;}
+.chip{transition:background-color .18s ease, color .18s ease, border-color .18s ease, transform .18s ease;}
+.quicklinks a, .archive-arrow{background-image:linear-gradient(currentColor, currentColor); background-repeat:no-repeat; background-position:left 100%; background-size:0 1px; transition:background-size .2s ease;}
+.quicklinks a:hover, .archive-arrow:hover{background-size:100% 1px;}
+.carousel-dot{transition:background-color .15s ease, transform .15s ease, width .2s ease;}
+.carousel-dot:hover, .carousel-dot:focus-visible{transform:scale(1.3);}
+.carousel-arrow{transition:background-color .15s ease, transform .15s ease;}
+.carousel-arrow:hover, .carousel-arrow:focus-visible{transform:translateY(-50%) scale(1.08);}
+header.masthead, main{transition:opacity .15s ease;}
+body.lang-fade header.masthead, body.lang-fade main{opacity:.45;}
+@media (prefers-reduced-motion: no-preference){
+  .reveal-init{opacity:0; transform:translateY(16px); transition:opacity .45s ease-out, transform .45s ease-out;}
+  .reveal-init.reveal-in{opacity:1; transform:translateY(0);}
+}
+@media (prefers-reduced-motion: reduce){
+  .controls, .card, .chip, .quicklinks a, .archive-arrow, .carousel-dot, .carousel-arrow, header.masthead, main{transition:none !important;}
+}
+
+</style>
+
+</head>
+<body>
+
+<div id="progress-bar" aria-hidden="true"></div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="masthead-top">
+      <p class="eyebrow"><span><span class="i18n-fr">Veille Branding · Marketing · Expérience de marque — Espagne &amp; Europe</span><span class="i18n-es">Vigilancia de Branding · Marketing · Experiencia de marca — España y Europa</span></span></p>
+      <div class="header-actions">
+        <button id="lang-toggle" class="lang-toggle" type="button" aria-label="Cambiar idioma"><span class="lang-toggle-fr active">&#x1F1EB;&#x1F1F7; FR</span><span class="lang-toggle-sep">·</span><span class="lang-toggle-es">&#x1F1EA;&#x1F1F8; ES</span></button>
+      </div>
+    </div>
+    <h1 class="title"><span><span class="i18n-fr">Une agence madrilène séduit Dior, New York couronne ses meilleurs rebrands et Las Vegas réunit le monde des événements</span><span class="i18n-es">Una agencia madrileña seduce a Dior, Nueva York premia sus mejores rebrandings y Las Vegas reúne al mundo de los eventos</span></span></h1>
+    <p class="subline"><span><span class="i18n-fr">11 – 13 octobre 2026 — marketing, branding et expérience de marque en Espagne et en Europe.</span><span class="i18n-es">11 – 13 de octubre de 2026 — marketing, branding y experiencia de marca en España y Europa.</span></span></p>
+    <p style="position:relative; margin:20px 0 0;"><a class="newsletter-cta" href="../newsletter/veille-2026-10-13.html"><span><span class="i18n-fr">&#128231; Voir la newsletter de cette édition →</span><span class="i18n-es">&#128231; Ver la newsletter de esta edición →</span></span></a></p>
+    <div class="stats-row">
+      <div class="stat"><span class="stat-num" data-target="3">0</span><span class="stat-label"><span><span class="i18n-fr">actus cette période</span><span class="i18n-es">noticias de este período</span></span></span></div>
+      <div class="stat"><span class="stat-num" data-target="3">0</span><span class="stat-label"><span><span class="i18n-fr">sources citées</span><span class="i18n-es">fuentes citadas</span></span></span></div>
+      <div class="stat"><span class="stat-num" data-target="3">0</span><span class="stat-label"><span><span class="i18n-fr">thématiques couvertes</span><span class="i18n-es">temáticas cubiertas</span></span></span></div>
+    </div>
+  </div>
+</header>
+<main class="wrap">
+
+  <div class="controls">
+    <div class="chips" id="chips"><button class="chip active" data-filter="all" type="button"><span><span class="i18n-fr">Tout</span><span class="i18n-es">Todo</span></span></button><button class="chip" data-filter="popup" type="button">🏬 <span><span class="i18n-fr">Pop-up stores</span><span class="i18n-es">Tiendas efímeras</span></span></button><button class="chip" data-filter="branding" type="button">🎨 <span><span class="i18n-fr">Branding</span><span class="i18n-es">Branding</span></span></button><button class="chip" data-filter="evenements" type="button">📅 <span><span class="i18n-fr">Événements</span><span class="i18n-es">Eventos</span></span></button></div>
+    <div class="search-wrap">
+      <input type="search" id="search-input" placeholder="Rechercher un mot-clé (marque, thème…)" aria-label="Rechercher">
+    </div>
+  </div>
+
+  <div class="edition-note">
+    <span><span class="i18n-fr">Édition plus courte que d'habitude&nbsp;: la fenêtre du 11 au 13 octobre 2026 a été calme sur la plupart des thématiques suivies (marketing général, tech, expériences B2C, pop-up multiples) — après une recherche approfondie et une vérification stricte des dates de publication, seules 3 actus solidement datées ont passé le filtre, réparties entre pop-up/activation, branding et événements B2B. Mieux vaut une édition courte et fiable qu'une édition remplie de contenu hors-fenêtre.</span><span class="i18n-es">Edición más corta de lo habitual&nbsp;: la ventana del 11 al 13 de octubre de 2026 estuvo tranquila en la mayoría de las temáticas que seguimos (marketing general, tech, experiencias B2C, varios pop-up) — tras una búsqueda exhaustiva y una verificación estricta de las fechas de publicación, solo 3 noticias con fecha sólida pasaron el filtro, repartidas entre pop-up/activación, branding y eventos B2B. Mejor una edición corta y fiable que una edición llena de contenido fuera de ventana.</span></span>
+  </div>
+
+  <section class="top5-section">
+    <h2 class="section-title top5-title"><span class="section-emoji">&#127942;</span><span><span class="i18n-fr">Top 3 à retenir</span><span class="i18n-es">Top 3 para recordar</span></span></h2>
+    <div class="top5-grid">
+
+<article class="card top5-hero" data-theme="popup" data-search="dior confie madrid a une agence espagnole dior le confia madrid a una agencia espanola dior a choisi l'agence madrilene wildbytes pour concevoir et produire miss dior l'atelier, une installation immersive montee du 17 au 20 septembre sur la plaza de callao a madrid pour le lancement du nouveau miss dior eau de parfum signe francis kurkdjian. l'experience, construite autour de l'odorat, a attire pres de 5000 visiteurs en quatre jours. son cofondateur julio obelleiro revient aujourd'hui sur ce que signifie, pour une agence espagnole, gagner la confiance d'une maison comme dior. dior eligio a la agencia madrilena wildbytes para disenar y producir miss dior l'atelier, una instalacion inmersiva montada del 17 al 20 de septiembre en la plaza de callao de madrid para el lanzamiento del nuevo miss dior eau de parfum firmado por francis kurkdjian. la experiencia, construida alrededor del olfato, reunio a casi 5000 visitantes en cuatro dias. su cofundador, julio obelleiro, explica hoy que significa para una agencia espanola ganarse la confianza de una maison como dior. qu'une maison de luxe francaise confie une activation entiere a une agence espagnole plutot qu'a son reseau habituel d'agences parisiennes ou londoniennes montre que le marche espagnol de l'experience de marque a atteint une maturite technique et creative reconnue au niveau international. que una maison de lujo francesa confie una activacion completa a una agencia espanola, en vez de a su red habitual de agencias parisinas o londinenses, demuestra que el mercado espanol de experiencia de marca ha alcanzado una madurez tecnica y creativa reconocida internacionalmente. documenter ses propres activations sensorielles comme un portfolio a part. documentar las propias activaciones sensoriales como un portfolio aparte." tabindex="0" role="button" aria-expanded="false" id="card-top3-popup-0">
+<div class="card-media"><img src="https://images.unsplash.com/photo-1757800945942-cdc006f6f5eb?auto=format&fit=crop&w=1200&q=70" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.closest('.card-media').classList.add('media-fallback')"><div class="fallback-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="42" height="42" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9.5"/><path d="M8 13l2.5-3 2 2.5L16 9"/></svg></div><span class="badge"><span><span class="i18n-fr">Pop-up stores</span><span class="i18n-es">Tiendas efímeras</span></span> <span class="badge-emoji">🏬</span></span></div>
+  <div class="card-body">
+    <div class="card-title-row">
+      <h3 class="card-title"><span><span class="i18n-fr">Dior confie Madrid à une agence espagnole</span><span class="i18n-es">Dior le confía Madrid a una agencia española</span></span></h3>
+      <span class="read-tag">3 min</span>
+    </div>
+    <p class="card-fact"><span><span class="i18n-fr">Dior a choisi l'agence madrilène Wildbytes pour concevoir et produire « Miss Dior L'Atelier », une installation immersive montée du 17 au 20 septembre sur la Plaza de Callao à Madrid pour le lancement du nouveau Miss Dior Eau de Parfum signé Francis Kurkdjian. L'expérience, construite autour de l'odorat, a attiré près de 5 000 visiteurs en quatre jours. Son cofondateur Julio Obelleiro revient aujourd'hui sur ce que signifie, pour une agence espagnole, gagner la confiance d'une maison comme Dior.</span><span class="i18n-es">Dior eligió a la agencia madrileña Wildbytes para diseñar y producir «Miss Dior L'Atelier», una instalación inmersiva montada del 17 al 20 de septiembre en la Plaza de Callao de Madrid para el lanzamiento del nuevo Miss Dior Eau de Parfum firmado por Francis Kurkdjian. La experiencia, construida alrededor del olfato, reunió a casi 5.000 visitantes en cuatro días. Su cofundador, Julio Obelleiro, explica hoy qué significa para una agencia española ganarse la confianza de una maison como Dior.</span></span></p>
+    <div class="card-more">
+      <p class="card-label"><span><span class="i18n-fr">Pourquoi ça compte</span><span class="i18n-es">Por qué importa</span></span></p>
+      <p class="card-why"><span><span class="i18n-fr">Qu'une maison de luxe française confie une activation entière à une agence espagnole plutôt qu'à son réseau habituel d'agences parisiennes ou londoniennes montre que le marché espagnol de l'expérience de marque a atteint une maturité technique et créative reconnue au niveau international — une porte d'entrée concrète pour tout freelance ou agence ibérique visant des clients de luxe.</span><span class="i18n-es">Que una maison de lujo francesa confíe una activación completa a una agencia española, en vez de a su red habitual de agencias parisinas o londinenses, demuestra que el mercado español de experiencia de marca ha alcanzado una madurez técnica y creativa reconocida internacionalmente — una puerta de entrada concreta para cualquier freelance o agencia ibérica que apunte a clientes de lujo.</span></span></p>
+      <p class="card-label"><span><span class="i18n-fr">Action concrète</span><span class="i18n-es">Acción concreta</span></span></p>
+      <p class="card-action">&#128161; <span><span class="i18n-fr">Documenter ses propres activations sensorielles (olfaction, son, texture) comme un portfolio à part, distinct des cas purement visuels — c'est précisément ce type de savoir-faire expérientiel, pas seulement créatif, qui a fait gagner ce contrat à Wildbytes.</span><span class="i18n-es">Documentar las propias activaciones sensoriales (olfato, sonido, textura) como un portfolio aparte, distinto de los casos puramente visuales — es precisamente ese tipo de saber hacer experiencial, no solo creativo, el que le hizo ganar este contrato a Wildbytes.</span></span></p>
+      <p class="card-source"><span><span class="i18n-fr">Source :</span><span class="i18n-es">Fuente:</span></span> <a href="https://prnoticias.com/2026/10/13/marketing-de-lujo-que-significa-para-una-agencia-espanola-que-dior-le-toque-la-puerta/" target="_blank" rel="noopener noreferrer">PRNoticias &#8599;</a></p>
+<div class="social-pack" hidden>
+  <div class="social-pack-inner">
+    <p class="social-row"><strong>Titular</strong><br>Una agencia española se gana la confianza de Dior con una experiencia sobre el olfato</p><p class="social-row"><strong>Descripción</strong><br>Wildbytes, agencia madrileña, diseñó y produjo «Miss Dior L'Atelier», una instalación inmersiva en la Plaza de Callao (17-20 de septiembre) para el lanzamiento del nuevo Miss Dior Eau de Parfum. La experiencia, centrada en el olfato, recibió cerca de 5.000 visitantes en cuatro días.</p><p class="social-row"><strong>Why it matters?</strong><br>Why it matters: si una maison francesa de este calibre confía en una agencia española para su activación insignia, ¿qué le está diciendo esto al resto del mercado de lujo sobre el talento ibérico?</p><p class="social-row"><strong>CC take</strong><br>CC TAKE: Luxury doesn't always speak French — sometimes it speaks Spanish, and it smells incredible.</p><p class="social-row"><strong>Copy out + CTA</strong><br>Un mes después de cerrar sus puertas, la activación sigue siendo la carta de presentación de Wildbytes ante el lujo internacional. ¿Conoces otra agencia española que haya trabajado últimamente para una maison de este nivel?</p><p class="social-row"><strong>Consejo muy Armi</strong><br>Consejo muy Armi: cuando presentes un caso de experiencia de marca a un cliente de lujo, lleva siempre una cifra de asistencia y una duración exacta (aquí, 5.000 visitantes en 4 días) — en lujo, la escala y la exclusividad temporal venden tanto como el concepto creativo.</p>
+    <button class="social-copy-btn" type="button" data-pack="Titular\nUna agencia española se gana la confianza de Dior con una experiencia sobre el olfato\nDescripción\nWildbytes, agencia madrileña, diseñó y produjo «Miss Dior L'Atelier», una instalación inmersiva en la Plaza de Callao (17-20 de septiembre) para el lanzamiento del nuevo Miss Dior Eau de Parfum. La experiencia, centrada en el olfato, recibió cerca de 5.000 visitantes en cuatro días.\nWhy it matters?\nWhy it matters: si una maison francesa de este calibre confía en una agencia española para su activación insignia, ¿qué le está diciendo esto al resto del mercado de lujo sobre el talento ibérico?\nCC take\nCC TAKE: Luxury doesn't always speak French — sometimes it speaks Spanish, and it smells incredible.\nCopy out + CTA\nUn mes después de cerrar sus puertas, la activación sigue siendo la carta de presentación de Wildbytes ante el lujo internacional. ¿Conoces otra agencia española que haya trabajado últimamente para una maison de este nivel?\nConsejo muy Armi\nConsejo muy Armi: cuando presentes un caso de experiencia de marca a un cliente de lujo, lleva siempre una cifra de asistencia y una duración exacta (aquí, 5.000 visitantes en 4 días) — en lujo, la escala y la exclusividad temporal venden tanto como el concepto creativo.">&#128203; <span class="i18n-fr">Copier</span><span class="i18n-es">Copiar</span></button>
+  </div>
+</div>
+    </div>
+    <div class="card-btn-row">
+      <button class="card-toggle" type="button" aria-hidden="true"><span class="card-toggle-label"><span><span class="i18n-fr">Voir plus</span><span class="i18n-es">Ver más</span></span></span> <span class="chevron">&#9662;</span></button>
+      <div class="card-btn-actions">
+        <button class="card-social-toggle" type="button"><span><span class="i18n-fr">📱 Copy réseaux</span><span class="i18n-es">📱 Copy redes</span></span></button>
+      </div>
+    </div>
+  </div>
+</article>
+
+<article class="card top5-hero" data-theme="branding" data-search="new york sacre les meilleurs rebrands nord-americains nueva york premia los mejores rebrandings de norteamerica les transform awards north america 2026, organises par transform magazine, remettent leurs prix ce 13 octobre a l'edison ballroom de new york, en parallele de la conference transform live north america. la shortlist, devoilee en aout, met notamment en lumiere l'agence starfish avec six nominations, de l'identite de destination a la transformation digitale de marque. los transform awards north america 2026, organizados por transform magazine, entregan sus premios este 13 de octubre en el edison ballroom de nueva york, junto a la conferencia transform live north america. la shortlist, revelada en agosto, destaca especialmente a la agencia starfish, con seis nominaciones. que les categories best brand evolution affichent six finalistes chacune cette annee confirme que le rebranding n'est plus un exercice ponctuel reserve aux grandes marques de consommation. que las categorias best brand evolution presenten este ano seis finalistas cada una confirma que el rebranding ya no es un ejercicio puntual reservado a las grandes marcas de consumo. reperer dans son portefeuille de clients les secteurs peu associes au branding. detectar en la propia cartera de clientes los sectores poco asociados al branding." tabindex="0" role="button" aria-expanded="false" id="card-top3-branding-0">
+<div class="card-media"><img src="https://images.unsplash.com/photo-1633533451997-8b6079082e3d?auto=format&fit=crop&w=1200&q=70" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.closest('.card-media').classList.add('media-fallback')"><div class="fallback-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="42" height="42" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9.5"/><path d="M8 13l2.5-3 2 2.5L16 9"/></svg></div><span class="badge"><span><span class="i18n-fr">Branding</span><span class="i18n-es">Branding</span></span> <span class="badge-emoji">🎨</span></span></div>
+  <div class="card-body">
+    <div class="card-title-row">
+      <h3 class="card-title"><span><span class="i18n-fr">New York sacre les meilleurs rebrands nord-américains</span><span class="i18n-es">Nueva York premia los mejores rebrandings de Norteamérica</span></span></h3>
+      <span class="read-tag">3 min</span>
+    </div>
+    <p class="card-fact"><span><span class="i18n-fr">Les Transform Awards North America 2026, organisés par Transform magazine, remettent leurs prix ce 13 octobre à l'Edison Ballroom de New York, en parallèle de la conférence Transform Live North America. La shortlist, dévoilée en août, met notamment en lumière l'agence Starfish avec six nominations, de l'identité de destination (Visit Greater Palm Springs) à la transformation digitale de marque (Primary Wave Music).</span><span class="i18n-es">Los Transform Awards North America 2026, organizados por Transform magazine, entregan sus premios este 13 de octubre en el Edison Ballroom de Nueva York, junto a la conferencia Transform Live North America. La shortlist, revelada en agosto, destaca especialmente a la agencia Starfish, con seis nominaciones, desde identidad de destino (Visit Greater Palm Springs) hasta transformación digital de marca (Primary Wave Music).</span></span></p>
+    <div class="card-more">
+      <p class="card-label"><span><span class="i18n-fr">Pourquoi ça compte</span><span class="i18n-es">Por qué importa</span></span></p>
+      <p class="card-why"><span><span class="i18n-fr">Que les catégories « Best Brand Evolution » affichent six finalistes chacune cette année confirme que le rebranding n'est plus un exercice ponctuel réservé aux grandes marques de consommation, mais une pratique continue appliquée à des secteurs aussi variés que le tourisme de destination, la santé ou l'immobilier — un signal utile pour positionner une offre de branding auprès de clients non traditionnels.</span><span class="i18n-es">Que las categorías «Best Brand Evolution» presenten este año seis finalistas cada una confirma que el rebranding ya no es un ejercicio puntual reservado a las grandes marcas de consumo, sino una práctica continua aplicada a sectores tan variados como el turismo de destino, la salud o el inmobiliario — una señal útil para posicionar una oferta de branding ante clientes no tradicionales.</span></span></p>
+      <p class="card-label"><span><span class="i18n-fr">Action concrète</span><span class="i18n-es">Acción concreta</span></span></p>
+      <p class="card-action">&#128161; <span><span class="i18n-fr">Repérer, dans son propre portefeuille de clients, les secteurs peu associés au branding (collectivités, santé, immobilier) et leur présenter un cas de rebranding sectoriel comme ceux récompensés cette année, plutôt que des exemples issus de la grande consommation.</span><span class="i18n-es">Detectar, en la propia cartera de clientes, los sectores poco asociados al branding (administraciones, salud, inmobiliario) y presentarles un caso de rebranding sectorial como los premiados este año, en vez de ejemplos de gran consumo.</span></span></p>
+      <p class="card-source"><span><span class="i18n-fr">Source :</span><span class="i18n-es">Fuente:</span></span> <a href="https://www.transformmagazine.net/articles/2026/transform-awards-north-america-2026-shortlist-announced/" target="_blank" rel="noopener noreferrer">Transform magazine &#8599;</a></p>
+<div class="social-pack" hidden>
+  <div class="social-pack-inner">
+    <p class="social-row"><strong>Titular</strong><br>Nueva York premia hoy los mejores rebrandings de Norteamérica</p><p class="social-row"><strong>Descripción</strong><br>Los Transform Awards North America 2026 entregan sus premios este 13 de octubre en el Edison Ballroom de Nueva York. La shortlist de agosto destaca a la agencia Starfish con seis nominaciones, en categorías que van de la identidad de destino turístico a la transformación digital de marca.</p><p class="social-row"><strong>Why it matters?</strong><br>Why it matters: si hasta un destino turístico o una fundación compiten hoy en las mismas categorías que una marca de consumo, ¿qué cliente te queda sin un argumento de rebranding?</p><p class="social-row"><strong>CC take</strong><br>CC TAKE: Rebranding stopped being a CPG sport a while ago — today's shortlist proves it.</p><p class="social-row"><strong>Copy out + CTA</strong><br>Los premios se conocen hoy mismo en Nueva York, así que la lista real de ganadores llegará en las próximas horas. ¿Qué sector crees que debería rediseñar su marca antes que ningún otro en 2027?</p><p class="social-row"><strong>Consejo muy Armi</strong><br>Consejo muy Armi: sigue los shortlists de premios de branding como este no solo para inspirarte, sino para detectar qué sectores están empezando a invertir en identidad — suelen ser los próximos en buscar un freelance como tú.</p>
+    <button class="social-copy-btn" type="button" data-pack="Titular\nNueva York premia hoy los mejores rebrandings de Norteamérica\nDescripción\nLos Transform Awards North America 2026 entregan sus premios este 13 de octubre en el Edison Ballroom de Nueva York. La shortlist de agosto destaca a la agencia Starfish con seis nominaciones, en categorías que van de la identidad de destino turístico a la transformación digital de marca.\nWhy it matters?\nWhy it matters: si hasta un destino turístico o una fundación compiten hoy en las mismas categorías que una marca de consumo, ¿qué cliente te queda sin un argumento de rebranding?\nCC take\nCC TAKE: Rebranding stopped being a CPG sport a while ago — today's shortlist proves it.\nCopy out + CTA\nLos premios se conocen hoy mismo en Nueva York, así que la lista real de ganadores llegará en las próximas horas. ¿Qué sector crees que debería rediseñar su marca antes que ningún otro en 2027?\nConsejo muy Armi\nConsejo muy Armi: sigue los shortlists de premios de branding como este no solo para inspirarte, sino para detectar qué sectores están empezando a invertir en identidad — suelen ser los próximos en buscar un freelance como tú.">&#128203; <span class="i18n-fr">Copier</span><span class="i18n-es">Copiar</span></button>
+  </div>
+</div>
+    </div>
+    <div class="card-btn-row">
+      <button class="card-toggle" type="button" aria-hidden="true"><span class="card-toggle-label"><span><span class="i18n-fr">Voir plus</span><span class="i18n-es">Ver más</span></span></span> <span class="chevron">&#9662;</span></button>
+      <div class="card-btn-actions">
+        <button class="card-social-toggle" type="button"><span><span class="i18n-fr">📱 Copy réseaux</span><span class="i18n-es">📱 Copy redes</span></span></button>
+      </div>
+    </div>
+  </div>
+</article>
+
+<article class="card top5-hero" data-theme="evenements" data-search="las vegas reunit le monde des evenements b2b las vegas reune al mundo de los eventos b2b imex america 2026, le plus grand salon mondial de l'industrie des reunions et evenements, ouvre ses portes ce 13 octobre au mandalay bay de las vegas, pour trois jours. l'edition 2026 introduit le programme design matters, avec cinq nouveaux parcours de formation dont un, design for spectacle, entierement consacre aux experiences immersives et aux evenements de grande ampleur. imex america 2026, la mayor feria mundial de la industria de reuniones y eventos, abre sus puertas este 13 de octubre en el mandalay bay de las vegas, durante tres dias. la edicion 2026 introduce el programa design matters, con cinco nuevos itinerarios formativos, entre ellos design for spectacle, dedicado por completo a las experiencias inmersivas y los eventos de gran escala. qu'un salon generaliste de cette taille consacre desormais tout un parcours de formation a la conception d'experiences spectaculaires confirme que la production d'evenements devient une discipline de design a part entiere. que una feria generalista de este tamano dedique ya todo un itinerario formativo al diseno de experiencias espectaculares confirma que la produccion de eventos se esta convirtiendo en una disciplina de diseno. reformuler son offre de production evenementielle en mettant en avant le design de l'experience. reformular la oferta de produccion de eventos destacando el diseno de la experiencia." tabindex="0" role="button" aria-expanded="false" id="card-top3-evenements-0">
+<div class="card-media"><img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=1200&q=70" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.closest('.card-media').classList.add('media-fallback')"><div class="fallback-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="42" height="42" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9.5"/><path d="M8 13l2.5-3 2 2.5L16 9"/></svg></div><span class="badge"><span><span class="i18n-fr">Événements</span><span class="i18n-es">Eventos</span></span> <span class="badge-emoji">📅</span></span></div>
+  <div class="card-body">
+    <div class="card-title-row">
+      <h3 class="card-title"><span><span class="i18n-fr">Las Vegas réunit le monde des événements B2B</span><span class="i18n-es">Las Vegas reúne al mundo de los eventos B2B</span></span></h3>
+      <span class="read-tag">3 min</span>
+    </div>
+    <p class="card-fact"><span><span class="i18n-fr">IMEX America 2026, le plus grand salon mondial de l'industrie des réunions et événements, ouvre ses portes ce 13 octobre au Mandalay Bay de Las Vegas, pour trois jours. L'édition 2026 introduit le programme « Design Matters », avec cinq nouveaux parcours de formation dont un, « Design for Spectacle », entièrement consacré aux expériences immersives et aux événements de grande ampleur.</span><span class="i18n-es">IMEX America 2026, la mayor feria mundial de la industria de reuniones y eventos, abre sus puertas este 13 de octubre en el Mandalay Bay de Las Vegas, durante tres días. La edición 2026 introduce el programa «Design Matters», con cinco nuevos itinerarios formativos, entre ellos «Design for Spectacle», dedicado por completo a las experiencias inmersivas y los eventos de gran escala.</span></span></p>
+    <div class="card-more">
+      <p class="card-label"><span><span class="i18n-fr">Pourquoi ça compte</span><span class="i18n-es">Por qué importa</span></span></p>
+      <p class="card-why"><span><span class="i18n-fr">Qu'un salon généraliste de cette taille consacre désormais tout un parcours de formation à la conception d'expériences spectaculaires, et non plus seulement à la logistique MICE classique, confirme que la production d'événements est en train de devenir une discipline de design à part entière — exactement le positionnement que peut revendiquer un(e) freelance en direction créative d'événements.</span><span class="i18n-es">Que una feria generalista de este tamaño dedique ya todo un itinerario formativo al diseño de experiencias espectaculares, y no solo a la logística MICE clásica, confirma que la producción de eventos se está convirtiendo en una disciplina de diseño por derecho propio — exactamente el posicionamiento que puede reivindicar un o una freelance de dirección creativa de eventos.</span></span></p>
+      <p class="card-label"><span><span class="i18n-fr">Action concrète</span><span class="i18n-es">Acción concreta</span></span></p>
+      <p class="card-action">&#128161; <span><span class="i18n-fr">Reformuler son offre de production événementielle en mettant en avant le « design de l'expérience » (parcours, scénographie, dramaturgie) comme compétence distincte de la pure logistique — c'est le vocabulaire que les plus gros salons du secteur valorisent désormais.</span><span class="i18n-es">Reformular la oferta de producción de eventos destacando el «diseño de la experiencia» (recorrido, escenografía, dramaturgia) como una competencia distinta de la pura logística — es el vocabulario que las ferias más grandes del sector ya están priorizando.</span></span></p>
+      <p class="card-source"><span><span class="i18n-fr">Source :</span><span class="i18n-es">Fuente:</span></span> <a href="https://www.journaldespalaces.com/en/pressrelease-79164-united-states-calendar-growing-industry-investment-signals-confidence-ahead-of-imex-america-2026.html" target="_blank" rel="noopener noreferrer">Journal des Palaces &#8599;</a></p>
+<div class="social-pack" hidden>
+  <div class="social-pack-inner">
+    <p class="social-row"><strong>Titular</strong><br>La feria más grande del mundo de eventos abre hoy en Las Vegas</p><p class="social-row"><strong>Descripción</strong><br>IMEX America 2026 abre sus puertas este 13 de octubre en el Mandalay Bay de Las Vegas, con más de 17.000 asistentes esperados. La edición estrena «Design Matters», un programa con cinco nuevos itinerarios formativos, incluido «Design for Spectacle», centrado en experiencias inmersivas y eventos de gran escala.</p><p class="social-row"><strong>Why it matters?</strong><br>Why it matters: si hasta la feria MICE más grande del mundo dedica un itinerario entero al «diseño del espectáculo», ¿sigue siendo la logística el centro de la producción de eventos, o ya es el diseño de la experiencia?</p><p class="social-row"><strong>CC take</strong><br>CC TAKE: Event production just got a design degree.</p><p class="social-row"><strong>Copy out + CTA</strong><br>La feria dura hasta el 15 de octubre, así que todavía hay tiempo de seguir en directo lo que se cuece allí. ¿Qué parte de un evento cuidas tú primero: la logística o la escenografía?</p><p class="social-row"><strong>Consejo muy Armi</strong><br>Consejo muy Armi: si produces eventos, empieza a hablar de «diseño de experiencia» en vez de solo «producción» en tu propio perfil — es el término que ahora usan las ferias más grandes del sector, y los clientes lo están empezando a buscar así.</p>
+    <button class="social-copy-btn" type="button" data-pack="Titular\nLa feria más grande del mundo de eventos abre hoy en Las Vegas\nDescripción\nIMEX America 2026 abre sus puertas este 13 de octubre en el Mandalay Bay de Las Vegas, con más de 17.000 asistentes esperados. La edición estrena «Design Matters», un programa con cinco nuevos itinerarios formativos, incluido «Design for Spectacle», centrado en experiencias inmersivas y eventos de gran escala.\nWhy it matters?\nWhy it matters: si hasta la feria MICE más grande del mundo dedica un itinerario entero al «diseño del espectáculo», ¿sigue siendo la logística el centro de la producción de eventos, o ya es el diseño de la experiencia?\nCC take\nCC TAKE: Event production just got a design degree.\nCopy out + CTA\nLa feria dura hasta el 15 de octubre, así que todavía hay tiempo de seguir en directo lo que se cuece allí. ¿Qué parte de un evento cuidas tú primero: la logística o la escenografía?\nConsejo muy Armi\nConsejo muy Armi: si produces eventos, empieza a hablar de «diseño de experiencia» en vez de solo «producción» en tu propio perfil — es el término que ahora usan las ferias más grandes del sector, y los clientes lo están empezando a buscar así.">&#128203; <span class="i18n-fr">Copier</span><span class="i18n-es">Copiar</span></button>
+  </div>
+</div>
+    </div>
+    <div class="card-btn-row">
+      <button class="card-toggle" type="button" aria-hidden="true"><span class="card-toggle-label"><span><span class="i18n-fr">Voir plus</span><span class="i18n-es">Ver más</span></span></span> <span class="chevron">&#9662;</span></button>
+      <div class="card-btn-actions">
+        <button class="card-social-toggle" type="button"><span><span class="i18n-fr">📱 Copy réseaux</span><span class="i18n-es">📱 Copy redes</span></span></button>
+      </div>
+    </div>
+  </div>
+</article>
+
+    </div>
+  </section>
+
+  <section class="carousel-section">
+    <h2 class="section-title"><span class="section-emoji">&#127902;&#65039;</span><span><span class="i18n-fr">Le carrousel de la période</span><span class="i18n-es">El carrusel del período</span></span></h2>
+    <div class="carousel" id="carousel" tabindex="0" aria-roledescription="carrousel" aria-label="Actus marquantes de la période">
+      <div class="carousel-track" id="carousel-track">
+<div class="carousel-slide" data-theme="popup">
+          <div class="carousel-slide-media"><img src="https://images.unsplash.com/photo-1757800945942-cdc006f6f5eb?auto=format&fit=crop&w=1200&q=70" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.parentElement.classList.add('media-fallback')"></div>
+          <div class="carousel-slide-content">
+            <span class="carousel-badge">🏬 <span><span class="i18n-fr">Pop-up stores</span><span class="i18n-es">Tiendas efímeras</span></span></span>
+            <h3><span><span class="i18n-fr">Une agence espagnole séduit Dior</span><span class="i18n-es">Una agencia española seduce a Dior</span></span></h3>
+            <p><span><span class="i18n-fr">Wildbytes a conçu pour Dior une expérience immersive dédiée à l'odorat, à Madrid.</span><span class="i18n-es">Wildbytes diseñó para Dior una experiencia inmersiva centrada en el olfato, en Madrid.</span></span></p>
+          </div>
+        </div>
+<div class="carousel-slide" data-theme="branding">
+          <div class="carousel-slide-media"><img src="https://images.unsplash.com/photo-1633533451997-8b6079082e3d?auto=format&fit=crop&w=1200&q=70" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.parentElement.classList.add('media-fallback')"></div>
+          <div class="carousel-slide-content">
+            <span class="carousel-badge">🎨 <span><span class="i18n-fr">Branding</span><span class="i18n-es">Branding</span></span></span>
+            <h3><span><span class="i18n-fr">New York couronne le meilleur du rebranding</span><span class="i18n-es">Nueva York corona lo mejor del rebranding</span></span></h3>
+            <p><span><span class="i18n-fr">Les Transform Awards North America 2026 récompensent des identités allant du tourisme à la santé.</span><span class="i18n-es">Los Transform Awards North America 2026 premian identidades que van del turismo a la salud.</span></span></p>
+          </div>
+        </div>
+<div class="carousel-slide" data-theme="evenements">
+          <div class="carousel-slide-media"><img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=1200&q=70" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.parentElement.classList.add('media-fallback')"></div>
+          <div class="carousel-slide-content">
+            <span class="carousel-badge">📅 <span><span class="i18n-fr">Événements</span><span class="i18n-es">Eventos</span></span></span>
+            <h3><span><span class="i18n-fr">Las Vegas, capitale du design d'événements</span><span class="i18n-es">Las Vegas, capital del diseño de eventos</span></span></h3>
+            <p><span><span class="i18n-fr">IMEX America 2026 ouvre avec un nouveau parcours dédié aux expériences spectaculaires.</span><span class="i18n-es">IMEX America 2026 abre con un nuevo itinerario dedicado a las experiencias espectaculares.</span></span></p>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-arrow prev" type="button" aria-label="Précédent">&#8249;</button>
+      <button class="carousel-arrow next" type="button" aria-label="Suivant">&#8250;</button>
+      <div class="carousel-dots" id="carousel-dots"></div>
+    </div>
+  </section>
+
+  <section class="quicklinks-section">
+    <h2 class="section-title"><span class="section-emoji">&#128279;</span><span><span class="i18n-fr">Liens rapides</span><span class="i18n-es">Enlaces rápidos</span></span></h2>
+    <div class="quicklinks">
+      <ul>
+        <li class="quicklink-item"><span class="quicklink-title"><span><span class="i18n-fr">Sephora installe son festival immersif SEPHORiA à Londres pour la première fois, du 16 au 17 octobre.</span><span class="i18n-es">Sephora instala por primera vez su festival inmersivo SEPHORiA en Londres, del 16 al 17 de octubre.</span></span></span> — <span class="quicklink-source">The Retail Bulletin</span> — <a href="https://www.theretailbulletin.com/health-and-beauty/sephora-to-bring-its-sephoria-beauty-experience-to-london-for-the-first-time-24-06-2026/" target="_blank" rel="noopener noreferrer">&#8599;</a></li>
+        <li class="quicklink-item"><span class="quicklink-title"><span><span class="i18n-fr">POP Mart ouvre à New York un pop-up Skullpanda entièrement pensé pour « se déconnecter », à partir du 16 octobre.</span><span class="i18n-es">POP Mart abre en Nueva York un pop-up de Skullpanda pensado íntegramente para «desconectar», a partir del 16 de octubre.</span></span></span> — <span class="quicklink-source">NYCforFree.co</span> — <a href="https://www.nycforfree.co/events/skullpanda-off-mode-experience" target="_blank" rel="noopener noreferrer">&#8599;</a></li>
+        <li class="quicklink-item"><span class="quicklink-title"><span><span class="i18n-fr">Fanatics Collectibles ouvrira le 23 octobre son premier flagship sur le continent européen, à Paris.</span><span class="i18n-es">Fanatics Collectibles abrirá el 23 de octubre su primer flagship en la Europa continental, en París.</span></span></span> — <span class="quicklink-source">Otia</span> — <a href="https://otia.com/news/fanatics-collectibles-paris-flagship-store-opening-october-23" target="_blank" rel="noopener noreferrer">&#8599;</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <p class="no-results" id="no-results" hidden><span><span class="i18n-fr">Aucun résultat pour cette recherche.</span><span class="i18n-es">Ningún resultado para esta búsqueda.</span></span></p>
+
+  <footer>
+    <p><span><span class="i18n-fr">Veille personnelle — branding, marketing, activation de marque. Espagne &amp; Europe. Édition du 13 octobre 2026.</span><span class="i18n-es">Vigilancia personal — branding, marketing, activación de marca. España y Europa. Edición del 13 de octubre de 2026.</span></span></p>
+  </footer>
+</main>
+
+<script>
+
+(function(){
+  "use strict";
+
+  // ----- Progress bar -----
+  var bar = document.getElementById('progress-bar');
+  function updateProgress(){
+    var el = document.documentElement;
+    var scrollTop = el.scrollTop || document.body.scrollTop;
+    var scrollHeight = (el.scrollHeight || document.body.scrollHeight) - el.clientHeight;
+    var pct = scrollHeight > 0 ? (scrollTop / scrollHeight) * 100 : 0;
+    if (bar) bar.style.width = pct + '%';
+  }
+  window.addEventListener('scroll', updateProgress, { passive: true });
+  window.addEventListener('resize', updateProgress);
+  updateProgress();
+
+  // ----- Animated counters -----
+  function animateCount(el, duration){
+    if (!el) return;
+    var target = parseInt(el.getAttribute('data-target'), 10) || 0;
+    var startTime = null;
+    function step(ts){
+      if (!startTime) startTime = ts;
+      var progress = Math.min((ts - startTime) / duration, 1);
+      el.textContent = Math.floor(progress * target);
+      if (progress < 1) requestAnimationFrame(step);
+      else el.textContent = target;
+    }
+    requestAnimationFrame(step);
+  }
+  document.querySelectorAll('.stat-num[data-target]').forEach(function(el){ animateCount(el, 900); });
+
+  // ----- Chip filters + search -----
+  var cards = Array.prototype.slice.call(document.querySelectorAll('.card'));
+  var chips = Array.prototype.slice.call(document.querySelectorAll('.chip'));
+  var searchInput = document.getElementById('search-input');
+  var currentFilter = 'all';
+
+  function applyFilters(){
+    var q = searchInput ? searchInput.value.toLowerCase().trim() : '';
+    var visibleCount = 0;
+    cards.forEach(function(card){
+      var themeMatch = currentFilter === 'all' || card.getAttribute('data-theme') === currentFilter;
+      var textMatch = !q || (card.getAttribute('data-search') || '').indexOf(q) !== -1;
+      var show = themeMatch && textMatch;
+      card.hidden = !show;
+      if (show) visibleCount++;
+    });
+    document.querySelectorAll('.theme-section').forEach(function(section){
+      var visible = section.querySelectorAll('.card:not([hidden])').length;
+      section.style.display = visible === 0 ? 'none' : '';
+    });
+    var noResults = document.getElementById('no-results');
+    if (noResults) noResults.hidden = visibleCount !== 0;
+  }
+
+  chips.forEach(function(chip){
+    chip.addEventListener('click', function(){
+      chips.forEach(function(c){ c.classList.remove('active'); });
+      chip.classList.add('active');
+      currentFilter = chip.getAttribute('data-filter');
+      applyFilters();
+    });
+  });
+  if (searchInput) searchInput.addEventListener('input', applyFilters);
+
+  // ----- Card expand/collapse -----
+  cards.forEach(function(card){
+    function toggle(e){
+      if (e && e.target && e.target.closest('.card-social-toggle')) return;
+      if (e && e.target && e.target.closest('.social-pack')) return;
+      if (e && e.target && e.target.closest('a')) return;
+      var expanded = card.classList.toggle('expanded');
+      card.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+    }
+    card.addEventListener('click', toggle);
+    card.addEventListener('keydown', function(e){
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(e); }
+    });
+    var socialBtn = card.querySelector('.card-social-toggle');
+    var socialPack = card.querySelector('.social-pack');
+    if (socialBtn && socialPack) {
+      socialBtn.addEventListener('click', function(e){
+        e.stopPropagation();
+        socialPack.hidden = !socialPack.hidden;
+      });
+    }
+    var copyBtn = card.querySelector('.social-copy-btn');
+    if (copyBtn) {
+      copyBtn.addEventListener('click', function(e){
+        e.stopPropagation();
+        var text = (copyBtn.getAttribute('data-pack') || '').replace(/\\n/g, '\n');
+        function done(ok){
+          copyBtn.classList.toggle('copied', ok);
+          setTimeout(function(){ copyBtn.classList.remove('copied'); }, 1800);
+        }
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(text).then(function(){ done(true); }, function(){ done(false); });
+        } else {
+          try {
+            var ta = document.createElement('textarea');
+            ta.value = text; document.body.appendChild(ta); ta.select();
+            var ok = document.execCommand('copy');
+            document.body.removeChild(ta);
+            done(ok);
+          } catch(err){ done(false); }
+        }
+      });
+    }
+  });
+
+  // ----- Carousel -----
+  var track = document.getElementById('carousel-track');
+  var carousel = document.getElementById('carousel');
+  if (track && carousel) {
+    var slides = Array.prototype.slice.call(track.children);
+    var dotsWrap = document.getElementById('carousel-dots');
+    var current = 0;
+    var autoplayTimer = null;
+
+    slides.forEach(function(_, i){
+      var dot = document.createElement('button');
+      dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
+      dot.type = 'button';
+      dot.setAttribute('aria-label', 'Slide ' + (i+1));
+      dot.addEventListener('click', function(){ goTo(i, true); });
+      if (dotsWrap) dotsWrap.appendChild(dot);
+    });
+    var dots = dotsWrap ? Array.prototype.slice.call(dotsWrap.children) : [];
+
+    function goTo(i, manual){
+      current = (i + slides.length) % slides.length;
+      track.style.transform = 'translateX(-' + (current * 100) + '%)';
+      dots.forEach(function(d, idx){ d.classList.toggle('active', idx === current); });
+      if (manual) restartAutoplay();
+    }
+    function next(){ goTo(current + 1); }
+    function prev(){ goTo(current - 1); }
+
+    var prevBtn = document.querySelector('.carousel-arrow.prev');
+    var nextBtn = document.querySelector('.carousel-arrow.next');
+    if (prevBtn) prevBtn.addEventListener('click', function(){ prev(); restartAutoplay(); });
+    if (nextBtn) nextBtn.addEventListener('click', function(){ next(); restartAutoplay(); });
+
+    carousel.addEventListener('keydown', function(e){
+      if (e.key === 'ArrowRight') { next(); restartAutoplay(); }
+      if (e.key === 'ArrowLeft') { prev(); restartAutoplay(); }
+    });
+
+    function startAutoplay(){
+      if (slides.length < 2) return;
+      autoplayTimer = setInterval(next, 5500);
+    }
+    function stopAutoplay(){ if (autoplayTimer) { clearInterval(autoplayTimer); autoplayTimer = null; } }
+    function restartAutoplay(){ stopAutoplay(); startAutoplay(); }
+
+    carousel.addEventListener('mouseenter', stopAutoplay);
+    carousel.addEventListener('mouseleave', startAutoplay);
+
+    var touchStartX = null;
+    carousel.addEventListener('touchstart', function(e){ touchStartX = e.changedTouches[0].clientX; }, {passive:true});
+    carousel.addEventListener('touchend', function(e){
+      if (touchStartX === null) return;
+      var dx = e.changedTouches[0].clientX - touchStartX;
+      if (Math.abs(dx) > 40) { dx < 0 ? next() : prev(); restartAutoplay(); }
+      touchStartX = null;
+    }, {passive:true});
+
+    startAutoplay();
+  }
+
+  // ----- Scroll reveal (motion-safe) -----
+  (function(){
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    if (!('IntersectionObserver' in window)) return;
+    var groups = Array.prototype.slice.call(document.querySelectorAll('.card-grid, .top5-grid'));
+    groups.forEach(function(group){
+      Array.prototype.slice.call(group.children).forEach(function(el, i){
+        el.classList.add('reveal-init');
+        el.style.transitionDelay = (i * 70) + 'ms';
+      });
+    });
+    Array.prototype.slice.call(document.querySelectorAll('.carousel-section, .quicklinks')).forEach(function(el){
+      el.classList.add('reveal-init');
+    });
+    var observer = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if (entry.isIntersecting){
+          entry.target.classList.add('reveal-in');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {threshold:.12, rootMargin:'0px 0px -40px 0px'});
+    Array.prototype.slice.call(document.querySelectorAll('.reveal-init')).forEach(function(el){ observer.observe(el); });
+  })();
+
+  // ----- Sticky header blur on scroll -----
+  (function(){
+    var controlsBar = document.querySelector('.controls');
+    if (!controlsBar) return;
+    function onControlsScroll(){
+      controlsBar.classList.toggle('is-scrolled', (window.scrollY || document.documentElement.scrollTop) > 8);
+    }
+    window.addEventListener('scroll', onControlsScroll, { passive: true });
+    onControlsScroll();
+  })();
+
+  // ----- FR / ES language toggle -----
+  var currentLang = 'fr';
+  try { if (localStorage.getItem('veille-lang') === 'es') currentLang = 'es'; } catch(e){}
+  var langToggleBtn = document.getElementById('lang-toggle');
+  var I18N_UI = {
+    fr: { searchPlaceholder: 'Rechercher un mot-clé (marque, thème…)' },
+    es: { searchPlaceholder: 'Buscar una palabra clave (marca, tema…)' }
+  };
+  function applyLang(lang, save){
+    currentLang = lang;
+    document.body.classList.toggle('lang-es', lang === 'es');
+    if (langToggleBtn) {
+      var frSpan = langToggleBtn.querySelector('.lang-toggle-fr');
+      var esSpan = langToggleBtn.querySelector('.lang-toggle-es');
+      if (frSpan) frSpan.classList.toggle('active', lang === 'fr');
+      if (esSpan) esSpan.classList.toggle('active', lang === 'es');
+    }
+    if (searchInput && I18N_UI[lang]) searchInput.setAttribute('placeholder', I18N_UI[lang].searchPlaceholder);
+    if (save) { try { localStorage.setItem('veille-lang', lang); } catch(e){} }
+  }
+  function switchLang(lang, save){
+    var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduced) { applyLang(lang, save); return; }
+    document.body.classList.add('lang-fade');
+    setTimeout(function(){
+      applyLang(lang, save);
+      requestAnimationFrame(function(){ document.body.classList.remove('lang-fade'); });
+    }, 150);
+  }
+  if (langToggleBtn) {
+    langToggleBtn.addEventListener('click', function(){
+      switchLang(currentLang === 'es' ? 'fr' : 'es', true);
+    });
+  }
+  applyLang(currentLang, false);
+
+  applyFilters();
+})();
+
+</script>
+
+</body>
+</html>
