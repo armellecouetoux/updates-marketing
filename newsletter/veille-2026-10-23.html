@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Newsletter — Veille Branding &amp; Marketing — 23 octobre 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+
+:root{
+  --bg:#F3EDE2; --panel:#FBF8F2; --panel-line:#E4DACB; --ink:#2B2621; --ink-soft:#7A7167;
+  --accent:#B27A50; --accent-soft:#DCC7AE; --dark:#2B2621;
+  --font:'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+}
+*{box-sizing:border-box;}
+html,body{margin:0;padding:0;}
+body{background:var(--bg); color:var(--ink); font-family:var(--font); font-weight:400; line-height:1.55; -webkit-font-smoothing:antialiased;}
+.toolbar{max-width:600px; margin:0 auto; padding:16px 20px 0; display:flex; align-items:center; justify-content:flex-end; gap:10px;}
+#copy-btn{font-family:var(--font); font-weight:700; font-size:13px; color:#fff; background:var(--accent); border:none; border-radius:999px; padding:10px 18px; cursor:pointer; transition:transform .15s ease;}
+#copy-btn:hover{transform:translateY(-2px);}
+#copy-btn.copied{background:var(--dark);}
+.lang-toggle{font-family:var(--font); font-weight:600; font-size:12.5px; color:var(--ink); background:var(--panel); border:1px solid var(--panel-line); border-radius:999px; padding:9px 16px; cursor:pointer; white-space:nowrap; display:inline-flex; align-items:center; gap:6px;}
+.lang-toggle-fr,.lang-toggle-es{opacity:.5;}
+.lang-toggle-fr.active,.lang-toggle-es.active{opacity:1; font-weight:800; color:var(--accent);}
+.email-wrap{max-width:600px; margin:0 auto; padding:20px;}
+.email{background:var(--panel); border-radius:14px; overflow:hidden; border:1px solid var(--panel-line);}
+.email-header{background:var(--dark); color:#F3EDE2; padding:34px 28px;}
+.eyebrow{font-family:var(--font); font-weight:700; letter-spacing:.1em; text-transform:uppercase; font-size:11px; color:var(--accent-soft); margin:0 0 10px;}
+.email-header h1{font-family:var(--font); font-weight:800; font-size:23px; line-height:1.28; margin:0 0 10px;}
+.email-header p{font-size:13.5px; color:#D9CFC0; margin:0;}
+.email-body{padding:28px;}
+.intro{font-size:14.5px; color:var(--ink); margin:0 0 26px; line-height:1.6;}
+.section-label{font-family:var(--font); font-weight:800; font-size:12px; letter-spacing:.06em; text-transform:uppercase; color:var(--ink); margin:0 0 16px;}
+.item{padding:0 0 20px; margin:0 0 20px; border-bottom:1px solid var(--panel-line);}
+.item:last-child{border-bottom:none; margin-bottom:0; padding-bottom:0;}
+.item-num{display:inline-flex; align-items:center; justify-content:center; width:22px; height:22px; border-radius:50%; background:var(--accent); color:#fff; font-family:var(--font); font-weight:800; font-size:11.5px; margin-right:8px; vertical-align:middle;}
+.item h3{font-family:var(--font); font-weight:700; font-size:16px; margin:0 0 6px; color:var(--ink); display:inline;}
+.item p{font-size:13.5px; color:var(--ink); margin:8px 0 8px; line-height:1.55;}
+.item a.src{font-family:var(--font); font-weight:700; font-size:12.5px; color:var(--accent); text-decoration:none; border-bottom:1px solid var(--accent-soft);}
+.cta-row{text-align:center; margin:30px 0 6px;}
+.cta{display:inline-block; font-family:var(--font); font-weight:700; font-size:13.5px; color:#fff; background:var(--dark); text-decoration:none; border-radius:999px; padding:12px 24px;}
+.email-footer{background:var(--bg); padding:20px 28px; text-align:center; color:var(--ink-soft); font-size:12px;}
+.email-footer p{margin:4px 0;}
+.email-footer a{color:var(--accent);}
+@media (max-width:480px){ .email-header{padding:26px 20px;} .email-body{padding:20px;} .email-footer{padding:16px 20px;} }
+.i18n-es{display:none;}
+body.lang-es .i18n-fr{display:none;}
+body.lang-es .i18n-es{display:inline;}
+
+/* --- Micro-interactions & scroll-reveal (motion-safe) --- */
+.email{transition:opacity .15s ease;}
+body.lang-fade .email{opacity:.45;}
+.item a.src{transition:color .18s ease, border-color .18s ease;}
+.cta{transition:transform .2s cubic-bezier(.25,.8,.25,1), background-color .2s ease;}
+.cta:hover{transform:translateY(-2px);}
+@media (prefers-reduced-motion: no-preference){
+  .reveal-init{opacity:0; transform:translateY(16px); transition:opacity .45s ease-out, transform .45s ease-out;}
+  .reveal-init.reveal-in{opacity:1; transform:translateY(0);}
+}
+@media (prefers-reduced-motion: reduce){
+  .email, .item a.src, .cta{transition:none !important;}
+}
+
+</style>
+
+</head>
+<body>
+
+<div class="toolbar">
+  <button id="lang-toggle" class="lang-toggle" type="button" aria-label="Cambiar idioma"><span class="lang-toggle-fr active">&#x1F1EB;&#x1F1F7; FR</span><span>·</span><span class="lang-toggle-es">&#x1F1EA;&#x1F1F8; ES</span></button>
+  <button id="copy-btn" type="button"><span class="copy-btn-label"><span><span class="i18n-fr">&#128203; Copier le texte</span><span class="i18n-es">&#128203; Copiar el texto</span></span></span></button>
+</div>
+
+<div class="email-wrap">
+  <div class="email" id="email-content">
+
+    <div class="email-header">
+      <p class="eyebrow"><span><span class="i18n-fr">Veille Branding · Marketing · Expérience de marque</span><span class="i18n-es">Vigilancia de Branding · Marketing · Experiencia de marca</span></span></p>
+      <h1><span><span class="i18n-fr">Apple Music se réinvente par le son, un village espagnol devient star de pub</span><span class="i18n-es">Apple Music se reinventa a través del sonido, un pueblo español protagoniza un anuncio</span></span></h1>
+      <p><span><span class="i18n-fr">23 octobre 2026 · Période du 21 au 23 octobre 2026 — l'essentiel en 2 actus, à lire en 2 minutes.</span><span class="i18n-es">23 de octubre de 2026 · Período del 21 al 23 de octubre de 2026 — lo esencial en 2 noticias, para leer en 2 minutos.</span></span></p>
+    </div>
+
+    <div class="email-body">
+      <p class="intro"><span><span class="i18n-fr">Édition courte&nbsp;: la fenêtre du 21 au 23 octobre a été très calme sur la plupart des thématiques, mais a livré deux actus bien distinctes&nbsp;: Apple Music refond son identité autour du son, et Babaria transforme un vrai village espagnol en star de sa campagne.</span><span class="i18n-es">Edición corta&nbsp;: la ventana del 21 al 23 de octubre estuvo muy tranquila en la mayoría de las temáticas, pero trajo dos noticias bien distintas&nbsp;: Apple Music rediseña su identidad en torno al sonido, y Babaria convierte un pueblo español real en la estrella de su campaña.</span></span></p>
+      <p class="section-label"><span><span class="i18n-fr">&#127942; Le Top 2 de la période</span><span class="i18n-es">&#127942; El Top 2 del período</span></span></p>
+      <div class="item">
+        <h3><span class="item-num">1</span><span><span class="i18n-fr">Apple Music dévoile une identité «&nbsp;Made by Sound&nbsp;»</span><span class="i18n-es">Apple Music presenta una identidad «&nbsp;Made by Sound&nbsp;»</span></span></h3>
+        <p><span><span class="i18n-fr">Le 21 octobre, Apple a présenté un nouveau logo noir et blanc conçu avec Fred again.. et le studio NEST Acoustics, littéralement façonné par le son. Déploiement prévu dès iOS 27.2.</span><span class="i18n-es">El 21 de octubre, Apple presentó un nuevo logotipo en blanco y negro creado junto a Fred again.. y el estudio NEST Acoustics, literalmente moldeado por el sonido. Despliegue previsto con iOS 27.2.</span></span></p>
+        <a class="src" href="https://www.macrumors.com/2026/10/21/apple-music-new-look-announced/" target="_blank" rel="noopener noreferrer"><span><span class="i18n-fr">Lire la source (MacRumors) →</span><span class="i18n-es">Leer la fuente (MacRumors) →</span></span></a>
+      </div>
+      <div class="item">
+        <h3><span class="item-num">2</span><span><span class="i18n-fr">Babaria transforme le village de Cebolla en star de sa campagne</span><span class="i18n-es">Babaria convierte el pueblo de Cebolla en estrella de su campaña</span></span></h3>
+        <p><span><span class="i18n-fr">Le 22 octobre, la marque valencienne a lancé «&nbsp;La vida en Cebolla&nbsp;», une mini-série tournée dans le village toledano qui porte le nom de son shampoing à l'oignon, avec le créateur Iban García.</span><span class="i18n-es">El 22 de octubre, la marca valenciana lanzó «&nbsp;La vida en Cebolla&nbsp;», una miniserie rodada en el pueblo toledano que lleva el nombre de su champú de cebolla, con el creador Iban García.</span></span></p>
+        <a class="src" href="https://www.marketingdirecto.com/creacion/campanas-de-marketing/vecinos-cebolla-convierten-estrellas-nueva-campana-babaria" target="_blank" rel="noopener noreferrer"><span><span class="i18n-fr">Lire la source (MarketingDirecto) →</span><span class="i18n-es">Leer la fuente (MarketingDirecto) →</span></span></a>
+      </div>
+
+      <div class="cta-row">
+        <a class="cta" href="../reports/veille-2026-10-23.html"><span><span class="i18n-fr">Lire le rapport complet (2 actus) →</span><span class="i18n-es">Leer el informe completo (2 noticias) →</span></span></a>
+      </div>
+    </div>
+
+    <div class="email-footer">
+      <p><span><span class="i18n-fr">Veille personnelle &#8212; branding, marketing, activation de marque. Espagne &amp; Europe.</span><span class="i18n-es">Vigilancia personal &#8212; branding, marketing, activación de marca. España y Europa.</span></span></p>
+      <p><span><span class="i18n-fr">&#201;dition du 23 octobre 2026</span><span class="i18n-es">Edición del 23 de octubre de 2026</span></span> · <a href="../archive.html"><span><span class="i18n-fr">Voir toutes les archives</span><span class="i18n-es">Ver todos los archivos</span></span></a></p>
+    </div>
+
+  </div>
+</div>
+<script>
+
+(function(){
+  "use strict";
+  var btn = document.getElementById('copy-btn');
+  var content = document.getElementById('email-content');
+
+  // ----- Scroll reveal (motion-safe) -----
+  (function(){
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    if (!('IntersectionObserver' in window)) return;
+    var items = Array.prototype.slice.call(document.querySelectorAll('.item'));
+    items.forEach(function(el, i){
+      el.classList.add('reveal-init');
+      el.style.transitionDelay = (i * 70) + 'ms';
+    });
+    var observer = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if (entry.isIntersecting){
+          entry.target.classList.add('reveal-in');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {threshold:.12, rootMargin:'0px 0px -40px 0px'});
+    items.forEach(function(el){ observer.observe(el); });
+  })();
+
+  var currentLang = 'fr';
+  try { if (localStorage.getItem('veille-lang') === 'es') currentLang = 'es'; } catch(e){}
+  var langToggleBtn = document.getElementById('lang-toggle');
+  var copyLabel = btn ? btn.querySelector('.copy-btn-label') : null;
+  var I18N = {
+    fr: { copy: '📋 Copier le texte', copied: '✅ Copié !', failed: '⚠️ Sélectionnez et copiez manuellement' },
+    es: { copy: '📋 Copiar el texto', copied: '✅ ¡Copiado!', failed: '⚠️ Selecciona y copia manualmente' }
+  };
+  function applyLang(lang, save){
+    currentLang = lang;
+    document.body.classList.toggle('lang-es', lang === 'es');
+    if (langToggleBtn) {
+      var frSpan = langToggleBtn.querySelector('.lang-toggle-fr');
+      var esSpan = langToggleBtn.querySelector('.lang-toggle-es');
+      if (frSpan) frSpan.classList.toggle('active', lang === 'fr');
+      if (esSpan) esSpan.classList.toggle('active', lang === 'es');
+    }
+    if (save) { try { localStorage.setItem('veille-lang', lang); } catch(e){} }
+  }
+  function switchLang(lang, save){
+    var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduced) { applyLang(lang, save); return; }
+    document.body.classList.add('lang-fade');
+    setTimeout(function(){
+      applyLang(lang, save);
+      requestAnimationFrame(function(){ document.body.classList.remove('lang-fade'); });
+    }, 150);
+  }
+  if (langToggleBtn) {
+    langToggleBtn.addEventListener('click', function(){ switchLang(currentLang === 'es' ? 'fr' : 'es', true); });
+  }
+  applyLang(currentLang, false);
+  if (!btn || !content) return;
+  btn.addEventListener('click', function(){
+    var text = content.innerText;
+    function done(ok){
+      if (copyLabel) copyLabel.textContent = ok ? I18N[currentLang].copied : I18N[currentLang].failed;
+      btn.classList.toggle('copied', ok);
+      setTimeout(function(){
+        if (copyLabel) copyLabel.innerHTML = '<span class="i18n-fr">📋 Copier le texte</span><span class="i18n-es">📋 Copiar el texto</span>';
+        btn.classList.remove('copied');
+      }, 2200);
+    }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(function(){ done(true); }, function(){ done(false); });
+    } else {
+      try {
+        var range = document.createRange();
+        range.selectNode(content);
+        var sel = window.getSelection();
+        sel.removeAllRanges();
+        sel.addRange(range);
+        var ok = document.execCommand('copy');
+        sel.removeAllRanges();
+        done(ok);
+      } catch (e) { done(false); }
+    }
+  });
+})();
+
+</script>
+
+</body>
+</html>
