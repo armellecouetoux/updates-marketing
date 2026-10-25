@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Veille Branding &amp; Marketing — 25 octobre 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+
+:root{
+  --bg:#F3EDE2;
+  --panel:#FBF8F2;
+  --panel-line:#E4DACB;
+  --ink:#2B2621;
+  --ink-soft:#7A7167;
+  --accent:#B27A50;
+  --accent-soft:#DCC7AE;
+  --dark:#2B2621;
+  --dark-2:#3A332B;
+  --font:'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+  --radius:16px;
+  --maxw:860px;
+}
+*{box-sizing:border-box;}
+html,body{margin:0;padding:0;}
+body{background:var(--bg); color:var(--ink); font-family:var(--font); font-weight:400; line-height:1.55; -webkit-font-smoothing:antialiased; overflow-x:hidden;}
+.wrap{max-width:var(--maxw); margin:0 auto; padding:0 20px;}
+a{color:var(--accent);}
+
+#progress-bar{position:fixed; top:0; left:0; height:3px; width:0%; background:var(--accent); z-index:999; transition:width .08s linear;}
+
+header.masthead{background:var(--dark); color:#F3EDE2; padding:52px 0 44px; position:relative; overflow:hidden;}
+.masthead-top{display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; position:relative;}
+.eyebrow{font-family:var(--font); font-weight:700; letter-spacing:.1em; text-transform:uppercase; font-size:11.5px; color:var(--accent-soft); margin:0;}
+.header-actions{display:flex; align-items:center; gap:12px; flex-wrap:wrap;}
+h1.title{font-family:var(--font); font-weight:800; font-size:clamp(24px, 3.8vw, 38px); line-height:1.22; margin:18px 0 14px; max-width:720px; position:relative;}
+h1.title .accent-underline{border-bottom:3px solid var(--accent); padding-bottom:2px;}
+.subline{font-size:15px; color:#D9CFC0; max-width:640px; margin:0; position:relative;}
+.newsletter-cta{display:inline-flex; align-items:center; gap:8px; font-family:var(--font); font-weight:700; font-size:13px; color:var(--dark); text-decoration:none; background:var(--accent-soft); border-radius:999px; padding:10px 20px; transition:transform .15s ease, background .15s ease; white-space:nowrap;}
+.newsletter-cta:hover{transform:translateY(-2px); background:#e9d9c4;}
+.stats-row{display:flex; gap:36px; margin-top:26px; flex-wrap:wrap; position:relative;}
+.stat{display:flex; flex-direction:column; gap:2px;}
+.stat-num{font-family:var(--font); font-weight:800; font-size:32px; color:#F3EDE2; line-height:1;}
+.stat-label{font-family:var(--font); font-weight:700; font-size:11px; letter-spacing:.05em; text-transform:uppercase; color:var(--accent-soft);}
+
+.lang-toggle{font-family:var(--font); font-weight:600; font-size:12.5px; color:#F3EDE2; background:transparent; border:1px solid rgba(243,237,226,.4); border-radius:999px; padding:7px 14px; cursor:pointer; white-space:nowrap; display:inline-flex; align-items:center; gap:6px; transition:background .15s ease, border-color .15s ease;}
+.lang-toggle:hover{background:rgba(243,237,226,.12); border-color:#F3EDE2;}
+.lang-toggle-fr,.lang-toggle-es{opacity:.55; transition:opacity .15s ease;}
+.lang-toggle-fr.active,.lang-toggle-es.active{opacity:1; font-weight:800; color:var(--accent-soft);}
+.lang-toggle-sep{opacity:.4;}
+
+main{padding:48px 0 20px;}
+
+.quiet-card{background:var(--panel); border:1px solid var(--panel-line); border-radius:var(--radius); padding:36px 32px; margin-bottom:28px; box-shadow:0 1px 2px rgba(43,38,33,.04);}
+.quiet-icon{width:52px; height:52px; border-radius:50%; background:var(--bg); border:1px solid var(--panel-line); display:flex; align-items:center; justify-content:center; margin-bottom:18px; color:var(--accent);}
+.quiet-card h2{font-family:var(--font); font-weight:800; font-size:21px; margin:0 0 14px; color:var(--ink);}
+.quiet-card p{font-size:14.5px; color:var(--ink); margin:0 0 14px; line-height:1.65;}
+.quiet-card p:last-child{margin-bottom:0;}
+.quiet-card .muted{color:var(--ink-soft); font-size:13px;}
+.quiet-list{margin:0 0 14px; padding-left:20px; font-size:14px; color:var(--ink); line-height:1.7;}
+.quiet-list li{margin-bottom:4px;}
+
+.next-edition{background:var(--dark); color:#F3EDE2; border-radius:var(--radius); padding:26px 28px; margin-bottom:40px;}
+.next-edition p{margin:0; font-size:14px; color:#E4D9C8; line-height:1.6;}
+.next-edition strong{color:#F3EDE2;}
+
+.no-results{text-align:center; color:var(--ink-soft); font-family:var(--font); font-weight:600; padding:40px 0; font-size:15px;}
+
+footer{margin-top:40px; padding:28px 0 50px; border-top:1px solid var(--panel-line); color:var(--ink-soft); font-size:13px;}
+
+@media (max-width:640px){ header.masthead{padding:40px 0 36px;} .stats-row{gap:24px;} .quiet-card{padding:28px 22px;} }
+
+.i18n-es{display:none;}
+body.lang-es .i18n-fr{display:none;}
+body.lang-es .i18n-es{display:inline;}
+body.lang-es .i18n-es.block{display:block;}
+
+/* --- Micro-interactions & scroll-reveal (motion-safe) --- */
+.quicklinks a, .archive-arrow{background-image:linear-gradient(currentColor, currentColor); background-repeat:no-repeat; background-position:left 100%; background-size:0 1px; transition:background-size .2s ease;}
+.quicklinks a:hover, .archive-arrow:hover{background-size:100% 1px;}
+header.masthead, main{transition:opacity .15s ease;}
+body.lang-fade header.masthead, body.lang-fade main{opacity:.45;}
+@media (prefers-reduced-motion: no-preference){
+  .reveal-init{opacity:0; transform:translateY(16px); transition:opacity .45s ease-out, transform .45s ease-out;}
+  .reveal-init.reveal-in{opacity:1; transform:translateY(0);}
+}
+@media (prefers-reduced-motion: reduce){
+  .quicklinks a, .archive-arrow, header.masthead, main{transition:none !important;}
+}
+
+</style>
+
+</head>
+<body>
+
+<div id="progress-bar" aria-hidden="true"></div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="masthead-top">
+      <p class="eyebrow"><span><span class="i18n-fr">Veille Branding · Marketing · Expérience de marque — Espagne &amp; Europe</span><span class="i18n-es">Vigilancia de Branding · Marketing · Experiencia de marca — España y Europa</span></span></p>
+      <div class="header-actions">
+        <button id="lang-toggle" class="lang-toggle" type="button" aria-label="Cambiar idioma"><span class="lang-toggle-fr active">&#x1F1EB;&#x1F1F7; FR</span><span class="lang-toggle-sep">·</span><span class="lang-toggle-es">&#x1F1EA;&#x1F1F8; ES</span></button>
+      </div>
+    </div>
+    <h1 class="title"><span><span class="i18n-fr">Édition blanche&nbsp;: aucune actu n'a passé le filtre de date cette fois</span><span class="i18n-es">Edición en blanco: ninguna noticia superó el filtro de fecha esta vez</span></span></h1>
+    <p class="subline"><span><span class="i18n-fr">23 – 25 octobre 2026 — marketing, branding et expérience de marque en Espagne et en Europe.</span><span class="i18n-es">23 – 25 de octubre de 2026 — marketing, branding y experiencia de marca en España y Europa.</span></span></p>
+    <p style="position:relative; margin:20px 0 0;"><a class="newsletter-cta" href="../newsletter/veille-2026-10-25.html"><span><span class="i18n-fr">&#128231; Voir la newsletter de cette édition →</span><span class="i18n-es">&#128231; Ver la newsletter de esta edición →</span></span></a></p>
+    <div class="stats-row">
+      <div class="stat"><span class="stat-num" data-target="0">0</span><span class="stat-label"><span><span class="i18n-fr">actus validées</span><span class="i18n-es">noticias validadas</span></span></span></div>
+      <div class="stat"><span class="stat-num" data-target="80">0</span><span class="stat-label"><span><span class="i18n-fr">requêtes de recherche</span><span class="i18n-es">búsquedas realizadas</span></span></span></div>
+      <div class="stat"><span class="stat-num" data-target="8">0</span><span class="stat-label"><span><span class="i18n-fr">thématiques passées en revue</span><span class="i18n-es">temáticas revisadas</span></span></span></div>
+    </div>
+  </div>
+</header>
+<main class="wrap">
+
+  <div class="quiet-card">
+    <div class="quiet-icon" aria-hidden="true">
+      <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9.5"/><path d="M8.5 9.5h.01M15.5 9.5h.01M8 15c1.2-1 2.6-1.5 4-1.5s2.8.5 4 1.5" stroke-linecap="round"/></svg>
+    </div>
+    <h2><span><span class="i18n-fr">Pourquoi cette édition est vide</span><span class="i18n-es">Por qué esta edición está vacía</span></span></h2>
+    <p><span><span class="i18n-fr">Cette veille applique un filtre de date strict&nbsp;: seules les actus dont la date de publication est clairement vérifiable dans la fenêtre du 23 au 25 octobre 2026 peuvent être retenues. Après plus de 80 requêtes de recherche couvrant les 8 thématiques suivies (marketing, branding, tech, événements B2B et B2C, pop-up stores, activations originales) en Espagne, en Europe et à l'échelle mondiale, aucune actu n'a passé ce filtre&nbsp;: tout ce qui est remonté était soit déjà couvert dans une édition précédente, soit daté d'avant le 23 octobre, soit sans date de publication clairement vérifiable (listicles «&nbsp;evergreen&nbsp;», calendriers d'événements, pages non datées).</span><span class="i18n-es">Esta vigilancia aplica un filtro de fecha estricto: solo se admiten noticias cuya fecha de publicación sea claramente verificable dentro de la ventana del 23 al 25 de octubre de 2026. Tras más de 80 búsquedas que cubrieron las 8 temáticas que seguimos (marketing, branding, tecnología, eventos B2B y B2C, tiendas efímeras, activaciones originales) en España, Europa y a escala global, ninguna noticia superó ese filtro: todo lo que apareció ya estaba cubierto en una edición anterior, tenía fecha anterior al 23 de octubre, o no tenía una fecha de publicación claramente verificable (listados «evergreen», calendarios de eventos, páginas sin fecha).</span></span></p>
+    <p><span><span class="i18n-fr">Quelques pistes sérieuses ont été explorées puis écartées pour cette raison&nbsp;: un rapport WARC sur les dépenses publicitaires des grandes marques (daté de mi-octobre), une intervention sur la marque B2B au Festival of Marketing de Londres (14 octobre), et plusieurs campagnes espagnoles originales (Jumpers, Chupa Chups) dont la date de publication exacte n'a pas pu être confirmée dans la fenêtre. Mieux vaut une édition courte et honnête qu'une édition remplie de contenu hors-fenêtre.</span><span class="i18n-es">Se exploraron varias pistas serias que finalmente se descartaron por este motivo: un informe de WARC sobre el gasto publicitario de las grandes marcas (fechado a mediados de octubre), una intervención sobre la marca B2B en el Festival of Marketing de Londres (14 de octubre), y varias campañas españolas originales (Jumpers, Chupa Chups) cuya fecha exacta de publicación no se pudo confirmar dentro de la ventana. Mejor una edición corta y honesta que una edición llena de contenido fuera de ventana.</span></span></p>
+  </div>
+
+  <div class="next-edition">
+    <p><span><span class="i18n-fr"><strong>La prochaine édition arrive dans 2 jours</strong>, avec une fenêtre de recherche actualisée. Si cette fenêtre reste calme, cela peut aussi indiquer un délai d'indexation des sources les plus récentes plutôt qu'une absence réelle d'actualité — une nouvelle recherche complète sera menée à chaque édition, sans aucun raccourci.</span><span class="i18n-es"><strong>La próxima edición llega en 2 días</strong>, con una ventana de búsqueda actualizada. Si esta ventana sigue estando tranquila, también puede indicar un retraso de indexación de las fuentes más recientes y no una ausencia real de noticias — en cada edición se realizará una búsqueda completa nueva, sin ningún atajo.</span></span></p>
+  </div>
+
+  <footer>
+    <p><span><span class="i18n-fr">Veille personnelle — branding, marketing, activation de marque. Espagne &amp; Europe. Édition du 25 octobre 2026.</span><span class="i18n-es">Vigilancia personal — branding, marketing, activación de marca. España y Europa. Edición del 25 de octubre de 2026.</span></span></p>
+  </footer>
+</main>
+
+<script>
+
+(function(){
+  "use strict";
+
+  // ----- Progress bar -----
+  var bar = document.getElementById('progress-bar');
+  function updateProgress(){
+    var el = document.documentElement;
+    var scrollTop = el.scrollTop || document.body.scrollTop;
+    var scrollHeight = (el.scrollHeight || document.body.scrollHeight) - el.clientHeight;
+    var pct = scrollHeight > 0 ? (scrollTop / scrollHeight) * 100 : 0;
+    if (bar) bar.style.width = pct + '%';
+  }
+  window.addEventListener('scroll', updateProgress, { passive: true });
+  window.addEventListener('resize', updateProgress);
+  updateProgress();
+
+  // ----- Animated counters -----
+  function animateCount(el, duration){
+    if (!el) return;
+    var target = parseInt(el.getAttribute('data-target'), 10) || 0;
+    var startTime = null;
+    function step(ts){
+      if (!startTime) startTime = ts;
+      var progress = Math.min((ts - startTime) / duration, 1);
+      el.textContent = Math.floor(progress * target);
+      if (progress < 1) requestAnimationFrame(step);
+      else el.textContent = target;
+    }
+    requestAnimationFrame(step);
+  }
+  document.querySelectorAll('.stat-num[data-target]').forEach(function(el){ animateCount(el, 900); });
+
+  // ----- Scroll reveal (motion-safe) -----
+  (function(){
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    if (!('IntersectionObserver' in window)) return;
+    Array.prototype.slice.call(document.querySelectorAll('.quiet-card, .next-edition')).forEach(function(el, i){
+      el.classList.add('reveal-init');
+      el.style.transitionDelay = (i * 80) + 'ms';
+    });
+    var observer = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if (entry.isIntersecting){
+          entry.target.classList.add('reveal-in');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {threshold:.12, rootMargin:'0px 0px -40px 0px'});
+    Array.prototype.slice.call(document.querySelectorAll('.reveal-init')).forEach(function(el){ observer.observe(el); });
+  })();
+
+  // ----- FR / ES language toggle -----
+  var currentLang = 'fr';
+  try { if (localStorage.getItem('veille-lang') === 'es') currentLang = 'es'; } catch(e){}
+  var langToggleBtn = document.getElementById('lang-toggle');
+  function applyLang(lang, save){
+    currentLang = lang;
+    document.body.classList.toggle('lang-es', lang === 'es');
+    if (langToggleBtn) {
+      var frSpan = langToggleBtn.querySelector('.lang-toggle-fr');
+      var esSpan = langToggleBtn.querySelector('.lang-toggle-es');
+      if (frSpan) frSpan.classList.toggle('active', lang === 'fr');
+      if (esSpan) esSpan.classList.toggle('active', lang === 'es');
+    }
+    if (save) { try { localStorage.setItem('veille-lang', lang); } catch(e){} }
+  }
+  function switchLang(lang, save){
+    var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduced) { applyLang(lang, save); return; }
+    document.body.classList.add('lang-fade');
+    setTimeout(function(){
+      applyLang(lang, save);
+      requestAnimationFrame(function(){ document.body.classList.remove('lang-fade'); });
+    }, 150);
+  }
+  if (langToggleBtn) {
+    langToggleBtn.addEventListener('click', function(){
+      switchLang(currentLang === 'es' ? 'fr' : 'es', true);
+    });
+  }
+  applyLang(currentLang, false);
+})();
+
+</script>
+
+</body>
+</html>
