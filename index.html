@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Veille Branding &amp; Marketing — 25 octobre 2026</title>
+<title>Veille Branding &amp; Marketing — 27 octobre 2026</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -21,7 +21,7 @@
   --dark-2:#3A332B;
   --font:'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
   --radius:16px;
-  --maxw:860px;
+  --maxw:1180px;
 }
 *{box-sizing:border-box;}
 html,body{margin:0;padding:0;}
@@ -37,9 +37,9 @@ header.masthead{background:var(--dark); color:#F3EDE2; padding:52px 0 44px; posi
 .header-actions{display:flex; align-items:center; gap:12px; flex-wrap:wrap;}
 .archive-link{font-family:var(--font); font-weight:600; font-size:12.5px; color:#F3EDE2; text-decoration:none; border:1px solid rgba(243,237,226,.4); border-radius:999px; padding:7px 16px; white-space:nowrap; transition:background .15s ease, border-color .15s ease;}
 .archive-link:hover{background:rgba(243,237,226,.12); border-color:#F3EDE2;}
-h1.title{font-family:var(--font); font-weight:800; font-size:clamp(24px, 3.8vw, 38px); line-height:1.22; margin:18px 0 14px; max-width:720px; position:relative;}
+h1.title{font-family:var(--font); font-weight:800; font-size:clamp(26px, 4.2vw, 44px); line-height:1.18; margin:18px 0 14px; max-width:920px; position:relative;}
 h1.title .accent-underline{border-bottom:3px solid var(--accent); padding-bottom:2px;}
-.subline{font-size:15px; color:#D9CFC0; max-width:640px; margin:0; position:relative;}
+.subline{font-size:15px; color:#D9CFC0; max-width:680px; margin:0; position:relative;}
 .newsletter-cta{display:inline-flex; align-items:center; gap:8px; font-family:var(--font); font-weight:700; font-size:13px; color:var(--dark); text-decoration:none; background:var(--accent-soft); border-radius:999px; padding:10px 20px; transition:transform .15s ease, background .15s ease; white-space:nowrap;}
 .newsletter-cta:hover{transform:translateY(-2px); background:#e9d9c4;}
 .stats-row{display:flex; gap:36px; margin-top:26px; flex-wrap:wrap; position:relative;}
@@ -53,26 +53,108 @@ h1.title .accent-underline{border-bottom:3px solid var(--accent); padding-bottom
 .lang-toggle-fr.active,.lang-toggle-es.active{opacity:1; font-weight:800; color:var(--accent-soft);}
 .lang-toggle-sep{opacity:.4;}
 
-main{padding:48px 0 20px;}
+main{padding:40px 0 20px;}
+.controls{display:flex; flex-wrap:wrap; gap:16px; align-items:center; justify-content:space-between; margin-bottom:36px; position:sticky; top:0; background:var(--bg); z-index:50; padding:14px 0; border-bottom:1px solid var(--panel-line);}
+.chips{display:flex; flex-wrap:wrap; gap:8px;}
+.chip{font-family:var(--font); font-weight:600; font-size:12.5px; letter-spacing:.02em; background:var(--panel); color:var(--ink); border:1px solid var(--panel-line); border-radius:999px; padding:8px 16px; cursor:pointer; transition:all .15s ease; white-space:nowrap;}
+.chip:hover{border-color:var(--accent); transform:translateY(-1px);}
+.chip.active{background:var(--dark); color:#F3EDE2; border-color:var(--dark);}
+.search-wrap{flex:0 1 320px; min-width:220px;}
+#search-input{width:100%; font-family:var(--font); font-size:13.5px; padding:10px 16px; border:1px solid var(--panel-line); border-radius:999px; background:var(--panel); color:var(--ink);}
+#search-input:focus{outline:2px solid var(--accent); outline-offset:1px;}
 
-.quiet-card{background:var(--panel); border:1px solid var(--panel-line); border-radius:var(--radius); padding:36px 32px; margin-bottom:28px; box-shadow:0 1px 2px rgba(43,38,33,.04);}
-.quiet-icon{width:52px; height:52px; border-radius:50%; background:var(--bg); border:1px solid var(--panel-line); display:flex; align-items:center; justify-content:center; margin-bottom:18px; color:var(--accent);}
-.quiet-card h2{font-family:var(--font); font-weight:800; font-size:21px; margin:0 0 14px; color:var(--ink);}
-.quiet-card p{font-size:14.5px; color:var(--ink); margin:0 0 14px; line-height:1.65;}
-.quiet-card p:last-child{margin-bottom:0;}
-.quiet-card .muted{color:var(--ink-soft); font-size:13px;}
-.quiet-list{margin:0 0 14px; padding-left:20px; font-size:14px; color:var(--ink); line-height:1.7;}
-.quiet-list li{margin-bottom:4px;}
+.section-title{font-family:var(--font); font-weight:800; font-size:23px; color:var(--ink); margin:0 0 22px; display:flex; align-items:center; gap:10px;}
+.section-emoji{font-size:22px;}
+.section-intro{font-size:14px; color:var(--ink-soft); margin:-12px 0 22px; max-width:680px;}
+.top5-section{margin-bottom:56px;}
+.top5-title{font-size:27px;}
+.top5-grid{display:grid; grid-template-columns:repeat(auto-fit, minmax(300px,1fr)); gap:22px;}
 
-.next-edition{background:var(--dark); color:#F3EDE2; border-radius:var(--radius); padding:26px 28px; margin-bottom:40px;}
-.next-edition p{margin:0; font-size:14px; color:#E4D9C8; line-height:1.6;}
-.next-edition strong{color:#F3EDE2;}
+.theme-section{margin-bottom:52px; scroll-margin-top:90px;}
+.card-grid{display:grid; grid-template-columns:repeat(auto-fit, minmax(300px,1fr)); gap:20px;}
+
+.card{background:var(--panel); border:1px solid var(--panel-line); border-radius:var(--radius); overflow:hidden; cursor:pointer; transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease; display:flex; flex-direction:column; box-shadow:0 1px 2px rgba(43,38,33,.04);}
+.card:hover{transform:translateY(-4px); box-shadow:0 10px 24px rgba(43,38,33,.10); border-color:var(--accent);}
+.card:focus-visible{outline:2px solid var(--accent); outline-offset:2px;}
+.card-media{position:relative; aspect-ratio:5/3; overflow:hidden; background:var(--dark);}
+.card-media img{width:100%; height:100%; object-fit:cover; display:block; transition:transform .35s ease;}
+.card:hover .card-media img{transform:scale(1.05);}
+.card-media .fallback-icon{display:none; width:100%; height:100%; align-items:center; justify-content:center; color:var(--accent-soft); background:linear-gradient(135deg,#3A332B,#2B2621);}
+.card-media.media-fallback .fallback-icon{display:flex;}
+.card-media.media-fallback img{display:none;}
+.card-media .badge{position:absolute; top:12px; left:12px; background:rgba(251,248,242,.94); color:var(--ink); font-family:var(--font); font-weight:700; font-size:11px; letter-spacing:.03em; padding:6px 12px; border-radius:999px; display:flex; align-items:center; gap:5px;}
+.card-body{padding:20px 20px 16px; display:flex; flex-direction:column; gap:10px; flex:1;}
+.card-title-row{display:flex; align-items:baseline; justify-content:space-between; gap:10px;}
+.card-title{font-family:var(--font); font-weight:700; font-size:18px; line-height:1.28; color:var(--ink); margin:0;}
+.read-tag{font-family:var(--font); font-weight:600; font-size:11px; color:var(--ink-soft); white-space:nowrap;}
+.card-fact{font-size:14px; color:var(--ink); margin:0; line-height:1.55;}
+.card-more{max-height:0; opacity:0; overflow:hidden; transition:max-height .4s ease, opacity .3s ease, margin .4s ease;}
+.card.expanded .card-more{max-height:1400px; opacity:1; margin-top:4px;}
+.card-label{font-family:var(--font); font-weight:700; font-size:11.5px; letter-spacing:.05em; text-transform:uppercase; color:var(--accent); margin:12px 0 4px;}
+.card-why, .card-action{font-size:13.5px; color:var(--ink); margin:0 0 4px; line-height:1.5;}
+.card-source{font-size:12.5px; color:var(--ink-soft); margin:10px 0 0;}
+.card-source a{color:var(--ink); font-weight:600; text-decoration:none; border-bottom:1px solid var(--panel-line);}
+.card-source a:hover{border-color:var(--accent);}
+.card-btn-row{margin-top:auto; display:flex; align-items:center; justify-content:space-between; gap:10px; padding-top:8px;}
+.card-toggle{background:none; border:none; cursor:pointer; font-family:var(--font); font-weight:600; font-size:12px; color:var(--ink-soft); padding:6px 0; display:flex; align-items:center; gap:4px;}
+.chevron{transition:transform .25s ease; display:inline-block;}
+.card.expanded .chevron{transform:rotate(180deg);}
+.card.expanded .card-toggle{color:var(--accent);}
+.card-social-toggle{background:none; border:1px solid var(--panel-line); border-radius:999px; cursor:pointer; font-family:var(--font); font-weight:600; font-size:11.5px; color:var(--ink-soft); padding:6px 12px; transition:border-color .15s ease, color .15s ease;}
+.card-social-toggle:hover{border-color:var(--accent); color:var(--accent);}
+.card-btn-actions{display:flex; align-items:center; gap:8px;}
+
+.social-pack{margin-top:10px; border-top:1px dashed var(--panel-line); padding-top:10px;}
+.social-pack-inner{background:var(--bg); border:1px solid var(--panel-line); border-radius:12px; padding:14px 16px;}
+.social-row{font-size:12.5px; color:var(--ink); margin:0 0 8px; line-height:1.5;}
+.social-row strong{color:var(--accent); display:block; font-size:11px; letter-spacing:.04em; text-transform:uppercase; margin-bottom:2px;}
+.social-copy-btn{font-family:var(--font); font-weight:700; font-size:12px; color:var(--ink); background:var(--accent-soft); border:none; border-radius:999px; padding:8px 16px; cursor:pointer; margin-top:4px; transition:background .15s ease;}
+.social-copy-btn:hover{background:#e9d9c4;}
+.social-copy-btn.copied{background:var(--accent); color:#fff;}
+
+.top5-hero{position:relative;}
+.top5-hero .card-media{aspect-ratio:16/10;}
+.top5-hero::before{content:"★"; position:absolute; top:14px; right:14px; z-index:2; background:var(--dark); color:#F3EDE2; width:28px; height:28px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:13px;}
+.top5-hero .card-title{font-size:19px;}
 
 .no-results{text-align:center; color:var(--ink-soft); font-family:var(--font); font-weight:600; padding:40px 0; font-size:15px;}
+.card[hidden]{display:none;}
+
+/* Carrousel */
+.carousel-section{margin-bottom:56px;}
+.carousel{position:relative; border-radius:var(--radius); overflow:hidden; background:linear-gradient(135deg, #d8cbb6 0%, #cbb99e 100%); outline:none;}
+.carousel-track{display:flex; transition:transform .5s cubic-bezier(.65,0,.35,1);}
+.carousel-slide{flex:0 0 100%; display:flex; align-items:flex-end; min-height:340px; position:relative; padding:32px;}
+.carousel-slide-media{position:absolute; inset:0; z-index:0;}
+.carousel-slide-media img{width:100%; height:100%; object-fit:cover; display:block; opacity:.55;}
+.carousel-slide-media::after{content:""; position:absolute; inset:0; background:linear-gradient(0deg, rgba(43,38,33,.82) 0%, rgba(43,38,33,.25) 60%, rgba(43,38,33,.15) 100%);}
+.carousel-slide-media.media-fallback img{display:none;}
+.carousel-slide-content{position:relative; z-index:1; max-width:640px; color:#F3EDE2;}
+.carousel-badge{display:inline-block; font-family:var(--font); font-weight:700; font-size:11px; letter-spacing:.03em; background:rgba(243,237,226,.16); border:1px solid rgba(243,237,226,.35); border-radius:999px; padding:6px 14px; margin-bottom:14px;}
+.carousel-slide-content h3{font-family:var(--font); font-weight:800; font-size:clamp(19px,2.6vw,25px); line-height:1.25; margin:0 0 10px; color:#F3EDE2;}
+.carousel-slide-content p{font-size:14px; color:#E4D9C8; margin:0; max-width:520px;}
+.carousel-arrow{position:absolute; top:50%; transform:translateY(-50%); z-index:2; width:40px; height:40px; border-radius:50%; border:1px solid rgba(243,237,226,.4); background:rgba(43,38,33,.55); color:#F3EDE2; font-size:17px; cursor:pointer; display:flex; align-items:center; justify-content:center; transition:background .15s ease;}
+.carousel-arrow:hover{background:var(--accent);}
+.carousel-arrow.prev{left:16px;}
+.carousel-arrow.next{right:16px;}
+.carousel-dots{display:flex; gap:8px; justify-content:center; flex-wrap:wrap; padding:16px 10px 4px; position:relative; z-index:1; max-height:44px; overflow-y:auto;}
+.carousel-dot{width:8px; height:8px; border-radius:50%; background:rgba(43,38,33,.25); border:none; cursor:pointer; padding:0;}
+.carousel-dot.active{background:var(--accent); width:20px; border-radius:6px; transition:width .2s ease;}
+@media (max-width:640px){ .carousel-slide{min-height:280px; padding:22px;} .carousel-arrow{width:34px; height:34px; font-size:14px;} }
+
+.quicklinks{background:var(--panel); border:1px solid var(--panel-line); border-radius:var(--radius); padding:24px 26px; margin-bottom:20px;}
+.quicklinks ul{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:10px;}
+.quicklink-item{font-size:13.5px; color:var(--ink); border-bottom:1px dashed var(--panel-line); padding-bottom:9px;}
+.quicklink-item:last-child{border-bottom:none; padding-bottom:0;}
+.quicklink-title{font-weight:700;}
+.quicklink-source{color:var(--ink-soft);}
+.quicklinks a{color:var(--accent); font-weight:700; text-decoration:none;}
+
+.edition-note{background:var(--panel); border:1px solid var(--panel-line); border-radius:var(--radius); padding:20px 24px; margin-bottom:40px; font-size:13.5px; color:var(--ink-soft); line-height:1.6;}
 
 footer{margin-top:40px; padding:28px 0 50px; border-top:1px solid var(--panel-line); color:var(--ink-soft); font-size:13px;}
 
-@media (max-width:640px){ header.masthead{padding:40px 0 36px;} .stats-row{gap:24px;} .quiet-card{padding:28px 22px;} }
+@media (max-width:640px){ header.masthead{padding:40px 0 36px;} .controls{position:static;} .stats-row{gap:24px;} }
 
 .i18n-es{display:none;}
 body.lang-es .i18n-fr{display:none;}
@@ -80,8 +162,16 @@ body.lang-es .i18n-es{display:inline;}
 body.lang-es .i18n-es.block{display:block;}
 
 /* --- Micro-interactions & scroll-reveal (motion-safe) --- */
+.controls{transition:background-color .25s ease, box-shadow .25s ease, backdrop-filter .25s ease;}
+.controls.is-scrolled{background-color:rgba(243,237,226,.88); backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px); box-shadow:0 6px 18px rgba(43,38,33,.08);}
+.card{transition:transform .22s cubic-bezier(.25,.8,.25,1), box-shadow .22s cubic-bezier(.25,.8,.25,1), border-color .22s ease;}
+.chip{transition:background-color .18s ease, color .18s ease, border-color .18s ease, transform .18s ease;}
 .quicklinks a, .archive-arrow{background-image:linear-gradient(currentColor, currentColor); background-repeat:no-repeat; background-position:left 100%; background-size:0 1px; transition:background-size .2s ease;}
 .quicklinks a:hover, .archive-arrow:hover{background-size:100% 1px;}
+.carousel-dot{transition:background-color .15s ease, transform .15s ease, width .2s ease;}
+.carousel-dot:hover, .carousel-dot:focus-visible{transform:scale(1.3);}
+.carousel-arrow{transition:background-color .15s ease, transform .15s ease;}
+.carousel-arrow:hover, .carousel-arrow:focus-visible{transform:translateY(-50%) scale(1.08);}
 header.masthead, main{transition:opacity .15s ease;}
 body.lang-fade header.masthead, body.lang-fade main{opacity:.45;}
 @media (prefers-reduced-motion: no-preference){
@@ -89,7 +179,7 @@ body.lang-fade header.masthead, body.lang-fade main{opacity:.45;}
   .reveal-init.reveal-in{opacity:1; transform:translateY(0);}
 }
 @media (prefers-reduced-motion: reduce){
-  .quicklinks a, .archive-arrow, header.masthead, main{transition:none !important;}
+  .controls, .card, .chip, .quicklinks a, .archive-arrow, .carousel-dot, .carousel-arrow, header.masthead, main{transition:none !important;}
 }
 
 </style>
@@ -108,33 +198,89 @@ body.lang-fade header.masthead, body.lang-fade main{opacity:.45;}
         <button id="lang-toggle" class="lang-toggle" type="button" aria-label="Cambiar idioma"><span class="lang-toggle-fr active">&#x1F1EB;&#x1F1F7; FR</span><span class="lang-toggle-sep">·</span><span class="lang-toggle-es">&#x1F1EA;&#x1F1F8; ES</span></button>
       </div>
     </div>
-    <h1 class="title"><span><span class="i18n-fr">Édition blanche&nbsp;: aucune actu n'a passé le filtre de date cette fois</span><span class="i18n-es">Edición en blanco: ninguna noticia superó el filtro de fecha esta vez</span></span></h1>
-    <p class="subline"><span><span class="i18n-fr">23 – 25 octobre 2026 — marketing, branding et expérience de marque en Espagne et en Europe.</span><span class="i18n-es">23 – 25 de octubre de 2026 — marketing, branding y experiencia de marca en España y Europa.</span></span></p>
-    <p style="position:relative; margin:20px 0 0;"><a class="newsletter-cta" href="newsletter/veille-2026-10-25.html"><span><span class="i18n-fr">&#128231; Voir la newsletter de cette édition →</span><span class="i18n-es">&#128231; Ver la newsletter de esta edición →</span></span></a></p>
+    <h1 class="title"><span><span class="i18n-fr">Dove embouteille 69 ans de nostalgie dans son premier parfum</span><span class="i18n-es">Dove embotella 69 años de nostalgia en su primer perfume</span></span></h1>
+    <p class="subline"><span><span class="i18n-fr">25 – 27 octobre 2026 — marketing, branding et expérience de marque en Espagne et en Europe.</span><span class="i18n-es">25 – 27 de octubre de 2026 — marketing, branding y experiencia de marca en España y Europa.</span></span></p>
+    <p style="position:relative; margin:20px 0 0;"><a class="newsletter-cta" href="newsletter/veille-2026-10-27.html"><span><span class="i18n-fr">&#128231; Voir la newsletter de cette édition →</span><span class="i18n-es">&#128231; Ver la newsletter de esta edición →</span></span></a></p>
     <div class="stats-row">
-      <div class="stat"><span class="stat-num" data-target="0">0</span><span class="stat-label"><span><span class="i18n-fr">actus validées</span><span class="i18n-es">noticias validadas</span></span></span></div>
-      <div class="stat"><span class="stat-num" data-target="80">0</span><span class="stat-label"><span><span class="i18n-fr">requêtes de recherche</span><span class="i18n-es">búsquedas realizadas</span></span></span></div>
-      <div class="stat"><span class="stat-num" data-target="8">0</span><span class="stat-label"><span><span class="i18n-fr">thématiques passées en revue</span><span class="i18n-es">temáticas revisadas</span></span></span></div>
+      <div class="stat"><span class="stat-num" data-target="1">0</span><span class="stat-label"><span><span class="i18n-fr">actu validée</span><span class="i18n-es">noticia validada</span></span></span></div>
+      <div class="stat"><span class="stat-num" data-target="1">0</span><span class="stat-label"><span><span class="i18n-fr">source citée</span><span class="i18n-es">fuente citada</span></span></span></div>
+      <div class="stat"><span class="stat-num" data-target="40">0</span><span class="stat-label"><span><span class="i18n-fr">requêtes de recherche</span><span class="i18n-es">búsquedas realizadas</span></span></span></div>
     </div>
   </div>
 </header>
 <main class="wrap">
 
-  <div class="quiet-card">
-    <div class="quiet-icon" aria-hidden="true">
-      <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9.5"/><path d="M8.5 9.5h.01M15.5 9.5h.01M8 15c1.2-1 2.6-1.5 4-1.5s2.8.5 4 1.5" stroke-linecap="round"/></svg>
+  <div class="controls">
+    <div class="chips" id="chips"><button class="chip active" data-filter="all" type="button"><span><span class="i18n-fr">Tout</span><span class="i18n-es">Todo</span></span></button><button class="chip" data-filter="marketing" type="button">📈 <span><span class="i18n-fr">Marketing</span><span class="i18n-es">Marketing</span></span></button></div>
+    <div class="search-wrap">
+      <input type="search" id="search-input" placeholder="Rechercher un mot-clé (marque, thème…)" aria-label="Rechercher">
     </div>
-    <h2><span><span class="i18n-fr">Pourquoi cette édition est vide</span><span class="i18n-es">Por qué esta edición está vacía</span></span></h2>
-    <p><span><span class="i18n-fr">Cette veille applique un filtre de date strict&nbsp;: seules les actus dont la date de publication est clairement vérifiable dans la fenêtre du 23 au 25 octobre 2026 peuvent être retenues. Après plus de 80 requêtes de recherche couvrant les 8 thématiques suivies (marketing, branding, tech, événements B2B et B2C, pop-up stores, activations originales) en Espagne, en Europe et à l'échelle mondiale, aucune actu n'a passé ce filtre&nbsp;: tout ce qui est remonté était soit déjà couvert dans une édition précédente, soit daté d'avant le 23 octobre, soit sans date de publication clairement vérifiable (listicles «&nbsp;evergreen&nbsp;», calendriers d'événements, pages non datées).</span><span class="i18n-es">Esta vigilancia aplica un filtro de fecha estricto: solo se admiten noticias cuya fecha de publicación sea claramente verificable dentro de la ventana del 23 al 25 de octubre de 2026. Tras más de 80 búsquedas que cubrieron las 8 temáticas que seguimos (marketing, branding, tecnología, eventos B2B y B2C, tiendas efímeras, activaciones originales) en España, Europa y a escala global, ninguna noticia superó ese filtro: todo lo que apareció ya estaba cubierto en una edición anterior, tenía fecha anterior al 23 de octubre, o no tenía una fecha de publicación claramente verificable (listados «evergreen», calendarios de eventos, páginas sin fecha).</span></span></p>
-    <p><span><span class="i18n-fr">Quelques pistes sérieuses ont été explorées puis écartées pour cette raison&nbsp;: un rapport WARC sur les dépenses publicitaires des grandes marques (daté de mi-octobre), une intervention sur la marque B2B au Festival of Marketing de Londres (14 octobre), et plusieurs campagnes espagnoles originales (Jumpers, Chupa Chups) dont la date de publication exacte n'a pas pu être confirmée dans la fenêtre. Mieux vaut une édition courte et honnête qu'une édition remplie de contenu hors-fenêtre.</span><span class="i18n-es">Se exploraron varias pistas serias que finalmente se descartaron por este motivo: un informe de WARC sobre el gasto publicitario de las grandes marcas (fechado a mediados de octubre), una intervención sobre la marca B2B en el Festival of Marketing de Londres (14 de octubre), y varias campañas españolas originales (Jumpers, Chupa Chups) cuya fecha exacta de publicación no se pudo confirmar dentro de la ventana. Mejor una edición corta y honesta que una edición llena de contenido fuera de ventana.</span></span></p>
   </div>
 
-  <div class="next-edition">
-    <p><span><span class="i18n-fr"><strong>La prochaine édition arrive dans 2 jours</strong>, avec une fenêtre de recherche actualisée. Si cette fenêtre reste calme, cela peut aussi indiquer un délai d'indexation des sources les plus récentes plutôt qu'une absence réelle d'actualité — une nouvelle recherche complète sera menée à chaque édition, sans aucun raccourci.</span><span class="i18n-es"><strong>La próxima edición llega en 2 días</strong>, con una ventana de búsqueda actualizada. Si esta ventana sigue estando tranquila, también puede indicar un retraso de indexación de las fuentes más recientes y no una ausencia real de noticias — en cada edición se realizará una búsqueda completa nueva, sin ningún atajo.</span></span></p>
+  <div class="edition-note">
+    <span><span class="i18n-fr">Édition très courte&nbsp;: la fenêtre du 25 au 27 octobre 2026 a été inhabituellement difficile à couvrir. Un incident réseau a rendu l'outil de vérification directe des pages totalement indisponible pendant toute la session de recherche — impossible donc d'ouvrir les articles sources pour confirmer une date ou récupérer une image. Plusieurs pistes prometteuses (un rebranding fintech australien, une activation de marque à Dubaï, un pop-up parisien, une nouvelle offre publicitaire chez Pinterest) ont dû être écartées après vérification croisée&nbsp;: leur date réelle tombait hors de la fenêtre du 25-27 octobre, ou elles n'ont pas pu être confirmées par une seconde source indépendante. Une seule actu a passé ce filtre strict avec certitude&nbsp;: le lancement du premier parfum de Dove. Mieux vaut une édition courte et fiable qu'une édition remplie de contenu non vérifié.</span><span class="i18n-es">Edición muy corta&nbsp;: la ventana del 25 al 27 de octubre de 2026 fue inusualmente difícil de cubrir. Un incidente de red dejó totalmente inoperativa la herramienta de verificación directa de páginas durante toda la sesión de búsqueda — así que no fue posible abrir los artículos originales para confirmar una fecha o recuperar una imagen. Varias pistas prometedoras (un rebranding fintech australiano, una activación de marca en Dubái, un pop-up parisino, una nueva oferta publicitaria de Pinterest) tuvieron que descartarse tras una verificación cruzada&nbsp;: su fecha real caía fuera de la ventana del 25-27 de octubre, o no pudieron confirmarse con una segunda fuente independiente. Solo una noticia superó este filtro estricto con certeza&nbsp;: el lanzamiento del primer perfume de Dove. Mejor una edición corta y fiable que una edición llena de contenido sin verificar.</span></span>
   </div>
+
+  <section class="top5-section">
+    <h2 class="section-title top5-title"><span class="section-emoji">&#127942;</span><span><span class="i18n-fr">Top 1 à retenir</span><span class="i18n-es">Top 1 para recordar</span></span></h2>
+    <div class="top5-grid">
+
+<article class="card top5-hero" data-theme="marketing" data-search="dove original fragrance premier parfum primer perfume savon jabon soap unilever ann gottlieb pastilla 1957 drop limite" tabindex="0" role="button" aria-expanded="false" id="card-top1-marketing-0">
+<div class="card-media"><img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=70" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.closest('.card-media').classList.add('media-fallback')"><div class="fallback-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="42" height="42" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9.5"/><path d="M8 13l2.5-3 2 2.5L16 9"/></svg></div><span class="badge"><span><span class="i18n-fr">Marketing</span><span class="i18n-es">Marketing</span></span> <span class="badge-emoji">📈</span></span></div>
+  <div class="card-body">
+    <div class="card-title-row">
+      <h3 class="card-title"><span><span class="i18n-fr">Dove lance son premier parfum, embouteillé à partir de l'odeur de son savon culte</span><span class="i18n-es">Dove lanza su primer perfume, embotellado a partir del olor de su jabón de culto</span></span></h3>
+      <span class="read-tag">2 min</span>
+    </div>
+    <p class="card-fact"><span><span class="i18n-fr">Unilever a lancé le 27 octobre Dove Original Fragrance, le premier parfum de l'histoire de la marque — une édition limitée vendue exclusivement en ligne sur dovefragrance.com, en «&nbsp;social drop&nbsp;» à quantité limitée, sans sortie en magasin. Développé avec la parfumeuse Ann Gottlieb (CK One, Dior J'adore, Marc Jacobs Daisy), il reproduit fidèlement l'odeur du pain de savon Dove original lancé aux États-Unis en 1957, et se vend 19,57&nbsp;$ — un clin d'œil direct à cette date. La liste d'attente s'était ouverte le 22 octobre.</span><span class="i18n-es">Unilever lanzó el 27 de octubre Dove Original Fragrance, el primer perfume en la historia de la marca — una edición limitada vendida exclusivamente online en dovefragrance.com, como «&nbsp;social drop&nbsp;» de cantidad limitada, sin salida en tiendas físicas. Desarrollado con la perfumista Ann Gottlieb (CK One, Dior J'adore, Marc Jacobs Daisy), reproduce fielmente el olor de la pastilla de jabón Dove original, lanzada en Estados Unidos en 1957, y se vende a 19,57&nbsp;$ — un guiño directo a esa fecha. La lista de espera se había abierto el 22 de octubre.</span></span></p>
+    <div class="card-more">
+      <p class="card-label"><span><span class="i18n-fr">Pourquoi ça compte</span><span class="i18n-es">Por qué importa</span></span></p>
+      <p class="card-why"><span><span class="i18n-fr">Transformer un actif purement fonctionnel — l'odeur d'un savon — en produit de parfumerie à part entière est un cas d'école de «&nbsp;brand stretch&nbsp;» fondé sur la nostalgie sensorielle plutôt que sur une logique d'extension de catégorie classique. Le choix du drop limité en ligne, plutôt qu'un lancement retail classique, transforme aussi un produit de grande consommation en objet de désir presque collector.</span><span class="i18n-es">Convertir un activo puramente funcional — el olor de un jabón — en un producto de perfumería por derecho propio es un caso de libro de «&nbsp;brand stretch&nbsp;» basado en la nostalgia sensorial, más que en una lógica de extensión de categoría clásica. Apostar por un drop limitado online, en lugar de un lanzamiento retail convencional, convierte además un producto de gran consumo en un objeto de deseo casi de colección.</span></span></p>
+      <p class="card-label"><span><span class="i18n-fr">Action concrète</span><span class="i18n-es">Acción concreta</span></span></p>
+      <p class="card-action">&#128161; <span><span class="i18n-fr">Pour un client avec un actif sensoriel fort et sous-exploité (une odeur, une texture, un bruit caractéristique), cartographier ses «&nbsp;signatures sensorielles historiques&nbsp;» avant de chercher une extension de gamme classique — et tester un lancement en drop limité plutôt qu'un déploiement retail large, pour transformer la rareté elle-même en argument marketing.</span><span class="i18n-es">Para un cliente con un activo sensorial fuerte y poco explotado (un olor, una textura, un sonido característico), mapear sus «&nbsp;firmas sensoriales históricas&nbsp;» antes de buscar una extensión de gama clásica — y probar un lanzamiento en drop limitado en lugar de un despliegue retail amplio, para convertir la propia escasez en argumento de marketing.</span></span></p>
+      <p class="card-source"><span><span class="i18n-fr">Source :</span><span class="i18n-es">Fuente:</span></span> <a href="https://cosmeticsbusiness.com/dove-launches-fragrance-inspired-by-original-beauty-bar" target="_blank" rel="noopener noreferrer">CosmeticsBusiness &#8599;</a></p>
+<div class="social-pack" hidden>
+  <div class="social-pack-inner">
+    <p class="social-row"><strong>Titular</strong><br>Dove lanza su primer perfume y huele exactamente a la pastilla de jabón de toda la vida</p><p class="social-row"><strong>Descripción</strong><br>Unilever lanzó el 27 de octubre Dove Original Fragrance, el primer perfume de la marca: una edición limitada vendida solo online, en un 'drop' sin reposición, desarrollada con la perfumista Ann Gottlieb. Reproduce el olor del jabón Dove Original (lanzado en EE.UU. en 1957) y se vende a 19,57 dólares, un guiño directo a esa fecha.</p><p class="social-row"><strong>Why it matters?</strong><br>Why it matters: ¿cuántas marcas tienen ya un olor, una textura o un sonido icónico que nunca han pensado en vender como producto por sí solo?</p><p class="social-row"><strong>CC take</strong><br>CC TAKE: Nostalgia, bottled — and sold like a drop, not like a supermarket SKU.</p><p class="social-row"><strong>Copy out + CTA</strong><br>Dove no inventó un aroma nuevo: embotelló uno que ya llevaba 69 años en la memoria de sus clientas, y lo vendió como si fuera una colaboración de streetwear. ¿Qué otra marca crees que tiene un 'olor icónico' esperando a convertirse en producto?</p><p class="social-row"><strong>Consejo muy Armi</strong><br>Consejo muy Armi: la próxima vez que audites una marca histórica, pregunta qué huele, suena o se siente 'como ella' — ese inventario sensorial casi nunca está documentado, y es un argumento de venta carísimo de ofrecer como diagnóstico antes de proponer cualquier extensión de producto.</p>
+    <button class="social-copy-btn" type="button" data-pack="Titular\nDove lanza su primer perfume y huele exactamente a la pastilla de jabón de toda la vida\nDescripción\nUnilever lanzó el 27 de octubre Dove Original Fragrance, el primer perfume de la marca: una edición limitada vendida solo online, en un 'drop' sin reposición, desarrollada con la perfumista Ann Gottlieb. Reproduce el olor del jabón Dove Original (lanzado en EE.UU. en 1957) y se vende a 19,57 dólares, un guiño directo a esa fecha.\nWhy it matters?\nWhy it matters: ¿cuántas marcas tienen ya un olor, una textura o un sonido icónico que nunca han pensado en vender como producto por sí solo?\nCC take\nCC TAKE: Nostalgia, bottled — and sold like a drop, not like a supermarket SKU.\nCopy out + CTA\nDove no inventó un aroma nuevo: embotelló uno que ya llevaba 69 años en la memoria de sus clientas, y lo vendió como si fuera una colaboración de streetwear. ¿Qué otra marca crees que tiene un 'olor icónico' esperando a convertirse en producto?\nConsejo muy Armi\nConsejo muy Armi: la próxima vez que audites una marca histórica, pregunta qué huele, suena o se siente 'como ella' — ese inventario sensorial casi nunca está documentado, y es un argumento de venta carísimo de ofrecer como diagnóstico antes de proponer cualquier extensión de producto.">&#128203; <span class="i18n-fr">Copier</span><span class="i18n-es">Copiar</span></button>
+  </div>
+</div>
+    </div>
+    <div class="card-btn-row">
+      <button class="card-toggle" type="button" aria-hidden="true"><span class="card-toggle-label"><span><span class="i18n-fr">Voir plus</span><span class="i18n-es">Ver más</span></span></span> <span class="chevron">&#9662;</span></button>
+      <div class="card-btn-actions">
+        <button class="card-social-toggle" type="button"><span><span class="i18n-fr">📱 Copy réseaux</span><span class="i18n-es">📱 Copy redes</span></span></button>
+      </div>
+    </div>
+  </div>
+</article>
+
+    </div>
+  </section>
+
+  <section class="carousel-section">
+    <h2 class="section-title"><span class="section-emoji">&#127902;&#65039;</span><span><span class="i18n-fr">Le carrousel de la période</span><span class="i18n-es">El carrusel del período</span></span></h2>
+    <div class="carousel" id="carousel" tabindex="0" aria-roledescription="carrousel" aria-label="Actus marquantes de la période">
+      <div class="carousel-track" id="carousel-track">
+<div class="carousel-slide" data-theme="marketing">
+          <div class="carousel-slide-media"><img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=70" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.parentElement.classList.add('media-fallback')"></div>
+          <div class="carousel-slide-content">
+            <span class="carousel-badge">📈 <span><span class="i18n-fr">Marketing</span><span class="i18n-es">Marketing</span></span></span>
+            <h3><span><span class="i18n-fr">Dove embouteille l'odeur de son savon culte</span><span class="i18n-es">Dove embotella el olor de su jabón de culto</span></span></h3>
+            <p><span><span class="i18n-fr">Un parfum vendu en drop limité, à un prix qui rend hommage à 1957.</span><span class="i18n-es">Un perfume vendido en drop limitado, a un precio que homenajea 1957.</span></span></p>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-arrow prev" type="button" aria-label="Précédent">&#8249;</button>
+      <button class="carousel-arrow next" type="button" aria-label="Suivant">&#8250;</button>
+      <div class="carousel-dots" id="carousel-dots"></div>
+    </div>
+  </section>
+
+  <p class="no-results" id="no-results" hidden><span><span class="i18n-fr">Aucun résultat pour cette recherche.</span><span class="i18n-es">Ningún resultado para esta búsqueda.</span></span></p>
 
   <footer>
-    <p><span><span class="i18n-fr">Veille personnelle — branding, marketing, activation de marque. Espagne &amp; Europe. Édition du 25 octobre 2026.</span><span class="i18n-es">Vigilancia personal — branding, marketing, activación de marca. España y Europa. Edición del 25 de octubre de 2026.</span></span></p>
+    <p><span><span class="i18n-fr">Veille personnelle — branding, marketing, activation de marque. Espagne &amp; Europe. Édition du 27 octobre 2026.</span><span class="i18n-es">Vigilancia personal — branding, marketing, activación de marca. España y Europa. Edición del 27 de octubre de 2026.</span></span></p>
   </footer>
 </main>
 
@@ -172,13 +318,158 @@ body.lang-fade header.masthead, body.lang-fade main{opacity:.45;}
   }
   document.querySelectorAll('.stat-num[data-target]').forEach(function(el){ animateCount(el, 900); });
 
+  // ----- Chip filters + search -----
+  var cards = Array.prototype.slice.call(document.querySelectorAll('.card'));
+  var chips = Array.prototype.slice.call(document.querySelectorAll('.chip'));
+  var searchInput = document.getElementById('search-input');
+  var currentFilter = 'all';
+
+  function applyFilters(){
+    var q = searchInput ? searchInput.value.toLowerCase().trim() : '';
+    var visibleCount = 0;
+    cards.forEach(function(card){
+      var themeMatch = currentFilter === 'all' || card.getAttribute('data-theme') === currentFilter;
+      var textMatch = !q || (card.getAttribute('data-search') || '').indexOf(q) !== -1;
+      var show = themeMatch && textMatch;
+      card.hidden = !show;
+      if (show) visibleCount++;
+    });
+    document.querySelectorAll('.theme-section').forEach(function(section){
+      var visible = section.querySelectorAll('.card:not([hidden])').length;
+      section.style.display = visible === 0 ? 'none' : '';
+    });
+    var noResults = document.getElementById('no-results');
+    if (noResults) noResults.hidden = visibleCount !== 0;
+  }
+
+  chips.forEach(function(chip){
+    chip.addEventListener('click', function(){
+      chips.forEach(function(c){ c.classList.remove('active'); });
+      chip.classList.add('active');
+      currentFilter = chip.getAttribute('data-filter');
+      applyFilters();
+    });
+  });
+  if (searchInput) searchInput.addEventListener('input', applyFilters);
+
+  // ----- Card expand/collapse -----
+  cards.forEach(function(card){
+    function toggle(e){
+      if (e && e.target && e.target.closest('.card-social-toggle')) return;
+      if (e && e.target && e.target.closest('.social-pack')) return;
+      if (e && e.target && e.target.closest('a')) return;
+      var expanded = card.classList.toggle('expanded');
+      card.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+    }
+    card.addEventListener('click', toggle);
+    card.addEventListener('keydown', function(e){
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(e); }
+    });
+    var socialBtn = card.querySelector('.card-social-toggle');
+    var socialPack = card.querySelector('.social-pack');
+    if (socialBtn && socialPack) {
+      socialBtn.addEventListener('click', function(e){
+        e.stopPropagation();
+        socialPack.hidden = !socialPack.hidden;
+      });
+    }
+    var copyBtn = card.querySelector('.social-copy-btn');
+    if (copyBtn) {
+      copyBtn.addEventListener('click', function(e){
+        e.stopPropagation();
+        var text = (copyBtn.getAttribute('data-pack') || '').replace(/\\n/g, '\n');
+        function done(ok){
+          copyBtn.classList.toggle('copied', ok);
+          setTimeout(function(){ copyBtn.classList.remove('copied'); }, 1800);
+        }
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(text).then(function(){ done(true); }, function(){ done(false); });
+        } else {
+          try {
+            var ta = document.createElement('textarea');
+            ta.value = text; document.body.appendChild(ta); ta.select();
+            var ok = document.execCommand('copy');
+            document.body.removeChild(ta);
+            done(ok);
+          } catch(err){ done(false); }
+        }
+      });
+    }
+  });
+
+  // ----- Carousel -----
+  var track = document.getElementById('carousel-track');
+  var carousel = document.getElementById('carousel');
+  if (track && carousel) {
+    var slides = Array.prototype.slice.call(track.children);
+    var dotsWrap = document.getElementById('carousel-dots');
+    var current = 0;
+    var autoplayTimer = null;
+
+    slides.forEach(function(_, i){
+      var dot = document.createElement('button');
+      dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
+      dot.type = 'button';
+      dot.setAttribute('aria-label', 'Slide ' + (i+1));
+      dot.addEventListener('click', function(){ goTo(i, true); });
+      if (dotsWrap) dotsWrap.appendChild(dot);
+    });
+    var dots = dotsWrap ? Array.prototype.slice.call(dotsWrap.children) : [];
+
+    function goTo(i, manual){
+      current = (i + slides.length) % slides.length;
+      track.style.transform = 'translateX(-' + (current * 100) + '%)';
+      dots.forEach(function(d, idx){ d.classList.toggle('active', idx === current); });
+      if (manual) restartAutoplay();
+    }
+    function next(){ goTo(current + 1); }
+    function prev(){ goTo(current - 1); }
+
+    var prevBtn = document.querySelector('.carousel-arrow.prev');
+    var nextBtn = document.querySelector('.carousel-arrow.next');
+    if (prevBtn) prevBtn.addEventListener('click', function(){ prev(); restartAutoplay(); });
+    if (nextBtn) nextBtn.addEventListener('click', function(){ next(); restartAutoplay(); });
+
+    carousel.addEventListener('keydown', function(e){
+      if (e.key === 'ArrowRight') { next(); restartAutoplay(); }
+      if (e.key === 'ArrowLeft') { prev(); restartAutoplay(); }
+    });
+
+    function startAutoplay(){
+      if (slides.length < 2) return;
+      autoplayTimer = setInterval(next, 5500);
+    }
+    function stopAutoplay(){ if (autoplayTimer) { clearInterval(autoplayTimer); autoplayTimer = null; } }
+    function restartAutoplay(){ stopAutoplay(); startAutoplay(); }
+
+    carousel.addEventListener('mouseenter', stopAutoplay);
+    carousel.addEventListener('mouseleave', startAutoplay);
+
+    var touchStartX = null;
+    carousel.addEventListener('touchstart', function(e){ touchStartX = e.changedTouches[0].clientX; }, {passive:true});
+    carousel.addEventListener('touchend', function(e){
+      if (touchStartX === null) return;
+      var dx = e.changedTouches[0].clientX - touchStartX;
+      if (Math.abs(dx) > 40) { dx < 0 ? next() : prev(); restartAutoplay(); }
+      touchStartX = null;
+    }, {passive:true});
+
+    startAutoplay();
+  }
+
   // ----- Scroll reveal (motion-safe) -----
   (function(){
     if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
     if (!('IntersectionObserver' in window)) return;
-    Array.prototype.slice.call(document.querySelectorAll('.quiet-card, .next-edition')).forEach(function(el, i){
+    var groups = Array.prototype.slice.call(document.querySelectorAll('.card-grid, .top5-grid'));
+    groups.forEach(function(group){
+      Array.prototype.slice.call(group.children).forEach(function(el, i){
+        el.classList.add('reveal-init');
+        el.style.transitionDelay = (i * 70) + 'ms';
+      });
+    });
+    Array.prototype.slice.call(document.querySelectorAll('.carousel-section, .quicklinks')).forEach(function(el){
       el.classList.add('reveal-init');
-      el.style.transitionDelay = (i * 80) + 'ms';
     });
     var observer = new IntersectionObserver(function(entries){
       entries.forEach(function(entry){
@@ -191,10 +482,25 @@ body.lang-fade header.masthead, body.lang-fade main{opacity:.45;}
     Array.prototype.slice.call(document.querySelectorAll('.reveal-init')).forEach(function(el){ observer.observe(el); });
   })();
 
+  // ----- Sticky header blur on scroll -----
+  (function(){
+    var controlsBar = document.querySelector('.controls');
+    if (!controlsBar) return;
+    function onControlsScroll(){
+      controlsBar.classList.toggle('is-scrolled', (window.scrollY || document.documentElement.scrollTop) > 8);
+    }
+    window.addEventListener('scroll', onControlsScroll, { passive: true });
+    onControlsScroll();
+  })();
+
   // ----- FR / ES language toggle -----
   var currentLang = 'fr';
   try { if (localStorage.getItem('veille-lang') === 'es') currentLang = 'es'; } catch(e){}
   var langToggleBtn = document.getElementById('lang-toggle');
+  var I18N_UI = {
+    fr: { searchPlaceholder: 'Rechercher un mot-clé (marque, thème…)' },
+    es: { searchPlaceholder: 'Buscar una palabra clave (marca, tema…)' }
+  };
   function applyLang(lang, save){
     currentLang = lang;
     document.body.classList.toggle('lang-es', lang === 'es');
@@ -204,6 +510,7 @@ body.lang-fade header.masthead, body.lang-fade main{opacity:.45;}
       if (frSpan) frSpan.classList.toggle('active', lang === 'fr');
       if (esSpan) esSpan.classList.toggle('active', lang === 'es');
     }
+    if (searchInput && I18N_UI[lang]) searchInput.setAttribute('placeholder', I18N_UI[lang].searchPlaceholder);
     if (save) { try { localStorage.setItem('veille-lang', lang); } catch(e){} }
   }
   function switchLang(lang, save){
@@ -221,6 +528,8 @@ body.lang-fade header.masthead, body.lang-fade main{opacity:.45;}
     });
   }
   applyLang(currentLang, false);
+
+  applyFilters();
 })();
 
 </script>
