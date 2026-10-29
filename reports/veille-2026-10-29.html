@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Veille Branding &amp; Marketing — 29 octobre 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+
+:root{
+  --bg:#F3EDE2;
+  --panel:#FBF8F2;
+  --panel-line:#E4DACB;
+  --ink:#2B2621;
+  --ink-soft:#7A7167;
+  --accent:#B27A50;
+  --accent-soft:#DCC7AE;
+  --dark:#2B2621;
+  --dark-2:#3A332B;
+  --font:'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+  --radius:16px;
+  --maxw:1180px;
+}
+*{box-sizing:border-box;}
+html,body{margin:0;padding:0;}
+body{background:var(--bg); color:var(--ink); font-family:var(--font); font-weight:400; line-height:1.55; -webkit-font-smoothing:antialiased; overflow-x:hidden;}
+.wrap{max-width:var(--maxw); margin:0 auto; padding:0 20px;}
+a{color:var(--accent);}
+
+#progress-bar{position:fixed; top:0; left:0; height:3px; width:0%; background:var(--accent); z-index:999; transition:width .08s linear;}
+
+header.masthead{background:var(--dark); color:#F3EDE2; padding:52px 0 44px; position:relative; overflow:hidden;}
+.masthead-top{display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; position:relative;}
+.eyebrow{font-family:var(--font); font-weight:700; letter-spacing:.1em; text-transform:uppercase; font-size:11.5px; color:var(--accent-soft); margin:0;}
+.header-actions{display:flex; align-items:center; gap:12px; flex-wrap:wrap;}
+h1.title{font-family:var(--font); font-weight:800; font-size:clamp(26px, 4.2vw, 44px); line-height:1.18; margin:18px 0 14px; max-width:920px; position:relative;}
+h1.title .accent-underline{border-bottom:3px solid var(--accent); padding-bottom:2px;}
+.subline{font-size:15px; color:#D9CFC0; max-width:680px; margin:0; position:relative;}
+.newsletter-cta{display:inline-flex; align-items:center; gap:8px; font-family:var(--font); font-weight:700; font-size:13px; color:var(--dark); text-decoration:none; background:var(--accent-soft); border-radius:999px; padding:10px 20px; transition:transform .15s ease, background .15s ease; white-space:nowrap;}
+.newsletter-cta:hover{transform:translateY(-2px); background:#e9d9c4;}
+.stats-row{display:flex; gap:36px; margin-top:26px; flex-wrap:wrap; position:relative;}
+.stat{display:flex; flex-direction:column; gap:2px;}
+.stat-num{font-family:var(--font); font-weight:800; font-size:32px; color:#F3EDE2; line-height:1;}
+.stat-label{font-family:var(--font); font-weight:700; font-size:11px; letter-spacing:.05em; text-transform:uppercase; color:var(--accent-soft);}
+
+.lang-toggle{font-family:var(--font); font-weight:600; font-size:12.5px; color:#F3EDE2; background:transparent; border:1px solid rgba(243,237,226,.4); border-radius:999px; padding:7px 14px; cursor:pointer; white-space:nowrap; display:inline-flex; align-items:center; gap:6px; transition:background .15s ease, border-color .15s ease;}
+.lang-toggle:hover{background:rgba(243,237,226,.12); border-color:#F3EDE2;}
+.lang-toggle-fr,.lang-toggle-es{opacity:.55; transition:opacity .15s ease;}
+.lang-toggle-fr.active,.lang-toggle-es.active{opacity:1; font-weight:800; color:var(--accent-soft);}
+.lang-toggle-sep{opacity:.4;}
+
+main{padding:40px 0 20px;}
+.controls{display:flex; flex-wrap:wrap; gap:16px; align-items:center; justify-content:space-between; margin-bottom:36px; position:sticky; top:0; background:var(--bg); z-index:50; padding:14px 0; border-bottom:1px solid var(--panel-line);}
+.chips{display:flex; flex-wrap:wrap; gap:8px;}
+.chip{font-family:var(--font); font-weight:600; font-size:12.5px; letter-spacing:.02em; background:var(--panel); color:var(--ink); border:1px solid var(--panel-line); border-radius:999px; padding:8px 16px; cursor:pointer; transition:all .15s ease; white-space:nowrap;}
+.chip:hover{border-color:var(--accent); transform:translateY(-1px);}
+.chip.active{background:var(--dark); color:#F3EDE2; border-color:var(--dark);}
+.search-wrap{flex:0 1 320px; min-width:220px;}
+#search-input{width:100%; font-family:var(--font); font-size:13.5px; padding:10px 16px; border:1px solid var(--panel-line); border-radius:999px; background:var(--panel); color:var(--ink);}
+#search-input:focus{outline:2px solid var(--accent); outline-offset:1px;}
+
+.section-title{font-family:var(--font); font-weight:800; font-size:23px; color:var(--ink); margin:0 0 22px; display:flex; align-items:center; gap:10px;}
+.section-emoji{font-size:22px;}
+.section-intro{font-size:14px; color:var(--ink-soft); margin:-12px 0 22px; max-width:680px;}
+.top5-section{margin-bottom:56px;}
+.top5-title{font-size:27px;}
+.top5-grid{display:grid; grid-template-columns:repeat(auto-fit, minmax(300px,1fr)); gap:22px;}
+
+.theme-section{margin-bottom:52px; scroll-margin-top:90px;}
+.card-grid{display:grid; grid-template-columns:repeat(auto-fit, minmax(300px,1fr)); gap:20px;}
+
+.card{background:var(--panel); border:1px solid var(--panel-line); border-radius:var(--radius); overflow:hidden; cursor:pointer; transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease; display:flex; flex-direction:column; box-shadow:0 1px 2px rgba(43,38,33,.04);}
+.card:hover{transform:translateY(-4px); box-shadow:0 10px 24px rgba(43,38,33,.10); border-color:var(--accent);}
+.card:focus-visible{outline:2px solid var(--accent); outline-offset:2px;}
+.card-media{position:relative; aspect-ratio:5/3; overflow:hidden; background:var(--dark);}
+.card-media img{width:100%; height:100%; object-fit:cover; display:block; transition:transform .35s ease;}
+.card:hover .card-media img{transform:scale(1.05);}
+.card-media .fallback-icon{display:none; width:100%; height:100%; align-items:center; justify-content:center; color:var(--accent-soft); background:linear-gradient(135deg,#3A332B,#2B2621);}
+.card-media.media-fallback .fallback-icon{display:flex;}
+.card-media.media-fallback img{display:none;}
+.card-media .badge{position:absolute; top:12px; left:12px; background:rgba(251,248,242,.94); color:var(--ink); font-family:var(--font); font-weight:700; font-size:11px; letter-spacing:.03em; padding:6px 12px; border-radius:999px; display:flex; align-items:center; gap:5px;}
+.card-body{padding:20px 20px 16px; display:flex; flex-direction:column; gap:10px; flex:1;}
+.card-title-row{display:flex; align-items:baseline; justify-content:space-between; gap:10px;}
+.card-title{font-family:var(--font); font-weight:700; font-size:18px; line-height:1.28; color:var(--ink); margin:0;}
+.read-tag{font-family:var(--font); font-weight:600; font-size:11px; color:var(--ink-soft); white-space:nowrap;}
+.card-fact{font-size:14px; color:var(--ink); margin:0; line-height:1.55;}
+.card-more{max-height:0; opacity:0; overflow:hidden; transition:max-height .4s ease, opacity .3s ease, margin .4s ease;}
+.card.expanded .card-more{max-height:1400px; opacity:1; margin-top:4px;}
+.card-label{font-family:var(--font); font-weight:700; font-size:11.5px; letter-spacing:.05em; text-transform:uppercase; color:var(--accent); margin:12px 0 4px;}
+.card-why, .card-action{font-size:13.5px; color:var(--ink); margin:0 0 4px; line-height:1.5;}
+.card-source{font-size:12.5px; color:var(--ink-soft); margin:10px 0 0;}
+.card-source a{color:var(--ink); font-weight:600; text-decoration:none; border-bottom:1px solid var(--panel-line);}
+.card-source a:hover{border-color:var(--accent);}
+.card-btn-row{margin-top:auto; display:flex; align-items:center; justify-content:space-between; gap:10px; padding-top:8px;}
+.card-toggle{background:none; border:none; cursor:pointer; font-family:var(--font); font-weight:600; font-size:12px; color:var(--ink-soft); padding:6px 0; display:flex; align-items:center; gap:4px;}
+.chevron{transition:transform .25s ease; display:inline-block;}
+.card.expanded .chevron{transform:rotate(180deg);}
+.card.expanded .card-toggle{color:var(--accent);}
+.card-social-toggle{background:none; border:1px solid var(--panel-line); border-radius:999px; cursor:pointer; font-family:var(--font); font-weight:600; font-size:11.5px; color:var(--ink-soft); padding:6px 12px; transition:border-color .15s ease, color .15s ease;}
+.card-social-toggle:hover{border-color:var(--accent); color:var(--accent);}
+.card-btn-actions{display:flex; align-items:center; gap:8px;}
+
+.social-pack{margin-top:10px; border-top:1px dashed var(--panel-line); padding-top:10px;}
+.social-pack-inner{background:var(--bg); border:1px solid var(--panel-line); border-radius:12px; padding:14px 16px;}
+.social-row{font-size:12.5px; color:var(--ink); margin:0 0 8px; line-height:1.5;}
+.social-row strong{color:var(--accent); display:block; font-size:11px; letter-spacing:.04em; text-transform:uppercase; margin-bottom:2px;}
+.social-copy-btn{font-family:var(--font); font-weight:700; font-size:12px; color:var(--ink); background:var(--accent-soft); border:none; border-radius:999px; padding:8px 16px; cursor:pointer; margin-top:4px; transition:background .15s ease;}
+.social-copy-btn:hover{background:#e9d9c4;}
+.social-copy-btn.copied{background:var(--accent); color:#fff;}
+
+.top5-hero{position:relative;}
+.top5-hero .card-media{aspect-ratio:16/10;}
+.top5-hero::before{content:"★"; position:absolute; top:14px; right:14px; z-index:2; background:var(--dark); color:#F3EDE2; width:28px; height:28px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:13px;}
+.top5-hero .card-title{font-size:19px;}
+
+.no-results{text-align:center; color:var(--ink-soft); font-family:var(--font); font-weight:600; padding:40px 0; font-size:15px;}
+.card[hidden]{display:none;}
+
+/* Carrousel */
+.carousel-section{margin-bottom:56px;}
+.carousel{position:relative; border-radius:var(--radius); overflow:hidden; background:linear-gradient(135deg, #d8cbb6 0%, #cbb99e 100%); outline:none;}
+.carousel-track{display:flex; transition:transform .5s cubic-bezier(.65,0,.35,1);}
+.carousel-slide{flex:0 0 100%; display:flex; align-items:flex-end; min-height:340px; position:relative; padding:32px;}
+.carousel-slide-media{position:absolute; inset:0; z-index:0;}
+.carousel-slide-media img{width:100%; height:100%; object-fit:cover; display:block; opacity:.55;}
+.carousel-slide-media::after{content:""; position:absolute; inset:0; background:linear-gradient(0deg, rgba(43,38,33,.82) 0%, rgba(43,38,33,.25) 60%, rgba(43,38,33,.15) 100%);}
+.carousel-slide-media.media-fallback img{display:none;}
+.carousel-slide-content{position:relative; z-index:1; max-width:640px; color:#F3EDE2;}
+.carousel-badge{display:inline-block; font-family:var(--font); font-weight:700; font-size:11px; letter-spacing:.03em; background:rgba(243,237,226,.16); border:1px solid rgba(243,237,226,.35); border-radius:999px; padding:6px 14px; margin-bottom:14px;}
+.carousel-slide-content h3{font-family:var(--font); font-weight:800; font-size:clamp(19px,2.6vw,25px); line-height:1.25; margin:0 0 10px; color:#F3EDE2;}
+.carousel-slide-content p{font-size:14px; color:#E4D9C8; margin:0; max-width:520px;}
+.carousel-arrow{position:absolute; top:50%; transform:translateY(-50%); z-index:2; width:40px; height:40px; border-radius:50%; border:1px solid rgba(243,237,226,.4); background:rgba(43,38,33,.55); color:#F3EDE2; font-size:17px; cursor:pointer; display:flex; align-items:center; justify-content:center; transition:background .15s ease;}
+.carousel-arrow:hover{background:var(--accent);}
+.carousel-arrow.prev{left:16px;}
+.carousel-arrow.next{right:16px;}
+.carousel-dots{display:flex; gap:8px; justify-content:center; flex-wrap:wrap; padding:16px 10px 4px; position:relative; z-index:1; max-height:44px; overflow-y:auto;}
+.carousel-dot{width:8px; height:8px; border-radius:50%; background:rgba(43,38,33,.25); border:none; cursor:pointer; padding:0;}
+.carousel-dot.active{background:var(--accent); width:20px; border-radius:6px; transition:width .2s ease;}
+@media (max-width:640px){ .carousel-slide{min-height:280px; padding:22px;} .carousel-arrow{width:34px; height:34px; font-size:14px;} }
+
+.quicklinks{background:var(--panel); border:1px solid var(--panel-line); border-radius:var(--radius); padding:24px 26px; margin-bottom:20px;}
+.quicklinks ul{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:10px;}
+.quicklink-item{font-size:13.5px; color:var(--ink); border-bottom:1px dashed var(--panel-line); padding-bottom:9px;}
+.quicklink-item:last-child{border-bottom:none; padding-bottom:0;}
+.quicklink-title{font-weight:700;}
+.quicklink-source{color:var(--ink-soft);}
+.quicklinks a{color:var(--accent); font-weight:700; text-decoration:none;}
+
+.edition-note{background:var(--panel); border:1px solid var(--panel-line); border-radius:var(--radius); padding:20px 24px; margin-bottom:40px; font-size:13.5px; color:var(--ink-soft); line-height:1.6;}
+
+footer{margin-top:40px; padding:28px 0 50px; border-top:1px solid var(--panel-line); color:var(--ink-soft); font-size:13px;}
+
+@media (max-width:640px){ header.masthead{padding:40px 0 36px;} .controls{position:static;} .stats-row{gap:24px;} }
+
+.i18n-es{display:none;}
+body.lang-es .i18n-fr{display:none;}
+body.lang-es .i18n-es{display:inline;}
+body.lang-es .i18n-es.block{display:block;}
+
+/* --- Micro-interactions & scroll-reveal (motion-safe) --- */
+.controls{transition:background-color .25s ease, box-shadow .25s ease, backdrop-filter .25s ease;}
+.controls.is-scrolled{background-color:rgba(243,237,226,.88); backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px); box-shadow:0 6px 18px rgba(43,38,33,.08);}
+.card{transition:transform .22s cubic-bezier(.25,.8,.25,1), box-shadow .22s cubic-bezier(.25,.8,.25,1), border-color .22s ease;}
+.chip{transition:background-color .18s ease, color .18s ease, border-color .18s ease, transform .18s ease;}
+.quicklinks a, .archive-arrow{background-image:linear-gradient(currentColor, currentColor); background-repeat:no-repeat; background-position:left 100%; background-size:0 1px; transition:background-size .2s ease;}
+.quicklinks a:hover, .archive-arrow:hover{background-size:100% 1px;}
+.carousel-dot{transition:background-color .15s ease, transform .15s ease, width .2s ease;}
+.carousel-dot:hover, .carousel-dot:focus-visible{transform:scale(1.3);}
+.carousel-arrow{transition:background-color .15s ease, transform .15s ease;}
+.carousel-arrow:hover, .carousel-arrow:focus-visible{transform:translateY(-50%) scale(1.08);}
+header.masthead, main{transition:opacity .15s ease;}
+body.lang-fade header.masthead, body.lang-fade main{opacity:.45;}
+@media (prefers-reduced-motion: no-preference){
+  .reveal-init{opacity:0; transform:translateY(16px); transition:opacity .45s ease-out, transform .45s ease-out;}
+  .reveal-init.reveal-in{opacity:1; transform:translateY(0);}
+}
+@media (prefers-reduced-motion: reduce){
+  .controls, .card, .chip, .quicklinks a, .archive-arrow, .carousel-dot, .carousel-arrow, header.masthead, main{transition:none !important;}
+}
+
+</style>
+
+</head>
+<body>
+
+<div id="progress-bar" aria-hidden="true"></div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="masthead-top">
+      <p class="eyebrow"><span><span class="i18n-fr">Veille Branding · Marketing · Expérience de marque — Espagne &amp; Europe</span><span class="i18n-es">Vigilancia de Branding · Marketing · Experiencia de marca — España y Europa</span></span></p>
+      <div class="header-actions">
+        <button id="lang-toggle" class="lang-toggle" type="button" aria-label="Cambiar idioma"><span class="lang-toggle-fr active">&#x1F1EB;&#x1F1F7; FR</span><span class="lang-toggle-sep">·</span><span class="lang-toggle-es">&#x1F1EA;&#x1F1F8; ES</span></button>
+      </div>
+    </div>
+    <h1 class="title"><span><span class="i18n-fr">Margiela réinvente la paire de lunettes, Madrid couronne l'innovation</span><span class="i18n-es">Margiela reinventa las gafas, Madrid corona la innovación</span></span></h1>
+    <p class="subline"><span><span class="i18n-fr">27 – 29 octobre 2026 — marketing, branding et expérience de marque en Espagne et en Europe.</span><span class="i18n-es">27 – 29 de octubre de 2026 — marketing, branding y experiencia de marca en España y Europa.</span></span></p>
+    <p style="position:relative; margin:20px 0 0;"><a class="newsletter-cta" href="../newsletter/veille-2026-10-29.html"><span><span class="i18n-fr">&#128231; Voir la newsletter de cette édition →</span><span class="i18n-es">&#128231; Ver la newsletter de esta edición →</span></span></a></p>
+    <div class="stats-row">
+      <div class="stat"><span class="stat-num" data-target="5">0</span><span class="stat-label"><span><span class="i18n-fr">actus validées</span><span class="i18n-es">noticias validadas</span></span></span></div>
+      <div class="stat"><span class="stat-num" data-target="8">0</span><span class="stat-label"><span><span class="i18n-fr">sources citées</span><span class="i18n-es">fuentes citadas</span></span></span></div>
+      <div class="stat"><span class="stat-num" data-target="42">0</span><span class="stat-label"><span><span class="i18n-fr">requêtes de recherche</span><span class="i18n-es">búsquedas realizadas</span></span></span></div>
+    </div>
+  </div>
+</header>
+<main class="wrap">
+
+  <div class="controls">
+    <div class="chips" id="chips">
+      <button class="chip active" data-filter="all" type="button"><span><span class="i18n-fr">Tout</span><span class="i18n-es">Todo</span></span></button>
+      <button class="chip" data-filter="activations" type="button">💥 <span><span class="i18n-fr">Activations</span><span class="i18n-es">Activaciones</span></span></button>
+      <button class="chip" data-filter="evenements" type="button">🎪 <span><span class="i18n-fr">Événements</span><span class="i18n-es">Eventos</span></span></button>
+      <button class="chip" data-filter="tech" type="button">🤖 <span><span class="i18n-fr">Tech</span><span class="i18n-es">Tecnología</span></span></button>
+      <button class="chip" data-filter="branding" type="button">🎨 <span><span class="i18n-fr">Branding</span><span class="i18n-es">Branding</span></span></button>
+      <button class="chip" data-filter="b2b" type="button">🤝 <span><span class="i18n-fr">B2B</span><span class="i18n-es">B2B</span></span></button>
+    </div>
+    <div class="search-wrap">
+      <input type="search" id="search-input" placeholder="Rechercher un mot-clé (marque, thème…)" aria-label="Rechercher">
+    </div>
+  </div>
+
+  <div class="edition-note">
+    <span><span class="i18n-fr">Édition courte&nbsp;: un incident réseau a empêché tout accès direct aux pages sources pendant toute la session de recherche (seul le moteur de recherche restait disponible), rendant impossible la récupération des visuels originaux des articles — les images ci-dessous viennent donc du pool de secours. Plusieurs pistes espagnoles prometteuses (le rebranding d'Avatel, la campagne santé de Mapfre) ont dû être écartées&nbsp;: leur date de publication réelle (26 octobre) tombait juste avant la fenêtre du 27-29 octobre. Cinq actus ont passé le filtre strict de date avec certitude.</span><span class="i18n-es">Edición corta&nbsp;: un incidente de red impidió todo acceso directo a las páginas fuente durante toda la sesión de búsqueda (solo el motor de búsqueda seguía disponible), lo que hizo imposible recuperar las imágenes originales de los artículos — las imágenes de abajo vienen por tanto del banco de reserva. Varias pistas españolas prometedoras (el rebranding de Avatel, la campaña de salud de Mapfre) tuvieron que descartarse&nbsp;: su fecha de publicación real (26 de octubre) caía justo antes de la ventana del 27-29 de octubre. Cinco noticias superaron el filtro estricto de fecha con certeza.</span></span>
+  </div>
+
+  <section class="top5-section">
+    <h2 class="section-title top5-title"><span class="section-emoji">&#127942;</span><span><span class="i18n-fr">Top 5 à retenir</span><span class="i18n-es">Top 5 para recordar</span></span></h2>
+    <div class="top5-grid">
+
+<article class="card top5-hero" data-theme="activations" data-search="margiela gentle monster lunettes gafas sol optica deconstruction coleccion alex prager film pop-up seoul paris tokyo" tabindex="0" role="button" aria-expanded="false" id="card-top1-activations-0">
+<div class="card-media"><img src="https://images.unsplash.com/photo-1763142165009-007b090f055f?auto=format&fit=crop&w=1200&q=70" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.closest('.card-media').classList.add('media-fallback')"><div class="fallback-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="42" height="42" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9.5"/><path d="M8 13l2.5-3 2 2.5L16 9"/></svg></div><span class="badge"><span><span class="i18n-fr">Activations</span><span class="i18n-es">Activaciones</span></span> <span class="badge-emoji">💥</span></span></div>
+  <div class="card-body">
+    <div class="card-title-row">
+      <h3 class="card-title"><span><span class="i18n-fr">Margiela et Gentle Monster lancent leur 4ᵉ collection de lunettes, avec des pop-up dans 8 villes</span><span class="i18n-es">Margiela y Gentle Monster lanzan su 4ª colección de gafas, con pop-ups en 8 ciudades</span></span></h3>
+      <span class="read-tag">3 min</span>
+    </div>
+    <p class="card-fact"><span><span class="i18n-fr">Maison Margiela et Gentle Monster ont lancé ce 29 octobre leur quatrième collaboration en lunetterie&nbsp;: 68 modèles (43 solaires, 25 optiques) autour du thème «&nbsp;Déconstruction&nbsp;», avec les quatre points de suture blancs signature de Margiela. La campagne, filmée par la photographe-réalisatrice Alex Prager, suit une femme traversant une ville mouvante pour un rendez-vous dans dix minutes. Des installations éphémères accompagnent le lancement dans huit villes — Séoul, Tokyo, Shanghai, Pékin, Bangkok, Kuala Lumpur, Melbourne et Paris —, avec à Séoul une performance live des chorégraphes Damien Jalet et Ian McMahon.</span><span class="i18n-es">Maison Margiela y Gentle Monster lanzaron este 29 de octubre su cuarta colaboración en lunetería: 68 modelos (43 de sol, 25 ópticos) bajo el concepto «Deconstrucción», con las cuatro puntadas blancas de Margiela como firma. La campaña, dirigida por la fotógrafa y directora Alex Prager, sigue a una mujer que atraviesa una ciudad cambiante antes de una cita en diez minutos. Instalaciones efímeras acompañan el lanzamiento en ocho ciudades — Seúl, Tokio, Shanghái, Pekín, Bangkok, Kuala Lumpur, Melbourne y París —, con una performance en directo en Seúl de los coreógrafos Damien Jalet e Ian McMahon.</span></span></p>
+    <div class="card-more">
+      <p class="card-label"><span><span class="i18n-fr">Pourquoi ça compte</span><span class="i18n-es">Por qué importa</span></span></p>
+      <p class="card-why"><span><span class="i18n-fr">Construire un lancement produit autour d'un court-métrage d'auteur et d'un réseau de huit installations simultanées, plutôt qu'une simple campagne d'images, transforme une collection d'accessoires en évènement culturel mondial — une mécanique que peu de catégories hors mode/luxe s'autorisent encore.</span><span class="i18n-es">Construir un lanzamiento de producto alrededor de un cortometraje de autor y una red de ocho instalaciones simultáneas, en vez de una simple campaña de imágenes, convierte una colección de accesorios en un evento cultural global — una mecánica que pocas categorías fuera de la moda y el lujo todavía se permiten.</span></span></p>
+      <p class="card-label"><span><span class="i18n-fr">Action concrète</span><span class="i18n-es">Acción concreta</span></span></p>
+      <p class="card-action">&#128161; <span><span class="i18n-fr">Pour une collaboration de marque, cartographier dès le brief un petit réseau de villes-clés (3 à 5, pas forcément toutes en même temps) où installer une version miniature de l'expérience plutôt que de concentrer tout le budget sur un seul lancement local — la cohérence narrative (même film, même thème) compte plus que le nombre de points.</span><span class="i18n-es">Para una colaboración de marca, mapear desde el brief una pequeña red de ciudades clave (3 a 5, no necesariamente todas a la vez) donde instalar una versión reducida de la experiencia, en vez de concentrar todo el presupuesto en un único lanzamiento local — la coherencia narrativa (mismo filme, mismo concepto) pesa más que el número de puntos.</span></span></p>
+      <p class="card-source"><span><span class="i18n-fr">Source :</span><span class="i18n-es">Fuente:</span></span> <a href="https://fashionunited.uk/press/fashion/maison-margiela-and-gentle-monster-centre-fourth-eyewear-collaboration-on-deconstruction/2026102791062" target="_blank" rel="noopener noreferrer">FashionUnited &#8599;</a></p>
+<div class="social-pack" hidden>
+  <div class="social-pack-inner">
+    <p class="social-row"><strong>Titular</strong><br>Margiela y Gentle Monster destruyen (literalmente) el concepto de gafas de sol</p><p class="social-row"><strong>Descripción</strong><br>El 29 de octubre, Maison Margiela y Gentle Monster lanzaron su cuarta colaboración en lunetería: 68 modelos (43 de sol, 25 ópticos) bajo el concepto 'Deconstrucción', con las cuatro puntadas blancas de Margiela como firma. La campaña, dirigida por Alex Prager, se acompaña de instalaciones pop-up en ocho ciudades, de Seúl a París, con una performance en vivo en la capital surcoreana.</p><p class="social-row"><strong>Why it matters?</strong><br>Why it matters: ¿cuántas colaboraciones de producto se atreven a construirse alrededor de un cortometraje de autor en vez de un simple lookbook?</p><p class="social-row"><strong>CC take</strong><br>CC TAKE: Eight cities, one film, zero filler — this is how you make eyewear feel like an art release.</p><p class="social-row"><strong>Copy out + CTA</strong><br>Margiela y Gentle Monster llevan cuatro colaboraciones seguidas sin repetir una sola vez la fórmula. ¿Qué otra dupla de marcas crees que aguantaría cuatro rondas sin perder frescura?</p><p class="social-row"><strong>Consejo muy Armi</strong><br>Consejo muy Armi: la próxima vez que diseñes una activación multi-ciudad, pregúntate si cada parada cuenta la MISMA historia con un acento local, o si son ocho eventos sin hilo conductor — ese hilo (aquí, el cortometraje) es lo que convierte una gira de prensa en un lanzamiento cultural.</p>
+    <button class="social-copy-btn" type="button" data-pack="Titular\nMargiela y Gentle Monster destruyen (literalmente) el concepto de gafas de sol\nDescripción\nEl 29 de octubre, Maison Margiela y Gentle Monster lanzaron su cuarta colaboración en lunetería: 68 modelos (43 de sol, 25 ópticos) bajo el concepto 'Deconstrucción', con las cuatro puntadas blancas de Margiela como firma. La campaña, dirigida por Alex Prager, se acompaña de instalaciones pop-up en ocho ciudades, de Seúl a París, con una performance en vivo en la capital surcoreana.\nWhy it matters?\nWhy it matters: ¿cuántas colaboraciones de producto se atreven a construirse alrededor de un cortometraje de autor en vez de un simple lookbook?\nCC take\nCC TAKE: Eight cities, one film, zero filler — this is how you make eyewear feel like an art release.\nCopy out + CTA\nMargiela y Gentle Monster llevan cuatro colaboraciones seguidas sin repetir una sola vez la fórmula. ¿Qué otra dupla de marcas crees que aguantaría cuatro rondas sin perder frescura?\nConsejo muy Armi\nConsejo muy Armi: la próxima vez que diseñes una activación multi-ciudad, pregúntate si cada parada cuenta la MISMA historia con un acento local, o si son ocho eventos sin hilo conductor — ese hilo (aquí, el cortometraje) es lo que convierte una gira de prensa en un lanzamiento cultural.">&#128203; <span class="i18n-fr">Copier</span><span class="i18n-es">Copiar</span></button>
+  </div>
+</div>
+    </div>
+    <div class="card-btn-row">
+      <button class="card-toggle" type="button" aria-hidden="true"><span class="card-toggle-label"><span><span class="i18n-fr">Voir plus</span><span class="i18n-es">Ver más</span></span></span> <span class="chevron">&#9662;</span></button>
+      <div class="card-btn-actions">
+        <button class="card-social-toggle" type="button"><span><span class="i18n-fr">📱 Copy réseaux</span><span class="i18n-es">📱 Copy redes</span></span></button>
+      </div>
+    </div>
+  </div>
+</article>
+
+<article class="card top5-hero" data-theme="evenements" data-search="iab spain premios inspirational 26 madrid circulo bellas artes gala noche finalistas lucia angulo mccann" tabindex="0" role="button" aria-expanded="false" id="card-top2-evenements-0">
+<div class="card-media"><img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=1200&q=70" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.closest('.card-media').classList.add('media-fallback')"><div class="fallback-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="42" height="42" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9.5"/><path d="M8 13l2.5-3 2 2.5L16 9"/></svg></div><span class="badge"><span><span class="i18n-fr">Événements</span><span class="i18n-es">Eventos</span></span> <span class="badge-emoji">🎪</span></span></div>
+  <div class="card-body">
+    <div class="card-title-row">
+      <h3 class="card-title"><span><span class="i18n-fr">IAB Spain remet ce soir ses Prix Inspirational'26, 103 projets finalistes</span><span class="i18n-es">IAB Spain entrega esta noche los Premios Inspirational'26, con 103 finalistas</span></span></h3>
+      <span class="read-tag">2 min</span>
+    </div>
+    <p class="card-fact"><span><span class="i18n-fr">Ce 29 octobre à partir de 19h, le Círculo de Bellas Artes de Madrid accueille la «&nbsp;Noche Inspirational&nbsp;», la remise des Prix Inspirational'26 d'IAB Spain. Sur plus de 300 projets inscrits — un record —, 103 ont été retenus comme finalistes dans 18 catégories, jugés par un Grand Jury présidé par Lucía Angulo (CEO de McCann Worldgroup et McCann Spain). Pensamiento Estratégico, Marketing d'Influence, Idées Disruptives et Stratégie de Branded Content concentrent le plus d'inscriptions cette année.</span><span class="i18n-es">Este 29 de octubre, a partir de las 19h, el Círculo de Bellas Artes de Madrid acoge la «Noche Inspirational», la entrega de los Premios Inspirational'26 de IAB Spain. De más de 300 proyectos inscritos —récord de la edición—, 103 llegaron como finalistas en 18 categorías, evaluados por un Gran Jurado presidido por Lucía Angulo, CEO de McCann Worldgroup y McCann Spain. Pensamiento Estratégico, Marketing de Influencia, Ideas Disruptivas y Estrategia en Branded Content concentran el mayor número de inscripciones este año.</span></span></p>
+    <div class="card-more">
+      <p class="card-label"><span><span class="i18n-fr">Pourquoi ça compte</span><span class="i18n-es">Por qué importa</span></span></p>
+      <p class="card-why"><span><span class="i18n-fr">Que «&nbsp;Pensamiento Estratégico&nbsp;» devance cette année les catégories créatives classiques en nombre d'inscriptions suggère un recentrage du secteur publicitaire espagnol sur la justification stratégique des idées, davantage que sur la seule exécution créative.</span><span class="i18n-es">Que «Pensamiento Estratégico» supere este año a las categorías creativas clásicas en número de inscripciones sugiere un giro del sector publicitario español hacia la justificación estratégica de las ideas, más que hacia la sola ejecución creativa.</span></span></p>
+      <p class="card-label"><span><span class="i18n-fr">Action concrète</span><span class="i18n-es">Acción concreta</span></span></p>
+      <p class="card-action">&#128161; <span><span class="i18n-fr">S'inscrire ou candidater à ce type de prix sectoriels n'est pas qu'une question d'ego&nbsp;: la liste des finalistes publiée en amont fonctionne comme une base de veille concurrentielle gratuite — repérer les catégories où une agence ou un client est absent peut révéler un angle de positionnement disponible.</span><span class="i18n-es">Inscribirse o presentar candidaturas a este tipo de premios sectoriales no es solo cuestión de ego: la lista de finalistas publicada de antemano funciona como una base de vigilancia competitiva gratuita — detectar las categorías donde falta una agencia o un cliente puede revelar un ángulo de posicionamiento disponible.</span></span></p>
+      <p class="card-source"><span><span class="i18n-fr">Source :</span><span class="i18n-es">Fuente:</span></span> <a href="https://www.marketingdirecto.com/marketing-general/eventos-y-formacion/premios-inspirational26-anuncia-103-proyectos-finalistas" target="_blank" rel="noopener noreferrer">MarketingDirecto &#8599;</a></p>
+<div class="social-pack" hidden>
+  <div class="social-pack-inner">
+    <p class="social-row"><strong>Titular</strong><br>IAB Spain corona esta noche a lo mejor de la publicidad digital en los Premios Inspirational'26</p><p class="social-row"><strong>Descripción</strong><br>La Noche Inspirational se celebra hoy 29 de octubre en el Círculo de Bellas Artes de Madrid. De más de 300 proyectos inscritos —récord de la edición—, 103 llegaron como finalistas a las 18 categorías, evaluados por un Gran Jurado presidido por Lucía Angulo, CEO de McCann Worldgroup y McCann Spain.</p><p class="social-row"><strong>Why it matters?</strong><br>Why it matters: si la categoría más inscrita este año es 'Pensamiento Estratégico' y no una categoría creativa clásica, ¿qué dice eso de hacia dónde está moviendo el foco la industria española?</p><p class="social-row"><strong>CC take</strong><br>CC TAKE: Strategy just out-entered creativity — and that tells you where the industry thinks the real work happens now.</p><p class="social-row"><strong>Copy out + CTA</strong><br>Más de 300 proyectos compitiendo por solo 103 plazas finalistas: la competencia este año ha sido más dura que nunca. ¿Te atreves a adivinar qué categoría se lleva el Gran Premio esta noche?</p><p class="social-row"><strong>Consejo muy Armi</strong><br>Consejo muy Armi: usa las shortlists de premios como las de IAB antes de la gala, no después — es la lista de competidores y potenciales clientes mejor segmentada por categoría que vas a encontrar gratis en todo el año.</p>
+    <button class="social-copy-btn" type="button" data-pack="Titular\nIAB Spain corona esta noche a lo mejor de la publicidad digital en los Premios Inspirational'26\nDescripción\nLa Noche Inspirational se celebra hoy 29 de octubre en el Círculo de Bellas Artes de Madrid. De más de 300 proyectos inscritos —récord de la edición—, 103 llegaron como finalistas a las 18 categorías, evaluados por un Gran Jurado presidido por Lucía Angulo, CEO de McCann Worldgroup y McCann Spain.\nWhy it matters?\nWhy it matters: si la categoría más inscrita este año es 'Pensamiento Estratégico' y no una categoría creativa clásica, ¿qué dice eso de hacia dónde está moviendo el foco la industria española?\nCC take\nCC TAKE: Strategy just out-entered creativity — and that tells you where the industry thinks the real work happens now.\nCopy out + CTA\nMás de 300 proyectos compitiendo por solo 103 plazas finalistas: la competencia este año ha sido más dura que nunca. ¿Te atreves a adivinar qué categoría se lleva el Gran Premio esta noche?\nConsejo muy Armi\nConsejo muy Armi: usa las shortlists de premios como las de IAB antes de la gala, no después — es la lista de competidores y potenciales clientes mejor segmentada por categoría que vas a encontrar gratis en todo el año.">&#128203; <span class="i18n-fr">Copier</span><span class="i18n-es">Copiar</span></button>
+  </div>
+</div>
+    </div>
+    <div class="card-btn-row">
+      <button class="card-toggle" type="button" aria-hidden="true"><span class="card-toggle-label"><span><span class="i18n-fr">Voir plus</span><span class="i18n-es">Ver más</span></span></span> <span class="chevron">&#9662;</span></button>
+      <div class="card-btn-actions">
+        <button class="card-social-toggle" type="button"><span><span class="i18n-fr">📱 Copy réseaux</span><span class="i18n-es">📱 Copy redes</span></span></button>
+      </div>
+    </div>
+  </div>
+</article>
+
+<article class="card top5-hero" data-theme="tech" data-search="meta product browsing publicidad ads facebook instagram black friday opt out conversion" tabindex="0" role="button" aria-expanded="false" id="card-top3-tech-0">
+<div class="card-media"><img src="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?auto=format&fit=crop&w=1200&q=70" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.closest('.card-media').classList.add('media-fallback')"><div class="fallback-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="42" height="42" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9.5"/><path d="M8 13l2.5-3 2 2.5L16 9"/></svg></div><span class="badge"><span><span class="i18n-fr">Tech</span><span class="i18n-es">Tecnología</span></span> <span class="badge-emoji">🤖</span></span></div>
+  <div class="card-body">
+    <div class="card-title-row">
+      <h3 class="card-title"><span><span class="i18n-fr">Meta active le «&nbsp;product browsing&nbsp;» dans vos pubs existantes dès le 28 octobre</span><span class="i18n-es">Meta activa el «product browsing» en tus anuncios activos desde el 28 de octubre</span></span></h3>
+      <span class="read-tag">3 min</span>
+    </div>
+    <p class="card-fact"><span><span class="i18n-fr">Depuis le 28 octobre, Meta active par défaut la fonctionnalité «&nbsp;product browsing&nbsp;» sur les publicités Facebook et Instagram déjà actives, sauf désactivation manuelle. Au clic sur une publicité, l'utilisateur voit désormais une page produit avec des recommandations personnalisées avant même d'arriver sur le site de l'annonceur. Meta justifie ce changement par un test montrant +3&nbsp;% de conversions en moyenne — une mesure en volume de conversions, pas en valeur de commande, selon plusieurs voix critiques du secteur.</span><span class="i18n-es">Desde el 28 de octubre, Meta activa por defecto la función «product browsing» en los anuncios de Facebook e Instagram ya activos, salvo que se desactive manualmente. Al tocar un anuncio, el usuario ve ahora una página de producto con recomendaciones personalizadas antes incluso de llegar a la web del anunciante. Meta justifica el cambio con un test que muestra un 3&nbsp;% más de conversiones de media — una métrica que cuenta volumen de conversiones, no valor del pedido, según varias voces críticas del sector.</span></span></p>
+    <div class="card-more">
+      <p class="card-label"><span><span class="i18n-fr">Pourquoi ça compte</span><span class="i18n-es">Por qué importa</span></span></p>
+      <p class="card-why"><span><span class="i18n-fr">Ce changement arrive délibérément avant le Black Friday, période où chaque point de friction retiré du parcours d'achat compte — mais aussi où chaque modification non anticipée du tunnel de conversion peut fausser l'attribution et les comparatifs de performance d'une campagne à l'autre.</span><span class="i18n-es">Este cambio llega deliberadamente antes del Black Friday, el periodo en el que cada punto de friccción eliminado del recorrido de compra cuenta — pero también en el que cada modificación no anticipada del embudo de conversión puede distorsionar la atribución y las comparativas de rendimiento entre campañas.</span></span></p>
+      <p class="card-label"><span><span class="i18n-fr">Action concrète</span><span class="i18n-es">Acción concreta</span></span></p>
+      <p class="card-action">&#128161; <span><span class="i18n-fr">Vérifier dès maintenant, pour chaque client avec des campagnes Meta actives, si le «&nbsp;product browsing&nbsp;» est resté activé par défaut, et faire ce choix consciemment (test A/B si possible) plutôt que de le découvrir après coup dans un rapport de performance de novembre.</span><span class="i18n-es">Revisar ahora mismo, para cada cliente con campañas activas en Meta, si el «product browsing» se ha quedado activado por defecto, y tomar esa decisión de forma consciente (con test A/B si es posible) en lugar de descubrirlo después en un informe de resultados de noviembre.</span></span></p>
+      <p class="card-source"><span><span class="i18n-fr">Source :</span><span class="i18n-es">Fuente:</span></span> <a href="https://commonthreadco.com/blogs/coachs-corner/meta-is-auto-enabling-product-browsing-in-your-existing-ads-on-october-28-what-ecommerce-brands-must-do-before-black-friday" target="_blank" rel="noopener noreferrer">Common Thread Collective &#8599;</a></p>
+<div class="social-pack" hidden>
+  <div class="social-pack-inner">
+    <p class="social-row"><strong>Titular</strong><br>Meta activa un intermediario en tus anuncios justo antes del Black Friday (y no lo pediste)</p><p class="social-row"><strong>Descripción</strong><br>Desde el 28 de octubre, Meta activa por defecto el 'product browsing' en los anuncios de Facebook e Instagram ya activos, salvo que el anunciante lo desactive manualmente. Al tocar el anuncio, el usuario ve ahora una página de producto con recomendaciones dentro de la propia app, antes de llegar a la web de la marca. Meta justifica el cambio con un test que muestra un 3% más de conversiones de media.</p><p class="social-row"><strong>Why it matters?</strong><br>Why it matters: si la métrica que justifica el cambio cuenta conversiones y no valor del pedido, ¿quién se está quedando con el verdadero beneficio de esta 'mejora'?</p><p class="social-row"><strong>CC take</strong><br>CC TAKE: Your ad, Meta's checkout page — read the fine print before Black Friday eats your attribution.</p><p class="social-row"><strong>Copy out + CTA</strong><br>A una semana de que arranque la temporada más cara del año en medios, Meta cambia las reglas del juego sin pedir permiso explícito. ¿Ya revisaste si tus campañas activas tienen esto encendido?</p><p class="social-row"><strong>Consejo muy Armi</strong><br>Consejo muy Armi: antes de cualquier pico de inversión en paid media (Black Friday, Navidad, rebajas), añade a tu checklist de cliente una revisión de 'configuraciones activadas por defecto' en cada plataforma — es gratis, tarda diez minutos y evita sorpresas carísimas en el informe de resultados.</p>
+    <button class="social-copy-btn" type="button" data-pack="Titular\nMeta activa un intermediario en tus anuncios justo antes del Black Friday (y no lo pediste)\nDescripción\nDesde el 28 de octubre, Meta activa por defecto el 'product browsing' en los anuncios de Facebook e Instagram ya activos, salvo que el anunciante lo desactive manualmente. Al tocar el anuncio, el usuario ve ahora una página de producto con recomendaciones dentro de la propia app, antes de llegar a la web de la marca. Meta justifica el cambio con un test que muestra un 3% más de conversiones de media.\nWhy it matters?\nWhy it matters: si la métrica que justifica el cambio cuenta conversiones y no valor del pedido, ¿quién se está quedando con el verdadero beneficio de esta 'mejora'?\nCC take\nCC TAKE: Your ad, Meta's checkout page — read the fine print before Black Friday eats your attribution.\nCopy out + CTA\nA una semana de que arranque la temporada más cara del año en medios, Meta cambia las reglas del juego sin pedir permiso explícito. ¿Ya revisaste si tus campañas activas tienen esto encendido?\nConsejo muy Armi\nConsejo muy Armi: antes de cualquier pico de inversión en paid media (Black Friday, Navidad, rebajas), añade a tu checklist de cliente una revisión de 'configuraciones activadas por defecto' en cada plataforma — es gratis, tarda diez minutos y evita sorpresas carísimas en el informe de resultados.">&#128203; <span class="i18n-fr">Copier</span><span class="i18n-es">Copiar</span></button>
+  </div>
+</div>
+    </div>
+    <div class="card-btn-row">
+      <button class="card-toggle" type="button" aria-hidden="true"><span class="card-toggle-label"><span><span class="i18n-fr">Voir plus</span><span class="i18n-es">Ver más</span></span></span> <span class="chevron">&#9662;</span></button>
+      <div class="card-btn-actions">
+        <button class="card-social-toggle" type="button"><span><span class="i18n-fr">📱 Copy réseaux</span><span class="i18n-es">📱 Copy redes</span></span></button>
+      </div>
+    </div>
+  </div>
+</article>
+
+<article class="card top5-hero" data-theme="branding" data-search="rillet red antler rebrand identidad marca erp agentico fintech monograma morado metro nueva york" tabindex="0" role="button" aria-expanded="false" id="card-top4-branding-0">
+<div class="card-media"><img src="https://images.unsplash.com/photo-1614036634955-ae5e90f9b9eb?auto=format&fit=crop&w=1200&q=70" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.closest('.card-media').classList.add('media-fallback')"><div class="fallback-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="42" height="42" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9.5"/><path d="M8 13l2.5-3 2 2.5L16 9"/></svg></div><span class="badge"><span><span class="i18n-fr">Branding</span><span class="i18n-es">Branding</span></span> <span class="badge-emoji">🎨</span></span></div>
+  <div class="card-body">
+    <div class="card-title-row">
+      <h3 class="card-title"><span><span class="i18n-fr">Rillet change de visage&nbsp;: Red Antler signe son identité «&nbsp;vitesse et rigueur&nbsp;»</span><span class="i18n-es">Rillet cambia de imagen: Red Antler firma su identidad de «velocidad y rigor»</span></span></h3>
+      <span class="read-tag">2 min</span>
+    </div>
+    <p class="card-fact"><span><span class="i18n-fr">Le 27 octobre, l'ERP agentique Rillet a dévoilé une nouvelle identité de marque conçue par l'agence new-yorkaise Red Antler&nbsp;: un monogramme «&nbsp;R&nbsp;» redessiné, la typographie ABC ROM, une palette dominée par le violet et une texture visuelle en «&nbsp;flux&nbsp;». Le déploiement a démarré ce mois-ci dans le métro de Manhattan et à l'aéroport de Las Vegas, en parallèle du lancement de nouvelles fonctions de clôture comptable instantanée.</span><span class="i18n-es">El 27 de octubre, el ERP agéntico Rillet presentó una nueva identidad de marca diseñada por la agencia neoyorquina Red Antler: un monograma «R» rediseñado, la tipografía ABC ROM, una paleta dominada por el morado y una textura visual de «flujos». El despliegue arrancó este mes en el metro de Manhattan y el aeropuerto de Las Vegas, junto con el lanzamiento de nuevas funciones de cierre contable instantáneo.</span></span></p>
+    <div class="card-more">
+      <p class="card-label"><span><span class="i18n-fr">Pourquoi ça compte</span><span class="i18n-es">Por qué importa</span></span></p>
+      <p class="card-why"><span><span class="i18n-fr">Qu'une entreprise de logiciel financier choisisse l'affichage physique (métro, aéroport) plutôt que la seule publicité digitale pour porter un rebranding B2B montre que même les marques SaaS les plus techniques misent désormais sur une présence de marque tangible pour se différencier dans un marché saturé d'outils IA.</span><span class="i18n-es">Que una empresa de software financiero elija la publicidad física (metro, aeropuerto) en lugar de solo la digital para presentar un rebranding B2B muestra que incluso las marcas SaaS más técnicas apuestan ya por una presencia de marca tangible para diferenciarse en un mercado saturado de herramientas de IA.</span></span></p>
+      <p class="card-label"><span><span class="i18n-fr">Action concrète</span><span class="i18n-es">Acción concreta</span></span></p>
+      <p class="card-action">&#128161; <span><span class="i18n-fr">Pour un client B2B technique, tester un format d'affichage physique ciblé (une station de métro, un aéroport fréquenté par sa cible professionnelle) au moment du lancement d'une nouvelle identité, plutôt que de tout concentrer en display digital — l'effet de légitimité perçue est disproportionné par rapport au coût.</span><span class="i18n-es">Para un cliente B2B técnico, probar un formato de publicidad física muy dirigido (una estación de metro, un aeropuerto frecuentado por su público profesional) en el momento de lanzar una nueva identidad, en lugar de concentrarlo todo en display digital — el efecto de legitimidad percibida es desproporcionado respecto al coste.</span></span></p>
+      <p class="card-source"><span><span class="i18n-fr">Source :</span><span class="i18n-es">Fuente:</span></span> <a href="https://www.businesswire.com/news/home/20261027027701/en/Rillet-Launches-New-Brand-Identity-Zero-Day-Close-Infrastructure-and-Powerful-New-Agentic-Finance-Capabilities-for-the-Modern-Enterprise-Finance-Team" target="_blank" rel="noopener noreferrer">Business Wire &#8599;</a></p>
+<div class="social-pack" hidden>
+  <div class="social-pack-inner">
+    <p class="social-row"><strong>Titular</strong><br>Rillet rediseña su marca y la lleva al metro de Nueva York (en lugar de solo a una landing page)</p><p class="social-row"><strong>Descripción</strong><br>El 27 de octubre, el ERP agéntico Rillet presentó una nueva identidad diseñada por la agencia Red Antler: un monograma 'R' rediseñado, tipografía ABC ROM, paleta morada y una textura de 'flujos'. El despliegue arrancó este mes en el metro de Manhattan y el aeropuerto de Las Vegas, junto con nuevas funciones de cierre contable instantáneo.</p><p class="social-row"><strong>Why it matters?</strong><br>Why it matters: si hasta el software financiero más técnico necesita presencia física para destacar, ¿qué dice eso del nivel de saturación visual que hay ya en el B2B digital?</p><p class="social-row"><strong>CC take</strong><br>CC TAKE: When even fintech ERPs need subway ads, brand noise has officially gone vertical.</p><p class="social-row"><strong>Copy out + CTA</strong><br>Rillet apostó por un metro y un aeropuerto, no por otro banner de LinkedIn, para presentar su nueva cara. ¿Conoces alguna otra marca B2B que haya roto con el display digital para apostar por algo físico?</p><p class="social-row"><strong>Consejo muy Armi</strong><br>Consejo muy Armi: cuando un cliente B2B diga que 'el físico no es para nosotros', enséñale este caso — a veces un solo pasillo de metro genera más conversación de marca que un mes entero de programática.</p>
+    <button class="social-copy-btn" type="button" data-pack="Titular\nRillet rediseña su marca y la lleva al metro de Nueva York (en lugar de solo a una landing page)\nDescripción\nEl 27 de octubre, el ERP agéntico Rillet presentó una nueva identidad diseñada por la agencia Red Antler: un monograma 'R' rediseñado, tipografía ABC ROM, paleta morada y una textura de 'flujos'. El despliegue arrancó este mes en el metro de Manhattan y el aeropuerto de Las Vegas, junto con nuevas funciones de cierre contable instantáneo.\nWhy it matters?\nWhy it matters: si hasta el software financiero más técnico necesita presencia física para destacar, ¿qué dice eso del nivel de saturación visual que hay ya en el B2B digital?\nCC take\nCC TAKE: When even fintech ERPs need subway ads, brand noise has officially gone vertical.\nCopy out + CTA\nRillet apostó por un metro y un aeropuerto, no por otro banner de LinkedIn, para presentar su nueva cara. ¿Conoces alguna otra marca B2B que haya roto con el display digital para apostar por algo físico?\nConsejo muy Armi\nConsejo muy Armi: cuando un cliente B2B diga que 'el físico no es para nosotros', enséñale este caso — a veces un solo pasillo de metro genera más conversación de marca que un mes entero de programática.">&#128203; <span class="i18n-fr">Copier</span><span class="i18n-es">Copiar</span></button>
+  </div>
+</div>
+    </div>
+    <div class="card-btn-row">
+      <button class="card-toggle" type="button" aria-hidden="true"><span class="card-toggle-label"><span><span class="i18n-fr">Voir plus</span><span class="i18n-es">Ver más</span></span></span> <span class="chevron">&#9662;</span></button>
+      <div class="card-btn-actions">
+        <button class="card-social-toggle" type="button"><span><span class="i18n-fr">📱 Copy réseaux</span><span class="i18n-es">📱 Copy redes</span></span></button>
+      </div>
+    </div>
+  </div>
+</article>
+
+<article class="card top5-hero" data-theme="b2b" data-search="phd media batalla innovacion movistar esports center madrid twitch koi omnicom networking marcas" tabindex="0" role="button" aria-expanded="false" id="card-top5-b2b-0">
+<div class="card-media"><img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=1200&q=70" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.closest('.card-media').classList.add('media-fallback')"><div class="fallback-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="42" height="42" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9.5"/><path d="M8 13l2.5-3 2 2.5L16 9"/></svg></div><span class="badge"><span><span class="i18n-fr">B2B</span><span class="i18n-es">B2B</span></span> <span class="badge-emoji">🤝</span></span></div>
+  <div class="card-body">
+    <div class="card-title-row">
+      <h3 class="card-title"><span><span class="i18n-fr">PHD Media fait monter les marques sur le ring, 5ᵉ «&nbsp;Batalla de la Innovación&nbsp;»</span><span class="i18n-es">PHD Media sube a las marcas al ring en la 5ª «Batalla de la Innovación»</span></span></h3>
+      <span class="read-tag">2 min</span>
+    </div>
+    <p class="card-fact"><span><span class="i18n-fr">Ce 27 octobre, PHD Media (groupe Omnicom) a organisé la 5ᵉ édition de «&nbsp;La Batalla de la Innovación&nbsp;», de 16h30 à 20h, au Movistar eSports Center de Madrid — un format d'affrontement de marques sur scène, en partenariat avec Twitch, Movistar KOI et MarketingDirecto.com. Les éditions précédentes ont réuni des marques comme KFC, Uber Eats, Warner Music ou Diageo, qui y présentent en direct leurs initiatives les plus disruptives devant un jury et un public professionnel.</span><span class="i18n-es">Este 27 de octubre, PHD Media (grupo Omnicom) celebró la 5ª edición de «La Batalla de la Innovación», de 16:30 a 20:00h, en el Movistar eSports Center de Madrid — un formato de enfrentamiento de marcas sobre el escenario, en colaboración con Twitch, Movistar KOI y MarketingDirecto.com. En ediciones anteriores han subido marcas como KFC, Uber Eats, Warner Music o Diageo, presentando en directo sus iniciativas más disruptivas ante jurado y público profesional.</span></span></p>
+    <div class="card-more">
+      <p class="card-label"><span><span class="i18n-fr">Pourquoi ça compte</span><span class="i18n-es">Por qué importa</span></span></p>
+      <p class="card-why"><span><span class="i18n-fr">Installer un format de networking B2B dans une salle d'esport plutôt que dans un hôtel classique déplace symboliquement l'innovation marketing vers les codes du gaming et du divertissement — un choix de lieu qui est lui-même un message sur le positionnement visé.</span><span class="i18n-es">Instalar un formato de networking B2B en una sala de esports en lugar de un hotel clásico desplaza simbólicamente la innovación de marketing hacia los códigos del gaming y el entretenimiento — una elección de espacio que es, en sí misma, un mensaje sobre el posicionamiento buscado.</span></span></p>
+      <p class="card-label"><span><span class="i18n-fr">Action concrète</span><span class="i18n-es">Acción concreta</span></span></p>
+      <p class="card-action">&#128161; <span><span class="i18n-fr">Pour un évènement B2B destiné à des décideurs plus jeunes ou à l'image «&nbsp;innovation&nbsp;», challenger systématiquement le lieu par défaut (hôtel, siège, palais des congrès) et évaluer un espace associé à une autre culture (gaming, sport, art) qui renforce le message sans en dire un mot.</span><span class="i18n-es">Para un evento B2B dirigido a perfiles más jóvenes o a una imagen de «innovación», cuestionar siempre el espacio por defecto (hotel, sede, palacio de congresos) y evaluar un lugar asociado a otra cultura (gaming, deporte, arte) que refuerce el mensaje sin decir una palabra.</span></span></p>
+      <p class="card-source"><span><span class="i18n-fr">Source :</span><span class="i18n-es">Fuente:</span></span> <a href="https://www.eventbrite.es/e/la-batalla-de-la-innovacion-by-phd-tickets-2002799629606" target="_blank" rel="noopener noreferrer">Eventbrite &#8599;</a></p>
+<div class="social-pack" hidden>
+  <div class="social-pack-inner">
+    <p class="social-row"><strong>Titular</strong><br>PHD convierte el networking B2B en un combate de esports (y lleva cinco años haciéndolo)</p><p class="social-row"><strong>Descripción</strong><br>El pasado 27 de octubre, PHD Media (grupo Omnicom) celebró la quinta edición de 'La Batalla de la Innovación', de 16:30 a 20:00h, en el Movistar eSports Center de Madrid, con Twitch, Movistar KOI y MarketingDirecto.com como partners. En ediciones anteriores han subido al ring marcas como KFC, Uber Eats, Warner Music o Diageo, presentando en directo sus apuestas más disruptivas ante jurado y público profesional.</p><p class="social-row"><strong>Why it matters?</strong><br>Why it matters: ¿qué dice del B2B español que su evento de innovación más longevo elija un escenario de esports en vez de un hotel de cinco estrellas?</p><p class="social-row"><strong>CC take</strong><br>CC TAKE: Five years in, and B2B networking still looks more like a fight night than a conference — that's the whole point.</p><p class="social-row"><strong>Copy out + CTA</strong><br>Cinco ediciones después, el formato sigue vivo porque nunca dejó de sentirse como un espectáculo. ¿Qué otro evento B2B español se ha atrevido a cambiar tanto el escenario como el guion?</p><p class="social-row"><strong>Consejo muy Armi</strong><br>Consejo muy Armi: la próxima vez que produzcas un evento B2B, pregúntate qué 'escenario prestado' (un estudio de esports, una sala de conciertos, un rodaje) contaría mejor tu mensaje que una sala de hotel — el lugar también es brief.</p>
+    <button class="social-copy-btn" type="button" data-pack="Titular\nPHD convierte el networking B2B en un combate de esports (y lleva cinco años haciéndolo)\nDescripción\nEl pasado 27 de octubre, PHD Media (grupo Omnicom) celebró la quinta edición de 'La Batalla de la Innovación', de 16:30 a 20:00h, en el Movistar eSports Center de Madrid, con Twitch, Movistar KOI y MarketingDirecto.com como partners. En ediciones anteriores han subido al ring marcas como KFC, Uber Eats, Warner Music o Diageo, presentando en directo sus apuestas más disruptivas ante jurado y público profesional.\nWhy it matters?\nWhy it matters: ¿qué dice del B2B español que su evento de innovación más longevo elija un escenario de esports en vez de un hotel de cinco estrellas?\nCC take\nCC TAKE: Five years in, and B2B networking still looks more like a fight night than a conference — that's the whole point.\nCopy out + CTA\nCinco ediciones después, el formato sigue vivo porque nunca dejó de sentirse como un espectáculo. ¿Qué otro evento B2B español se ha atrevido a cambiar tanto el escenario como el guion?\nConsejo muy Armi\nConsejo muy Armi: la próxima vez que produzcas un evento B2B, pregúntate qué 'escenario prestado' (un estudio de esports, una sala de conciertos, un rodaje) contaría mejor tu mensaje que una sala de hotel — el lugar también es brief.">&#128203; <span class="i18n-fr">Copier</span><span class="i18n-es">Copiar</span></button>
+  </div>
+</div>
+    </div>
+    <div class="card-btn-row">
+      <button class="card-toggle" type="button" aria-hidden="true"><span class="card-toggle-label"><span><span class="i18n-fr">Voir plus</span><span class="i18n-es">Ver más</span></span></span> <span class="chevron">&#9662;</span></button>
+      <div class="card-btn-actions">
+        <button class="card-social-toggle" type="button"><span><span class="i18n-fr">📱 Copy réseaux</span><span class="i18n-es">📱 Copy redes</span></span></button>
+      </div>
+    </div>
+  </div>
+</article>
+
+    </div>
+  </section>
+
+  <section class="carousel-section">
+    <h2 class="section-title"><span class="section-emoji">&#127902;&#65039;</span><span><span class="i18n-fr">Le carrousel de la période</span><span class="i18n-es">El carrusel del período</span></span></h2>
+    <div class="carousel" id="carousel" tabindex="0" aria-roledescription="carrousel" aria-label="Actus marquantes de la période">
+      <div class="carousel-track" id="carousel-track">
+<div class="carousel-slide" data-theme="activations">
+          <div class="carousel-slide-media"><img src="https://images.unsplash.com/photo-1763142165009-007b090f055f?auto=format&fit=crop&w=1200&q=70" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.parentElement.classList.add('media-fallback')"></div>
+          <div class="carousel-slide-content">
+            <span class="carousel-badge">💥 <span><span class="i18n-fr">Activations</span><span class="i18n-es">Activaciones</span></span></span>
+            <h3><span><span class="i18n-fr">Margiela x Gentle Monster envahissent 8 villes</span><span class="i18n-es">Margiela x Gentle Monster toman 8 ciudades</span></span></h3>
+            <p><span><span class="i18n-fr">Un court-métrage signé Alex Prager et des pop-up simultanés, de Séoul à Paris.</span><span class="i18n-es">Un cortometraje firmado por Alex Prager y pop-ups simultáneos, de Seúl a París.</span></span></p>
+          </div>
+        </div>
+<div class="carousel-slide" data-theme="evenements">
+          <div class="carousel-slide-media"><img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=1200&q=70" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.parentElement.classList.add('media-fallback')"></div>
+          <div class="carousel-slide-content">
+            <span class="carousel-badge">🎪 <span><span class="i18n-fr">Événements</span><span class="i18n-es">Eventos</span></span></span>
+            <h3><span><span class="i18n-fr">Madrid célèbre sa «&nbsp;Noche Inspirational&nbsp;»</span><span class="i18n-es">Madrid celebra su «Noche Inspirational»</span></span></h3>
+            <p><span><span class="i18n-fr">103 finalistes, 18 catégories, un jury présidé par la CEO de McCann Espagne.</span><span class="i18n-es">103 finalistas, 18 categorías, un jurado presidido por la CEO de McCann España.</span></span></p>
+          </div>
+        </div>
+<div class="carousel-slide" data-theme="tech">
+          <div class="carousel-slide-media"><img src="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?auto=format&fit=crop&w=1200&q=70" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.parentElement.classList.add('media-fallback')"></div>
+          <div class="carousel-slide-content">
+            <span class="carousel-badge">🤖 <span><span class="i18n-fr">Tech</span><span class="i18n-es">Tecnología</span></span></span>
+            <h3><span><span class="i18n-fr">Meta rebat les cartes de vos pubs avant le Black Friday</span><span class="i18n-es">Meta reparte de nuevo las cartas de tus anuncios antes del Black Friday</span></span></h3>
+            <p><span><span class="i18n-fr">Le «&nbsp;product browsing&nbsp;» s'active par défaut depuis le 28 octobre, sauf opt-out.</span><span class="i18n-es">El «product browsing» se activa por defecto desde el 28 de octubre, salvo que lo desactives.</span></span></p>
+          </div>
+        </div>
+<div class="carousel-slide" data-theme="branding">
+          <div class="carousel-slide-media"><img src="https://images.unsplash.com/photo-1614036634955-ae5e90f9b9eb?auto=format&fit=crop&w=1200&q=70" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.parentElement.classList.add('media-fallback')"></div>
+          <div class="carousel-slide-content">
+            <span class="carousel-badge">🎨 <span><span class="i18n-fr">Branding</span><span class="i18n-es">Branding</span></span></span>
+            <h3><span><span class="i18n-fr">Rillet troque son logo pour un monogramme violet</span><span class="i18n-es">Rillet cambia su logo por un monograma morado</span></span></h3>
+            <p><span><span class="i18n-fr">Red Antler signe l'identité, le métro de New York l'affiche.</span><span class="i18n-es">Red Antler firma la identidad, el metro de Nueva York la exhibe.</span></span></p>
+          </div>
+        </div>
+<div class="carousel-slide" data-theme="b2b">
+          <div class="carousel-slide-media"><img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=1200&q=70" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.parentElement.classList.add('media-fallback')"></div>
+          <div class="carousel-slide-content">
+            <span class="carousel-badge">🤝 <span><span class="i18n-fr">B2B</span><span class="i18n-es">B2B</span></span></span>
+            <h3><span><span class="i18n-fr">Madrid transforme le networking B2B en combat d'arène</span><span class="i18n-es">Madrid convierte el networking B2B en combate de arena</span></span></h3>
+            <p><span><span class="i18n-fr">PHD Media réunit les marques les plus disruptives sur la scène d'un eSports Center.</span><span class="i18n-es">PHD Media reúne a las marcas más disruptivas en el escenario de un eSports Center.</span></span></p>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-arrow prev" type="button" aria-label="Précédent">&#8249;</button>
+      <button class="carousel-arrow next" type="button" aria-label="Suivant">&#8250;</button>
+      <div class="carousel-dots" id="carousel-dots"></div>
+    </div>
+  </section>
+
+  <p class="no-results" id="no-results" hidden><span><span class="i18n-fr">Aucun résultat pour cette recherche.</span><span class="i18n-es">Ningún resultado para esta búsqueda.</span></span></p>
+
+  <section class="quicklinks">
+    <h2 class="section-title" style="font-size:19px; margin-bottom:14px;"><span class="section-emoji">&#128279;</span><span><span class="i18n-fr">Liens rapides</span><span class="i18n-es">Enlaces rápidos</span></span></h2>
+    <ul>
+<li class="quicklink-item"><span class="quicklink-title"><span><span class="i18n-fr">Globalia Logistics Network dévoile sa nouvelle identité «&nbsp;Forward. Together.&nbsp;» pour ses 10 ans, à Bangkok</span><span class="i18n-es">Globalia Logistics Network revela su nueva identidad «Forward. Together.» por su 10º aniversario, en Bangkok</span></span></span> &#8212; <span class="quicklink-source">Manila Times</span> &#8212; <a href="https://www.manilatimes.net/2026/10/28/tmt-newswire/globenewswire/globalia-logistics-network-unveils-new-brand-identity-at-bangkok-summit-to-mark-10th-anniversary/2456417" target="_blank" rel="noopener noreferrer">&#8599;</a></li>
+<li class="quicklink-item"><span class="quicklink-title"><span><span class="i18n-fr">Advantage Solutions publie deux études sur le «&nbsp;shopper&nbsp;» de 2027</span><span class="i18n-es">Advantage Solutions publica dos estudios sobre el «shopper» de 2027</span></span></span> &#8212; <span class="quicklink-source">GlobeNewswire</span> &#8212; <a href="https://globenewswire.com/news-release/2026/10/28/3390328/0/en/advantage-solutions-releases-two-proprietary-studies-revealing-what-will-shape-retail-in-2027.html" target="_blank" rel="noopener noreferrer">&#8599;</a></li>
+<li class="quicklink-item"><span class="quicklink-title"><span><span class="i18n-fr">Apple orchestre un «&nbsp;Pro and Tell&nbsp;» à Los Angeles pour présenter ses nouveaux Mac</span><span class="i18n-es">Apple organiza un «Pro and Tell» en Los Ángeles para presentar sus nuevos Mac</span></span></span> &#8212; <span class="quicklink-source">Macworld</span> &#8212; <a href="https://www.macworld.com/article/672537/when-is-apples-next-event.html" target="_blank" rel="noopener noreferrer">&#8599;</a></li>
+    </ul>
+  </section>
+
+  <footer>
+    <p><span><span class="i18n-fr">Veille personnelle — branding, marketing, activation de marque. Espagne &amp; Europe. Édition du 29 octobre 2026.</span><span class="i18n-es">Vigilancia personal — branding, marketing, activación de marca. España y Europa. Edición del 29 de octubre de 2026.</span></span></p>
+  </footer>
+</main>
+
+<script>
+
+(function(){
+  "use strict";
+
+  // ----- Progress bar -----
+  var bar = document.getElementById('progress-bar');
+  function updateProgress(){
+    var el = document.documentElement;
+    var scrollTop = el.scrollTop || document.body.scrollTop;
+    var scrollHeight = (el.scrollHeight || document.body.scrollHeight) - el.clientHeight;
+    var pct = scrollHeight > 0 ? (scrollTop / scrollHeight) * 100 : 0;
+    if (bar) bar.style.width = pct + '%';
+  }
+  window.addEventListener('scroll', updateProgress, { passive: true });
+  window.addEventListener('resize', updateProgress);
+  updateProgress();
+
+  // ----- Animated counters -----
+  function animateCount(el, duration){
+    if (!el) return;
+    var target = parseInt(el.getAttribute('data-target'), 10) || 0;
+    var startTime = null;
+    function step(ts){
+      if (!startTime) startTime = ts;
+      var progress = Math.min((ts - startTime) / duration, 1);
+      el.textContent = Math.floor(progress * target);
+      if (progress < 1) requestAnimationFrame(step);
+      else el.textContent = target;
+    }
+    requestAnimationFrame(step);
+  }
+  document.querySelectorAll('.stat-num[data-target]').forEach(function(el){ animateCount(el, 900); });
+
+  // ----- Chip filters + search -----
+  var cards = Array.prototype.slice.call(document.querySelectorAll('.card'));
+  var chips = Array.prototype.slice.call(document.querySelectorAll('.chip'));
+  var searchInput = document.getElementById('search-input');
+  var currentFilter = 'all';
+
+  function applyFilters(){
+    var q = searchInput ? searchInput.value.toLowerCase().trim() : '';
+    var visibleCount = 0;
+    cards.forEach(function(card){
+      var themeMatch = currentFilter === 'all' || card.getAttribute('data-theme') === currentFilter;
+      var textMatch = !q || (card.getAttribute('data-search') || '').indexOf(q) !== -1;
+      var show = themeMatch && textMatch;
+      card.hidden = !show;
+      if (show) visibleCount++;
+    });
+    document.querySelectorAll('.theme-section').forEach(function(section){
+      var visible = section.querySelectorAll('.card:not([hidden])').length;
+      section.style.display = visible === 0 ? 'none' : '';
+    });
+    var noResults = document.getElementById('no-results');
+    if (noResults) noResults.hidden = visibleCount !== 0;
+  }
+
+  chips.forEach(function(chip){
+    chip.addEventListener('click', function(){
+      chips.forEach(function(c){ c.classList.remove('active'); });
+      chip.classList.add('active');
+      currentFilter = chip.getAttribute('data-filter');
+      applyFilters();
+    });
+  });
+  if (searchInput) searchInput.addEventListener('input', applyFilters);
+
+  // ----- Card expand/collapse -----
+  cards.forEach(function(card){
+    function toggle(e){
+      if (e && e.target && e.target.closest('.card-social-toggle')) return;
+      if (e && e.target && e.target.closest('.social-pack')) return;
+      if (e && e.target && e.target.closest('a')) return;
+      var expanded = card.classList.toggle('expanded');
+      card.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+    }
+    card.addEventListener('click', toggle);
+    card.addEventListener('keydown', function(e){
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(e); }
+    });
+    var socialBtn = card.querySelector('.card-social-toggle');
+    var socialPack = card.querySelector('.social-pack');
+    if (socialBtn && socialPack) {
+      socialBtn.addEventListener('click', function(e){
+        e.stopPropagation();
+        socialPack.hidden = !socialPack.hidden;
+      });
+    }
+    var copyBtn = card.querySelector('.social-copy-btn');
+    if (copyBtn) {
+      copyBtn.addEventListener('click', function(e){
+        e.stopPropagation();
+        var text = (copyBtn.getAttribute('data-pack') || '').replace(/\\n/g, '\n');
+        function done(ok){
+          copyBtn.classList.toggle('copied', ok);
+          setTimeout(function(){ copyBtn.classList.remove('copied'); }, 1800);
+        }
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(text).then(function(){ done(true); }, function(){ done(false); });
+        } else {
+          try {
+            var ta = document.createElement('textarea');
+            ta.value = text; document.body.appendChild(ta); ta.select();
+            var ok = document.execCommand('copy');
+            document.body.removeChild(ta);
+            done(ok);
+          } catch(err){ done(false); }
+        }
+      });
+    }
+  });
+
+  // ----- Carousel -----
+  var track = document.getElementById('carousel-track');
+  var carousel = document.getElementById('carousel');
+  if (track && carousel) {
+    var slides = Array.prototype.slice.call(track.children);
+    var dotsWrap = document.getElementById('carousel-dots');
+    var current = 0;
+    var autoplayTimer = null;
+
+    slides.forEach(function(_, i){
+      var dot = document.createElement('button');
+      dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
+      dot.type = 'button';
+      dot.setAttribute('aria-label', 'Slide ' + (i+1));
+      dot.addEventListener('click', function(){ goTo(i, true); });
+      if (dotsWrap) dotsWrap.appendChild(dot);
+    });
+    var dots = dotsWrap ? Array.prototype.slice.call(dotsWrap.children) : [];
+
+    function goTo(i, manual){
+      current = (i + slides.length) % slides.length;
+      track.style.transform = 'translateX(-' + (current * 100) + '%)';
+      dots.forEach(function(d, idx){ d.classList.toggle('active', idx === current); });
+      if (manual) restartAutoplay();
+    }
+    function next(){ goTo(current + 1); }
+    function prev(){ goTo(current - 1); }
+
+    var prevBtn = document.querySelector('.carousel-arrow.prev');
+    var nextBtn = document.querySelector('.carousel-arrow.next');
+    if (prevBtn) prevBtn.addEventListener('click', function(){ prev(); restartAutoplay(); });
+    if (nextBtn) nextBtn.addEventListener('click', function(){ next(); restartAutoplay(); });
+
+    carousel.addEventListener('keydown', function(e){
+      if (e.key === 'ArrowRight') { next(); restartAutoplay(); }
+      if (e.key === 'ArrowLeft') { prev(); restartAutoplay(); }
+    });
+
+    function startAutoplay(){
+      if (slides.length < 2) return;
+      autoplayTimer = setInterval(next, 5500);
+    }
+    function stopAutoplay(){ if (autoplayTimer) { clearInterval(autoplayTimer); autoplayTimer = null; } }
+    function restartAutoplay(){ stopAutoplay(); startAutoplay(); }
+
+    carousel.addEventListener('mouseenter', stopAutoplay);
+    carousel.addEventListener('mouseleave', startAutoplay);
+
+    var touchStartX = null;
+    carousel.addEventListener('touchstart', function(e){ touchStartX = e.changedTouches[0].clientX; }, {passive:true});
+    carousel.addEventListener('touchend', function(e){
+      if (touchStartX === null) return;
+      var dx = e.changedTouches[0].clientX - touchStartX;
+      if (Math.abs(dx) > 40) { dx < 0 ? next() : prev(); restartAutoplay(); }
+      touchStartX = null;
+    }, {passive:true});
+
+    startAutoplay();
+  }
+
+  // ----- Scroll reveal (motion-safe) -----
+  (function(){
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    if (!('IntersectionObserver' in window)) return;
+    var groups = Array.prototype.slice.call(document.querySelectorAll('.card-grid, .top5-grid'));
+    groups.forEach(function(group){
+      Array.prototype.slice.call(group.children).forEach(function(el, i){
+        el.classList.add('reveal-init');
+        el.style.transitionDelay = (i * 70) + 'ms';
+      });
+    });
+    Array.prototype.slice.call(document.querySelectorAll('.carousel-section, .quicklinks')).forEach(function(el){
+      el.classList.add('reveal-init');
+    });
+    var observer = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if (entry.isIntersecting){
+          entry.target.classList.add('reveal-in');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {threshold:.12, rootMargin:'0px 0px -40px 0px'});
+    Array.prototype.slice.call(document.querySelectorAll('.reveal-init')).forEach(function(el){ observer.observe(el); });
+  })();
+
+  // ----- Sticky header blur on scroll -----
+  (function(){
+    var controlsBar = document.querySelector('.controls');
+    if (!controlsBar) return;
+    function onControlsScroll(){
+      controlsBar.classList.toggle('is-scrolled', (window.scrollY || document.documentElement.scrollTop) > 8);
+    }
+    window.addEventListener('scroll', onControlsScroll, { passive: true });
+    onControlsScroll();
+  })();
+
+  // ----- FR / ES language toggle -----
+  var currentLang = 'fr';
+  try { if (localStorage.getItem('veille-lang') === 'es') currentLang = 'es'; } catch(e){}
+  var langToggleBtn = document.getElementById('lang-toggle');
+  var I18N_UI = {
+    fr: { searchPlaceholder: 'Rechercher un mot-clé (marque, thème…)' },
+    es: { searchPlaceholder: 'Buscar una palabra clave (marca, tema…)' }
+  };
+  function applyLang(lang, save){
+    currentLang = lang;
+    document.body.classList.toggle('lang-es', lang === 'es');
+    if (langToggleBtn) {
+      var frSpan = langToggleBtn.querySelector('.lang-toggle-fr');
+      var esSpan = langToggleBtn.querySelector('.lang-toggle-es');
+      if (frSpan) frSpan.classList.toggle('active', lang === 'fr');
+      if (esSpan) esSpan.classList.toggle('active', lang === 'es');
+    }
+    if (searchInput && I18N_UI[lang]) searchInput.setAttribute('placeholder', I18N_UI[lang].searchPlaceholder);
+    if (save) { try { localStorage.setItem('veille-lang', lang); } catch(e){} }
+  }
+  function switchLang(lang, save){
+    var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduced) { applyLang(lang, save); return; }
+    document.body.classList.add('lang-fade');
+    setTimeout(function(){
+      applyLang(lang, save);
+      requestAnimationFrame(function(){ document.body.classList.remove('lang-fade'); });
+    }, 150);
+  }
+  if (langToggleBtn) {
+    langToggleBtn.addEventListener('click', function(){
+      switchLang(currentLang === 'es' ? 'fr' : 'es', true);
+    });
+  }
+  applyLang(currentLang, false);
+
+  applyFilters();
+})();
+
+</script>
+
+</body>
+</html>
