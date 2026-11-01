@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Veille Branding &amp; Marketing — 1er novembre 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+
+:root{
+  --bg:#F3EDE2;
+  --panel:#FBF8F2;
+  --panel-line:#E4DACB;
+  --ink:#2B2621;
+  --ink-soft:#7A7167;
+  --accent:#B27A50;
+  --accent-soft:#DCC7AE;
+  --dark:#2B2621;
+  --dark-2:#3A332B;
+  --font:'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+  --radius:16px;
+  --maxw:1180px;
+}
+*{box-sizing:border-box;}
+html,body{margin:0;padding:0;}
+body{background:var(--bg); color:var(--ink); font-family:var(--font); font-weight:400; line-height:1.55; -webkit-font-smoothing:antialiased; overflow-x:hidden;}
+.wrap{max-width:var(--maxw); margin:0 auto; padding:0 20px;}
+a{color:var(--accent);}
+
+#progress-bar{position:fixed; top:0; left:0; height:3px; width:0%; background:var(--accent); z-index:999; transition:width .08s linear;}
+
+header.masthead{background:var(--dark); color:#F3EDE2; padding:52px 0 44px; position:relative; overflow:hidden;}
+.masthead-top{display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; position:relative;}
+.eyebrow{font-family:var(--font); font-weight:700; letter-spacing:.1em; text-transform:uppercase; font-size:11.5px; color:var(--accent-soft); margin:0;}
+.header-actions{display:flex; align-items:center; gap:12px; flex-wrap:wrap;}
+h1.title{font-family:var(--font); font-weight:800; font-size:clamp(26px, 4.2vw, 44px); line-height:1.18; margin:18px 0 14px; max-width:920px; position:relative;}
+h1.title .accent-underline{border-bottom:3px solid var(--accent); padding-bottom:2px;}
+.subline{font-size:15px; color:#D9CFC0; max-width:680px; margin:0; position:relative;}
+.newsletter-cta{display:inline-flex; align-items:center; gap:8px; font-family:var(--font); font-weight:700; font-size:13px; color:var(--dark); text-decoration:none; background:var(--accent-soft); border-radius:999px; padding:10px 20px; transition:transform .15s ease, background .15s ease; white-space:nowrap;}
+.newsletter-cta:hover{transform:translateY(-2px); background:#e9d9c4;}
+.stats-row{display:flex; gap:36px; margin-top:26px; flex-wrap:wrap; position:relative;}
+.stat{display:flex; flex-direction:column; gap:2px;}
+.stat-num{font-family:var(--font); font-weight:800; font-size:32px; color:#F3EDE2; line-height:1;}
+.stat-label{font-family:var(--font); font-weight:700; font-size:11px; letter-spacing:.05em; text-transform:uppercase; color:var(--accent-soft);}
+
+.lang-toggle{font-family:var(--font); font-weight:600; font-size:12.5px; color:#F3EDE2; background:transparent; border:1px solid rgba(243,237,226,.4); border-radius:999px; padding:7px 14px; cursor:pointer; white-space:nowrap; display:inline-flex; align-items:center; gap:6px; transition:background .15s ease, border-color .15s ease;}
+.lang-toggle:hover{background:rgba(243,237,226,.12); border-color:#F3EDE2;}
+.lang-toggle-fr,.lang-toggle-es{opacity:.55; transition:opacity .15s ease;}
+.lang-toggle-fr.active,.lang-toggle-es.active{opacity:1; font-weight:800; color:var(--accent-soft);}
+.lang-toggle-sep{opacity:.4;}
+
+main{padding:40px 0 20px;}
+.controls{display:flex; flex-wrap:wrap; gap:16px; align-items:center; justify-content:space-between; margin-bottom:36px; position:sticky; top:0; background:var(--bg); z-index:50; padding:14px 0; border-bottom:1px solid var(--panel-line);}
+.chips{display:flex; flex-wrap:wrap; gap:8px;}
+.chip{font-family:var(--font); font-weight:600; font-size:12.5px; letter-spacing:.02em; background:var(--panel); color:var(--ink); border:1px solid var(--panel-line); border-radius:999px; padding:8px 16px; cursor:pointer; transition:all .15s ease; white-space:nowrap;}
+.chip:hover{border-color:var(--accent); transform:translateY(-1px);}
+.chip.active{background:var(--dark); color:#F3EDE2; border-color:var(--dark);}
+.search-wrap{flex:0 1 320px; min-width:220px;}
+#search-input{width:100%; font-family:var(--font); font-size:13.5px; padding:10px 16px; border:1px solid var(--panel-line); border-radius:999px; background:var(--panel); color:var(--ink);}
+#search-input:focus{outline:2px solid var(--accent); outline-offset:1px;}
+
+.section-title{font-family:var(--font); font-weight:800; font-size:23px; color:var(--ink); margin:0 0 22px; display:flex; align-items:center; gap:10px;}
+.section-emoji{font-size:22px;}
+.section-intro{font-size:14px; color:var(--ink-soft); margin:-12px 0 22px; max-width:680px;}
+.top5-section{margin-bottom:56px;}
+.top5-title{font-size:27px;}
+.top5-grid{display:grid; grid-template-columns:repeat(auto-fit, minmax(300px,1fr)); gap:22px;}
+
+.theme-section{margin-bottom:52px; scroll-margin-top:90px;}
+.card-grid{display:grid; grid-template-columns:repeat(auto-fit, minmax(300px,1fr)); gap:20px;}
+
+.card{background:var(--panel); border:1px solid var(--panel-line); border-radius:var(--radius); overflow:hidden; cursor:pointer; transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease; display:flex; flex-direction:column; box-shadow:0 1px 2px rgba(43,38,33,.04);}
+.card:hover{transform:translateY(-4px); box-shadow:0 10px 24px rgba(43,38,33,.10); border-color:var(--accent);}
+.card:focus-visible{outline:2px solid var(--accent); outline-offset:2px;}
+.card-media{position:relative; aspect-ratio:5/3; overflow:hidden; background:var(--dark);}
+.card-media img{width:100%; height:100%; object-fit:cover; display:block; transition:transform .35s ease;}
+.card:hover .card-media img{transform:scale(1.05);}
+.card-media .fallback-icon{display:none; width:100%; height:100%; align-items:center; justify-content:center; color:var(--accent-soft); background:linear-gradient(135deg,#3A332B,#2B2621);}
+.card-media.media-fallback .fallback-icon{display:flex;}
+.card-media.media-fallback img{display:none;}
+.card-media .badge{position:absolute; top:12px; left:12px; background:rgba(251,248,242,.94); color:var(--ink); font-family:var(--font); font-weight:700; font-size:11px; letter-spacing:.03em; padding:6px 12px; border-radius:999px; display:flex; align-items:center; gap:5px;}
+.card-body{padding:20px 20px 16px; display:flex; flex-direction:column; gap:10px; flex:1;}
+.card-title-row{display:flex; align-items:baseline; justify-content:space-between; gap:10px;}
+.card-title{font-family:var(--font); font-weight:700; font-size:18px; line-height:1.28; color:var(--ink); margin:0;}
+.read-tag{font-family:var(--font); font-weight:600; font-size:11px; color:var(--ink-soft); white-space:nowrap;}
+.card-fact{font-size:14px; color:var(--ink); margin:0; line-height:1.55;}
+.card-more{max-height:0; opacity:0; overflow:hidden; transition:max-height .4s ease, opacity .3s ease, margin .4s ease;}
+.card.expanded .card-more{max-height:1400px; opacity:1; margin-top:4px;}
+.card-label{font-family:var(--font); font-weight:700; font-size:11.5px; letter-spacing:.05em; text-transform:uppercase; color:var(--accent); margin:12px 0 4px;}
+.card-why, .card-action{font-size:13.5px; color:var(--ink); margin:0 0 4px; line-height:1.5;}
+.card-source{font-size:12.5px; color:var(--ink-soft); margin:10px 0 0;}
+.card-source a{color:var(--ink); font-weight:600; text-decoration:none; border-bottom:1px solid var(--panel-line);}
+.card-source a:hover{border-color:var(--accent);}
+.card-btn-row{margin-top:auto; display:flex; align-items:center; justify-content:space-between; gap:10px; padding-top:8px;}
+.card-toggle{background:none; border:none; cursor:pointer; font-family:var(--font); font-weight:600; font-size:12px; color:var(--ink-soft); padding:6px 0; display:flex; align-items:center; gap:4px;}
+.chevron{transition:transform .25s ease; display:inline-block;}
+.card.expanded .chevron{transform:rotate(180deg);}
+.card.expanded .card-toggle{color:var(--accent);}
+.card-social-toggle{background:none; border:1px solid var(--panel-line); border-radius:999px; cursor:pointer; font-family:var(--font); font-weight:600; font-size:11.5px; color:var(--ink-soft); padding:6px 12px; transition:border-color .15s ease, color .15s ease;}
+.card-social-toggle:hover{border-color:var(--accent); color:var(--accent);}
+.card-btn-actions{display:flex; align-items:center; gap:8px;}
+
+.social-pack{margin-top:10px; border-top:1px dashed var(--panel-line); padding-top:10px;}
+.social-pack-inner{background:var(--bg); border:1px solid var(--panel-line); border-radius:12px; padding:14px 16px;}
+.social-row{font-size:12.5px; color:var(--ink); margin:0 0 8px; line-height:1.5;}
+.social-row strong{color:var(--accent); display:block; font-size:11px; letter-spacing:.04em; text-transform:uppercase; margin-bottom:2px;}
+.social-copy-btn{font-family:var(--font); font-weight:700; font-size:12px; color:var(--ink); background:var(--accent-soft); border:none; border-radius:999px; padding:8px 16px; cursor:pointer; margin-top:4px; transition:background .15s ease;}
+.social-copy-btn:hover{background:#e9d9c4;}
+.social-copy-btn.copied{background:var(--accent); color:#fff;}
+
+.top5-hero{position:relative;}
+.top5-hero .card-media{aspect-ratio:16/10;}
+.top5-hero::before{content:"★"; position:absolute; top:14px; right:14px; z-index:2; background:var(--dark); color:#F3EDE2; width:28px; height:28px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:13px;}
+.top5-hero .card-title{font-size:19px;}
+
+.no-results{text-align:center; color:var(--ink-soft); font-family:var(--font); font-weight:600; padding:40px 0; font-size:15px;}
+.card[hidden]{display:none;}
+
+/* Carrousel */
+.carousel-section{margin-bottom:56px;}
+.carousel{position:relative; border-radius:var(--radius); overflow:hidden; background:linear-gradient(135deg, #d8cbb6 0%, #cbb99e 100%); outline:none;}
+.carousel-track{display:flex; transition:transform .5s cubic-bezier(.65,0,.35,1);}
+.carousel-slide{flex:0 0 100%; display:flex; align-items:flex-end; min-height:340px; position:relative; padding:32px;}
+.carousel-slide-media{position:absolute; inset:0; z-index:0;}
+.carousel-slide-media img{width:100%; height:100%; object-fit:cover; display:block; opacity:.55;}
+.carousel-slide-media::after{content:""; position:absolute; inset:0; background:linear-gradient(0deg, rgba(43,38,33,.82) 0%, rgba(43,38,33,.25) 60%, rgba(43,38,33,.15) 100%);}
+.carousel-slide-media.media-fallback img{display:none;}
+.carousel-slide-content{position:relative; z-index:1; max-width:640px; color:#F3EDE2;}
+.carousel-badge{display:inline-block; font-family:var(--font); font-weight:700; font-size:11px; letter-spacing:.03em; background:rgba(243,237,226,.16); border:1px solid rgba(243,237,226,.35); border-radius:999px; padding:6px 14px; margin-bottom:14px;}
+.carousel-slide-content h3{font-family:var(--font); font-weight:800; font-size:clamp(19px,2.6vw,25px); line-height:1.25; margin:0 0 10px; color:#F3EDE2;}
+.carousel-slide-content p{font-size:14px; color:#E4D9C8; margin:0; max-width:520px;}
+.carousel-arrow{position:absolute; top:50%; transform:translateY(-50%); z-index:2; width:40px; height:40px; border-radius:50%; border:1px solid rgba(243,237,226,.4); background:rgba(43,38,33,.55); color:#F3EDE2; font-size:17px; cursor:pointer; display:flex; align-items:center; justify-content:center; transition:background .15s ease;}
+.carousel-arrow:hover{background:var(--accent);}
+.carousel-arrow.prev{left:16px;}
+.carousel-arrow.next{right:16px;}
+.carousel-dots{display:flex; gap:8px; justify-content:center; flex-wrap:wrap; padding:16px 10px 4px; position:relative; z-index:1; max-height:44px; overflow-y:auto;}
+.carousel-dot{width:8px; height:8px; border-radius:50%; background:rgba(43,38,33,.25); border:none; cursor:pointer; padding:0;}
+.carousel-dot.active{background:var(--accent); width:20px; border-radius:6px; transition:width .2s ease;}
+@media (max-width:640px){ .carousel-slide{min-height:280px; padding:22px;} .carousel-arrow{width:34px; height:34px; font-size:14px;} }
+
+.quicklinks{background:var(--panel); border:1px solid var(--panel-line); border-radius:var(--radius); padding:24px 26px; margin-bottom:20px;}
+.quicklinks ul{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:10px;}
+.quicklink-item{font-size:13.5px; color:var(--ink); border-bottom:1px dashed var(--panel-line); padding-bottom:9px;}
+.quicklink-item:last-child{border-bottom:none; padding-bottom:0;}
+.quicklink-title{font-weight:700;}
+.quicklink-source{color:var(--ink-soft);}
+.quicklinks a{color:var(--accent); font-weight:700; text-decoration:none;}
+
+.edition-note{background:var(--panel); border:1px solid var(--panel-line); border-radius:var(--radius); padding:20px 24px; margin-bottom:40px; font-size:13.5px; color:var(--ink-soft); line-height:1.6;}
+
+footer{margin-top:40px; padding:28px 0 50px; border-top:1px solid var(--panel-line); color:var(--ink-soft); font-size:13px;}
+
+@media (max-width:640px){ header.masthead{padding:40px 0 36px;} .controls{position:static;} .stats-row{gap:24px;} }
+
+.i18n-es{display:none;}
+body.lang-es .i18n-fr{display:none;}
+body.lang-es .i18n-es{display:inline;}
+body.lang-es .i18n-es.block{display:block;}
+
+/* --- Micro-interactions & scroll-reveal (motion-safe) --- */
+.controls{transition:background-color .25s ease, box-shadow .25s ease, backdrop-filter .25s ease;}
+.controls.is-scrolled{background-color:rgba(243,237,226,.88); backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px); box-shadow:0 6px 18px rgba(43,38,33,.08);}
+.card{transition:transform .22s cubic-bezier(.25,.8,.25,1), box-shadow .22s cubic-bezier(.25,.8,.25,1), border-color .22s ease;}
+.chip{transition:background-color .18s ease, color .18s ease, border-color .18s ease, transform .18s ease;}
+.quicklinks a, .archive-arrow{background-image:linear-gradient(currentColor, currentColor); background-repeat:no-repeat; background-position:left 100%; background-size:0 1px; transition:background-size .2s ease;}
+.quicklinks a:hover, .archive-arrow:hover{background-size:100% 1px;}
+.carousel-dot{transition:background-color .15s ease, transform .15s ease, width .2s ease;}
+.carousel-dot:hover, .carousel-dot:focus-visible{transform:scale(1.3);}
+.carousel-arrow{transition:background-color .15s ease, transform .15s ease;}
+.carousel-arrow:hover, .carousel-arrow:focus-visible{transform:translateY(-50%) scale(1.08);}
+header.masthead, main{transition:opacity .15s ease;}
+body.lang-fade header.masthead, body.lang-fade main{opacity:.45;}
+@media (prefers-reduced-motion: no-preference){
+  .reveal-init{opacity:0; transform:translateY(16px); transition:opacity .45s ease-out, transform .45s ease-out;}
+  .reveal-init.reveal-in{opacity:1; transform:translateY(0);}
+}
+@media (prefers-reduced-motion: reduce){
+  .controls, .card, .chip, .quicklinks a, .archive-arrow, .carousel-dot, .carousel-arrow, header.masthead, main{transition:none !important;}
+}
+
+</style>
+
+</head>
+<body>
+
+<div id="progress-bar" aria-hidden="true"></div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="masthead-top">
+      <p class="eyebrow"><span><span class="i18n-fr">Veille Branding · Marketing · Expérience de marque — Espagne &amp; Europe</span><span class="i18n-es">Vigilancia de Branding · Marketing · Experiencia de marca — España y Europa</span></span></p>
+      <div class="header-actions">
+        <button id="lang-toggle" class="lang-toggle" type="button" aria-label="Cambiar idioma"><span class="lang-toggle-fr active">&#x1F1EB;&#x1F1F7; FR</span><span class="lang-toggle-sep">·</span><span class="lang-toggle-es">&#x1F1EA;&#x1F1F8; ES</span></button>
+      </div>
+    </div>
+    <h1 class="title"><span><span class="i18n-fr">La stratégie bat le budget, un dossard vaut une réduction de train</span><span class="i18n-es">La estrategia vence al presupuesto, un dorsal vale un descuento de tren</span></span></h1>
+    <p class="subline"><span><span class="i18n-fr">29 octobre – 1er novembre 2026 — marketing, branding et expérience de marque en Espagne et en Europe.</span><span class="i18n-es">29 de octubre – 1 de noviembre de 2026 — marketing, branding y experiencia de marca en España y Europa.</span></span></p>
+    <p style="position:relative; margin:20px 0 0;"><a class="newsletter-cta" href="../newsletter/veille-2026-11-01.html"><span><span class="i18n-fr">&#128231; Voir la newsletter de cette édition →</span><span class="i18n-es">&#128231; Ver la newsletter de esta edición →</span></span></a></p>
+    <div class="stats-row">
+      <div class="stat"><span class="stat-num" data-target="3">0</span><span class="stat-label"><span><span class="i18n-fr">actus validées</span><span class="i18n-es">noticias validadas</span></span></span></div>
+      <div class="stat"><span class="stat-num" data-target="3">0</span><span class="stat-label"><span><span class="i18n-fr">sources citées</span><span class="i18n-es">fuentes citadas</span></span></span></div>
+      <div class="stat"><span class="stat-num" data-target="45">0</span><span class="stat-label"><span><span class="i18n-fr">requêtes de recherche</span><span class="i18n-es">búsquedas realizadas</span></span></span></div>
+    </div>
+  </div>
+</header>
+<main class="wrap">
+
+  <div class="controls">
+    <div class="chips" id="chips">
+      <button class="chip active" data-filter="all" type="button"><span><span class="i18n-fr">Tout</span><span class="i18n-es">Todo</span></span></button>
+      <button class="chip" data-filter="marketing" type="button">📈 <span><span class="i18n-fr">Marketing</span><span class="i18n-es">Marketing</span></span></button>
+      <button class="chip" data-filter="activations" type="button">💥 <span><span class="i18n-fr">Activations originales</span><span class="i18n-es">Activaciones originales</span></span></button>
+      <button class="chip" data-filter="b2c" type="button">✨ <span><span class="i18n-fr">Expériences B2C</span><span class="i18n-es">Experiencias B2C</span></span></button>
+    </div>
+    <div class="search-wrap">
+      <input type="search" id="search-input" placeholder="Rechercher un mot-clé (marque, thème…)" aria-label="Rechercher">
+    </div>
+  </div>
+
+  <div class="edition-note">
+    <span><span class="i18n-fr">Édition courte&nbsp;: malgré plus de 45 requêtes ciblées sur les 8 thématiques (Espagne, Europe et tendances mondiales), l'accès direct aux pages sources est resté bloqué pour la quasi-totalité des sites de presse (incident réseau déjà observé, normal pour ce sandbox) — seul le moteur de recherche restait disponible. Les trois actus retenues proviennent toutes du palmarès des Prix Inspirational'26, dévoilé le 30 octobre par IAB Spain&nbsp;: au-delà du Gran Premio et des titres d'Agence et d'Annonceur de l'année déjà couverts dans l'édition du 31 octobre, trois autres catégories (Pensée Stratégique, Idées Disruptives, Digital Experience &amp; Commerce) n'avaient pas encore été détaillées. Aucune autre actu n'a pu être vérifiée avec certitude dans la fenêtre du 29 octobre au 1er novembre — Branding, Tech, Événements, Expériences B2B et Pop-up stores sont donc absents de cette édition.</span><span class="i18n-es">Edición corta&nbsp;: a pesar de más de 45 búsquedas dirigidas a las 8 temáticas (España, Europa y tendencias globales), el acceso directo a las páginas fuente se mantuvo bloqueado para casi todos los medios (incidente de red ya observado, normal en este entorno) — solo el motor de búsqueda seguía disponible. Las tres noticias seleccionadas proceden todas del palmarés de los Premios Inspirational'26, dado a conocer el 30 de octubre por IAB Spain&nbsp;: más allá del Gran Premio y de los títulos de Agencia y Anunciante del Año ya cubiertos en la edición del 31 de octubre, otras tres categorías (Pensamiento Estratégico, Ideas Disruptivas y Digital Experience &amp; Commerce) no se habían detallado todavía. Ninguna otra noticia pudo verificarse con certeza en la ventana del 29 de octubre al 1 de noviembre — Branding, Tecnología, Eventos, Experiencias B2B y Pop-up stores están ausentes de esta edición.</span></span>
+  </div>
+
+  <section class="top5-section">
+    <h2 class="section-title top5-title"><span class="section-emoji">&#127942;</span><span><span class="i18n-fr">Top 3 à retenir</span><span class="i18n-es">Top 3 para recordar</span></span></h2>
+    <div class="top5-grid">
+
+<article class="card top5-hero" data-theme="marketing" data-search="help cuando la estrategia vale mas que la inversion oriol villar maicca clv santalucia seguros inspirational 26 pensamiento estrategico iab spain" tabindex="0" role="button" aria-expanded="false" id="card-top1-marketing-0">
+<div class="card-media"><img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=70" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.closest('.card-media').classList.add('media-fallback')"><div class="fallback-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="42" height="42" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9.5"/><path d="M8 13l2.5-3 2 2.5L16 9"/></svg></div><span class="badge"><span><span class="i18n-fr">Marketing</span><span class="i18n-es">Marketing</span></span> <span class="badge-emoji">📈</span></span></div>
+  <div class="card-body">
+    <div class="card-title-row">
+      <h3 class="card-title"><span><span class="i18n-fr">Un assureur décroche l'or de la « Pensée Stratégique » face à la bataille des budgets</span><span class="i18n-es">Una aseguradora se lleva el oro de «Pensamiento Estratégico» frente a la batalla de presupuestos</span></span></h3>
+      <span class="read-tag">3 min</span>
+    </div>
+    <p class="card-fact"><span><span class="i18n-fr">Lors de la remise des Prix Inspirational'26, le 30 octobre, l'or de la catégorie Pensée Stratégique est allé à «&nbsp;HELP! Cuando la estrategia vale más que la inversión&nbsp;», signé par le créatif Oriol Villar et l'agence Maicca avec CLV, pour l'assureur Santalucía Seguros. Le titre du projet résume son parti pris&nbsp;: démontrer qu'une stratégie bien pensée peut peser plus qu'un budget média conséquent.</span><span class="i18n-es">En la gala de los Premios Inspirational'26, celebrada el 30 de octubre, el oro de la categoría Pensamiento Estratégico fue para «HELP! Cuando la estrategia vale más que la inversión», firmado por el creativo Oriol Villar y la agencia Maicca con CLV, para la aseguradora Santalucía Seguros. El propio título del proyecto resume su apuesta: demostrar que una estrategia bien pensada puede pesar más que un presupuesto de medios abultado.</span></span></p>
+    <div class="card-more">
+      <p class="card-label"><span><span class="i18n-fr">Pourquoi ça compte</span><span class="i18n-es">Por qué importa</span></span></p>
+      <p class="card-why"><span><span class="i18n-fr">Dans un secteur assurantiel où la bataille se gagne historiquement à coups de budget média, qu'un jury récompense explicitement la pensée stratégique plutôt que l'investissement envoie un signal aux clients qui raisonnent encore «&nbsp;plus de budget, plus de résultats&nbsp;»&nbsp;: la qualité de la réflexion stratégique amont reste un levier gagnant, surtout pour les budgets serrés.</span><span class="i18n-es">En un sector asegurador que históricamente se ha ganado a golpe de presupuesto de medios, que un jurado premie explícitamente el pensamiento estratégico por encima de la inversión envía una señal a los clientes que todavía razonan «más presupuesto, más resultado»: la calidad de la reflexión estratégica previa sigue siendo una palanca ganadora, sobre todo para presupuestos ajustados.</span></span></p>
+      <p class="card-label"><span><span class="i18n-fr">Action concrète</span><span class="i18n-es">Acción concreta</span></span></p>
+      <p class="card-action">&#128161; <span><span class="i18n-fr">Face à un client qui réduit son budget média, proposer une «&nbsp;maquette stratégique&nbsp;» chiffrée avant toute discussion créative — ce prix montre qu'un jury professionnel valorise explicitement cet argument face aux clients eux-mêmes.</span><span class="i18n-es">Ante un cliente que recorta su presupuesto de medios, proponer una «maqueta estratégica» con números antes de cualquier discusión creativa — este premio demuestra que un jurado profesional valora explícitamente ese argumento frente a los propios clientes.</span></span></p>
+      <p class="card-source"><span><span class="i18n-fr">Source :</span><span class="i18n-es">Fuente:</span></span> <a href="https://theobjective.com/actualidad/2026-10-30/premios-inspirational26-ganadores/" target="_blank" rel="noopener noreferrer">The Objective &#8599;</a></p>
+<div class="social-pack" hidden>
+  <div class="social-pack-inner">
+    <p class="social-row"><strong>Titular</strong><br>Un seguro gana un premio de estrategia, no de presupuesto</p><p class="social-row"><strong>Descripción</strong><br>El 30 de octubre, los Premios Inspirational'26 entregaron el oro de Pensamiento Estratégico a «HELP! Cuando la estrategia vale más que la inversión», de Oriol Villar y Maicca con CLV, para Santalucía Seguros. El propio título resume la apuesta del proyecto: demostrar que una estrategia bien pensada puede pesar más que un presupuesto de medios abultado, en un sector que compite históricamente a golpe de inversión.</p><p class="social-row"><strong>Why it matters?</strong><br>Why it matters: en un sector que mide el éxito en millones invertidos, ¿qué pasa cuando el jurado premia justo lo contrario?</p><p class="social-row"><strong>CC take</strong><br>CC TAKE: The best media plan is sometimes just a better idea.</p><p class="social-row"><strong>Copy out + CTA</strong><br>El fallo se conoció ayer, en plena temporada de recortes de presupuesto para 2027. ¿Has tenido que defender una estrategia frente a un cliente que solo preguntaba por el presupuesto?</p><p class="social-row"><strong>Consejo muy Armi</strong><br>Consejo muy Armi: la próxima vez que un cliente recorte el presupuesto, no bajes el nivel de la propuesta — súbelo. Llega con una 'maqueta estratégica' con números antes de hablar de creatividad; es el mismo argumento que acaba de ganar un premio nacional.</p>
+    <button class="social-copy-btn" type="button" data-pack="Titular\nUn seguro gana un premio de estrategia, no de presupuesto\nDescripción\nEl 30 de octubre, los Premios Inspirational&#x27;26 entregaron el oro de Pensamiento Estratégico a &#x27;HELP! Cuando la estrategia vale más que la inversión&#x27;, de Oriol Villar y Maicca con CLV, para Santalucía Seguros. El propio título resume la apuesta del proyecto: demostrar que una estrategia bien pensada puede pesar más que un presupuesto de medios abultado, en un sector que compite históricamente a golpe de inversión.\nWhy it matters?\nWhy it matters: en un sector que mide el éxito en millones invertidos, ¿qué pasa cuando el jurado premia justo lo contrario?\nCC take\nCC TAKE: The best media plan is sometimes just a better idea.\nCopy out + CTA\nEl fallo se conoció ayer, en plena temporada de recortes de presupuesto para 2027. ¿Has tenido que defender una estrategia frente a un cliente que solo preguntaba por el presupuesto?\nConsejo muy Armi\nConsejo muy Armi: la próxima vez que un cliente recorte el presupuesto, no bajes el nivel de la propuesta — súbelo. Llega con una &#x27;maqueta estratégica&#x27; con números antes de hablar de creatividad; es el mismo argumento que acaba de ganar un premio nacional.">&#128203; <span class="i18n-fr">Copier</span><span class="i18n-es">Copiar</span></button>
+  </div>
+</div>
+    </div>
+    <div class="card-btn-row">
+      <button class="card-toggle" type="button" aria-hidden="true"><span class="card-toggle-label"><span><span class="i18n-fr">Voir plus</span><span class="i18n-es">Ver más</span></span></span> <span class="chevron">&#9662;</span></button>
+      <div class="card-btn-actions">
+        <button class="card-social-toggle" type="button"><span><span class="i18n-fr">📱 Copy réseaux</span><span class="i18n-es">📱 Copy redes</span></span></button>
+      </div>
+    </div>
+  </div>
+</article>
+
+<article class="card top5-hero" data-theme="activations" data-search="descuentos en dorsales mccann trainline inspirational 26 ideas disruptivas running carrera billete tren" tabindex="0" role="button" aria-expanded="false" id="card-top2-activations-0">
+<div class="card-media"><img src="https://images.unsplash.com/photo-1763142165009-007b090f055f?auto=format&fit=crop&w=1200&q=70" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.closest('.card-media').classList.add('media-fallback')"><div class="fallback-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="42" height="42" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9.5"/><path d="M8 13l2.5-3 2 2.5L16 9"/></svg></div><span class="badge"><span><span class="i18n-fr">Activations originales</span><span class="i18n-es">Activaciones originales</span></span> <span class="badge-emoji">💥</span></span></div>
+  <div class="card-body">
+    <div class="card-title-row">
+      <h3 class="card-title"><span><span class="i18n-fr">Trainline transforme un numéro de dossard en réduction de train</span><span class="i18n-es">Trainline convierte un dorsal de carrera en descuento de tren</span></span></h3>
+      <span class="read-tag">2 min</span>
+    </div>
+    <p class="card-fact"><span><span class="i18n-fr">Toujours au palmarès Inspirational'26 dévoilé le 30 octobre, l'or de la catégorie Idées Disruptives revient à «&nbsp;Descuentos en dorsales&nbsp;» (réductions sur dossards), signé McCann pour Trainline. Comme son nom l'indique, l'idée relie les billets de train aux numéros de dossard des coureurs amateurs, pour transformer une inscription à une course en réduction de voyage.</span><span class="i18n-es">También en el palmarés de los Premios Inspirational'26, dado a conocer el 30 de octubre, el oro de la categoría Ideas Disruptivas fue para «Descuentos en dorsales», firmado por McCann para Trainline. Como indica su nombre, la idea vincula los billetes de tren con los dorsales de los corredores amateurs, convirtiendo la inscripción a una carrera en un descuento de viaje.</span></span></p>
+    <div class="card-more">
+      <p class="card-label"><span><span class="i18n-fr">Pourquoi ça compte</span><span class="i18n-es">Por qué importa</span></span></p>
+      <p class="card-why"><span><span class="i18n-fr">Plutôt qu'un code promo générique, la marque s'appuie sur un identifiant que son audience possède déjà (le numéro de dossard) pour déclencher l'offre — un mécanisme simple qui transforme une communauté passion (le running amateur, en plein boom) en canal de distribution direct, sans dépense média additionnelle.</span><span class="i18n-es">En vez de un código promocional genérico, la marca se apoya en un identificador que su audiencia ya posee (el dorsal) para activar la oferta — un mecanismo sencillo que convierte a una comunidad de pasión (el running amateur, en pleno boom) en un canal de distribución directo, sin gasto de medios adicional.</span></span></p>
+      <p class="card-label"><span><span class="i18n-fr">Action concrète</span><span class="i18n-es">Acción concreta</span></span></p>
+      <p class="card-action">&#128161; <span><span class="i18n-fr">Repérer, pour un client donné, un identifiant que son audience possède déjà (carte de fidélité, dossard, badge d'événement, numéro d'adhérent) et s'en servir comme déclencheur d'offre plutôt que de créer un nouveau code promo générique.</span><span class="i18n-es">Identificar, para un cliente concreto, un identificador que su audiencia ya posea (tarjeta de fidelización, dorsal, acreditación de evento, número de socio) y usarlo como disparador de la oferta en lugar de crear un nuevo código promocional genérico.</span></span></p>
+      <p class="card-source"><span><span class="i18n-fr">Source :</span><span class="i18n-es">Fuente:</span></span> <a href="https://www.elpublicista.es/festivales-y-premios/fuego-camina-conmigo-mccann-movistar-triunfan-premios-2026" target="_blank" rel="noopener noreferrer">El Publicista &#8599;</a></p>
+<div class="social-pack" hidden>
+  <div class="social-pack-inner">
+    <p class="social-row"><strong>Titular</strong><br>Tu dorsal de la media maratón ahora es un billete de tren más barato</p><p class="social-row"><strong>Descripción</strong><br>En los Premios Inspirational'26 (30 de octubre), el oro de Ideas Disruptivas fue para «Descuentos en dorsales», de McCann para Trainline. La idea vincula el dorsal de una carrera popular con un descuento en el billete de tren hacia esa misma carrera, convirtiendo una comunidad de corredores amateurs en canal de distribución propio.</p><p class="social-row"><strong>Why it matters?</strong><br>Why it matters: ¿cuántos identificadores ya tiene tu cliente entre manos (una tarjeta, un dorsal, un carnet) que nunca ha usado como disparador de una oferta?</p><p class="social-row"><strong>CC take</strong><br>CC TAKE: The best promo code is one your customer already has in their pocket.</p><p class="social-row"><strong>Copy out + CTA</strong><br>Semanas después de que el running amateur rompiera otro récord de inscripciones en España, esta campaña conecta directamente con esa comunidad sin gastar un euro extra en medios. ¿Qué identificador de tus clientes usarías tú como disparador de una oferta?</p><p class="social-row"><strong>Consejo muy Armi</strong><br>Consejo muy Armi: antes de proponer un código promocional genérico en tu próxima propuesta, revisa qué 'dorsal' tiene ya tu cliente — una tarjeta de socio, una acreditación, un número de pedido — y preséntalo como la idea diferencial; es gratis y es exactamente lo que acaba de ganar un oro.</p>
+    <button class="social-copy-btn" type="button" data-pack="Titular\nTu dorsal de la media maratón ahora es un billete de tren más barato\nDescripción\nEn los Premios Inspirational&#x27;26 (30 de octubre), el oro de Ideas Disruptivas fue para &#x27;Descuentos en dorsales&#x27;, de McCann para Trainline. La idea vincula el dorsal de una carrera popular con un descuento en el billete de tren hacia esa misma carrera, convirtiendo una comunidad de corredores amateurs en canal de distribución propio.\nWhy it matters?\nWhy it matters: ¿cuántos identificadores ya tiene tu cliente entre manos (una tarjeta, un dorsal, un carnet) que nunca ha usado como disparador de una oferta?\nCC take\nCC TAKE: The best promo code is one your customer already has in their pocket.\nCopy out + CTA\nSemanas después de que el running amateur rompiera otro récord de inscripciones en España, esta campaña conecta directamente con esa comunidad sin gastar un euro extra en medios. ¿Qué identificador de tus clientes usarías tú como disparador de una oferta?\nConsejo muy Armi\nConsejo muy Armi: antes de proponer un código promocional genérico en tu próxima propuesta, revisa qué &#x27;dorsal&#x27; tiene ya tu cliente — una tarjeta de socio, una acreditación, un número de pedido — y preséntalo como la idea diferencial; es gratis y es exactamente lo que acaba de ganar un oro.">&#128203; <span class="i18n-fr">Copier</span><span class="i18n-es">Copiar</span></button>
+  </div>
+</div>
+    </div>
+    <div class="card-btn-row">
+      <button class="card-toggle" type="button" aria-hidden="true"><span class="card-toggle-label"><span><span class="i18n-fr">Voir plus</span><span class="i18n-es">Ver más</span></span></span> <span class="chevron">&#9662;</span></button>
+      <div class="card-btn-actions">
+        <button class="card-social-toggle" type="button"><span><span class="i18n-fr">📱 Copy réseaux</span><span class="i18n-es">📱 Copy redes</span></span></button>
+      </div>
+    </div>
+  </div>
+</article>
+
+<article class="card top5-hero" data-theme="b2c" data-search="mapfre contigo mccann um inspirational 26 digital experience commerce asegurados app experiencia digital" tabindex="0" role="button" aria-expanded="false" id="card-top3-b2c-0">
+<div class="card-media"><img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1200&q=70" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.closest('.card-media').classList.add('media-fallback')"><div class="fallback-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="42" height="42" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9.5"/><path d="M8 13l2.5-3 2 2.5L16 9"/></svg></div><span class="badge"><span><span class="i18n-fr">Expériences B2C</span><span class="i18n-es">Experiencias B2C</span></span> <span class="badge-emoji">✨</span></span></div>
+  <div class="card-body">
+    <div class="card-title-row">
+      <h3 class="card-title"><span><span class="i18n-fr">Mapfre gagne l'or de l'expérience digitale, pas de la publicité</span><span class="i18n-es">Mapfre gana el oro de la experiencia digital, no el de publicidad</span></span></h3>
+      <span class="read-tag">2 min</span>
+    </div>
+    <p class="card-fact"><span><span class="i18n-fr">Dans la même cérémonie du 30 octobre, l'or de la catégorie Digital Experience &amp; Commerce est allé à «&nbsp;Mapfre Contigo&nbsp;», projet signé par McCann avec UM pour l'assureur Mapfre, centré sur l'expérience digitale proposée à ses assurés particuliers.</span><span class="i18n-es">En la misma ceremonia del 30 de octubre, el oro de la categoría Digital Experience &amp; Commerce fue para «Mapfre Contigo», proyecto firmado por McCann con UM para la aseguradora Mapfre, centrado en la experiencia digital que ofrece a sus asegurados particulares.</span></span></p>
+    <div class="card-more">
+      <p class="card-label"><span><span class="i18n-fr">Pourquoi ça compte</span><span class="i18n-es">Por qué importa</span></span></p>
+      <p class="card-why"><span><span class="i18n-fr">Un assureur qui remporte un prix d'expérience digitale plutôt que de création publicitaire confirme un glissement de fond du secteur&nbsp;: la bataille concurrentielle se joue désormais autant sur l'appli et le parcours client au quotidien que sur la campagne de lancement — un territoire où les équipes de branding et d'expérience ont davantage de prise dans la durée qu'une agence créative ponctuelle.</span><span class="i18n-es">Que una aseguradora gane un premio de experiencia digital en lugar de uno de creación publicitaria confirma un giro de fondo del sector: la batalla competitiva se juega hoy tanto en la app y el recorrido del cliente del día a día como en la campaña de lanzamiento — un terreno donde los equipos de branding y experiencia tienen más margen de acción a largo plazo que una agencia creativa puntual.</span></span></p>
+      <p class="card-label"><span><span class="i18n-fr">Action concrète</span><span class="i18n-es">Acción concreta</span></span></p>
+      <p class="card-action">&#128161; <span><span class="i18n-fr">Pour un client dans un secteur à forte fréquence d'usage (assurance, banque, santé), auditer le parcours digital quotidien de ses clients existants avant de proposer une nouvelle campagne — c'est souvent là, plus que dans la pub, que se gagne la fidélité.</span><span class="i18n-es">Para un cliente en un sector de uso frecuente (seguros, banca, salud), auditar el recorrido digital cotidiano de sus clientes actuales antes de proponer una nueva campaña — a menudo es ahí, más que en la publicidad, donde se gana la fidelidad.</span></span></p>
+      <p class="card-source"><span><span class="i18n-fr">Source :</span><span class="i18n-es">Fuente:</span></span> <a href="https://marketing4ecommerce.net/premios-inspirational-2026/" target="_blank" rel="noopener noreferrer">Marketing4Ecommerce &#8599;</a></p>
+<div class="social-pack" hidden>
+  <div class="social-pack-inner">
+    <p class="social-row"><strong>Titular</strong><br>Mapfre no gana un premio de publicidad: gana uno de experiencia digital</p><p class="social-row"><strong>Descripción</strong><br>En la misma gala del 30 de octubre, el oro de Digital Experience &amp; Commerce fue para «Mapfre Contigo», de McCann con UM para Mapfre, centrado en la experiencia digital de sus asegurados particulares. El premio reconoce el trabajo en la app y el recorrido del cliente, no una campaña de lanzamiento.</p><p class="social-row"><strong>Why it matters?</strong><br>Why it matters: si el premio más comentado de un seguro ya no es su anuncio sino su app, ¿dónde debería estar realmente compitiendo tu cliente del sector servicios?</p><p class="social-row"><strong>CC take</strong><br>CC TAKE: Your best ad might be your app's onboarding screen.</p><p class="social-row"><strong>Copy out + CTA</strong><br>A una semana del palmarés, la lectura del sector es clara: la fidelización se juega ya en el uso diario, no solo en el spot. ¿Cuándo fue la última vez que auditaste el recorrido digital de un cliente antes de proponerle una campaña?</p><p class="social-row"><strong>Consejo muy Armi</strong><br>Consejo muy Armi: antes de tu próxima propuesta a un cliente de uso frecuente (seguros, banca, salud), pide usar tú misma su app o su área de cliente durante una semana — el diagnóstico que traigas vale tanto como una campaña entera, y es gratis.</p>
+    <button class="social-copy-btn" type="button" data-pack="Titular\nMapfre no gana un premio de publicidad: gana uno de experiencia digital\nDescripción\nEn la misma gala del 30 de octubre, el oro de Digital Experience &amp; Commerce fue para &#x27;Mapfre Contigo&#x27;, de McCann con UM para Mapfre, centrado en la experiencia digital de sus asegurados particulares. El premio reconoce el trabajo en la app y el recorrido del cliente, no una campaña de lanzamiento.\nWhy it matters?\nWhy it matters: si el premio más comentado de un seguro ya no es su anuncio sino su app, ¿dónde debería estar realmente compitiendo tu cliente del sector servicios?\nCC take\nCC TAKE: Your best ad might be your app&#x27;s onboarding screen.\nCopy out + CTA\nA una semana del palmarés, la lectura del sector es clara: la fidelización se juega ya en el uso diario, no solo en el spot. ¿Cuándo fue la última vez que auditaste el recorrido digital de un cliente antes de proponerle una campaña?\nConsejo muy Armi\nConsejo muy Armi: antes de tu próxima propuesta a un cliente de uso frecuente (seguros, banca, salud), pide usar tú misma su app o su área de cliente durante una semana — el diagnóstico que traigas vale tanto como una campaña entera, y es gratis.">&#128203; <span class="i18n-fr">Copier</span><span class="i18n-es">Copiar</span></button>
+  </div>
+</div>
+    </div>
+    <div class="card-btn-row">
+      <button class="card-toggle" type="button" aria-hidden="true"><span class="card-toggle-label"><span><span class="i18n-fr">Voir plus</span><span class="i18n-es">Ver más</span></span></span> <span class="chevron">&#9662;</span></button>
+      <div class="card-btn-actions">
+        <button class="card-social-toggle" type="button"><span><span class="i18n-fr">📱 Copy réseaux</span><span class="i18n-es">📱 Copy redes</span></span></button>
+      </div>
+    </div>
+  </div>
+</article>
+
+    </div>
+  </section>
+
+  <section class="carousel-section">
+    <h2 class="section-title"><span class="section-emoji">&#127902;&#65039;</span><span><span class="i18n-fr">Le carrousel de la période</span><span class="i18n-es">El carrusel del período</span></span></h2>
+    <div class="carousel" id="carousel" tabindex="0" aria-roledescription="carrousel" aria-label="Actus marquantes de la période">
+      <div class="carousel-track" id="carousel-track">
+<div class="carousel-slide" data-theme="marketing">
+          <div class="carousel-slide-media"><img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=70" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.parentElement.classList.add('media-fallback')"></div>
+          <div class="carousel-slide-content">
+            <span class="carousel-badge">📈 <span><span class="i18n-fr">Marketing</span><span class="i18n-es">Marketing</span></span></span>
+            <h3><span><span class="i18n-fr">La stratégie bat le budget chez Santalucía</span><span class="i18n-es">La estrategia vence al presupuesto en Santalucía</span></span></h3>
+            <p><span><span class="i18n-fr">Un jury récompense la pensée stratégique plutôt que l'investissement média.</span><span class="i18n-es">Un jurado premia el pensamiento estratégico frente a la inversión en medios.</span></span></p>
+          </div>
+        </div>
+<div class="carousel-slide" data-theme="activations">
+          <div class="carousel-slide-media"><img src="https://images.unsplash.com/photo-1763142165009-007b090f055f?auto=format&fit=crop&w=1200&q=70" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.parentElement.classList.add('media-fallback')"></div>
+          <div class="carousel-slide-content">
+            <span class="carousel-badge">💥 <span><span class="i18n-fr">Activations originales</span><span class="i18n-es">Activaciones originales</span></span></span>
+            <h3><span><span class="i18n-fr">Un dossard de course vaut une réduction Trainline</span><span class="i18n-es">Un dorsal de carrera vale un descuento en Trainline</span></span></h3>
+            <p><span><span class="i18n-fr">Trainline transforme une inscription sportive en billet de train moins cher.</span><span class="i18n-es">Trainline convierte una inscripción deportiva en un billete de tren más barato.</span></span></p>
+          </div>
+        </div>
+<div class="carousel-slide" data-theme="b2c">
+          <div class="carousel-slide-media"><img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1200&q=70" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.parentElement.classList.add('media-fallback')"></div>
+          <div class="carousel-slide-content">
+            <span class="carousel-badge">✨ <span><span class="i18n-fr">Expériences B2C</span><span class="i18n-es">Experiencias B2C</span></span></span>
+            <h3><span><span class="i18n-fr">Mapfre gagne l'or sur l'expérience, pas la pub</span><span class="i18n-es">Mapfre gana el oro en experiencia, no en publicidad</span></span></h3>
+            <p><span><span class="i18n-fr">L'assureur mise sur son parcours digital plutôt que sur la création.</span><span class="i18n-es">La aseguradora apuesta por su recorrido digital antes que por la creación.</span></span></p>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-arrow prev" type="button" aria-label="Précédent">&#8249;</button>
+      <button class="carousel-arrow next" type="button" aria-label="Suivant">&#8250;</button>
+      <div class="carousel-dots" id="carousel-dots"></div>
+    </div>
+  </section>
+
+  <p class="no-results" id="no-results" hidden><span><span class="i18n-fr">Aucun résultat pour cette recherche.</span><span class="i18n-es">Ningún resultado para esta búsqueda.</span></span></p>
+
+  <footer>
+    <p><span><span class="i18n-fr">Veille personnelle — branding, marketing, activation de marque. Espagne &amp; Europe. Édition du 1er novembre 2026.</span><span class="i18n-es">Vigilancia personal — branding, marketing, activación de marca. España y Europa. Edición del 1 de noviembre de 2026.</span></span></p>
+  </footer>
+</main>
+
+<script>
+
+(function(){
+  "use strict";
+
+  // ----- Progress bar -----
+  var bar = document.getElementById('progress-bar');
+  function updateProgress(){
+    var el = document.documentElement;
+    var scrollTop = el.scrollTop || document.body.scrollTop;
+    var scrollHeight = (el.scrollHeight || document.body.scrollHeight) - el.clientHeight;
+    var pct = scrollHeight > 0 ? (scrollTop / scrollHeight) * 100 : 0;
+    if (bar) bar.style.width = pct + '%';
+  }
+  window.addEventListener('scroll', updateProgress, { passive: true });
+  window.addEventListener('resize', updateProgress);
+  updateProgress();
+
+  // ----- Animated counters -----
+  function animateCount(el, duration){
+    if (!el) return;
+    var target = parseInt(el.getAttribute('data-target'), 10) || 0;
+    var startTime = null;
+    function step(ts){
+      if (!startTime) startTime = ts;
+      var progress = Math.min((ts - startTime) / duration, 1);
+      el.textContent = Math.floor(progress * target);
+      if (progress < 1) requestAnimationFrame(step);
+      else el.textContent = target;
+    }
+    requestAnimationFrame(step);
+  }
+  document.querySelectorAll('.stat-num[data-target]').forEach(function(el){ animateCount(el, 900); });
+
+  // ----- Chip filters + search -----
+  var cards = Array.prototype.slice.call(document.querySelectorAll('.card'));
+  var chips = Array.prototype.slice.call(document.querySelectorAll('.chip'));
+  var searchInput = document.getElementById('search-input');
+  var currentFilter = 'all';
+
+  function applyFilters(){
+    var q = searchInput ? searchInput.value.toLowerCase().trim() : '';
+    var visibleCount = 0;
+    cards.forEach(function(card){
+      var themeMatch = currentFilter === 'all' || card.getAttribute('data-theme') === currentFilter;
+      var textMatch = !q || (card.getAttribute('data-search') || '').indexOf(q) !== -1;
+      var show = themeMatch && textMatch;
+      card.hidden = !show;
+      if (show) visibleCount++;
+    });
+    document.querySelectorAll('.theme-section').forEach(function(section){
+      var visible = section.querySelectorAll('.card:not([hidden])').length;
+      section.style.display = visible === 0 ? 'none' : '';
+    });
+    var noResults = document.getElementById('no-results');
+    if (noResults) noResults.hidden = visibleCount !== 0;
+  }
+
+  chips.forEach(function(chip){
+    chip.addEventListener('click', function(){
+      chips.forEach(function(c){ c.classList.remove('active'); });
+      chip.classList.add('active');
+      currentFilter = chip.getAttribute('data-filter');
+      applyFilters();
+    });
+  });
+  if (searchInput) searchInput.addEventListener('input', applyFilters);
+
+  // ----- Card expand/collapse -----
+  cards.forEach(function(card){
+    function toggle(e){
+      if (e && e.target && e.target.closest('.card-social-toggle')) return;
+      if (e && e.target && e.target.closest('.social-pack')) return;
+      if (e && e.target && e.target.closest('a')) return;
+      var expanded = card.classList.toggle('expanded');
+      card.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+    }
+    card.addEventListener('click', toggle);
+    card.addEventListener('keydown', function(e){
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(e); }
+    });
+    var socialBtn = card.querySelector('.card-social-toggle');
+    var socialPack = card.querySelector('.social-pack');
+    if (socialBtn && socialPack) {
+      socialBtn.addEventListener('click', function(e){
+        e.stopPropagation();
+        socialPack.hidden = !socialPack.hidden;
+      });
+    }
+    var copyBtn = card.querySelector('.social-copy-btn');
+    if (copyBtn) {
+      copyBtn.addEventListener('click', function(e){
+        e.stopPropagation();
+        var text = (copyBtn.getAttribute('data-pack') || '').replace(/\\n/g, '\n');
+        function done(ok){
+          copyBtn.classList.toggle('copied', ok);
+          setTimeout(function(){ copyBtn.classList.remove('copied'); }, 1800);
+        }
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(text).then(function(){ done(true); }, function(){ done(false); });
+        } else {
+          try {
+            var ta = document.createElement('textarea');
+            ta.value = text; document.body.appendChild(ta); ta.select();
+            var ok = document.execCommand('copy');
+            document.body.removeChild(ta);
+            done(ok);
+          } catch(err){ done(false); }
+        }
+      });
+    }
+  });
+
+  // ----- Carousel -----
+  var track = document.getElementById('carousel-track');
+  var carousel = document.getElementById('carousel');
+  if (track && carousel) {
+    var slides = Array.prototype.slice.call(track.children);
+    var dotsWrap = document.getElementById('carousel-dots');
+    var current = 0;
+    var autoplayTimer = null;
+
+    slides.forEach(function(_, i){
+      var dot = document.createElement('button');
+      dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
+      dot.type = 'button';
+      dot.setAttribute('aria-label', 'Slide ' + (i+1));
+      dot.addEventListener('click', function(){ goTo(i, true); });
+      if (dotsWrap) dotsWrap.appendChild(dot);
+    });
+    var dots = dotsWrap ? Array.prototype.slice.call(dotsWrap.children) : [];
+
+    function goTo(i, manual){
+      current = (i + slides.length) % slides.length;
+      track.style.transform = 'translateX(-' + (current * 100) + '%)';
+      dots.forEach(function(d, idx){ d.classList.toggle('active', idx === current); });
+      if (manual) restartAutoplay();
+    }
+    function next(){ goTo(current + 1); }
+    function prev(){ goTo(current - 1); }
+
+    var prevBtn = document.querySelector('.carousel-arrow.prev');
+    var nextBtn = document.querySelector('.carousel-arrow.next');
+    if (prevBtn) prevBtn.addEventListener('click', function(){ prev(); restartAutoplay(); });
+    if (nextBtn) nextBtn.addEventListener('click', function(){ next(); restartAutoplay(); });
+
+    carousel.addEventListener('keydown', function(e){
+      if (e.key === 'ArrowRight') { next(); restartAutoplay(); }
+      if (e.key === 'ArrowLeft') { prev(); restartAutoplay(); }
+    });
+
+    function startAutoplay(){
+      if (slides.length < 2) return;
+      autoplayTimer = setInterval(next, 5500);
+    }
+    function stopAutoplay(){ if (autoplayTimer) { clearInterval(autoplayTimer); autoplayTimer = null; } }
+    function restartAutoplay(){ stopAutoplay(); startAutoplay(); }
+
+    carousel.addEventListener('mouseenter', stopAutoplay);
+    carousel.addEventListener('mouseleave', startAutoplay);
+
+    var touchStartX = null;
+    carousel.addEventListener('touchstart', function(e){ touchStartX = e.changedTouches[0].clientX; }, {passive:true});
+    carousel.addEventListener('touchend', function(e){
+      if (touchStartX === null) return;
+      var dx = e.changedTouches[0].clientX - touchStartX;
+      if (Math.abs(dx) > 40) { dx < 0 ? next() : prev(); restartAutoplay(); }
+      touchStartX = null;
+    }, {passive:true});
+
+    startAutoplay();
+  }
+
+  // ----- Scroll reveal (motion-safe) -----
+  (function(){
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    if (!('IntersectionObserver' in window)) return;
+    var groups = Array.prototype.slice.call(document.querySelectorAll('.card-grid, .top5-grid'));
+    groups.forEach(function(group){
+      Array.prototype.slice.call(group.children).forEach(function(el, i){
+        el.classList.add('reveal-init');
+        el.style.transitionDelay = (i * 70) + 'ms';
+      });
+    });
+    Array.prototype.slice.call(document.querySelectorAll('.carousel-section, .quicklinks')).forEach(function(el){
+      el.classList.add('reveal-init');
+    });
+    var observer = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if (entry.isIntersecting){
+          entry.target.classList.add('reveal-in');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {threshold:.12, rootMargin:'0px 0px -40px 0px'});
+    Array.prototype.slice.call(document.querySelectorAll('.reveal-init')).forEach(function(el){ observer.observe(el); });
+  })();
+
+  // ----- Sticky header blur on scroll -----
+  (function(){
+    var controlsBar = document.querySelector('.controls');
+    if (!controlsBar) return;
+    function onControlsScroll(){
+      controlsBar.classList.toggle('is-scrolled', (window.scrollY || document.documentElement.scrollTop) > 8);
+    }
+    window.addEventListener('scroll', onControlsScroll, { passive: true });
+    onControlsScroll();
+  })();
+
+  // ----- FR / ES language toggle -----
+  var currentLang = 'fr';
+  try { if (localStorage.getItem('veille-lang') === 'es') currentLang = 'es'; } catch(e){}
+  var langToggleBtn = document.getElementById('lang-toggle');
+  var I18N_UI = {
+    fr: { searchPlaceholder: 'Rechercher un mot-clé (marque, thème…)' },
+    es: { searchPlaceholder: 'Buscar una palabra clave (marca, tema…)' }
+  };
+  function applyLang(lang, save){
+    currentLang = lang;
+    document.body.classList.toggle('lang-es', lang === 'es');
+    if (langToggleBtn) {
+      var frSpan = langToggleBtn.querySelector('.lang-toggle-fr');
+      var esSpan = langToggleBtn.querySelector('.lang-toggle-es');
+      if (frSpan) frSpan.classList.toggle('active', lang === 'fr');
+      if (esSpan) esSpan.classList.toggle('active', lang === 'es');
+    }
+    if (searchInput && I18N_UI[lang]) searchInput.setAttribute('placeholder', I18N_UI[lang].searchPlaceholder);
+    if (save) { try { localStorage.setItem('veille-lang', lang); } catch(e){} }
+  }
+  function switchLang(lang, save){
+    var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduced) { applyLang(lang, save); return; }
+    document.body.classList.add('lang-fade');
+    setTimeout(function(){
+      applyLang(lang, save);
+      requestAnimationFrame(function(){ document.body.classList.remove('lang-fade'); });
+    }, 150);
+  }
+  if (langToggleBtn) {
+    langToggleBtn.addEventListener('click', function(){
+      switchLang(currentLang === 'es' ? 'fr' : 'es', true);
+    });
+  }
+  applyLang(currentLang, false);
+
+  applyFilters();
+})();
+
+</script>
+
+</body>
+</html>
